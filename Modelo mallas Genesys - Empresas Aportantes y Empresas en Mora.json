@@ -1,0 +1,907 @@
+
+SHEETS
+
+OBJECTS ON SHEETS
+
+DIMENSIONS
+{"qInfo":{"qId":"FbNyp","qType":"dimension"},"qMeta":{"_resourcetype":"app.object","_objecttype":"dimension","id":"FbNyp","approved":true,"published":true,"publishTime":"2022-08-23T14:38:17.291Z","owner":"auth0|166b54d4fba4b038422556fdd27fb4ea209eb8f8e094777af8f6c60653624a58","ownerId":"6335cbef79eaea523b82a5c9","createdDate":"2024-12-03T22:50:47.185Z","modifiedDate":"2024-12-03T22:50:47.185Z","encrypted":true,"privileges":["read","update","delete","publish","change_owner"],"title":"MES-DIA","description":"","tags":[]},"qData":[]}
+
+MEASURES
+
+VARIABLES
+{"qName":"vDia","qDefinition":"1","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"975516b3-a66f-4931-b7a0-6ff1f9058321","qType":"variable"},"qData":[],"qIsScriptCreated":true}
+{"qName":"vPeriodo","qDefinition":"202309","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"2c6be190-78d7-4dce-b3f5-a565b09ca9be","qType":"variable"},"qData":[],"qIsScriptCreated":true}
+{"qName":"vFechaFinal","qDefinition":"2023-09-30","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"73b04c60-17f5-4052-8138-899969a95b81","qType":"variable"},"qData":[],"qIsScriptCreated":true}
+{"qName":"vMes","qDefinition":"09","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"f553a521-684b-4aab-8719-6ba58da3cb2e","qType":"variable"},"qData":[],"qIsScriptCreated":true}
+{"qName":"vA\u00f1o","qDefinition":"2023","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"184139d6-37a1-4b5b-8487-0dfa9791c522","qType":"variable"},"qData":[],"qIsScriptCreated":true}
+{"qName":"vFechaInicial","qDefinition":"2023-09-01","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"c366fd74-7a65-4a98-9807-5b8290cf86f2","qType":"variable"},"qData":[],"qIsScriptCreated":true}
+{"qName":"vfechaActual","qDefinition":"2022-08-16","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"269552f9-2b87-4730-a006-0b385ce7e9d5","qType":"variable"},"qData":[]}
+{"qName":"vFechaFinalReplica","qDefinition":"2023-04-29","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"656ba48f-5029-4c56-ba5a-0e5e5f33bc8f","qType":"variable"},"qData":[]}
+{"qName":"vfechaInicial","qDefinition":"2018\/09\/01","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"129c9615-425b-4e10-bdf2-d920af772d45","qType":"variable"},"qData":[]}
+{"qName":"vfechaFinal","qDefinition":"2018\/09\/20","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"34849e48-a3da-4d98-b87f-42c28eb0d054","qType":"variable"},"qData":[]}
+{"qName":"vmesNombre","qDefinition":"septiembre","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"e37a2c2c-e087-4d21-a50f-67e4e69ab4a8","qType":"variable"},"qData":[]}
+{"qName":"INGRESOS","qDefinition":"=Count( {< CEDULA= P({1<FECHA_HISTORICO={$(=Min(FECHA_HISTORICO))}>})  >} DISTINCT CEDULA)","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"d2c52fb7-0a88-4721-afc6-f5d0c52bb21a","qType":"variable"},"qData":[]}
+{"qName":"% KEY","qDefinition":"1","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"05627f6c-b65d-4daf-a679-f0eca5e5305e","qType":"variable"},"qData":[]}
+{"qName":"vfechaHistorico","qDefinition":"20220816","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"eb287823-a77a-4a21-956f-80be73e9c6c4","qType":"variable"},"qData":[]}
+{"qName":"vdia","qDefinition":"16","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"4f08675e-81ba-4735-9cea-45790045c8da","qType":"variable"},"qData":[]}
+{"qName":"vperiodo","qDefinition":"202205","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"4438794c-cfe7-474d-af26-6872a79a91dc","qType":"variable"},"qData":[]}
+{"qName":"vfecha_final","qDefinition":"2022-08-31","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"2ad073f8-31f8-4c04-b45e-002ee1e5c61c","qType":"variable"},"qData":[]}
+{"qName":"vfecha_inicial","qDefinition":"2022-08-01","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"f570cec4-029f-4e68-9689-bfe2ae5b098c","qType":"variable"},"qData":[]}
+{"qName":"_gitoqlokMetaData_variable","qDescription":"Gitoqlok Metadata","qDefinition":"{\"masterId\":\"93befc03-d002-4b6c-b6b4-67413ac60787\",\"infoByServerType\":{},\"updatedAt\":1641933254439}","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"_gitoqlokMetaData_variable","qType":"variable"},"qData":[]}
+{"qName":"va\u00f1o","qDefinition":"2022","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"2bee9cd3-83ca-486a-bfcc-ae57633a25cf","qType":"variable"},"qData":[]}
+{"qName":"FechaComparativo","qDefinition":"DAY(FECHA_HISTORICO_FORMATO)&' DE ' & UPPER(MONTH(FECHA_HISTORICO_FORMATO))&' DE '&YEAR(FECHA_HISTORICO_FORMATO) &' - '&UPPER(WEEKDAY(FECHA_HISTORICO_FORMATO))","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"0b44a99a-0dbd-408d-995e-5b462e5362af","qType":"variable"},"qData":[]}
+{"qName":"vfecha","qDefinition":"2022-08-16","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"c1de97d8-3705-432a-8268-4d2065093fe5","qType":"variable"},"qData":[]}
+{"qName":"vmes","qDefinition":"08","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"2b1bfac3-5fa2-4cc6-9001-e82b7a7a2fbf","qType":"variable"},"qData":[]}
+
+FIELDS
+{"qIsHidden":true,"qIsSystem":true,"qName":"$Field","qCardinal":865,"qTags":["$text","$key","$hidden","$system"],"qSrcTables":[]}
+{"qIsHidden":true,"qIsSystem":true,"qName":"$Table","qCardinal":29,"qTags":["$text","$ascii","$key","$hidden","$system"],"qSrcTables":[]}
+{"qIsHidden":true,"qIsSystem":true,"qName":"$Rows","qCardinal":21,"qTags":["$numeric","$integer","$hidden","$system"],"qSrcTables":[]}
+{"qIsHidden":true,"qIsSystem":true,"qName":"$Fields","qCardinal":18,"qTags":["$numeric","$integer","$hidden","$system"],"qSrcTables":[]}
+{"qIsHidden":true,"qIsSystem":true,"qName":"$FieldNo","qCardinal":59,"qTags":["$numeric","$integer","$hidden","$system"],"qSrcTables":[]}
+{"qIsHidden":true,"qIsSystem":true,"qName":"$Info","qCardinal":1,"qTags":["$text","$ascii","$hidden","$system"],"qSrcTables":[]}
+{"qName":"Empresas_Aportantes_Drive.TIP_IDENTIFICACION","qCardinal":7,"qTags":[],"qSrcTables":["Empresas_Aportantes_Drive"]}
+{"qName":"Empresas_Aportantes_Drive.NUM_IDENTIFICACION","qCardinal":20022,"qTags":[],"qSrcTables":["Empresas_Aportantes_Drive"]}
+{"qName":"Empresas_Aportantes_Drive.NOM_EMPRESA","qCardinal":20015,"qTags":["$text"],"qSrcTables":["Empresas_Aportantes_Drive"]}
+{"qName":"Empresas_Aportantes_Drive.COD_MUNICIPIO_DANE","qCardinal":136,"qTags":[],"qSrcTables":["Empresas_Aportantes_Drive"]}
+{"qName":"Empresas_Aportantes_Drive.DIR_CORRESPONDECIA","qCardinal":18166,"qTags":[],"qSrcTables":["Empresas_Aportantes_Drive"]}
+{"qName":"Empresas_Aportantes_Drive.EST_VINCULACION","qCardinal":9,"qTags":[],"qSrcTables":["Empresas_Aportantes_Drive"]}
+{"qName":"Empresas_Aportantes_Drive.TIP_APORTANTE","qCardinal":5,"qTags":[],"qSrcTables":["Empresas_Aportantes_Drive"]}
+{"qName":"Empresas_Aportantes_Drive.TIP_SECTOR","qCardinal":4,"qTags":[],"qSrcTables":["Empresas_Aportantes_Drive"]}
+{"qName":"Empresas_Aportantes_Drive.ACT_ECONOMICA","qCardinal":419,"qTags":[],"qSrcTables":["Empresas_Aportantes_Drive"]}
+{"qName":"Empresas_Aportantes_Drive.SIT_EMPRESA_LEY_1429","qCardinal":8,"qTags":[],"qSrcTables":["Empresas_Aportantes_Drive"]}
+{"qName":"Empresas_Aportantes_Drive.PRO_PAGO_LEY_1429","qCardinal":4,"qTags":[],"qSrcTables":["Empresas_Aportantes_Drive"]}
+{"qName":"Empresas_Aportantes_Drive.SIT_EMPRESA_LEY_590","qCardinal":4,"qTags":[],"qSrcTables":["Empresas_Aportantes_Drive"]}
+{"qName":"Empresas_Aportantes_Drive.PRO_PAGO_LEY_590","qCardinal":6,"qTags":[],"qSrcTables":["Empresas_Aportantes_Drive"]}
+{"qName":"Empresas_Aportantes_Drive.APO_TOTAL_MENSUAL","qCardinal":5504,"qTags":[],"qSrcTables":["Empresas_Aportantes_Drive"]}
+{"qName":"Empresas_Aportantes_Drive.INT_PAGADOS_MORA","qCardinal":312,"qTags":[],"qSrcTables":["Empresas_Aportantes_Drive"]}
+{"qName":"Empresas_Aportantes_Drive.VAL_REINTEGROS","qCardinal":24,"qTags":[],"qSrcTables":["Empresas_Aportantes_Drive"]}
+{"qName":"Empresas_Aportantes_Malla2.TIP_IDENTIFICACION","qCardinal":5,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla2"]}
+{"qName":"Empresas_Aportantes_Malla2.NUM_IDENTIFICACION","qCardinal":10461,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla2"]}
+{"qName":"Empresas_Aportantes_Malla2.NOM_EMPRESA","qCardinal":8900,"qTags":["$text"],"qSrcTables":["Empresas_Aportantes_Malla2"]}
+{"qName":"Empresas_Aportantes_Malla2.COD_MUNICIPIO_DANE","qCardinal":109,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla2"]}
+{"qName":"Empresas_Aportantes_Malla2.DIR_CORRESPONDECIA","qCardinal":8279,"qTags":[],"qSrcTables":["Empresas_Aportantes_Malla2"]}
+{"qName":"Empresas_Aportantes_Malla2.EST_VINCULACION","qCardinal":5,"qTags":[],"qSrcTables":["Empresas_Aportantes_Malla2"]}
+{"qName":"Empresas_Aportantes_Malla2.TIP_APORTANTE","qCardinal":3,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla2"]}
+{"qName":"Empresas_Aportantes_Malla2.TIP_SECTOR","qCardinal":3,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla2"]}
+{"qName":"Empresas_Aportantes_Malla2.ACT_ECONOMICA","qCardinal":367,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla2"]}
+{"qName":"Empresas_Aportantes_Malla2.SIT_EMPRESA_LEY_1429","qCardinal":4,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla2"]}
+{"qName":"Empresas_Aportantes_Malla2.PRO_PAGO_LEY_1429","qCardinal":3,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla2"]}
+{"qName":"Empresas_Aportantes_Malla2.SIT_EMPRESA_LEY_590","qCardinal":3,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla2"]}
+{"qName":"Empresas_Aportantes_Malla2.PRO_PAGO_LEY_590","qCardinal":5,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla2"]}
+{"qName":"Empresas_Aportantes_Malla2.APO_TOTAL_MENSUAL","qCardinal":3206,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla2"]}
+{"qName":"Empresas_Aportantes_Malla2.INT_PAGADOS_MORA","qCardinal":152,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla2"]}
+{"qName":"Empresas_Aportantes_Malla2.VAL_REINTEGROS","qCardinal":11,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla2"]}
+{"qName":"Empresas_Aportantes_Malla2.D\u00edgito de verificaci\u00f3n","qCardinal":11,"qTags":["$text","$numeric","$integer","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla2"]}
+{"qName":"Empresas_Aportantes_Malla2.Nombre \/ Razon social","qCardinal":10480,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla2"]}
+{"qName":"Empresas_Aportantes_Malla2.Tipo Aportante","qCardinal":3,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla2"]}
+{"qName":"Empresas_Aportantes_Malla2.Periodo","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla2"]}
+{"qName":"Empresas_Aportantes_Malla2.TOTAL_MONTO_APORTE","qCardinal":3324,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla2"]}
+{"qName":"Empresas_Aportantes_Malla2.TOTAL_INTERESES_MORA","qCardinal":66,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla2"]}
+{"qName":"Empresas_Aportantes_Malla2.VALIDACION_2_APORTES","qCardinal":2,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla2"]}
+{"qName":"Empresas_Aportantes_Malla2.VALIDACION_TOTAL_APORTE","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla2"]}
+{"qName":"Empresas_Aportantes_Malla2.VALIDACION_TOTAL_INTERESES_MORA","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla2"]}
+{"qName":"Empresas_Aportantes_Malla2.A\u00d1O","qCardinal":1,"qTags":["$text","$numeric","$integer","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla2"]}
+{"qName":"Empresas_Aportantes_Malla2.MES","qCardinal":1,"qTags":["$text","$numeric","$integer","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla2"]}
+{"qName":"Empresas_Aportantes_Malla2.DIA","qCardinal":1,"qTags":["$text","$numeric","$integer","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla2"]}
+{"qName":"Empresas_Aportantes_Malla2_Cruce_Inverso.TIP_IDENTIFICACION","qCardinal":5,"qTags":[],"qSrcTables":["Empresas_Aportantes_Malla2_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla2_Cruce_Inverso.NUM_IDENTIFICACION","qCardinal":17172,"qTags":[],"qSrcTables":["Empresas_Aportantes_Malla2_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla2_Cruce_Inverso.NOM_EMPRESA","qCardinal":17168,"qTags":["$text"],"qSrcTables":["Empresas_Aportantes_Malla2_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla2_Cruce_Inverso.COD_MUNICIPIO_DANE","qCardinal":133,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla2_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla2_Cruce_Inverso.DIR_CORRESPONDECIA","qCardinal":15584,"qTags":[],"qSrcTables":["Empresas_Aportantes_Malla2_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla2_Cruce_Inverso.EST_VINCULACION","qCardinal":9,"qTags":[],"qSrcTables":["Empresas_Aportantes_Malla2_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla2_Cruce_Inverso.TIP_APORTANTE","qCardinal":5,"qTags":[],"qSrcTables":["Empresas_Aportantes_Malla2_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla2_Cruce_Inverso.TIP_SECTOR","qCardinal":4,"qTags":[],"qSrcTables":["Empresas_Aportantes_Malla2_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla2_Cruce_Inverso.ACT_ECONOMICA","qCardinal":419,"qTags":[],"qSrcTables":["Empresas_Aportantes_Malla2_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla2_Cruce_Inverso.SIT_EMPRESA_LEY_1429","qCardinal":8,"qTags":[],"qSrcTables":["Empresas_Aportantes_Malla2_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla2_Cruce_Inverso.PRO_PAGO_LEY_1429","qCardinal":4,"qTags":[],"qSrcTables":["Empresas_Aportantes_Malla2_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla2_Cruce_Inverso.SIT_EMPRESA_LEY_590","qCardinal":4,"qTags":[],"qSrcTables":["Empresas_Aportantes_Malla2_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla2_Cruce_Inverso.PRO_PAGO_LEY_590","qCardinal":6,"qTags":[],"qSrcTables":["Empresas_Aportantes_Malla2_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla2_Cruce_Inverso.APO_TOTAL_MENSUAL","qCardinal":5503,"qTags":[],"qSrcTables":["Empresas_Aportantes_Malla2_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla2_Cruce_Inverso.INT_PAGADOS_MORA","qCardinal":312,"qTags":[],"qSrcTables":["Empresas_Aportantes_Malla2_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla2_Cruce_Inverso.VAL_REINTEGROS","qCardinal":23,"qTags":[],"qSrcTables":["Empresas_Aportantes_Malla2_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla2_Cruce_Inverso.D\u00edgito de verificaci\u00f3n","qCardinal":11,"qTags":["$text","$numeric","$integer","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla2_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla2_Cruce_Inverso.Nombre \/ Razon social","qCardinal":8544,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla2_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla2_Cruce_Inverso.Tipo Aportante","qCardinal":3,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla2_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla2_Cruce_Inverso.Periodo","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla2_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla2_Cruce_Inverso.TOTAL_MONTO_APORTE","qCardinal":3165,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla2_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla2_Cruce_Inverso.TOTAL_INTERESES_MORA","qCardinal":63,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla2_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla2_Cruce_Inverso.VALIDACION_2_APORTES","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla2_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla2_Cruce_Inverso.VALIDACION_TOTAL_APORTE","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla2_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla2_Cruce_Inverso.VALIDACION_TOTAL_INTERESES_MORA","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla2_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla3.TIP_IDENTIFICACION","qCardinal":3,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla3"]}
+{"qName":"Empresas_Aportantes_Malla3.NUM_IDENTIFICACION","qCardinal":13992,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla3"]}
+{"qName":"Empresas_Aportantes_Malla3.NOM_EMPRESA","qCardinal":13973,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla3"]}
+{"qName":"Empresas_Aportantes_Malla3.COD_MUNICIPIO_DANE","qCardinal":132,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla3"]}
+{"qName":"Empresas_Aportantes_Malla3.DIR_CORRESPONDECIA","qCardinal":12552,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla3"]}
+{"qName":"Empresas_Aportantes_Malla3.EST_VINCULACION","qCardinal":7,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla3"]}
+{"qName":"Empresas_Aportantes_Malla3.TIP_APORTANTE","qCardinal":4,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla3"]}
+{"qName":"Empresas_Aportantes_Malla3.TIP_SECTOR","qCardinal":3,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla3"]}
+{"qName":"Empresas_Aportantes_Malla3.ACT_ECONOMICA","qCardinal":413,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla3"]}
+{"qName":"Empresas_Aportantes_Malla3.SIT_EMPRESA_LEY_1429","qCardinal":6,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla3"]}
+{"qName":"Empresas_Aportantes_Malla3.PRO_PAGO_LEY_1429","qCardinal":3,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla3"]}
+{"qName":"Empresas_Aportantes_Malla3.SIT_EMPRESA_LEY_590","qCardinal":3,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla3"]}
+{"qName":"Empresas_Aportantes_Malla3.PRO_PAGO_LEY_590","qCardinal":5,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla3"]}
+{"qName":"Empresas_Aportantes_Malla3.APO_TOTAL_MENSUAL","qCardinal":5143,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla3"]}
+{"qName":"Empresas_Aportantes_Malla3.INT_PAGADOS_MORA","qCardinal":280,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla3"]}
+{"qName":"Empresas_Aportantes_Malla3.VAL_REINTEGROS","qCardinal":19,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla3"]}
+{"qName":"Empresas_Aportantes_Malla3.TIPO_IDENTIFICACION","qCardinal":3,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla3"]}
+{"qName":"Empresas_Aportantes_Malla3.NUMERO_IDENTIFICACION","qCardinal":13992,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla3"]}
+{"qName":"Empresas_Aportantes_Malla3.DIGITO_VERIFICACION","qCardinal":10,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla3"]}
+{"qName":"Empresas_Aportantes_Malla3.RAZON_SOCIAL","qCardinal":13974,"qTags":["$text"],"qSrcTables":["Empresas_Aportantes_Malla3"]}
+{"qName":"Empresas_Aportantes_Malla3.NOMBRE_COMERCIAL","qCardinal":13590,"qTags":["$text"],"qSrcTables":["Empresas_Aportantes_Malla3"]}
+{"qName":"Empresas_Aportantes_Malla3.CLASIFICACION","qCardinal":3,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla3"]}
+{"qName":"Empresas_Aportantes_Malla3.ESTADO_AFILIACION","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla3"]}
+{"qName":"Empresas_Aportantes_Malla3.FECHA_ACTIVACION","qCardinal":4247,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla3"]}
+{"qName":"Empresas_Aportantes_Malla3.FECHA_DESAFILIACION","qCardinal":75,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla3"]}
+{"qName":"Empresas_Aportantes_Malla3.CANTIDAD_TRABAJADORES_ACTIVOS","qCardinal":265,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla3"]}
+{"qName":"Empresas_Aportantes_Malla3.ESTADO_CARTERA_APORTES","qCardinal":2,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla3"]}
+{"qName":"Empresas_Aportantes_Malla3.VALOR_RECAUDO_APORTES_ULTIMO_PERIODO_PAGADO","qCardinal":5849,"qTags":["$numeric"],"qSrcTables":["Empresas_Aportantes_Malla3"]}
+{"qName":"Empresas_Aportantes_Malla3.PERIODO_APORTES_ASOCIADO_RECAUDO_INFORMADO","qCardinal":31,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla3"]}
+{"qName":"Empresas_Aportantes_Malla3.VALIDACION_3","qCardinal":2,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla3"]}
+{"qName":"Empresas_Aportantes_Malla3.A\u00d1O","qCardinal":1,"qTags":["$text","$numeric","$integer","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla3"]}
+{"qName":"Empresas_Aportantes_Malla3.MES","qCardinal":1,"qTags":["$text","$numeric","$integer","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla3"]}
+{"qName":"Empresas_Aportantes_Malla3.DIA","qCardinal":1,"qTags":["$text","$numeric","$integer","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla3"]}
+{"qName":"Empresas_Aportantes_Malla3_Cruce_Inverso.TIP_IDENTIFICACION","qCardinal":6,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla3_Cruce_Inverso.NUM_IDENTIFICACION","qCardinal":2890,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla3_Cruce_Inverso.NOM_EMPRESA","qCardinal":2889,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla3_Cruce_Inverso.COD_MUNICIPIO_DANE","qCardinal":65,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla3_Cruce_Inverso.DIR_CORRESPONDECIA","qCardinal":2802,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla3_Cruce_Inverso.EST_VINCULACION","qCardinal":3,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla3_Cruce_Inverso.TIP_APORTANTE","qCardinal":4,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla3_Cruce_Inverso.TIP_SECTOR","qCardinal":3,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla3_Cruce_Inverso.ACT_ECONOMICA","qCardinal":225,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla3_Cruce_Inverso.SIT_EMPRESA_LEY_1429","qCardinal":2,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla3_Cruce_Inverso.PRO_PAGO_LEY_1429","qCardinal":2,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla3_Cruce_Inverso.SIT_EMPRESA_LEY_590","qCardinal":2,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla3_Cruce_Inverso.PRO_PAGO_LEY_590","qCardinal":4,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla3_Cruce_Inverso.APO_TOTAL_MENSUAL","qCardinal":1,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla3_Cruce_Inverso.INT_PAGADOS_MORA","qCardinal":1,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla3_Cruce_Inverso.VAL_REINTEGROS","qCardinal":3,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla3_Cruce_Inverso.TIPO_IDENTIFICACION","qCardinal":3,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla3_Cruce_Inverso.NUMERO_IDENTIFICACION","qCardinal":1045,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla3_Cruce_Inverso.DIGITO_VERIFICACION","qCardinal":10,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla3_Cruce_Inverso.RAZON_SOCIAL","qCardinal":1045,"qTags":["$text"],"qSrcTables":["Empresas_Aportantes_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla3_Cruce_Inverso.NOMBRE_COMERCIAL","qCardinal":954,"qTags":["$text"],"qSrcTables":["Empresas_Aportantes_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla3_Cruce_Inverso.CLASIFICACION","qCardinal":3,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla3_Cruce_Inverso.ESTADO_AFILIACION","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla3_Cruce_Inverso.FECHA_ACTIVACION","qCardinal":736,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla3_Cruce_Inverso.FECHA_DESAFILIACION","qCardinal":13,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla3_Cruce_Inverso.CANTIDAD_TRABAJADORES_ACTIVOS","qCardinal":35,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla3_Cruce_Inverso.ESTADO_CARTERA_APORTES","qCardinal":2,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla3_Cruce_Inverso.VALOR_RECAUDO_APORTES_ULTIMO_PERIODO_PAGADO","qCardinal":522,"qTags":["$numeric"],"qSrcTables":["Empresas_Aportantes_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla3_Cruce_Inverso.PERIODO_APORTES_ASOCIADO_RECAUDO_INFORMADO","qCardinal":26,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla3_Cruce_Inverso.VALIDACION_3","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla5.TIP_IDENTIFICACION","qCardinal":3,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla5"]}
+{"qName":"Empresas_Aportantes_Malla5.NUM_IDENTIFICACION","qCardinal":15050,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla5"]}
+{"qName":"Empresas_Aportantes_Malla5.NOM_EMPRESA","qCardinal":14857,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla5"]}
+{"qName":"Empresas_Aportantes_Malla5.COD_MUNICIPIO_DANE","qCardinal":135,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla5"]}
+{"qName":"Empresas_Aportantes_Malla5.DIR_CORRESPONDECIA","qCardinal":13353,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla5"]}
+{"qName":"Empresas_Aportantes_Malla5.EST_VINCULACION","qCardinal":8,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla5"]}
+{"qName":"Empresas_Aportantes_Malla5.TIP_APORTANTE","qCardinal":1,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla5"]}
+{"qName":"Empresas_Aportantes_Malla5.TIP_SECTOR","qCardinal":3,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla5"]}
+{"qName":"Empresas_Aportantes_Malla5.ACT_ECONOMICA","qCardinal":418,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla5"]}
+{"qName":"Empresas_Aportantes_Malla5.SIT_EMPRESA_LEY_1429","qCardinal":7,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla5"]}
+{"qName":"Empresas_Aportantes_Malla5.PRO_PAGO_LEY_1429","qCardinal":3,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla5"]}
+{"qName":"Empresas_Aportantes_Malla5.SIT_EMPRESA_LEY_590","qCardinal":3,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla5"]}
+{"qName":"Empresas_Aportantes_Malla5.PRO_PAGO_LEY_590","qCardinal":5,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla5"]}
+{"qName":"Empresas_Aportantes_Malla5.APO_TOTAL_MENSUAL","qCardinal":5247,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla5"]}
+{"qName":"Empresas_Aportantes_Malla5.INT_PAGADOS_MORA","qCardinal":292,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla5"]}
+{"qName":"Empresas_Aportantes_Malla5.VAL_REINTEGROS","qCardinal":19,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla5"]}
+{"qName":"Empresas_Aportantes_Malla5.TIPO_IDENTIFICACION","qCardinal":2,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla5"]}
+{"qName":"Empresas_Aportantes_Malla5.ESTADO_AFILIACION","qCardinal":2,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla5"]}
+{"qName":"Empresas_Aportantes_Malla5.FECHA_ACTIVACION","qCardinal":230,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla5"]}
+{"qName":"Empresas_Aportantes_Malla5.FECHA_DESAFILIACION","qCardinal":16,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla5"]}
+{"qName":"Empresas_Aportantes_Malla5.CANTIDAD_TRABAJADORES_ACTIVOS","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla5"]}
+{"qName":"Empresas_Aportantes_Malla5.VALOR_RECAUDO_APORTES_ULTIMO_PERIODO_PAGADO","qCardinal":252,"qTags":["$numeric"],"qSrcTables":["Empresas_Aportantes_Malla5"]}
+{"qName":"Empresas_Aportantes_Malla5.PERIODO_APORTES_ASOCIADO_RECAUDO_INFORMADO","qCardinal":24,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla5"]}
+{"qName":"Empresas_Aportantes_Malla5.Tipo Aportante","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla5"]}
+{"qName":"Empresas_Aportantes_Malla5.D\u00edgito de verificaci\u00f3n","qCardinal":11,"qTags":["$text","$numeric","$integer","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla5"]}
+{"qName":"Empresas_Aportantes_Malla5.Nombre \/ Razon social","qCardinal":105,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla5"]}
+{"qName":"Empresas_Aportantes_Malla5.Periodo","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla5"]}
+{"qName":"Empresas_Aportantes_Malla5.VALIDACION_5","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla5"]}
+{"qName":"Empresas_Aportantes_Malla5.VALIDACION_5_NO_ENCONTRADAS","qCardinal":2,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla5"]}
+{"qName":"Empresas_Aportantes_Malla5.A\u00d1O","qCardinal":1,"qTags":["$text","$numeric","$integer","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla5"]}
+{"qName":"Empresas_Aportantes_Malla5.MES","qCardinal":1,"qTags":["$text","$numeric","$integer","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla5"]}
+{"qName":"Empresas_Aportantes_Malla5.DIA","qCardinal":1,"qTags":["$text","$numeric","$integer","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla5"]}
+{"qName":"Empresas_Aportantes_Malla6.TIP_IDENTIFICACION","qCardinal":7,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla6"]}
+{"qName":"Empresas_Aportantes_Malla6.NUM_IDENTIFICACION","qCardinal":20022,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla6"]}
+{"qName":"Empresas_Aportantes_Malla6.NOM_EMPRESA","qCardinal":20015,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla6"]}
+{"qName":"Empresas_Aportantes_Malla6.COD_MUNICIPIO_DANE","qCardinal":136,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla6"]}
+{"qName":"Empresas_Aportantes_Malla6.DIR_CORRESPONDECIA","qCardinal":18166,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla6"]}
+{"qName":"Empresas_Aportantes_Malla6.EST_VINCULACION","qCardinal":9,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla6"]}
+{"qName":"Empresas_Aportantes_Malla6.TIP_APORTANTE","qCardinal":5,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla6"]}
+{"qName":"Empresas_Aportantes_Malla6.TIP_SECTOR","qCardinal":4,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla6"]}
+{"qName":"Empresas_Aportantes_Malla6.ACT_ECONOMICA","qCardinal":419,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla6"]}
+{"qName":"Empresas_Aportantes_Malla6.SIT_EMPRESA_LEY_1429","qCardinal":8,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla6"]}
+{"qName":"Empresas_Aportantes_Malla6.PRO_PAGO_LEY_1429","qCardinal":4,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla6"]}
+{"qName":"Empresas_Aportantes_Malla6.SIT_EMPRESA_LEY_590","qCardinal":4,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla6"]}
+{"qName":"Empresas_Aportantes_Malla6.PRO_PAGO_LEY_590","qCardinal":6,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla6"]}
+{"qName":"Empresas_Aportantes_Malla6.APO_TOTAL_MENSUAL","qCardinal":5504,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla6"]}
+{"qName":"Empresas_Aportantes_Malla6.INT_PAGADOS_MORA","qCardinal":312,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla6"]}
+{"qName":"Empresas_Aportantes_Malla6.VAL_REINTEGROS","qCardinal":24,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla6"]}
+{"qName":"Empresas_Aportantes_Malla6.VALIDACION_6","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla6"]}
+{"qName":"Empresas_Aportantes_Malla6.VALIDACION_9","qCardinal":0,"qTags":[],"qSrcTables":["Empresas_Aportantes_Malla6"]}
+{"qName":"Empresas_Aportantes_Malla6.VALIDACION_16","qCardinal":135,"qTags":["$text"],"qSrcTables":["Empresas_Aportantes_Malla6"]}
+{"qName":"Empresas_Aportantes_Malla6.VALIDACION_17_NOM_EMPRESA","qCardinal":0,"qTags":[],"qSrcTables":["Empresas_Aportantes_Malla6"]}
+{"qName":"Empresas_Aportantes_Malla6.VALIDACION_17_DIR_CORRESPONDECIA","qCardinal":0,"qTags":[],"qSrcTables":["Empresas_Aportantes_Malla6"]}
+{"qName":"Empresas_Aportantes_Malla6.VALIDACION_18_TIP_IDENTIFICACION","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla6"]}
+{"qName":"Empresas_Aportantes_Malla6.VALIDACION_18_NUM_IDENTIFICACION","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla6"]}
+{"qName":"Empresas_Aportantes_Malla6.VALIDACION_18_NOM_EMPRESA","qCardinal":0,"qTags":[],"qSrcTables":["Empresas_Aportantes_Malla6"]}
+{"qName":"Empresas_Aportantes_Malla6.VALIDACION_18_COD_MUNICIPIO_DANE","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla6"]}
+{"qName":"Empresas_Aportantes_Malla6.VALIDACION_18_EST_VINCULACION","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla6"]}
+{"qName":"Empresas_Aportantes_Malla6.VALIDACION_18_TIP_APORTANTE","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla6"]}
+{"qName":"Empresas_Aportantes_Malla6.VALIDACION_18_TIP_SECTOR","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla6"]}
+{"qName":"Empresas_Aportantes_Malla6.VALIDACION_18_ACT_ECONOMICA","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla6"]}
+{"qName":"Empresas_Aportantes_Malla6.VALIDACION_18_ACT_ECONOMICA_TIPO_APORTANTE","qCardinal":0,"qTags":[],"qSrcTables":["Empresas_Aportantes_Malla6"]}
+{"qName":"Empresas_Aportantes_Malla6.VALIDACION_18_SIT_EMPRESA_LEY_1429","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla6"]}
+{"qName":"Empresas_Aportantes_Malla6.VALIDACION_18_PRO_PAGO_LEY_1429","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla6"]}
+{"qName":"Empresas_Aportantes_Malla6.VALIDACION_18_SIT_EMPRESA_LEY_590","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla6"]}
+{"qName":"Empresas_Aportantes_Malla6.VALIDACION_18_PRO_PAGO_LEY_590","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla6"]}
+{"qName":"Empresas_Aportantes_Malla6.VALIDACION_18_APO_TOTAL_MENSUAL","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla6"]}
+{"qName":"Empresas_Aportantes_Malla6.VALIDACION_18_INT_PAGADOS_MORA","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla6"]}
+{"qName":"Empresas_Aportantes_Malla6.VALIDACION_18_VAL_REINTEGROS","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla6"]}
+{"qName":"Empresas_Aportantes_Malla6.A\u00d1O","qCardinal":1,"qTags":["$text","$numeric","$integer","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla6"]}
+{"qName":"Empresas_Aportantes_Malla6.MES","qCardinal":1,"qTags":["$text","$numeric","$integer","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla6"]}
+{"qName":"Empresas_Aportantes_Malla6.DIA","qCardinal":1,"qTags":["$text","$numeric","$integer","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla6"]}
+{"qName":"Empresas_Aportantes_Malla6_Nombre_Empresa.TIP_IDENTIFICACION","qCardinal":7,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla6_Nombre_Empresa"]}
+{"qName":"Empresas_Aportantes_Malla6_Nombre_Empresa.NUM_IDENTIFICACION","qCardinal":20022,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla6_Nombre_Empresa"]}
+{"qName":"Empresas_Aportantes_Malla6_Nombre_Empresa.NOM_EMPRESA","qCardinal":20015,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla6_Nombre_Empresa"]}
+{"qName":"Empresas_Aportantes_Malla6_Nombre_Empresa.COD_MUNICIPIO_DANE","qCardinal":136,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla6_Nombre_Empresa"]}
+{"qName":"Empresas_Aportantes_Malla6_Nombre_Empresa.DIR_CORRESPONDECIA","qCardinal":18166,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla6_Nombre_Empresa"]}
+{"qName":"Empresas_Aportantes_Malla6_Nombre_Empresa.EST_VINCULACION","qCardinal":9,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla6_Nombre_Empresa"]}
+{"qName":"Empresas_Aportantes_Malla6_Nombre_Empresa.TIP_APORTANTE","qCardinal":5,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla6_Nombre_Empresa"]}
+{"qName":"Empresas_Aportantes_Malla6_Nombre_Empresa.TIP_SECTOR","qCardinal":4,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla6_Nombre_Empresa"]}
+{"qName":"Empresas_Aportantes_Malla6_Nombre_Empresa.ACT_ECONOMICA","qCardinal":419,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla6_Nombre_Empresa"]}
+{"qName":"Empresas_Aportantes_Malla6_Nombre_Empresa.SIT_EMPRESA_LEY_1429","qCardinal":8,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla6_Nombre_Empresa"]}
+{"qName":"Empresas_Aportantes_Malla6_Nombre_Empresa.PRO_PAGO_LEY_1429","qCardinal":4,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla6_Nombre_Empresa"]}
+{"qName":"Empresas_Aportantes_Malla6_Nombre_Empresa.SIT_EMPRESA_LEY_590","qCardinal":4,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla6_Nombre_Empresa"]}
+{"qName":"Empresas_Aportantes_Malla6_Nombre_Empresa.PRO_PAGO_LEY_590","qCardinal":6,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla6_Nombre_Empresa"]}
+{"qName":"Empresas_Aportantes_Malla6_Nombre_Empresa.APO_TOTAL_MENSUAL","qCardinal":5504,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla6_Nombre_Empresa"]}
+{"qName":"Empresas_Aportantes_Malla6_Nombre_Empresa.INT_PAGADOS_MORA","qCardinal":312,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla6_Nombre_Empresa"]}
+{"qName":"Empresas_Aportantes_Malla6_Nombre_Empresa.VAL_REINTEGROS","qCardinal":24,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla6_Nombre_Empresa"]}
+{"qName":"Empresas_Aportantes_Malla6_Nombre_Empresa.RAZON_SOCIAL_REPORTE_29","qCardinal":14924,"qTags":["$text"],"qSrcTables":["Empresas_Aportantes_Malla6_Nombre_Empresa"]}
+{"qName":"Empresas_Aportantes_Malla6_Nombre_Empresa.VALIDACION_18_NOMBRE_EMPRESA","qCardinal":2,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla6_Nombre_Empresa"]}
+{"qName":"Empresas_Aportantes_Malla6_TipoDoc_Empresa.TIP_IDENTIFICACION","qCardinal":7,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla6_TipoDoc_Empresa"]}
+{"qName":"Empresas_Aportantes_Malla6_TipoDoc_Empresa.TIP_IDENTIFICACION_REPORTE_29","qCardinal":3,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla6_TipoDoc_Empresa"]}
+{"qName":"Empresas_Aportantes_Malla6_TipoDoc_Empresa.NUM_IDENTIFICACION","qCardinal":20022,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla6_TipoDoc_Empresa"]}
+{"qName":"Empresas_Aportantes_Malla6_TipoDoc_Empresa.NOM_EMPRESA","qCardinal":20015,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla6_TipoDoc_Empresa"]}
+{"qName":"Empresas_Aportantes_Malla6_TipoDoc_Empresa.COD_MUNICIPIO_DANE","qCardinal":136,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla6_TipoDoc_Empresa"]}
+{"qName":"Empresas_Aportantes_Malla6_TipoDoc_Empresa.DIR_CORRESPONDECIA","qCardinal":18166,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla6_TipoDoc_Empresa"]}
+{"qName":"Empresas_Aportantes_Malla6_TipoDoc_Empresa.EST_VINCULACION","qCardinal":9,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla6_TipoDoc_Empresa"]}
+{"qName":"Empresas_Aportantes_Malla6_TipoDoc_Empresa.TIP_APORTANTE","qCardinal":5,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla6_TipoDoc_Empresa"]}
+{"qName":"Empresas_Aportantes_Malla6_TipoDoc_Empresa.TIP_SECTOR","qCardinal":4,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla6_TipoDoc_Empresa"]}
+{"qName":"Empresas_Aportantes_Malla6_TipoDoc_Empresa.ACT_ECONOMICA","qCardinal":419,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla6_TipoDoc_Empresa"]}
+{"qName":"Empresas_Aportantes_Malla6_TipoDoc_Empresa.SIT_EMPRESA_LEY_1429","qCardinal":8,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla6_TipoDoc_Empresa"]}
+{"qName":"Empresas_Aportantes_Malla6_TipoDoc_Empresa.PRO_PAGO_LEY_1429","qCardinal":4,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla6_TipoDoc_Empresa"]}
+{"qName":"Empresas_Aportantes_Malla6_TipoDoc_Empresa.SIT_EMPRESA_LEY_590","qCardinal":4,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla6_TipoDoc_Empresa"]}
+{"qName":"Empresas_Aportantes_Malla6_TipoDoc_Empresa.PRO_PAGO_LEY_590","qCardinal":6,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla6_TipoDoc_Empresa"]}
+{"qName":"Empresas_Aportantes_Malla6_TipoDoc_Empresa.APO_TOTAL_MENSUAL","qCardinal":5504,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla6_TipoDoc_Empresa"]}
+{"qName":"Empresas_Aportantes_Malla6_TipoDoc_Empresa.INT_PAGADOS_MORA","qCardinal":312,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla6_TipoDoc_Empresa"]}
+{"qName":"Empresas_Aportantes_Malla6_TipoDoc_Empresa.VAL_REINTEGROS","qCardinal":24,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla6_TipoDoc_Empresa"]}
+{"qName":"Empresas_Aportantes_Malla6_TipoDoc_Empresa.RAZON_SOCIAL_REPORTE_29","qCardinal":15134,"qTags":["$text"],"qSrcTables":["Empresas_Aportantes_Malla6_TipoDoc_Empresa"]}
+{"qName":"Empresas_Aportantes_Malla6_TipoDoc_Empresa.VALIDACION_18_TIPO_DOC_EMPRESA","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla6_TipoDoc_Empresa"]}
+{"qName":"Empresas_Aportantes_Malla7.TIP_IDENTIFICACION","qCardinal":7,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla7"]}
+{"qName":"Empresas_Aportantes_Malla7.NUM_IDENTIFICACION","qCardinal":20022,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla7"]}
+{"qName":"Empresas_Aportantes_Malla7.NOM_EMPRESA","qCardinal":20015,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla7"]}
+{"qName":"Empresas_Aportantes_Malla7.COD_MUNICIPIO_DANE","qCardinal":136,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla7"]}
+{"qName":"Empresas_Aportantes_Malla7.DIR_CORRESPONDECIA","qCardinal":18166,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla7"]}
+{"qName":"Empresas_Aportantes_Malla7.EST_VINCULACION","qCardinal":9,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla7"]}
+{"qName":"Empresas_Aportantes_Malla7.TIP_APORTANTE","qCardinal":5,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla7"]}
+{"qName":"Empresas_Aportantes_Malla7.TIP_SECTOR","qCardinal":4,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla7"]}
+{"qName":"Empresas_Aportantes_Malla7.ACT_ECONOMICA","qCardinal":419,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla7"]}
+{"qName":"Empresas_Aportantes_Malla7.SIT_EMPRESA_LEY_1429","qCardinal":8,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla7"]}
+{"qName":"Empresas_Aportantes_Malla7.PRO_PAGO_LEY_1429","qCardinal":4,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla7"]}
+{"qName":"Empresas_Aportantes_Malla7.SIT_EMPRESA_LEY_590","qCardinal":4,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla7"]}
+{"qName":"Empresas_Aportantes_Malla7.PRO_PAGO_LEY_590","qCardinal":6,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla7"]}
+{"qName":"Empresas_Aportantes_Malla7.APO_TOTAL_MENSUAL","qCardinal":5504,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla7"]}
+{"qName":"Empresas_Aportantes_Malla7.INT_PAGADOS_MORA","qCardinal":312,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla7"]}
+{"qName":"Empresas_Aportantes_Malla7.VAL_REINTEGROS","qCardinal":24,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla7"]}
+{"qName":"Empresas_Aportantes_Malla7.NOMBRE_EMPRESA","qCardinal":0,"qTags":["$text"],"qSrcTables":["Empresas_Aportantes_Malla7"]}
+{"qName":"Empresas_Aportantes_Malla7.BEN_CUOTA_MONETARIA","qCardinal":0,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla7"]}
+{"qName":"Empresas_Aportantes_Malla7.VALIDACION_7","qCardinal":0,"qTags":[],"qSrcTables":["Empresas_Aportantes_Malla7"]}
+{"qName":"Empresas_Aportantes_Malla7.VALIDACION_7_NO_ENCONTRADAS","qCardinal":0,"qTags":[],"qSrcTables":["Empresas_Aportantes_Malla7"]}
+{"qName":"Empresas_Aportantes_Malla7.A\u00d1O","qCardinal":0,"qTags":["$text","$numeric","$integer","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla7"]}
+{"qName":"Empresas_Aportantes_Malla7.MES","qCardinal":0,"qTags":["$text","$numeric","$integer","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla7"]}
+{"qName":"Empresas_Aportantes_Malla7.DIA","qCardinal":0,"qTags":["$text","$numeric","$integer","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla7"]}
+{"qName":"Empresas_Aportantes_Malla8.TIP_IDENTIFICACION","qCardinal":7,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla8"]}
+{"qName":"Empresas_Aportantes_Malla8.NUM_IDENTIFICACION","qCardinal":20394,"qTags":["$text","$numeric","$integer","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla8"]}
+{"qName":"Empresas_Aportantes_Malla8.TIP_APORTANTE","qCardinal":5,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla8"]}
+{"qName":"Empresas_Aportantes_Malla8.NOM_EMPRESA","qCardinal":20015,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla8"]}
+{"qName":"Empresas_Aportantes_Malla8.COD_MUNICIPIO_DANE","qCardinal":136,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla8"]}
+{"qName":"Empresas_Aportantes_Malla8.DIR_CORRESPONDECIA","qCardinal":18166,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla8"]}
+{"qName":"Empresas_Aportantes_Malla8.EST_VINCULACION","qCardinal":9,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla8"]}
+{"qName":"Empresas_Aportantes_Malla8.TIP_SECTOR","qCardinal":4,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla8"]}
+{"qName":"Empresas_Aportantes_Malla8.ACT_ECONOMICA","qCardinal":419,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla8"]}
+{"qName":"Empresas_Aportantes_Malla8.SIT_EMPRESA_LEY_1429","qCardinal":8,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla8"]}
+{"qName":"Empresas_Aportantes_Malla8.PRO_PAGO_LEY_1429","qCardinal":4,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla8"]}
+{"qName":"Empresas_Aportantes_Malla8.SIT_EMPRESA_LEY_590","qCardinal":4,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla8"]}
+{"qName":"Empresas_Aportantes_Malla8.PRO_PAGO_LEY_590","qCardinal":6,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla8"]}
+{"qName":"Empresas_Aportantes_Malla8.APO_TOTAL_MENSUAL","qCardinal":5504,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla8"]}
+{"qName":"Empresas_Aportantes_Malla8.INT_PAGADOS_MORA","qCardinal":312,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla8"]}
+{"qName":"Empresas_Aportantes_Malla8.VAL_REINTEGROS","qCardinal":24,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla8"]}
+{"qName":"Empresas_Aportantes_Malla8.D\u00edgito de verificaci\u00f3n","qCardinal":11,"qTags":["$text","$numeric","$integer","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla8"]}
+{"qName":"Empresas_Aportantes_Malla8.Nombre \/ Razon social","qCardinal":7281,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla8"]}
+{"qName":"Empresas_Aportantes_Malla8.Tipo Aportante","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla8"]}
+{"qName":"Empresas_Aportantes_Malla8.Periodo","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla8"]}
+{"qName":"Empresas_Aportantes_Malla8.TIPO_IDENTIFICACION","qCardinal":3,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla8"]}
+{"qName":"Empresas_Aportantes_Malla8.VALIDACION_8","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla8"]}
+{"qName":"Empresas_Aportantes_Malla8.VALIDACION_8_NO_ENCONTRADAS","qCardinal":2,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla8"]}
+{"qName":"Empresas_Aportantes_Malla8.A\u00d1O","qCardinal":1,"qTags":["$text","$numeric","$integer","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla8"]}
+{"qName":"Empresas_Aportantes_Malla8.MES","qCardinal":1,"qTags":["$text","$numeric","$integer","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla8"]}
+{"qName":"Empresas_Aportantes_Malla8.DIA","qCardinal":1,"qTags":["$text","$numeric","$integer","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla8"]}
+{"qName":"Empresas_Aportantes_Malla8_1_Unidas.TIP_IDENTIFICACION","qCardinal":7,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla8_1_Unidas"]}
+{"qName":"Empresas_Aportantes_Malla8_1_Unidas.NUM_IDENTIFICACION","qCardinal":20022,"qTags":["$text","$numeric","$integer","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla8_1_Unidas"]}
+{"qName":"Empresas_Aportantes_Malla8_1_Unidas.NOM_EMPRESA","qCardinal":20015,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla8_1_Unidas"]}
+{"qName":"Empresas_Aportantes_Malla8_1_Unidas.COD_MUNICIPIO_DANE","qCardinal":136,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla8_1_Unidas"]}
+{"qName":"Empresas_Aportantes_Malla8_1_Unidas.DIR_CORRESPONDECIA","qCardinal":18166,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla8_1_Unidas"]}
+{"qName":"Empresas_Aportantes_Malla8_1_Unidas.EST_VINCULACION","qCardinal":9,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla8_1_Unidas"]}
+{"qName":"Empresas_Aportantes_Malla8_1_Unidas.TIP_APORTANTE","qCardinal":5,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla8_1_Unidas"]}
+{"qName":"Empresas_Aportantes_Malla8_1_Unidas.TIP_SECTOR","qCardinal":4,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla8_1_Unidas"]}
+{"qName":"Empresas_Aportantes_Malla8_1_Unidas.ACT_ECONOMICA","qCardinal":419,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla8_1_Unidas"]}
+{"qName":"Empresas_Aportantes_Malla8_1_Unidas.SIT_EMPRESA_LEY_1429","qCardinal":8,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla8_1_Unidas"]}
+{"qName":"Empresas_Aportantes_Malla8_1_Unidas.PRO_PAGO_LEY_1429","qCardinal":4,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla8_1_Unidas"]}
+{"qName":"Empresas_Aportantes_Malla8_1_Unidas.SIT_EMPRESA_LEY_590","qCardinal":4,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla8_1_Unidas"]}
+{"qName":"Empresas_Aportantes_Malla8_1_Unidas.PRO_PAGO_LEY_590","qCardinal":6,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla8_1_Unidas"]}
+{"qName":"Empresas_Aportantes_Malla8_1_Unidas.APO_TOTAL_MENSUAL","qCardinal":5504,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla8_1_Unidas"]}
+{"qName":"Empresas_Aportantes_Malla8_1_Unidas.INT_PAGADOS_MORA","qCardinal":312,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla8_1_Unidas"]}
+{"qName":"Empresas_Aportantes_Malla8_1_Unidas.VAL_REINTEGROS","qCardinal":24,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla8_1_Unidas"]}
+{"qName":"Empresas_Aportantes_Malla8_1_Unidas.TIPO_IDENTIFICACION","qCardinal":5,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla8_1_Unidas"]}
+{"qName":"Empresas_Aportantes_Malla8_1_Unidas.D\u00edgito de verificaci\u00f3n","qCardinal":11,"qTags":["$text","$numeric","$integer","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla8_1_Unidas"]}
+{"qName":"Empresas_Aportantes_Malla8_1_Unidas.Nombre \/ Razon social","qCardinal":8827,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla8_1_Unidas"]}
+{"qName":"Empresas_Aportantes_Malla8_1_Unidas.Periodo","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla8_1_Unidas"]}
+{"qName":"Empresas_Aportantes_Malla8_1_Unidas.VALIDACION_8_FINAL","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla8_1_Unidas"]}
+{"qName":"Empresas_Aportantes_Malla8_1_Unidas.VALIDACION_8_FINAL_NO_ENCONTRADAS","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla8_1_Unidas"]}
+{"qName":"Empresas_Aportantes_Malla8_1_Unidas.A\u00d1O","qCardinal":1,"qTags":["$text","$numeric","$integer","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla8_1_Unidas"]}
+{"qName":"Empresas_Aportantes_Malla8_1_Unidas.MES","qCardinal":1,"qTags":["$text","$numeric","$integer","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla8_1_Unidas"]}
+{"qName":"Empresas_Aportantes_Malla8_1_Unidas.DIA","qCardinal":1,"qTags":["$text","$numeric","$integer","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla8_1_Unidas"]}
+{"qName":"Empresas_Aportantes_Malla9.TIP_IDENTIFICACION","qCardinal":7,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla9"]}
+{"qName":"Empresas_Aportantes_Malla9.NUM_IDENTIFICACION","qCardinal":20202,"qTags":["$text","$numeric","$integer","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla9"]}
+{"qName":"Empresas_Aportantes_Malla9.NOM_EMPRESA","qCardinal":20015,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla9"]}
+{"qName":"Empresas_Aportantes_Malla9.COD_MUNICIPIO_DANE","qCardinal":136,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla9"]}
+{"qName":"Empresas_Aportantes_Malla9.DIR_CORRESPONDECIA","qCardinal":18166,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla9"]}
+{"qName":"Empresas_Aportantes_Malla9.EST_VINCULACION","qCardinal":9,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla9"]}
+{"qName":"Empresas_Aportantes_Malla9.TIP_APORTANTE","qCardinal":5,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla9"]}
+{"qName":"Empresas_Aportantes_Malla9.TIP_SECTOR","qCardinal":4,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla9"]}
+{"qName":"Empresas_Aportantes_Malla9.ACT_ECONOMICA","qCardinal":419,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla9"]}
+{"qName":"Empresas_Aportantes_Malla9.SIT_EMPRESA_LEY_1429","qCardinal":8,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla9"]}
+{"qName":"Empresas_Aportantes_Malla9.PRO_PAGO_LEY_1429","qCardinal":4,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla9"]}
+{"qName":"Empresas_Aportantes_Malla9.SIT_EMPRESA_LEY_590","qCardinal":4,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla9"]}
+{"qName":"Empresas_Aportantes_Malla9.PRO_PAGO_LEY_590","qCardinal":6,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla9"]}
+{"qName":"Empresas_Aportantes_Malla9.APO_TOTAL_MENSUAL","qCardinal":5504,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla9"]}
+{"qName":"Empresas_Aportantes_Malla9.INT_PAGADOS_MORA","qCardinal":312,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla9"]}
+{"qName":"Empresas_Aportantes_Malla9.VAL_REINTEGROS","qCardinal":24,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla9"]}
+{"qName":"Empresas_Aportantes_Malla9.RAZON_SOCIAL","qCardinal":14506,"qTags":["$text"],"qSrcTables":["Empresas_Aportantes_Malla9"]}
+{"qName":"Empresas_Aportantes_Malla9.NOMBRE_COMERCIAL","qCardinal":13935,"qTags":["$text"],"qSrcTables":["Empresas_Aportantes_Malla9"]}
+{"qName":"Empresas_Aportantes_Malla9.CLASIFICACION","qCardinal":4,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla9"]}
+{"qName":"Empresas_Aportantes_Malla9.ESTADO_AFILIACION","qCardinal":2,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla9"]}
+{"qName":"Empresas_Aportantes_Malla9.FECHA_ACTIVACION","qCardinal":4258,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla9"]}
+{"qName":"Empresas_Aportantes_Malla9.FECHA_DESAFILIACION","qCardinal":81,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla9"]}
+{"qName":"Empresas_Aportantes_Malla9.TIPO_IDENTIFICACION","qCardinal":3,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla9"]}
+{"qName":"Empresas_Aportantes_Malla9.NUMERO_IDENTIFICACION","qCardinal":14343,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla9"]}
+{"qName":"Empresas_Aportantes_Malla9.DIGITO_VERIFICACION","qCardinal":10,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla9"]}
+{"qName":"Empresas_Aportantes_Malla9.CANTIDAD_TRABAJADORES_ACTIVOS","qCardinal":266,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla9"]}
+{"qName":"Empresas_Aportantes_Malla9.ESTADO_CARTERA_APORTES","qCardinal":2,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla9"]}
+{"qName":"Empresas_Aportantes_Malla9.VALOR_RECAUDO_APORTES_ULTIMO_PERIODO_PAGADO","qCardinal":5900,"qTags":["$numeric"],"qSrcTables":["Empresas_Aportantes_Malla9"]}
+{"qName":"Empresas_Aportantes_Malla9.PERIODO_APORTES_ASOCIADO_RECAUDO_INFORMADO","qCardinal":35,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla9"]}
+{"qName":"Empresas_Aportantes_Malla9.VALIDACION_9","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla9"]}
+{"qName":"Empresas_Aportantes_Malla9.VALIDACION_9_NO_ENCONTRADAS","qCardinal":2,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla9"]}
+{"qName":"Empresas_Aportantes_Malla9.A\u00d1O","qCardinal":1,"qTags":["$text","$numeric","$integer","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla9"]}
+{"qName":"Empresas_Aportantes_Malla9.MES","qCardinal":1,"qTags":["$text","$numeric","$integer","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla9"]}
+{"qName":"Empresas_Aportantes_Malla9.DIA","qCardinal":1,"qTags":["$text","$numeric","$integer","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla9"]}
+{"qName":"Empresas_Aportantes_Malla10_12.TIP_IDENTIFICACION","qCardinal":4,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla10_12"]}
+{"qName":"Empresas_Aportantes_Malla10_12.NUM_IDENTIFICACION","qCardinal":1587,"qTags":["$text","$numeric","$integer","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla10_12"]}
+{"qName":"Empresas_Aportantes_Malla10_12.NOM_EMPRESA","qCardinal":1589,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla10_12"]}
+{"qName":"Empresas_Aportantes_Malla10_12.COD_MUNICIPIO_DANE","qCardinal":28,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla10_12"]}
+{"qName":"Empresas_Aportantes_Malla10_12.DIR_CORRESPONDECIA","qCardinal":1535,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla10_12"]}
+{"qName":"Empresas_Aportantes_Malla10_12.EST_VINCULACION","qCardinal":2,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla10_12"]}
+{"qName":"Empresas_Aportantes_Malla10_12.TIP_APORTANTE","qCardinal":4,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla10_12"]}
+{"qName":"Empresas_Aportantes_Malla10_12.TIP_SECTOR","qCardinal":2,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla10_12"]}
+{"qName":"Empresas_Aportantes_Malla10_12.ACT_ECONOMICA","qCardinal":19,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla10_12"]}
+{"qName":"Empresas_Aportantes_Malla10_12.SIT_EMPRESA_LEY_1429","qCardinal":1,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla10_12"]}
+{"qName":"Empresas_Aportantes_Malla10_12.PRO_PAGO_LEY_1429","qCardinal":1,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla10_12"]}
+{"qName":"Empresas_Aportantes_Malla10_12.SIT_EMPRESA_LEY_590","qCardinal":1,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla10_12"]}
+{"qName":"Empresas_Aportantes_Malla10_12.PRO_PAGO_LEY_590","qCardinal":1,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla10_12"]}
+{"qName":"Empresas_Aportantes_Malla10_12.APO_TOTAL_MENSUAL","qCardinal":200,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla10_12"]}
+{"qName":"Empresas_Aportantes_Malla10_12.INT_PAGADOS_MORA","qCardinal":37,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla10_12"]}
+{"qName":"Empresas_Aportantes_Malla10_12.VAL_REINTEGROS","qCardinal":2,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla10_12"]}
+{"qName":"Empresas_Aportantes_Malla10_12.Fecha expedici\u00f3n documento","qCardinal":838,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla10_12"]}
+{"qName":"Empresas_Aportantes_Malla10_12.Primer nombre","qCardinal":408,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla10_12"]}
+{"qName":"Empresas_Aportantes_Malla10_12.Segundo nombre","qCardinal":291,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla10_12"]}
+{"qName":"Empresas_Aportantes_Malla10_12.Primer Apellido","qCardinal":365,"qTags":["$text"],"qSrcTables":["Empresas_Aportantes_Malla10_12"]}
+{"qName":"Empresas_Aportantes_Malla10_12.Segundo Apellido","qCardinal":358,"qTags":["$text"],"qSrcTables":["Empresas_Aportantes_Malla10_12"]}
+{"qName":"Empresas_Aportantes_Malla10_12.Tipo afiliaci\u00f3n","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla10_12"]}
+{"qName":"Empresas_Aportantes_Malla10_12.Estado del Afiliado Principal","qCardinal":2,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla10_12"]}
+{"qName":"Empresas_Aportantes_Malla10_12.Fecha activaci\u00f3n","qCardinal":650,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla10_12"]}
+{"qName":"Empresas_Aportantes_Malla10_12.Fecha desafiliaci\u00f3n","qCardinal":2,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla10_12"]}
+{"qName":"Empresas_Aportantes_Malla10_12.D\u00edgito de verificaci\u00f3n","qCardinal":1,"qTags":["$text","$numeric","$integer","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla10_12"]}
+{"qName":"Empresas_Aportantes_Malla10_12.Nombre \/ Razon social","qCardinal":989,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla10_12"]}
+{"qName":"Empresas_Aportantes_Malla10_12.Tipo Aportante","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla10_12"]}
+{"qName":"Empresas_Aportantes_Malla10_12.Periodo","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla10_12"]}
+{"qName":"Empresas_Aportantes_Malla10_12.TIPO_IDENTIFICACION","qCardinal":4,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla10_12"]}
+{"qName":"Empresas_Aportantes_Malla10_12.VALIDACION_10_12","qCardinal":2,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla10_12"]}
+{"qName":"Empresas_Aportantes_Malla10_12.A\u00d1O","qCardinal":1,"qTags":["$text","$numeric","$integer","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla10_12"]}
+{"qName":"Empresas_Aportantes_Malla10_12.MES","qCardinal":1,"qTags":["$text","$numeric","$integer","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla10_12"]}
+{"qName":"Empresas_Aportantes_Malla10_12.DIA","qCardinal":1,"qTags":["$text","$numeric","$integer","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla10_12"]}
+{"qName":"Empresas_Aportantes_Malla10_12_Cruce_Inverso.TIP_IDENTIFICACION","qCardinal":3,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla10_12_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla10_12_Cruce_Inverso.NUM_IDENTIFICACION","qCardinal":432,"qTags":["$text","$numeric","$integer","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla10_12_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla10_12_Cruce_Inverso.NOM_EMPRESA","qCardinal":432,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla10_12_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla10_12_Cruce_Inverso.COD_MUNICIPIO_DANE","qCardinal":23,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla10_12_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla10_12_Cruce_Inverso.DIR_CORRESPONDECIA","qCardinal":421,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla10_12_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla10_12_Cruce_Inverso.EST_VINCULACION","qCardinal":2,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla10_12_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla10_12_Cruce_Inverso.TIP_APORTANTE","qCardinal":1,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla10_12_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla10_12_Cruce_Inverso.TIP_SECTOR","qCardinal":1,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla10_12_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla10_12_Cruce_Inverso.ACT_ECONOMICA","qCardinal":1,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla10_12_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla10_12_Cruce_Inverso.SIT_EMPRESA_LEY_1429","qCardinal":1,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla10_12_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla10_12_Cruce_Inverso.PRO_PAGO_LEY_1429","qCardinal":1,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla10_12_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla10_12_Cruce_Inverso.SIT_EMPRESA_LEY_590","qCardinal":1,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla10_12_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla10_12_Cruce_Inverso.PRO_PAGO_LEY_590","qCardinal":1,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla10_12_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla10_12_Cruce_Inverso.APO_TOTAL_MENSUAL","qCardinal":53,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla10_12_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla10_12_Cruce_Inverso.INT_PAGADOS_MORA","qCardinal":9,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla10_12_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla10_12_Cruce_Inverso.VAL_REINTEGROS","qCardinal":1,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla10_12_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla10_12_Cruce_Inverso.TIPO_IDENTIFICACION","qCardinal":3,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla10_12_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla10_12_Cruce_Inverso.Fecha expedici\u00f3n documento","qCardinal":238,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla10_12_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla10_12_Cruce_Inverso.Primer nombre","qCardinal":174,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla10_12_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla10_12_Cruce_Inverso.Segundo nombre","qCardinal":137,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla10_12_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla10_12_Cruce_Inverso.Primer Apellido","qCardinal":185,"qTags":["$text"],"qSrcTables":["Empresas_Aportantes_Malla10_12_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla10_12_Cruce_Inverso.Segundo Apellido","qCardinal":191,"qTags":["$text"],"qSrcTables":["Empresas_Aportantes_Malla10_12_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla10_12_Cruce_Inverso.Tipo afiliaci\u00f3n","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla10_12_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla10_12_Cruce_Inverso.Estado del Afiliado Principal","qCardinal":2,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla10_12_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla10_12_Cruce_Inverso.Fecha activaci\u00f3n","qCardinal":250,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla10_12_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla10_12_Cruce_Inverso.Fecha desafiliaci\u00f3n","qCardinal":2,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla10_12_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla10_12_Cruce_Inverso.D\u00edgito de verificaci\u00f3n","qCardinal":1,"qTags":["$text","$numeric","$integer","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla10_12_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla10_12_Cruce_Inverso.Nombre \/ Razon social","qCardinal":182,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla10_12_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla10_12_Cruce_Inverso.Tipo Aportante","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla10_12_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla10_12_Cruce_Inverso.Periodo","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla10_12_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla10_12_Cruce_Inverso.VALIDACION_10_12","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla10_12_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla11_13.TIP_IDENTIFICACION","qCardinal":4,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla11_13"]}
+{"qName":"Empresas_Aportantes_Malla11_13.NUM_IDENTIFICACION","qCardinal":8488,"qTags":["$text","$numeric","$integer","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla11_13"]}
+{"qName":"Empresas_Aportantes_Malla11_13.NOM_EMPRESA","qCardinal":3527,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla11_13"]}
+{"qName":"Empresas_Aportantes_Malla11_13.COD_MUNICIPIO_DANE","qCardinal":28,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla11_13"]}
+{"qName":"Empresas_Aportantes_Malla11_13.DIR_CORRESPONDECIA","qCardinal":3379,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla11_13"]}
+{"qName":"Empresas_Aportantes_Malla11_13.EST_VINCULACION","qCardinal":4,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla11_13"]}
+{"qName":"Empresas_Aportantes_Malla11_13.TIP_APORTANTE","qCardinal":3,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla11_13"]}
+{"qName":"Empresas_Aportantes_Malla11_13.TIP_SECTOR","qCardinal":2,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla11_13"]}
+{"qName":"Empresas_Aportantes_Malla11_13.ACT_ECONOMICA","qCardinal":12,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla11_13"]}
+{"qName":"Empresas_Aportantes_Malla11_13.SIT_EMPRESA_LEY_1429","qCardinal":2,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla11_13"]}
+{"qName":"Empresas_Aportantes_Malla11_13.PRO_PAGO_LEY_1429","qCardinal":2,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla11_13"]}
+{"qName":"Empresas_Aportantes_Malla11_13.SIT_EMPRESA_LEY_590","qCardinal":2,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla11_13"]}
+{"qName":"Empresas_Aportantes_Malla11_13.PRO_PAGO_LEY_590","qCardinal":2,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla11_13"]}
+{"qName":"Empresas_Aportantes_Malla11_13.APO_TOTAL_MENSUAL","qCardinal":300,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla11_13"]}
+{"qName":"Empresas_Aportantes_Malla11_13.INT_PAGADOS_MORA","qCardinal":15,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla11_13"]}
+{"qName":"Empresas_Aportantes_Malla11_13.VAL_REINTEGROS","qCardinal":3,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla11_13"]}
+{"qName":"Empresas_Aportantes_Malla11_13.Fecha expedici\u00f3n documento","qCardinal":2273,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla11_13"]}
+{"qName":"Empresas_Aportantes_Malla11_13.Primer nombre","qCardinal":857,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla11_13"]}
+{"qName":"Empresas_Aportantes_Malla11_13.Segundo nombre","qCardinal":876,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla11_13"]}
+{"qName":"Empresas_Aportantes_Malla11_13.Primer Apellido","qCardinal":693,"qTags":["$text"],"qSrcTables":["Empresas_Aportantes_Malla11_13"]}
+{"qName":"Empresas_Aportantes_Malla11_13.Segundo Apellido","qCardinal":840,"qTags":["$text"],"qSrcTables":["Empresas_Aportantes_Malla11_13"]}
+{"qName":"Empresas_Aportantes_Malla11_13.Tipo afiliaci\u00f3n","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla11_13"]}
+{"qName":"Empresas_Aportantes_Malla11_13.Estado del Afiliado Principal","qCardinal":2,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla11_13"]}
+{"qName":"Empresas_Aportantes_Malla11_13.Fecha activaci\u00f3n","qCardinal":2755,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla11_13"]}
+{"qName":"Empresas_Aportantes_Malla11_13.Fecha desafiliaci\u00f3n","qCardinal":4,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla11_13"]}
+{"qName":"Empresas_Aportantes_Malla11_13.D\u00edgito de verificaci\u00f3n","qCardinal":1,"qTags":["$text","$numeric","$integer","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla11_13"]}
+{"qName":"Empresas_Aportantes_Malla11_13.Nombre \/ Razon social","qCardinal":1759,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla11_13"]}
+{"qName":"Empresas_Aportantes_Malla11_13.Tipo Aportante","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla11_13"]}
+{"qName":"Empresas_Aportantes_Malla11_13.Periodo","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla11_13"]}
+{"qName":"Empresas_Aportantes_Malla11_13.TIPO_IDENTIFICACION","qCardinal":4,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla11_13"]}
+{"qName":"Empresas_Aportantes_Malla11_13.VALIDACION_11_13","qCardinal":2,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla11_13"]}
+{"qName":"Empresas_Aportantes_Malla11_13.A\u00d1O","qCardinal":1,"qTags":["$text","$numeric","$integer","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla11_13"]}
+{"qName":"Empresas_Aportantes_Malla11_13.MES","qCardinal":1,"qTags":["$text","$numeric","$integer","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla11_13"]}
+{"qName":"Empresas_Aportantes_Malla11_13.DIA","qCardinal":1,"qTags":["$text","$numeric","$integer","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla11_13"]}
+{"qName":"Empresas_Aportantes_Malla11_13_Cruce_Inverso.TIP_IDENTIFICACION","qCardinal":4,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla11_13_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla11_13_Cruce_Inverso.NUM_IDENTIFICACION","qCardinal":3602,"qTags":["$text","$numeric","$integer","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla11_13_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla11_13_Cruce_Inverso.NOM_EMPRESA","qCardinal":3602,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla11_13_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla11_13_Cruce_Inverso.COD_MUNICIPIO_DANE","qCardinal":28,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla11_13_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla11_13_Cruce_Inverso.DIR_CORRESPONDECIA","qCardinal":3451,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla11_13_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla11_13_Cruce_Inverso.EST_VINCULACION","qCardinal":2,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla11_13_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla11_13_Cruce_Inverso.TIP_APORTANTE","qCardinal":1,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla11_13_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla11_13_Cruce_Inverso.TIP_SECTOR","qCardinal":1,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla11_13_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla11_13_Cruce_Inverso.ACT_ECONOMICA","qCardinal":1,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla11_13_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla11_13_Cruce_Inverso.SIT_EMPRESA_LEY_1429","qCardinal":1,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla11_13_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla11_13_Cruce_Inverso.PRO_PAGO_LEY_1429","qCardinal":1,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla11_13_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla11_13_Cruce_Inverso.SIT_EMPRESA_LEY_590","qCardinal":1,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla11_13_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla11_13_Cruce_Inverso.PRO_PAGO_LEY_590","qCardinal":1,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla11_13_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla11_13_Cruce_Inverso.APO_TOTAL_MENSUAL","qCardinal":316,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla11_13_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla11_13_Cruce_Inverso.INT_PAGADOS_MORA","qCardinal":7,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla11_13_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla11_13_Cruce_Inverso.VAL_REINTEGROS","qCardinal":5,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla11_13_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla11_13_Cruce_Inverso.TIPO_IDENTIFICACION","qCardinal":3,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla11_13_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla11_13_Cruce_Inverso.Fecha expedici\u00f3n documento","qCardinal":1444,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla11_13_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla11_13_Cruce_Inverso.Primer nombre","qCardinal":562,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla11_13_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla11_13_Cruce_Inverso.Segundo nombre","qCardinal":571,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla11_13_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla11_13_Cruce_Inverso.Primer Apellido","qCardinal":474,"qTags":["$text"],"qSrcTables":["Empresas_Aportantes_Malla11_13_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla11_13_Cruce_Inverso.Segundo Apellido","qCardinal":596,"qTags":["$text"],"qSrcTables":["Empresas_Aportantes_Malla11_13_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla11_13_Cruce_Inverso.Tipo afiliaci\u00f3n","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla11_13_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla11_13_Cruce_Inverso.Estado del Afiliado Principal","qCardinal":2,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla11_13_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla11_13_Cruce_Inverso.Fecha activaci\u00f3n","qCardinal":1424,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla11_13_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla11_13_Cruce_Inverso.Fecha desafiliaci\u00f3n","qCardinal":3,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla11_13_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla11_13_Cruce_Inverso.D\u00edgito de verificaci\u00f3n","qCardinal":1,"qTags":["$text","$numeric","$integer","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla11_13_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla11_13_Cruce_Inverso.Nombre \/ Razon social","qCardinal":1758,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla11_13_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla11_13_Cruce_Inverso.Tipo Aportante","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla11_13_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla11_13_Cruce_Inverso.Periodo","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla11_13_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla11_13_Cruce_Inverso.VALIDACION_11_13","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla11_13_Cruce_Inverso"]}
+{"qName":"Empresas_Aportantes_Malla14.TIP_IDENTIFICACION","qCardinal":5,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla14"]}
+{"qName":"Empresas_Aportantes_Malla14.NUM_IDENTIFICACION","qCardinal":10461,"qTags":["$text","$numeric","$integer","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla14"]}
+{"qName":"Empresas_Aportantes_Malla14.Nombre \/ Razon social","qCardinal":10480,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla14"]}
+{"qName":"Empresas_Aportantes_Malla14.D\u00edgito de verificaci\u00f3n","qCardinal":11,"qTags":["$text","$numeric","$integer","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla14"]}
+{"qName":"Empresas_Aportantes_Malla14.Tipo Aportante","qCardinal":3,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla14"]}
+{"qName":"Empresas_Aportantes_Malla14.Periodo","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla14"]}
+{"qName":"Empresas_Aportantes_Malla14.NOM_EMPRESA","qCardinal":8900,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla14"]}
+{"qName":"Empresas_Aportantes_Malla14.COD_MUNICIPIO_DANE","qCardinal":109,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla14"]}
+{"qName":"Empresas_Aportantes_Malla14.DIR_CORRESPONDECIA","qCardinal":8279,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla14"]}
+{"qName":"Empresas_Aportantes_Malla14.EST_VINCULACION","qCardinal":5,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla14"]}
+{"qName":"Empresas_Aportantes_Malla14.TIP_APORTANTE","qCardinal":3,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla14"]}
+{"qName":"Empresas_Aportantes_Malla14.TIP_SECTOR","qCardinal":3,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla14"]}
+{"qName":"Empresas_Aportantes_Malla14.ACT_ECONOMICA","qCardinal":367,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla14"]}
+{"qName":"Empresas_Aportantes_Malla14.SIT_EMPRESA_LEY_1429","qCardinal":4,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla14"]}
+{"qName":"Empresas_Aportantes_Malla14.PRO_PAGO_LEY_1429","qCardinal":3,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla14"]}
+{"qName":"Empresas_Aportantes_Malla14.SIT_EMPRESA_LEY_590","qCardinal":3,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla14"]}
+{"qName":"Empresas_Aportantes_Malla14.PRO_PAGO_LEY_590","qCardinal":5,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla14"]}
+{"qName":"Empresas_Aportantes_Malla14.APO_TOTAL_MENSUAL","qCardinal":3206,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla14"]}
+{"qName":"Empresas_Aportantes_Malla14.INT_PAGADOS_MORA","qCardinal":152,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla14"]}
+{"qName":"Empresas_Aportantes_Malla14.VAL_REINTEGROS","qCardinal":11,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla14"]}
+{"qName":"Empresas_Aportantes_Malla14.TOTAL_MONTO_APORTE","qCardinal":3324,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla14"]}
+{"qName":"Empresas_Aportantes_Malla14.TOTAL_INTERESES_MORA","qCardinal":66,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla14"]}
+{"qName":"Empresas_Aportantes_Malla14.A\u00d1O","qCardinal":1,"qTags":["$text","$numeric","$integer","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla14"]}
+{"qName":"Empresas_Aportantes_Malla14.MES","qCardinal":1,"qTags":["$text","$numeric","$integer","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla14"]}
+{"qName":"Empresas_Aportantes_Malla14.DIA","qCardinal":1,"qTags":["$text","$numeric","$integer","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla14"]}
+{"qName":"Empresas_Aportantes_Malla14.Tipo de ajuste","qCardinal":0,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla14"]}
+{"qName":"Empresas_Aportantes_Malla14.Tipo de identificaci\u00f3n aportante","qCardinal":0,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla14"]}
+{"qName":"Empresas_Aportantes_Malla14.N\u00famero de identificaci\u00f3n aportante","qCardinal":0,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla14"]}
+{"qName":"Empresas_Aportantes_Malla14.Tipo aportante","qCardinal":0,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla14"]}
+{"qName":"Empresas_Aportantes_Malla14.Fecha de recaudo","qCardinal":0,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["Empresas_Aportantes_Malla14"]}
+{"qName":"Empresas_Aportantes_Malla14.Estado del aporte","qCardinal":0,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla14"]}
+{"qName":"Empresas_Aportantes_Malla14.REINTEGROS","qCardinal":0,"qTags":[],"qSrcTables":["Empresas_Aportantes_Malla14"]}
+{"qName":"Empresas_Aportantes_Malla14.VALIDACION_14","qCardinal":0,"qTags":[],"qSrcTables":["Empresas_Aportantes_Malla14"]}
+{"qName":"Empresas_Aportantes_Malla14.TOTAL_CIERRE_CONTABLE","qCardinal":0,"qTags":[],"qSrcTables":["Empresas_Aportantes_Malla14"]}
+{"qName":"Empresas_Aportantes_Malla14.Tipo identificaci\u00f3n","qCardinal":0,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla14"]}
+{"qName":"Empresas_Aportantes_Malla14.N\u00famero identificaci\u00f3n aportante","qCardinal":0,"qTags":["$text","$numeric","$integer","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla14"]}
+{"qName":"Empresas_Aportantes_Malla14.TOTAL_MONTO_APORTE_CIERRE","qCardinal":0,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla14"]}
+{"qName":"Empresas_Aportantes_Malla14.TOTAL_MONTO_INTERESES_MORA_CIERRE","qCardinal":0,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla14"]}
+{"qName":"Empresas_Aportantes_Malla14.VALIDACION_14_CIERRE_CONTABLE","qCardinal":0,"qTags":[],"qSrcTables":["Empresas_Aportantes_Malla14"]}
+{"qName":"Empresas_Aportantes_Malla14.VALIDACION_TOTAL_CIERRE_CONTABLE","qCardinal":0,"qTags":[],"qSrcTables":["Empresas_Aportantes_Malla14"]}
+{"qName":"Empresas_Aportantes_Malla15.TIP_IDENTIFICACION","qCardinal":5,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla15"]}
+{"qName":"Empresas_Aportantes_Malla15.NUM_IDENTIFICACION","qCardinal":10461,"qTags":["$text","$numeric","$integer","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla15"]}
+{"qName":"Empresas_Aportantes_Malla15.D\u00edgito de verificaci\u00f3n","qCardinal":11,"qTags":["$text","$numeric","$integer","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla15"]}
+{"qName":"Empresas_Aportantes_Malla15.Nombre \/ Razon social","qCardinal":10480,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla15"]}
+{"qName":"Empresas_Aportantes_Malla15.Tipo Aportante","qCardinal":3,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla15"]}
+{"qName":"Empresas_Aportantes_Malla15.NOM_EMPRESA","qCardinal":8900,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla15"]}
+{"qName":"Empresas_Aportantes_Malla15.COD_MUNICIPIO_DANE","qCardinal":109,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla15"]}
+{"qName":"Empresas_Aportantes_Malla15.DIR_CORRESPONDECIA","qCardinal":8279,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla15"]}
+{"qName":"Empresas_Aportantes_Malla15.EST_VINCULACION","qCardinal":5,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla15"]}
+{"qName":"Empresas_Aportantes_Malla15.TIP_APORTANTE","qCardinal":3,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla15"]}
+{"qName":"Empresas_Aportantes_Malla15.TIP_SECTOR","qCardinal":3,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla15"]}
+{"qName":"Empresas_Aportantes_Malla15.ACT_ECONOMICA","qCardinal":367,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla15"]}
+{"qName":"Empresas_Aportantes_Malla15.SIT_EMPRESA_LEY_1429","qCardinal":4,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla15"]}
+{"qName":"Empresas_Aportantes_Malla15.PRO_PAGO_LEY_1429","qCardinal":3,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla15"]}
+{"qName":"Empresas_Aportantes_Malla15.SIT_EMPRESA_LEY_590","qCardinal":3,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla15"]}
+{"qName":"Empresas_Aportantes_Malla15.PRO_PAGO_LEY_590","qCardinal":5,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla15"]}
+{"qName":"Empresas_Aportantes_Malla15.APO_TOTAL_MENSUAL","qCardinal":3206,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla15"]}
+{"qName":"Empresas_Aportantes_Malla15.INT_PAGADOS_MORA","qCardinal":152,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla15"]}
+{"qName":"Empresas_Aportantes_Malla15.VAL_REINTEGROS","qCardinal":11,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla15"]}
+{"qName":"Empresas_Aportantes_Malla15.Periodo","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla15"]}
+{"qName":"Empresas_Aportantes_Malla15.TOTAL_MONTO_APORTE","qCardinal":3324,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla15"]}
+{"qName":"Empresas_Aportantes_Malla15.TOTAL_INTERESES_MORA","qCardinal":66,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla15"]}
+{"qName":"Empresas_Aportantes_Malla15.A\u00d1O","qCardinal":1,"qTags":["$text","$numeric","$integer","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla15"]}
+{"qName":"Empresas_Aportantes_Malla15.MES","qCardinal":1,"qTags":["$text","$numeric","$integer","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla15"]}
+{"qName":"Empresas_Aportantes_Malla15.DIA","qCardinal":1,"qTags":["$text","$numeric","$integer","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla15"]}
+{"qName":"Empresas_Aportantes_Malla15.Tipo identificaci\u00f3n","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla15"]}
+{"qName":"Empresas_Aportantes_Malla15.N\u00famero identificaci\u00f3n aportante","qCardinal":419,"qTags":["$text","$numeric","$integer","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla15"]}
+{"qName":"Empresas_Aportantes_Malla15.TOTAL_MONTO_APORTE_CIERRE","qCardinal":273,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla15"]}
+{"qName":"Empresas_Aportantes_Malla15.TOTAL_MONTO_INTERESES_MORA_CIERRE","qCardinal":1,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla15"]}
+{"qName":"Empresas_Aportantes_Malla15.VALIDACION_15","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla15"]}
+{"qName":"Empresas_Aportantes_Malla15.VALIDACION_TOTAL_INTERESES_MORA","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla15"]}
+{"qName":"Empresas_Aportantes_Malla16.LLAVE","qCardinal":19,"qTags":["$text","$numeric","$integer","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla16"]}
+{"qName":"Empresas_Aportantes_Malla16.TIP_IDENTIFICACION_EMPRESA","qCardinal":1,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla16"]}
+{"qName":"Empresas_Aportantes_Malla16.NUM_IDENTIFICACION_EMPRESA","qCardinal":19,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla16"]}
+{"qName":"Empresas_Aportantes_Malla16.TIP_IDENTIFICACION_AFILIADO","qCardinal":1,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla16"]}
+{"qName":"Empresas_Aportantes_Malla16.NUM_IDENTIFICACION_AFILIADO","qCardinal":19,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla16"]}
+{"qName":"Empresas_Aportantes_Malla16.PRI_NOMBRE","qCardinal":13,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla16"]}
+{"qName":"Empresas_Aportantes_Malla16.SEG_NOMBRE","qCardinal":12,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla16"]}
+{"qName":"Empresas_Aportantes_Malla16.PRI_APELLIDO","qCardinal":19,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla16"]}
+{"qName":"Empresas_Aportantes_Malla16.SEG_APELLIDO","qCardinal":16,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla16"]}
+{"qName":"Empresas_Aportantes_Malla16.FEC_NACIMIENTO","qCardinal":19,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla16"]}
+{"qName":"Empresas_Aportantes_Malla16.GENERO_CCF","qCardinal":2,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla16"]}
+{"qName":"Empresas_Aportantes_Malla16.ORI_SEXUAL","qCardinal":1,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla16"]}
+{"qName":"Empresas_Aportantes_Malla16.NIVEL_ESCOLARIDAD","qCardinal":1,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla16"]}
+{"qName":"Empresas_Aportantes_Malla16.COD_OCUPACION_DANE","qCardinal":1,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla16"]}
+{"qName":"Empresas_Aportantes_Malla16.FACTOR_VULNERABILIDAD","qCardinal":1,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla16"]}
+{"qName":"Empresas_Aportantes_Malla16.ESTADO_CIVIL","qCardinal":2,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla16"]}
+{"qName":"Empresas_Aportantes_Malla16.PERTENENCIA_ETNICA","qCardinal":1,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla16"]}
+{"qName":"Empresas_Aportantes_Malla16.PAIS_RESIDENCIA_BENEFICIARIO","qCardinal":1,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla16"]}
+{"qName":"Empresas_Aportantes_Malla16.COD_MUNICIPIO_DANE","qCardinal":3,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla16"]}
+{"qName":"Empresas_Aportantes_Malla16.ARE_GEOGRAFICA_RESIDENCIA","qCardinal":1,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla16"]}
+{"qName":"Empresas_Aportantes_Malla16.COD_MUNICIPIO_LABOR_DANE","qCardinal":3,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla16"]}
+{"qName":"Empresas_Aportantes_Malla16.AREA_GEOGRAFICA_LABOR","qCardinal":1,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla16"]}
+{"qName":"Empresas_Aportantes_Malla16.SAL_BASICO","qCardinal":12,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla16"]}
+{"qName":"Empresas_Aportantes_Malla16.TIP_AFILIADO","qCardinal":1,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla16"]}
+{"qName":"Empresas_Aportantes_Malla16.CATEGORIA_CCF","qCardinal":1,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla16"]}
+{"qName":"Empresas_Aportantes_Malla16.BEN_CUOTA_MONETARIA","qCardinal":1,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Aportantes_Malla16"]}
+{"qName":"Empresas_Aportantes_Malla16.A\u00d1O","qCardinal":1,"qTags":["$text","$numeric","$integer","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla16"]}
+{"qName":"Empresas_Aportantes_Malla16.MES","qCardinal":1,"qTags":["$text","$numeric","$integer","$ascii"],"qSrcTables":["Empresas_Aportantes_Malla16"]}
+{"qName":"Empresas_Mora_Drive.TIP_IDENTIFICACION","qCardinal":4,"qTags":[],"qSrcTables":["Empresas_Mora_Drive"]}
+{"qName":"Empresas_Mora_Drive.NUM_IDENTIFICACION_EMPRESA","qCardinal":1510,"qTags":[],"qSrcTables":["Empresas_Mora_Drive"]}
+{"qName":"Empresas_Mora_Drive.NOM_EMPRESA","qCardinal":1510,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Drive"]}
+{"qName":"Empresas_Mora_Drive.COD_MUNICIPIO_DANE","qCardinal":68,"qTags":[],"qSrcTables":["Empresas_Mora_Drive"]}
+{"qName":"Empresas_Mora_Drive.DIR_EMPRESA","qCardinal":1450,"qTags":["$text"],"qSrcTables":["Empresas_Mora_Drive"]}
+{"qName":"Empresas_Mora_Drive.REP_LEGAL","qCardinal":1479,"qTags":["$text"],"qSrcTables":["Empresas_Mora_Drive"]}
+{"qName":"Empresas_Mora_Drive.FEC_INICIO_MORA","qCardinal":64,"qTags":[],"qSrcTables":["Empresas_Mora_Drive"]}
+{"qName":"Empresas_Mora_Drive.SAL_MORA","qCardinal":709,"qTags":[],"qSrcTables":["Empresas_Mora_Drive"]}
+{"qName":"Empresas_Mora_Drive.PER_MORA","qCardinal":4,"qTags":[],"qSrcTables":["Empresas_Mora_Drive"]}
+{"qName":"Empresas_Mora_Drive.GES_COBRO","qCardinal":2,"qTags":[],"qSrcTables":["Empresas_Mora_Drive"]}
+{"qName":"Empresas_Mora_Drive.ACU_PAGO","qCardinal":3,"qTags":[],"qSrcTables":["Empresas_Mora_Drive"]}
+{"qName":"Empresas_Mora_Drive.CAR_RECUPERADA","qCardinal":181,"qTags":[],"qSrcTables":["Empresas_Mora_Drive"]}
+{"qName":"Empresas_Mora_Drive.COR_ELECTRONICO","qCardinal":1438,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Drive"]}
+{"qName":"Empresas_Mora_Malla1.TIP_IDENTIFICACION","qCardinal":2,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla1"]}
+{"qName":"Empresas_Mora_Malla1.NUM_IDENTIFICACION_EMPRESA","qCardinal":1374,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla1"]}
+{"qName":"Empresas_Mora_Malla1.Tipo identificaci\u00f3n aportante","qCardinal":2,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla1"]}
+{"qName":"Empresas_Mora_Malla1.N\u00famero Identificaci\u00f3n aportante","qCardinal":1374,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla1"]}
+{"qName":"Empresas_Mora_Malla1.Raz\u00f3n social o nombre","qCardinal":1374,"qTags":["$text"],"qSrcTables":["Empresas_Mora_Malla1"]}
+{"qName":"Empresas_Mora_Malla1.Estado afiliaci\u00f3n aportante","qCardinal":3,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla1"]}
+{"qName":"Empresas_Mora_Malla1.Fecha minima de ingreso a Linea de Cobro","qCardinal":76,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["Empresas_Mora_Malla1"]}
+{"qName":"Empresas_Mora_Malla1.Fecha_fin_mes_reporte","qCardinal":1,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["Empresas_Mora_Malla1"]}
+{"qName":"Empresas_Mora_Malla1.Cantidad_dias","qCardinal":76,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla1"]}
+{"qName":"Empresas_Mora_Malla1.\u00daltima acci\u00f3n de cobro","qCardinal":4,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla1"]}
+{"qName":"Empresas_Mora_Malla1.NOM_EMPRESA","qCardinal":1342,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla1"]}
+{"qName":"Empresas_Mora_Malla1.COD_MUNICIPIO_DANE","qCardinal":67,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla1"]}
+{"qName":"Empresas_Mora_Malla1.DIR_EMPRESA","qCardinal":1290,"qTags":["$text"],"qSrcTables":["Empresas_Mora_Malla1"]}
+{"qName":"Empresas_Mora_Malla1.REP_LEGAL","qCardinal":1313,"qTags":["$text"],"qSrcTables":["Empresas_Mora_Malla1"]}
+{"qName":"Empresas_Mora_Malla1.FEC_INICIO_MORA","qCardinal":62,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["Empresas_Mora_Malla1"]}
+{"qName":"Empresas_Mora_Malla1.SAL_MORA","qCardinal":700,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla1"]}
+{"qName":"Empresas_Mora_Malla1.PER_MORA","qCardinal":3,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla1"]}
+{"qName":"Empresas_Mora_Malla1.GES_COBRO","qCardinal":1,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla1"]}
+{"qName":"Empresas_Mora_Malla1.ACU_PAGO","qCardinal":2,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla1"]}
+{"qName":"Empresas_Mora_Malla1.CAR_RECUPERADA","qCardinal":101,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla1"]}
+{"qName":"Empresas_Mora_Malla1.COR_ELECTRONICO","qCardinal":1277,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla1"]}
+{"qName":"Empresas_Mora_Malla1.VALIDACION_1","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla1"]}
+{"qName":"Empresas_Mora_Malla1.A\u00d1O","qCardinal":1,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla1"]}
+{"qName":"Empresas_Mora_Malla1.MES","qCardinal":1,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla1"]}
+{"qName":"Empresas_Mora_Malla1.DIA","qCardinal":1,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla1"]}
+{"qName":"Empresas_Mora_Malla3.TIP_IDENTIFICACION","qCardinal":2,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla3"]}
+{"qName":"Empresas_Mora_Malla3.NUM_IDENTIFICACION_EMPRESA","qCardinal":1400,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla3"]}
+{"qName":"Empresas_Mora_Malla3.Tipo identificaci\u00f3n aportante","qCardinal":2,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla3"]}
+{"qName":"Empresas_Mora_Malla3.N\u00famero Identificaci\u00f3n aportante","qCardinal":1400,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla3"]}
+{"qName":"Empresas_Mora_Malla3.Raz\u00f3n social o nombre","qCardinal":1400,"qTags":["$text"],"qSrcTables":["Empresas_Mora_Malla3"]}
+{"qName":"Empresas_Mora_Malla3.Estado afiliaci\u00f3n aportante","qCardinal":3,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla3"]}
+{"qName":"Empresas_Mora_Malla3.N\u00b0 de Operaci\u00f3n de cartera","qCardinal":1400,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla3"]}
+{"qName":"Empresas_Mora_Malla3.Nombre de Linea de Cobro","qCardinal":2,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla3"]}
+{"qName":"Empresas_Mora_Malla3.Fecha de ingreso a Linea de Cobro","qCardinal":123,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["Empresas_Mora_Malla3"]}
+{"qName":"Empresas_Mora_Malla3.Deuda","qCardinal":873,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla3"]}
+{"qName":"Empresas_Mora_Malla3.Periodo adeudado","qCardinal":68,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla3"]}
+{"qName":"Empresas_Mora_Malla3.\u00daltima acci\u00f3n de cobro","qCardinal":5,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla3"]}
+{"qName":"Empresas_Mora_Malla3.Fecha \u00faltima acci\u00f3n de cobro","qCardinal":72,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla3"]}
+{"qName":"Empresas_Mora_Malla3.Cantidad de periodos en mora","qCardinal":6,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla3"]}
+{"qName":"Empresas_Mora_Malla3.Tipo Identificaci\u00f3n Representante Legal","qCardinal":3,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla3"]}
+{"qName":"Empresas_Mora_Malla3.N\u00famero de Indentificaci\u00f3n Representante Legal","qCardinal":1369,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla3"]}
+{"qName":"Empresas_Mora_Malla3.Nombre Representante Legal","qCardinal":1369,"qTags":["$text"],"qSrcTables":["Empresas_Mora_Malla3"]}
+{"qName":"Empresas_Mora_Malla3.Correo representante legal","qCardinal":1276,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla3"]}
+{"qName":"Empresas_Mora_Malla3.Celular representante legal","qCardinal":1227,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla3"]}
+{"qName":"Empresas_Mora_Malla3.Direcci\u00f3n Ubicaci\u00f3n Principal","qCardinal":1355,"qTags":["$text"],"qSrcTables":["Empresas_Mora_Malla3"]}
+{"qName":"Empresas_Mora_Malla3.Correo electr\u00f3nico ubicaci\u00f3n principal","qCardinal":1276,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla3"]}
+{"qName":"Empresas_Mora_Malla3.C\u00f3digo Departamento","qCardinal":21,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla3"]}
+{"qName":"Empresas_Mora_Malla3.Departamento","qCardinal":21,"qTags":["$text"],"qSrcTables":["Empresas_Mora_Malla3"]}
+{"qName":"Empresas_Mora_Malla3.C\u00f3digo Municipio","qCardinal":68,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla3"]}
+{"qName":"Empresas_Mora_Malla3.Municipio","qCardinal":68,"qTags":["$text"],"qSrcTables":["Empresas_Mora_Malla3"]}
+{"qName":"Empresas_Mora_Malla3.Fecha afiliaci\u00f3n Empleador","qCardinal":993,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla3"]}
+{"qName":"Empresas_Mora_Malla3.Tel\u00e9fono fijo ubicaci\u00f3n principal","qCardinal":846,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla3"]}
+{"qName":"Empresas_Mora_Malla3.Celular ubicaci\u00f3n principal","qCardinal":1227,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla3"]}
+{"qName":"Empresas_Mora_Malla3.C\u00f3digo CIIU","qCardinal":240,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla3"]}
+{"qName":"Empresas_Mora_Malla3.Actividad econ\u00f3mica","qCardinal":240,"qTags":["$text"],"qSrcTables":["Empresas_Mora_Malla3"]}
+{"qName":"Empresas_Mora_Malla3.Clasificaci\u00f3n actividad econ\u00f3mica","qCardinal":22,"qTags":["$text"],"qSrcTables":["Empresas_Mora_Malla3"]}
+{"qName":"Empresas_Mora_Malla3.\u00daltimo per\u00edodo aporte","qCardinal":71,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla3"]}
+{"qName":"Empresas_Mora_Malla3.Fecha registro \u00faltimo aporte","qCardinal":699,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["Empresas_Mora_Malla3"]}
+{"qName":"Empresas_Mora_Malla3.Valor \u00faltimo aporte","qCardinal":600,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla3"]}
+{"qName":"Empresas_Mora_Malla3.Direcci\u00f3n Ubicaci\u00f3n judicial","qCardinal":1355,"qTags":["$text"],"qSrcTables":["Empresas_Mora_Malla3"]}
+{"qName":"Empresas_Mora_Malla3.Correo electr\u00f3nico ubicaci\u00f3n judicial","qCardinal":1276,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla3"]}
+{"qName":"Empresas_Mora_Malla3.Tel\u00e9fono fijo ubicaci\u00f3n judicial","qCardinal":846,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla3"]}
+{"qName":"Empresas_Mora_Malla3.Beneficio de ley","qCardinal":2,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla3"]}
+{"qName":"Empresas_Mora_Malla3.Responsables de contacto CCF1","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla3"]}
+{"qName":"Empresas_Mora_Malla3.Responsables de contacto CCF2","qCardinal":0,"qTags":[],"qSrcTables":["Empresas_Mora_Malla3"]}
+{"qName":"Empresas_Mora_Malla3.Fecha_fin_mes_reporte","qCardinal":1,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["Empresas_Mora_Malla3"]}
+{"qName":"Empresas_Mora_Malla3.Cantidad_dias","qCardinal":81,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla3"]}
+{"qName":"Empresas_Mora_Malla3.VALIDACION_1","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla3"]}
+{"qName":"Empresas_Mora_Malla3.VALIDACION_3","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla3"]}
+{"qName":"Empresas_Mora_Malla3.NOM_EMPRESA","qCardinal":1350,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla3"]}
+{"qName":"Empresas_Mora_Malla3.COD_MUNICIPIO_DANE","qCardinal":67,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla3"]}
+{"qName":"Empresas_Mora_Malla3.DIR_EMPRESA","qCardinal":1298,"qTags":["$text"],"qSrcTables":["Empresas_Mora_Malla3"]}
+{"qName":"Empresas_Mora_Malla3.REP_LEGAL","qCardinal":1321,"qTags":["$text"],"qSrcTables":["Empresas_Mora_Malla3"]}
+{"qName":"Empresas_Mora_Malla3.FEC_INICIO_MORA","qCardinal":62,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["Empresas_Mora_Malla3"]}
+{"qName":"Empresas_Mora_Malla3.SAL_MORA","qCardinal":704,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla3"]}
+{"qName":"Empresas_Mora_Malla3.PER_MORA","qCardinal":3,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla3"]}
+{"qName":"Empresas_Mora_Malla3.GES_COBRO","qCardinal":1,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla3"]}
+{"qName":"Empresas_Mora_Malla3.ACU_PAGO","qCardinal":2,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla3"]}
+{"qName":"Empresas_Mora_Malla3.CAR_RECUPERADA","qCardinal":102,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla3"]}
+{"qName":"Empresas_Mora_Malla3.COR_ELECTRONICO","qCardinal":1285,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla3"]}
+{"qName":"Empresas_Mora_Malla3.VALIDACION_3_UNIDAS","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla3"]}
+{"qName":"Empresas_Mora_Malla3.A\u00d1O","qCardinal":1,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla3"]}
+{"qName":"Empresas_Mora_Malla3.MES","qCardinal":1,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla3"]}
+{"qName":"Empresas_Mora_Malla3.DIA","qCardinal":1,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla3"]}
+{"qName":"Empresas_Mora_Malla3_Cruce_Inverso.TIP_IDENTIFICACION","qCardinal":4,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Mora_Malla3_Cruce_Inverso.NUM_IDENTIFICACION_EMPRESA","qCardinal":1510,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Mora_Malla3_Cruce_Inverso.NOM_EMPRESA","qCardinal":1510,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Mora_Malla3_Cruce_Inverso.COD_MUNICIPIO_DANE","qCardinal":68,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Mora_Malla3_Cruce_Inverso.DIR_EMPRESA","qCardinal":1450,"qTags":["$text"],"qSrcTables":["Empresas_Mora_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Mora_Malla3_Cruce_Inverso.REP_LEGAL","qCardinal":1479,"qTags":["$text"],"qSrcTables":["Empresas_Mora_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Mora_Malla3_Cruce_Inverso.FEC_INICIO_MORA","qCardinal":64,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["Empresas_Mora_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Mora_Malla3_Cruce_Inverso.SAL_MORA","qCardinal":709,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Mora_Malla3_Cruce_Inverso.PER_MORA","qCardinal":4,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Mora_Malla3_Cruce_Inverso.GES_COBRO","qCardinal":2,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Mora_Malla3_Cruce_Inverso.ACU_PAGO","qCardinal":3,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Mora_Malla3_Cruce_Inverso.CAR_RECUPERADA","qCardinal":181,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Mora_Malla3_Cruce_Inverso.COR_ELECTRONICO","qCardinal":1438,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Mora_Malla3_Cruce_Inverso.Tipo identificaci\u00f3n aportante","qCardinal":2,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Mora_Malla3_Cruce_Inverso.N\u00famero Identificaci\u00f3n aportante","qCardinal":1350,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Mora_Malla3_Cruce_Inverso.Raz\u00f3n social o nombre","qCardinal":1350,"qTags":["$text"],"qSrcTables":["Empresas_Mora_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Mora_Malla3_Cruce_Inverso.Estado afiliaci\u00f3n aportante","qCardinal":3,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Mora_Malla3_Cruce_Inverso.N\u00b0 de Operaci\u00f3n de cartera","qCardinal":1350,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Mora_Malla3_Cruce_Inverso.Nombre de Linea de Cobro","qCardinal":2,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Mora_Malla3_Cruce_Inverso.Fecha de ingreso a Linea de Cobro","qCardinal":123,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["Empresas_Mora_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Mora_Malla3_Cruce_Inverso.Deuda","qCardinal":806,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Mora_Malla3_Cruce_Inverso.Periodo adeudado","qCardinal":68,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Mora_Malla3_Cruce_Inverso.\u00daltima acci\u00f3n de cobro","qCardinal":5,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Mora_Malla3_Cruce_Inverso.Fecha \u00faltima acci\u00f3n de cobro","qCardinal":66,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Mora_Malla3_Cruce_Inverso.Cantidad de periodos en mora","qCardinal":6,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Mora_Malla3_Cruce_Inverso.Tipo Identificaci\u00f3n Representante Legal","qCardinal":3,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Mora_Malla3_Cruce_Inverso.N\u00famero de Indentificaci\u00f3n Representante Legal","qCardinal":1321,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Mora_Malla3_Cruce_Inverso.Nombre Representante Legal","qCardinal":1321,"qTags":["$text"],"qSrcTables":["Empresas_Mora_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Mora_Malla3_Cruce_Inverso.Correo representante legal","qCardinal":1228,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Mora_Malla3_Cruce_Inverso.Celular representante legal","qCardinal":1183,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Mora_Malla3_Cruce_Inverso.Direcci\u00f3n Ubicaci\u00f3n Principal","qCardinal":1306,"qTags":["$text"],"qSrcTables":["Empresas_Mora_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Mora_Malla3_Cruce_Inverso.Correo electr\u00f3nico ubicaci\u00f3n principal","qCardinal":1228,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Mora_Malla3_Cruce_Inverso.C\u00f3digo Departamento","qCardinal":20,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Mora_Malla3_Cruce_Inverso.Departamento","qCardinal":20,"qTags":["$text"],"qSrcTables":["Empresas_Mora_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Mora_Malla3_Cruce_Inverso.C\u00f3digo Municipio","qCardinal":67,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Mora_Malla3_Cruce_Inverso.Municipio","qCardinal":67,"qTags":["$text"],"qSrcTables":["Empresas_Mora_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Mora_Malla3_Cruce_Inverso.Fecha afiliaci\u00f3n Empleador","qCardinal":962,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Mora_Malla3_Cruce_Inverso.Tel\u00e9fono fijo ubicaci\u00f3n principal","qCardinal":810,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Mora_Malla3_Cruce_Inverso.Celular ubicaci\u00f3n principal","qCardinal":1183,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Mora_Malla3_Cruce_Inverso.C\u00f3digo CIIU","qCardinal":237,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Mora_Malla3_Cruce_Inverso.Actividad econ\u00f3mica","qCardinal":237,"qTags":["$text"],"qSrcTables":["Empresas_Mora_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Mora_Malla3_Cruce_Inverso.Clasificaci\u00f3n actividad econ\u00f3mica","qCardinal":22,"qTags":["$text"],"qSrcTables":["Empresas_Mora_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Mora_Malla3_Cruce_Inverso.\u00daltimo per\u00edodo aporte","qCardinal":71,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Mora_Malla3_Cruce_Inverso.Fecha registro \u00faltimo aporte","qCardinal":697,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["Empresas_Mora_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Mora_Malla3_Cruce_Inverso.Valor \u00faltimo aporte","qCardinal":565,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Mora_Malla3_Cruce_Inverso.Direcci\u00f3n Ubicaci\u00f3n judicial","qCardinal":1306,"qTags":["$text"],"qSrcTables":["Empresas_Mora_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Mora_Malla3_Cruce_Inverso.Correo electr\u00f3nico ubicaci\u00f3n judicial","qCardinal":1228,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Mora_Malla3_Cruce_Inverso.Tel\u00e9fono fijo ubicaci\u00f3n judicial","qCardinal":810,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Mora_Malla3_Cruce_Inverso.Beneficio de ley","qCardinal":2,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Mora_Malla3_Cruce_Inverso.Responsables de contacto CCF1","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Mora_Malla3_Cruce_Inverso.Responsables de contacto CCF2","qCardinal":0,"qTags":[],"qSrcTables":["Empresas_Mora_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Mora_Malla3_Cruce_Inverso.Fecha_fin_mes_reporte","qCardinal":1,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["Empresas_Mora_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Mora_Malla3_Cruce_Inverso.Cantidad_dias","qCardinal":72,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Mora_Malla3_Cruce_Inverso.VALIDACION_1","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Mora_Malla3_Cruce_Inverso.VALIDACION_3","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Mora_Malla3_Cruce_Inverso.VALIDACION_3_CRUCE_INVERSO","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla3_Cruce_Inverso"]}
+{"qName":"Empresas_Mora_Malla4.TIP_IDENTIFICACION","qCardinal":3,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla4"]}
+{"qName":"Empresas_Mora_Malla4.NUM_IDENTIFICACION_EMPRESA","qCardinal":5234,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla4"]}
+{"qName":"Empresas_Mora_Malla4.Tipo identificaci\u00f3n aportante","qCardinal":3,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla4"]}
+{"qName":"Empresas_Mora_Malla4.N\u00famero Identificaci\u00f3n aportante","qCardinal":5234,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla4"]}
+{"qName":"Empresas_Mora_Malla4.Raz\u00f3n social o nombre","qCardinal":5229,"qTags":["$text"],"qSrcTables":["Empresas_Mora_Malla4"]}
+{"qName":"Empresas_Mora_Malla4.Estado afiliaci\u00f3n aportante","qCardinal":3,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla4"]}
+{"qName":"Empresas_Mora_Malla4.Cantidad de periodos en mora","qCardinal":6,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla4"]}
+{"qName":"Empresas_Mora_Malla4.cantidad_nit","qCardinal":7,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla4"]}
+{"qName":"Empresas_Mora_Malla4.cantidad_periodo_adeudado","qCardinal":7,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla4"]}
+{"qName":"Empresas_Mora_Malla4.NOM_EMPRESA","qCardinal":1428,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla4"]}
+{"qName":"Empresas_Mora_Malla4.COD_MUNICIPIO_DANE","qCardinal":67,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla4"]}
+{"qName":"Empresas_Mora_Malla4.DIR_EMPRESA","qCardinal":1370,"qTags":["$text"],"qSrcTables":["Empresas_Mora_Malla4"]}
+{"qName":"Empresas_Mora_Malla4.REP_LEGAL","qCardinal":1397,"qTags":["$text"],"qSrcTables":["Empresas_Mora_Malla4"]}
+{"qName":"Empresas_Mora_Malla4.FEC_INICIO_MORA","qCardinal":63,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["Empresas_Mora_Malla4"]}
+{"qName":"Empresas_Mora_Malla4.SAL_MORA","qCardinal":704,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla4"]}
+{"qName":"Empresas_Mora_Malla4.PER_MORA","qCardinal":3,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla4"]}
+{"qName":"Empresas_Mora_Malla4.GES_COBRO","qCardinal":1,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla4"]}
+{"qName":"Empresas_Mora_Malla4.ACU_PAGO","qCardinal":2,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla4"]}
+{"qName":"Empresas_Mora_Malla4.CAR_RECUPERADA","qCardinal":143,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla4"]}
+{"qName":"Empresas_Mora_Malla4.COR_ELECTRONICO","qCardinal":1358,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla4"]}
+{"qName":"Empresas_Mora_Malla4.VALIDACION_4","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla4"]}
+{"qName":"Empresas_Mora_Malla4.VALIDACION_4_CANTIDAD_PERIODOS_MORA_83","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla4"]}
+{"qName":"Empresas_Mora_Malla4.VALIDACION_4_CANTIDAD_NIT_83","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla4"]}
+{"qName":"Empresas_Mora_Malla4.VALIDACION_4_CANTIDAD_PERIODO_ADEUDADO_83","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla4"]}
+{"qName":"Empresas_Mora_Malla4.A\u00d1O","qCardinal":1,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla4"]}
+{"qName":"Empresas_Mora_Malla4.MES","qCardinal":1,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla4"]}
+{"qName":"Empresas_Mora_Malla4.DIA","qCardinal":1,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla4"]}
+{"qName":"Empresas_Mora_Malla5.TIP_IDENTIFICACION","qCardinal":3,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla5"]}
+{"qName":"Empresas_Mora_Malla5.NUM_IDENTIFICACION_EMPRESA","qCardinal":5234,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla5"]}
+{"qName":"Empresas_Mora_Malla5.Tipo identificaci\u00f3n aportante","qCardinal":3,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla5"]}
+{"qName":"Empresas_Mora_Malla5.N\u00famero Identificaci\u00f3n aportante","qCardinal":5234,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla5"]}
+{"qName":"Empresas_Mora_Malla5.Raz\u00f3n social o nombre","qCardinal":5229,"qTags":["$text"],"qSrcTables":["Empresas_Mora_Malla5"]}
+{"qName":"Empresas_Mora_Malla5.Estado afiliaci\u00f3n aportante","qCardinal":3,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla5"]}
+{"qName":"Empresas_Mora_Malla5.total_deuda","qCardinal":2574,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla5"]}
+{"qName":"Empresas_Mora_Malla5.NOM_EMPRESA","qCardinal":1428,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla5"]}
+{"qName":"Empresas_Mora_Malla5.COD_MUNICIPIO_DANE","qCardinal":67,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla5"]}
+{"qName":"Empresas_Mora_Malla5.DIR_EMPRESA","qCardinal":1370,"qTags":["$text"],"qSrcTables":["Empresas_Mora_Malla5"]}
+{"qName":"Empresas_Mora_Malla5.REP_LEGAL","qCardinal":1397,"qTags":["$text"],"qSrcTables":["Empresas_Mora_Malla5"]}
+{"qName":"Empresas_Mora_Malla5.FEC_INICIO_MORA","qCardinal":63,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["Empresas_Mora_Malla5"]}
+{"qName":"Empresas_Mora_Malla5.SAL_MORA","qCardinal":704,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla5"]}
+{"qName":"Empresas_Mora_Malla5.PER_MORA","qCardinal":3,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla5"]}
+{"qName":"Empresas_Mora_Malla5.GES_COBRO","qCardinal":1,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla5"]}
+{"qName":"Empresas_Mora_Malla5.ACU_PAGO","qCardinal":2,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla5"]}
+{"qName":"Empresas_Mora_Malla5.CAR_RECUPERADA","qCardinal":143,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla5"]}
+{"qName":"Empresas_Mora_Malla5.COR_ELECTRONICO","qCardinal":1358,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla5"]}
+{"qName":"Empresas_Mora_Malla5.VALIDACION_5","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla5"]}
+{"qName":"Empresas_Mora_Malla5.VALIDACION_5_TOTAL_DEUDA","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla5"]}
+{"qName":"Empresas_Mora_Malla5.A\u00d1O","qCardinal":1,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla5"]}
+{"qName":"Empresas_Mora_Malla5.MES","qCardinal":1,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla5"]}
+{"qName":"Empresas_Mora_Malla5.DIA","qCardinal":1,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla5"]}
+{"qName":"Empresas_Mora_Malla8.TIP_IDENTIFICACION","qCardinal":4,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla8"]}
+{"qName":"Empresas_Mora_Malla8.NUM_IDENTIFICACION_EMPRESA","qCardinal":1510,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla8"]}
+{"qName":"Empresas_Mora_Malla8.NOM_EMPRESA","qCardinal":1510,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla8"]}
+{"qName":"Empresas_Mora_Malla8.COD_MUNICIPIO_DANE","qCardinal":68,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla8"]}
+{"qName":"Empresas_Mora_Malla8.DIR_EMPRESA","qCardinal":1450,"qTags":["$text"],"qSrcTables":["Empresas_Mora_Malla8"]}
+{"qName":"Empresas_Mora_Malla8.REP_LEGAL","qCardinal":1479,"qTags":["$text"],"qSrcTables":["Empresas_Mora_Malla8"]}
+{"qName":"Empresas_Mora_Malla8.FEC_INICIO_MORA","qCardinal":64,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["Empresas_Mora_Malla8"]}
+{"qName":"Empresas_Mora_Malla8.SAL_MORA","qCardinal":709,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla8"]}
+{"qName":"Empresas_Mora_Malla8.PER_MORA","qCardinal":4,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla8"]}
+{"qName":"Empresas_Mora_Malla8.GES_COBRO","qCardinal":2,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla8"]}
+{"qName":"Empresas_Mora_Malla8.ACU_PAGO","qCardinal":3,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla8"]}
+{"qName":"Empresas_Mora_Malla8.CAR_RECUPERADA","qCardinal":181,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla8"]}
+{"qName":"Empresas_Mora_Malla8.COR_ELECTRONICO","qCardinal":1438,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla8"]}
+{"qName":"Empresas_Mora_Malla8.Tipo identificaci\u00f3n aportante","qCardinal":3,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla8"]}
+{"qName":"Empresas_Mora_Malla8.N\u00famero identificaci\u00f3n aportante","qCardinal":355,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla8"]}
+{"qName":"Empresas_Mora_Malla8.Fecha de env\u00edo","qCardinal":44,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["Empresas_Mora_Malla8"]}
+{"qName":"Empresas_Mora_Malla8.Resultado de entrega","qCardinal":3,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla8"]}
+{"qName":"Empresas_Mora_Malla8.L\u00ednea de Cobro","qCardinal":2,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla8"]}
+{"qName":"Empresas_Mora_Malla8.Raz\u00f3n social o nombre","qCardinal":355,"qTags":["$text"],"qSrcTables":["Empresas_Mora_Malla8"]}
+{"qName":"Empresas_Mora_Malla8.Estado afiliaci\u00f3n aportante","qCardinal":3,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla8"]}
+{"qName":"Empresas_Mora_Malla8.Estado cartera aportante","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla8"]}
+{"qName":"Empresas_Mora_Malla8.VALIDACION_8_LINEA_COBRO","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla8"]}
+{"qName":"Empresas_Mora_Malla8.VALIDACION_8_PERIODO","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla8"]}
+{"qName":"Empresas_Mora_Malla8.VALIDACION_8_RESULTADO_ENTREGA","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla8"]}
+{"qName":"Empresas_Mora_Malla8.VALIDACION_8_GES_COBRO","qCardinal":2,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla8"]}
+{"qName":"Empresas_Mora_Malla8.VALIDACION_8_VALOR_GES_COBRO","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla8"]}
+{"qName":"Empresas_Mora_Malla8.A\u00d1O","qCardinal":1,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla8"]}
+{"qName":"Empresas_Mora_Malla8.MES","qCardinal":1,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla8"]}
+{"qName":"Empresas_Mora_Malla8.DIA","qCardinal":1,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla8"]}
+{"qName":"Empresas_Mora_Malla7_9_10_11_12.TIP_IDENTIFICACION","qCardinal":4,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla7_9_10_11_12"]}
+{"qName":"Empresas_Mora_Malla7_9_10_11_12.NUM_IDENTIFICACION_EMPRESA","qCardinal":1510,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla7_9_10_11_12"]}
+{"qName":"Empresas_Mora_Malla7_9_10_11_12.NOM_EMPRESA","qCardinal":1510,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla7_9_10_11_12"]}
+{"qName":"Empresas_Mora_Malla7_9_10_11_12.COD_MUNICIPIO_DANE","qCardinal":68,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla7_9_10_11_12"]}
+{"qName":"Empresas_Mora_Malla7_9_10_11_12.DIR_EMPRESA","qCardinal":1450,"qTags":["$text"],"qSrcTables":["Empresas_Mora_Malla7_9_10_11_12"]}
+{"qName":"Empresas_Mora_Malla7_9_10_11_12.REP_LEGAL","qCardinal":1479,"qTags":["$text"],"qSrcTables":["Empresas_Mora_Malla7_9_10_11_12"]}
+{"qName":"Empresas_Mora_Malla7_9_10_11_12.FEC_INICIO_MORA","qCardinal":64,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["Empresas_Mora_Malla7_9_10_11_12"]}
+{"qName":"Empresas_Mora_Malla7_9_10_11_12.SAL_MORA","qCardinal":709,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla7_9_10_11_12"]}
+{"qName":"Empresas_Mora_Malla7_9_10_11_12.PER_MORA","qCardinal":4,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla7_9_10_11_12"]}
+{"qName":"Empresas_Mora_Malla7_9_10_11_12.GES_COBRO","qCardinal":2,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla7_9_10_11_12"]}
+{"qName":"Empresas_Mora_Malla7_9_10_11_12.ACU_PAGO","qCardinal":3,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla7_9_10_11_12"]}
+{"qName":"Empresas_Mora_Malla7_9_10_11_12.CAR_RECUPERADA","qCardinal":181,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla7_9_10_11_12"]}
+{"qName":"Empresas_Mora_Malla7_9_10_11_12.COR_ELECTRONICO","qCardinal":1438,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla7_9_10_11_12"]}
+{"qName":"Empresas_Mora_Malla7_9_10_11_12.VALIDACION_7","qCardinal":0,"qTags":[],"qSrcTables":["Empresas_Mora_Malla7_9_10_11_12"]}
+{"qName":"Empresas_Mora_Malla7_9_10_11_12.VALIDACION_9","qCardinal":68,"qTags":["$text"],"qSrcTables":["Empresas_Mora_Malla7_9_10_11_12"]}
+{"qName":"Empresas_Mora_Malla7_9_10_11_12.VALIDACION_10_TIP_IDENTIFICACION","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla7_9_10_11_12"]}
+{"qName":"Empresas_Mora_Malla7_9_10_11_12.VALIDACION_10_NUM_IDENTIFICACION_EMPRESA","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla7_9_10_11_12"]}
+{"qName":"Empresas_Mora_Malla7_9_10_11_12.VALIDACION_10_NOM_EMPRESA","qCardinal":0,"qTags":[],"qSrcTables":["Empresas_Mora_Malla7_9_10_11_12"]}
+{"qName":"Empresas_Mora_Malla7_9_10_11_12.VALIDACION_10_COD_MUNICIPIO_DANE","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla7_9_10_11_12"]}
+{"qName":"Empresas_Mora_Malla7_9_10_11_12.VALIDACION_10_DIR_EMPRESA","qCardinal":0,"qTags":[],"qSrcTables":["Empresas_Mora_Malla7_9_10_11_12"]}
+{"qName":"Empresas_Mora_Malla7_9_10_11_12.VALIDACION_10_REP_LEGAL","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla7_9_10_11_12"]}
+{"qName":"Empresas_Mora_Malla7_9_10_11_12.VALIDACION_10_FEC_INICIO_MORA","qCardinal":64,"qTags":[],"qSrcTables":["Empresas_Mora_Malla7_9_10_11_12"]}
+{"qName":"Empresas_Mora_Malla7_9_10_11_12.VALIDACION_10_A\u00d1O_FEC_INICIO_MORA","qCardinal":0,"qTags":[],"qSrcTables":["Empresas_Mora_Malla7_9_10_11_12"]}
+{"qName":"Empresas_Mora_Malla7_9_10_11_12.VALIDACION_10_SAL_MORA","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla7_9_10_11_12"]}
+{"qName":"Empresas_Mora_Malla7_9_10_11_12.VALIDACION_10_PER_MORA","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla7_9_10_11_12"]}
+{"qName":"Empresas_Mora_Malla7_9_10_11_12.VALIDACION_10_GES_COBRO","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla7_9_10_11_12"]}
+{"qName":"Empresas_Mora_Malla7_9_10_11_12.VALIDACION_10_ACU_PAGO","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla7_9_10_11_12"]}
+{"qName":"Empresas_Mora_Malla7_9_10_11_12.VALIDACION_10_CAR_RECUPERADA","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla7_9_10_11_12"]}
+{"qName":"Empresas_Mora_Malla7_9_10_11_12.VALIDACION_10_COR_ELECTRONICO","qCardinal":0,"qTags":[],"qSrcTables":["Empresas_Mora_Malla7_9_10_11_12"]}
+{"qName":"Empresas_Mora_Malla7_9_10_11_12.A\u00d1O","qCardinal":1,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla7_9_10_11_12"]}
+{"qName":"Empresas_Mora_Malla7_9_10_11_12.MES","qCardinal":1,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla7_9_10_11_12"]}
+{"qName":"Empresas_Mora_Malla7_9_10_11_12.DIA","qCardinal":1,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla7_9_10_11_12"]}
+{"qName":"Empresas_Mora_Malla13.TIP_IDENTIFICACION","qCardinal":4,"qTags":[],"qSrcTables":["Empresas_Mora_Malla13"]}
+{"qName":"Empresas_Mora_Malla13.NUM_IDENTIFICACION_EMPRESA","qCardinal":1510,"qTags":[],"qSrcTables":["Empresas_Mora_Malla13"]}
+{"qName":"Empresas_Mora_Malla13.NOM_EMPRESA","qCardinal":1510,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla13"]}
+{"qName":"Empresas_Mora_Malla13.COD_MUNICIPIO_DANE","qCardinal":68,"qTags":[],"qSrcTables":["Empresas_Mora_Malla13"]}
+{"qName":"Empresas_Mora_Malla13.DIR_EMPRESA","qCardinal":1450,"qTags":["$text"],"qSrcTables":["Empresas_Mora_Malla13"]}
+{"qName":"Empresas_Mora_Malla13.REP_LEGAL","qCardinal":1479,"qTags":["$text"],"qSrcTables":["Empresas_Mora_Malla13"]}
+{"qName":"Empresas_Mora_Malla13.FEC_INICIO_MORA","qCardinal":63,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["Empresas_Mora_Malla13"]}
+{"qName":"Empresas_Mora_Malla13.SAL_MORA","qCardinal":709,"qTags":[],"qSrcTables":["Empresas_Mora_Malla13"]}
+{"qName":"Empresas_Mora_Malla13.PER_MORA","qCardinal":4,"qTags":[],"qSrcTables":["Empresas_Mora_Malla13"]}
+{"qName":"Empresas_Mora_Malla13.GES_COBRO","qCardinal":2,"qTags":[],"qSrcTables":["Empresas_Mora_Malla13"]}
+{"qName":"Empresas_Mora_Malla13.ACU_PAGO","qCardinal":3,"qTags":[],"qSrcTables":["Empresas_Mora_Malla13"]}
+{"qName":"Empresas_Mora_Malla13.CAR_RECUPERADA","qCardinal":181,"qTags":[],"qSrcTables":["Empresas_Mora_Malla13"]}
+{"qName":"Empresas_Mora_Malla13.COR_ELECTRONICO","qCardinal":1438,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla13"]}
+{"qName":"Empresas_Mora_Malla13.Tipo identificaci\u00f3n aportante","qCardinal":2,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla13"]}
+{"qName":"Empresas_Mora_Malla13.N\u00famero Identificaci\u00f3n aportante","qCardinal":1428,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla13"]}
+{"qName":"Empresas_Mora_Malla13.Raz\u00f3n social o nombre","qCardinal":1428,"qTags":["$text"],"qSrcTables":["Empresas_Mora_Malla13"]}
+{"qName":"Empresas_Mora_Malla13.Estado afiliaci\u00f3n aportante","qCardinal":3,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla13"]}
+{"qName":"Empresas_Mora_Malla13.Fecha minima de ingreso a Linea de Cobro","qCardinal":98,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["Empresas_Mora_Malla13"]}
+{"qName":"Empresas_Mora_Malla13.VALIDACION_13_EMPRESAS_MORA","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla13"]}
+{"qName":"Empresas_Mora_Malla13.VALIDACION_13","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Empresas_Mora_Malla13"]}
+{"qName":"Empresas_Mora_Malla13.A\u00d1O","qCardinal":1,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla13"]}
+{"qName":"Empresas_Mora_Malla13.MES","qCardinal":1,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla13"]}
+{"qName":"Empresas_Mora_Malla13.DIA","qCardinal":1,"qTags":["$numeric","$integer"],"qSrcTables":["Empresas_Mora_Malla13"]}
