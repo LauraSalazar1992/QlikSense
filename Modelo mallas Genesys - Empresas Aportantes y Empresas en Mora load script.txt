@@ -1,0 +1,1268 @@
+///$tab Main
+SET ThousandSep='.';
+SET DecimalSep=',';
+SET MoneyThousandSep='.';
+SET MoneyDecimalSep=',';
+SET MoneyFormat='$ #.##0,00;($ #.##0,00)';
+SET TimeFormat='hh:mm:ss TT';
+SET DateFormat='YYYY-MM-DD';
+SET TimestampFormat='YYYY-MM-DD hh:mm:ss[.fff] TT';
+SET FirstWeekDay=6;
+SET BrokenWeeks=1;
+SET ReferenceDay=0;
+SET FirstMonthOfYear=1;
+SET CollationLocale='es-CO';
+SET CreateSearchIndexOnReload=1;
+SET MonthNames='enero;febrero;marzo;abril;mayo;junio;julio;agosto;septiembre;octubre;noviembre;diciembre';
+SET LongMonthNames='enero;febrero;marzo;abril;mayo;junio;julio;agosto;septiembre;octubre;noviembre;diciembre';
+SET DayNames='lunes;martes;miércoles;jueves;viernes;sábado;domingo';
+SET LongDayNames='lunes;martes;miércoles;jueves;viernes;sábado;domingo';
+
+///$tab VARIABLES
+/*
+EXTRACCIÓN DIARIA
+
+CREADOR: CLAUDIA MILENA BAENA 
+
+LA EXTRACCIÓN DE INFORMACIÓN SE REALIZA A LAS 6 PM TODOS LOS DIAS 
+SE ALMACENA UN QVD POR CADA TABLA DE LOS MÓDULO DE SAR Y SAR, ADICIONAL EL QVD DE LA TABLA FINANCIERA DE JDE.
+
+LA INFORMACIÓN SE ACTUALIZA TODOS LOS DÍAS EN EL QVD DEL AÑO ACTUAL
+
+SE GUARDA QVD POR CADA AÑO.
+*/
+
+
+//OBTENEMOS LA FECHA DEL SISTEMA PARA LA GENERACIÓN DEL REPORTE
+// LET vfechaGeneracion = date(monthstart(today(1),0),'YYYY-MM-DD');
+
+// vFechaInicial = '2023-05-01'
+// vFechaFinal = '2023-05-31'
+// vFechaFinalReplica = date(MonthEnd(vFechaInicial)-1,'YYYY-MM-DD');
+
+LET vFechaInicial = date(monthstart(today(1), -1),'YYYY-MM-DD');  //NO MOVER ESTA FECHA
+LET vFechaFinal = date(MonthEnd(vFechaInicial),'YYYY-MM-DD');
+// LET vFechaFinalReplica = date(MonthEnd(vFechaInicial)-1,'YYYY-MM-DD');
+
+LET vMes=NUM(MONTH(vFechaInicial),'00');
+LET vAño=Year(vFechaInicial);
+LET vDia=Day(vFechaInicial);
+LET vPeriodo=vAño&vMes;
+
+LET vPeriodoGi='prueba';
+LET vPeriodoGit='prueba';
+ 
+// TRACE  '$(vfechaGeneracion)'; 
+
+// vfechaInicial = '2022-01-01'
+// vfechaFinal = '2022-01-31'
+
+TRACE '$(vFechaInicial)'; 
+TRACE '$(vFechaFinal)'; 
+TRACE '$(vPeriodo)';
+TRACE '$(vAño)';
+TRACE '$(vMes)';
+TRACE '$(vDia)';
+
+
+// EXIT SCRIPT;
+///$tab Empresas Aportantes
+Qualify *;
+
+Empresas_Aportantes_Drive:
+
+LOAD
+    TIP_IDENTIFICACION,
+    NUM_IDENTIFICACION,
+    NOM_EMPRESA,
+    COD_MUNICIPIO_DANE,
+    DIR_CORRESPONDECIA,
+    EST_VINCULACION,
+    TIP_APORTANTE,
+    TIP_SECTOR,
+    ACT_ECONOMICA,
+    SIT_EMPRESA_LEY_1429,
+    PRO_PAGO_LEY_1429,
+    SIT_EMPRESA_LEY_590,
+    PRO_PAGO_LEY_590,
+    APO_TOTAL_MENSUAL,
+    INT_PAGADOS_MORA,
+    VAL_REINTEGROS
+FROM [lib://Conexión Modelos Adicionales (srvqlik_admin)/Malla Validaciones Genesys/Empresas y Aportantes/QVD/Extracted/EMPRESAS_APORTANTES_DRIVE_$(vPeriodo).qvd]
+(qvd);
+
+
+///$tab Empresas Aportantes - Malla 2
+Qualify *;
+
+Empresas_Aportantes_Malla2:
+
+LOAD
+    TIP_IDENTIFICACION,
+    NUM_IDENTIFICACION,
+    NOM_EMPRESA,
+    COD_MUNICIPIO_DANE,
+    DIR_CORRESPONDECIA,
+    EST_VINCULACION,
+    TIP_APORTANTE,
+    TIP_SECTOR,
+    ACT_ECONOMICA,
+    SIT_EMPRESA_LEY_1429,
+    PRO_PAGO_LEY_1429,
+    SIT_EMPRESA_LEY_590,
+    PRO_PAGO_LEY_590,
+    APO_TOTAL_MENSUAL,
+    INT_PAGADOS_MORA,
+    VAL_REINTEGROS,
+    "Dígito de verificación",
+    "Nombre / Razon social",
+    "Tipo Aportante",
+    Periodo,
+    TOTAL_MONTO_APORTE,
+    TOTAL_INTERESES_MORA,
+    VALIDACION_2_APORTES,
+    VALIDACION_TOTAL_APORTE,
+    VALIDACION_TOTAL_INTERESES_MORA,
+//     VALIDACION_2_APORTES_NO_ENCONTRADOS,
+//     VALIDACION_2_CON_APORTES,
+    AÑO,
+    MES,
+    DIA
+FROM [lib://Conexión Modelos Adicionales (srvqlik_admin)/Malla Validaciones Genesys/Empresas y Aportantes/QVD/Transformed/MALLA2_$(vPeriodo).qvd]
+(qvd);
+
+
+
+Qualify *;
+
+Empresas_Aportantes_Malla2_Cruce_Inverso:
+
+LOAD
+    TIP_IDENTIFICACION,
+    NUM_IDENTIFICACION,
+    NOM_EMPRESA,
+    COD_MUNICIPIO_DANE,
+    DIR_CORRESPONDECIA,
+    EST_VINCULACION,
+    TIP_APORTANTE,
+    TIP_SECTOR,
+    ACT_ECONOMICA,
+    SIT_EMPRESA_LEY_1429,
+    PRO_PAGO_LEY_1429,
+    SIT_EMPRESA_LEY_590,
+    PRO_PAGO_LEY_590,
+    APO_TOTAL_MENSUAL,
+    INT_PAGADOS_MORA,
+    VAL_REINTEGROS,
+    "Dígito de verificación",
+    "Nombre / Razon social",
+    "Tipo Aportante",
+    Periodo,
+    TOTAL_MONTO_APORTE,
+    TOTAL_INTERESES_MORA,
+    VALIDACION_2_APORTES,
+    VALIDACION_TOTAL_APORTE,
+    VALIDACION_TOTAL_INTERESES_MORA
+//     VALIDACION_2_APORTES_NO_ENCONTRADOS,
+//     VALIDACION_2_CON_APORTES,
+//     AÑO,
+//     MES,
+//     DIA
+FROM [lib://Conexión Modelos Adicionales (srvqlik_admin)/Malla Validaciones Genesys/Empresas y Aportantes/QVD/Transformed/MALLA2_CRUCE_INVERSO_$(vPeriodo).qvd]
+(qvd);
+
+
+
+
+///$tab Empresas Aportantes - Malla 3
+Qualify *;
+
+Empresas_Aportantes_Malla3:
+
+LOAD
+    TIP_IDENTIFICACION,
+    NUM_IDENTIFICACION,
+    NOM_EMPRESA,
+    COD_MUNICIPIO_DANE,
+    DIR_CORRESPONDECIA,
+    EST_VINCULACION,
+    TIP_APORTANTE,
+    TIP_SECTOR,
+    ACT_ECONOMICA,
+    SIT_EMPRESA_LEY_1429,
+    PRO_PAGO_LEY_1429,
+    SIT_EMPRESA_LEY_590,
+    PRO_PAGO_LEY_590,
+    APO_TOTAL_MENSUAL,
+    INT_PAGADOS_MORA,
+    VAL_REINTEGROS,
+    TIPO_IDENTIFICACION,
+    NUMERO_IDENTIFICACION,
+    DIGITO_VERIFICACION,
+    RAZON_SOCIAL,
+    NOMBRE_COMERCIAL,
+    CLASIFICACION,
+    ESTADO_AFILIACION,
+    FECHA_ACTIVACION,
+    FECHA_DESAFILIACION,
+    CANTIDAD_TRABAJADORES_ACTIVOS,
+    ESTADO_CARTERA_APORTES,
+    VALOR_RECAUDO_APORTES_ULTIMO_PERIODO_PAGADO,
+    PERIODO_APORTES_ASOCIADO_RECAUDO_INFORMADO,
+    VALIDACION_3,
+//     VALIDACION_3_NO_ENCONTRADAS,
+//     VALIDACION_3_SIN_APORTES,
+    AÑO,
+    MES,
+    DIA
+FROM [lib://Conexión Modelos Adicionales (srvqlik_admin)/Malla Validaciones Genesys/Empresas y Aportantes/QVD/Transformed/MALLA3_$(vPeriodo).qvd]
+(qvd);
+
+
+
+Qualify *;
+
+Empresas_Aportantes_Malla3_Cruce_Inverso:
+
+LOAD
+    TIP_IDENTIFICACION,
+    NUM_IDENTIFICACION,
+    NOM_EMPRESA,
+    COD_MUNICIPIO_DANE,
+    DIR_CORRESPONDECIA,
+    EST_VINCULACION,
+    TIP_APORTANTE,
+    TIP_SECTOR,
+    ACT_ECONOMICA,
+    SIT_EMPRESA_LEY_1429,
+    PRO_PAGO_LEY_1429,
+    SIT_EMPRESA_LEY_590,
+    PRO_PAGO_LEY_590,
+    APO_TOTAL_MENSUAL,
+    INT_PAGADOS_MORA,
+    VAL_REINTEGROS,
+    TIPO_IDENTIFICACION,
+    NUMERO_IDENTIFICACION,
+    DIGITO_VERIFICACION,
+    RAZON_SOCIAL,
+    NOMBRE_COMERCIAL,
+    CLASIFICACION,
+    ESTADO_AFILIACION,
+    FECHA_ACTIVACION,
+    FECHA_DESAFILIACION,
+    CANTIDAD_TRABAJADORES_ACTIVOS,
+    ESTADO_CARTERA_APORTES,
+    VALOR_RECAUDO_APORTES_ULTIMO_PERIODO_PAGADO,
+    PERIODO_APORTES_ASOCIADO_RECAUDO_INFORMADO,
+    VALIDACION_3
+FROM [lib://Conexión Modelos Adicionales (srvqlik_admin)/Malla Validaciones Genesys/Empresas y Aportantes/QVD/Transformed/MALLA3_CRUCE_INVERSO_$(vPeriodo).qvd]
+(qvd);
+
+
+
+///$tab Empresas Aportantes - Malla 5
+Qualify *;
+
+Empresas_Aportantes_Malla5:
+
+LOAD
+    TIP_IDENTIFICACION,
+    NUM_IDENTIFICACION,
+    NOM_EMPRESA,
+    COD_MUNICIPIO_DANE,
+    DIR_CORRESPONDECIA,
+    EST_VINCULACION,
+    TIP_APORTANTE,
+    TIP_SECTOR,
+    ACT_ECONOMICA,
+    SIT_EMPRESA_LEY_1429,
+    PRO_PAGO_LEY_1429,
+    SIT_EMPRESA_LEY_590,
+    PRO_PAGO_LEY_590,
+    APO_TOTAL_MENSUAL,
+    INT_PAGADOS_MORA,
+    VAL_REINTEGROS,
+    TIPO_IDENTIFICACION,
+    ESTADO_AFILIACION,
+    FECHA_ACTIVACION,
+    FECHA_DESAFILIACION,
+    CANTIDAD_TRABAJADORES_ACTIVOS,
+    VALOR_RECAUDO_APORTES_ULTIMO_PERIODO_PAGADO,
+    PERIODO_APORTES_ASOCIADO_RECAUDO_INFORMADO,
+    "Tipo Aportante",
+    "Dígito de verificación",
+    "Nombre / Razon social",
+    Periodo,
+    VALIDACION_5,
+    VALIDACION_5_NO_ENCONTRADAS,
+    AÑO,
+    MES,
+    DIA
+FROM [lib://Conexión Modelos Adicionales (srvqlik_admin)/Malla Validaciones Genesys/Empresas y Aportantes/QVD/Transformed/MALLA5_$(vPeriodo).qvd]
+(qvd);
+
+
+
+///$tab Empresas Aportantes - Malla 6, 9, 16, 17,18
+Qualify *;
+
+//Validaciones 6, 9, 16, 17,18
+Empresas_Aportantes_Malla6:
+
+LOAD
+    TIP_IDENTIFICACION,
+    NUM_IDENTIFICACION,
+    NOM_EMPRESA,
+    COD_MUNICIPIO_DANE,
+    DIR_CORRESPONDECIA,
+    EST_VINCULACION,
+    TIP_APORTANTE,
+    TIP_SECTOR,
+    ACT_ECONOMICA,
+    SIT_EMPRESA_LEY_1429,
+    PRO_PAGO_LEY_1429,
+    SIT_EMPRESA_LEY_590,
+    PRO_PAGO_LEY_590,
+    APO_TOTAL_MENSUAL,
+    INT_PAGADOS_MORA,
+    VAL_REINTEGROS,
+    VALIDACION_6,
+    VALIDACION_9,
+    VALIDACION_16,
+    VALIDACION_17_NOM_EMPRESA,
+    VALIDACION_17_DIR_CORRESPONDECIA,
+    VALIDACION_18_TIP_IDENTIFICACION,
+    VALIDACION_18_NUM_IDENTIFICACION,
+    VALIDACION_18_NOM_EMPRESA,
+    VALIDACION_18_COD_MUNICIPIO_DANE,
+    VALIDACION_18_EST_VINCULACION,
+    VALIDACION_18_TIP_APORTANTE,
+    VALIDACION_18_TIP_SECTOR,
+    VALIDACION_18_ACT_ECONOMICA,
+    VALIDACION_18_ACT_ECONOMICA_TIPO_APORTANTE,
+    VALIDACION_18_SIT_EMPRESA_LEY_1429,
+    VALIDACION_18_PRO_PAGO_LEY_1429,
+    VALIDACION_18_SIT_EMPRESA_LEY_590,
+    VALIDACION_18_PRO_PAGO_LEY_590,
+    VALIDACION_18_APO_TOTAL_MENSUAL,
+    VALIDACION_18_INT_PAGADOS_MORA,
+    VALIDACION_18_VAL_REINTEGROS,
+    AÑO,
+    MES,
+    DIA
+FROM [lib://Conexión Modelos Adicionales (srvqlik_admin)/Malla Validaciones Genesys/Empresas y Aportantes/QVD/Extracted/VALIDACIONES_EMPRESAS_APORTANTES_DRIVE_$(vPeriodo).qvd]
+(qvd);
+
+
+
+Qualify *;
+
+//Validaciones 18 Nombre empresa
+Empresas_Aportantes_Malla6_Nombre_Empresa:
+
+LOAD
+    TIP_IDENTIFICACION,
+    NUM_IDENTIFICACION,
+    NOM_EMPRESA,
+    COD_MUNICIPIO_DANE,
+    DIR_CORRESPONDECIA,
+    EST_VINCULACION,
+    TIP_APORTANTE,
+    TIP_SECTOR,
+    ACT_ECONOMICA,
+    SIT_EMPRESA_LEY_1429,
+    PRO_PAGO_LEY_1429,
+    SIT_EMPRESA_LEY_590,
+    PRO_PAGO_LEY_590,
+    APO_TOTAL_MENSUAL,
+    INT_PAGADOS_MORA,
+    VAL_REINTEGROS,
+    RAZON_SOCIAL_REPORTE_29,
+    VALIDACION_18_NOMBRE_EMPRESA
+FROM [lib://Conexión Modelos Adicionales (srvqlik_admin)/Malla Validaciones Genesys/Empresas y Aportantes/QVD/Extracted/VALIDACIONES_18_NOMBRE_EMPRESA_$(vPeriodo).qvd]
+(qvd);
+
+
+Qualify *;
+
+//Validaciones 18 tipo documento empresa
+Empresas_Aportantes_Malla6_TipoDoc_Empresa:
+
+LOAD
+    TIP_IDENTIFICACION,
+    TIP_IDENTIFICACION_REPORTE_29,
+    NUM_IDENTIFICACION,
+    NOM_EMPRESA,
+    COD_MUNICIPIO_DANE,
+    DIR_CORRESPONDECIA,
+    EST_VINCULACION,
+    TIP_APORTANTE,
+    TIP_SECTOR,
+    ACT_ECONOMICA,
+    SIT_EMPRESA_LEY_1429,
+    PRO_PAGO_LEY_1429,
+    SIT_EMPRESA_LEY_590,
+    PRO_PAGO_LEY_590,
+    APO_TOTAL_MENSUAL,
+    INT_PAGADOS_MORA,
+    VAL_REINTEGROS,
+    RAZON_SOCIAL_REPORTE_29,
+    VALIDACION_18_TIPO_DOC_EMPRESA
+FROM [lib://Conexión Modelos Adicionales (srvqlik_admin)/Malla Validaciones Genesys/Empresas y Aportantes/QVD/Extracted/VALIDACIONES_18_TIPO_DOC_EMPRESA_$(vPeriodo).qvd]
+(qvd);
+
+
+
+
+
+
+
+
+
+
+///$tab Empresas Aportantes - Malla 7
+Qualify *;
+
+Empresas_Aportantes_Malla7:
+
+LOAD
+    TIP_IDENTIFICACION,
+    NUM_IDENTIFICACION,
+    NOM_EMPRESA,
+    COD_MUNICIPIO_DANE,
+    DIR_CORRESPONDECIA,
+    EST_VINCULACION,
+    TIP_APORTANTE,
+    TIP_SECTOR,
+    ACT_ECONOMICA,
+    SIT_EMPRESA_LEY_1429,
+    PRO_PAGO_LEY_1429,
+    SIT_EMPRESA_LEY_590,
+    PRO_PAGO_LEY_590,
+    APO_TOTAL_MENSUAL,
+    INT_PAGADOS_MORA,
+    VAL_REINTEGROS,
+    NOMBRE_EMPRESA,
+    BEN_CUOTA_MONETARIA,
+    VALIDACION_7,
+    VALIDACION_7_NO_ENCONTRADAS,
+    AÑO,
+    MES,
+    DIA
+FROM [lib://Conexión Modelos Adicionales (srvqlik_admin)/Malla Validaciones Genesys/Empresas y Aportantes/QVD/Transformed/MALLA7_$(vPeriodo).qvd]
+(qvd);
+
+
+///$tab Empresas Aportantes - Malla 8
+Qualify *;
+
+Empresas_Aportantes_Malla8:
+
+LOAD
+    TIP_IDENTIFICACION,
+    NUM_IDENTIFICACION,
+    TIP_APORTANTE,
+    NOM_EMPRESA,
+    COD_MUNICIPIO_DANE,
+    DIR_CORRESPONDECIA,
+    EST_VINCULACION,
+    TIP_SECTOR,
+    ACT_ECONOMICA,
+    SIT_EMPRESA_LEY_1429,
+    PRO_PAGO_LEY_1429,
+    SIT_EMPRESA_LEY_590,
+    PRO_PAGO_LEY_590,
+    APO_TOTAL_MENSUAL,
+    INT_PAGADOS_MORA,
+    VAL_REINTEGROS,
+    "Dígito de verificación",
+    "Nombre / Razon social",
+    "Tipo Aportante",
+    Periodo,
+    TIPO_IDENTIFICACION,
+    VALIDACION_8,
+    VALIDACION_8_NO_ENCONTRADAS,
+    AÑO,
+    MES,
+    DIA
+FROM [lib://Conexión Modelos Adicionales (srvqlik_admin)/Malla Validaciones Genesys/Empresas y Aportantes/QVD/Transformed/MALLA8_$(vPeriodo).qvd]
+(qvd);
+
+
+///$tab Empresas Aportantes - Malla 8.1
+Qualify *;
+
+Empresas_Aportantes_Malla8_1_Unidas:
+
+LOAD
+    TIP_IDENTIFICACION,
+    NUM_IDENTIFICACION,
+    NOM_EMPRESA,
+    COD_MUNICIPIO_DANE,
+    DIR_CORRESPONDECIA,
+    EST_VINCULACION,
+    TIP_APORTANTE,
+    TIP_SECTOR,
+    ACT_ECONOMICA,
+    SIT_EMPRESA_LEY_1429,
+    PRO_PAGO_LEY_1429,
+    SIT_EMPRESA_LEY_590,
+    PRO_PAGO_LEY_590,
+    APO_TOTAL_MENSUAL,
+    INT_PAGADOS_MORA,
+    VAL_REINTEGROS,
+    TIPO_IDENTIFICACION,
+    "Dígito de verificación",
+    "Nombre / Razon social",
+    Periodo,
+    VALIDACION_8_FINAL,
+    VALIDACION_8_FINAL_NO_ENCONTRADAS,
+    AÑO,
+    MES,
+    DIA
+FROM [lib://Conexión Modelos Adicionales (srvqlik_admin)/Malla Validaciones Genesys/Empresas y Aportantes/QVD/Transformed/MALLA8_1_$(vPeriodo).qvd]
+(qvd);
+
+
+///$tab Empresas Aportantes - Malla 9
+Qualify *;
+
+Empresas_Aportantes_Malla9:
+
+LOAD
+    TIP_IDENTIFICACION,
+    NUM_IDENTIFICACION,
+    NOM_EMPRESA,
+    COD_MUNICIPIO_DANE,
+    DIR_CORRESPONDECIA,
+    EST_VINCULACION,
+    TIP_APORTANTE,
+    TIP_SECTOR,
+    ACT_ECONOMICA,
+    SIT_EMPRESA_LEY_1429,
+    PRO_PAGO_LEY_1429,
+    SIT_EMPRESA_LEY_590,
+    PRO_PAGO_LEY_590,
+    APO_TOTAL_MENSUAL,
+    INT_PAGADOS_MORA,
+    VAL_REINTEGROS,
+    RAZON_SOCIAL,
+    NOMBRE_COMERCIAL,
+    CLASIFICACION,
+    ESTADO_AFILIACION,
+    FECHA_ACTIVACION,
+    FECHA_DESAFILIACION,
+    TIPO_IDENTIFICACION,
+    NUMERO_IDENTIFICACION,
+    DIGITO_VERIFICACION,
+    CANTIDAD_TRABAJADORES_ACTIVOS,
+    ESTADO_CARTERA_APORTES,
+    VALOR_RECAUDO_APORTES_ULTIMO_PERIODO_PAGADO,
+    PERIODO_APORTES_ASOCIADO_RECAUDO_INFORMADO,
+    VALIDACION_9,
+    VALIDACION_9_NO_ENCONTRADAS,
+    AÑO,
+    MES,
+    DIA
+FROM [lib://Conexión Modelos Adicionales (srvqlik_admin)/Malla Validaciones Genesys/Empresas y Aportantes/QVD/Transformed/MALLA9_$(vPeriodo).qvd]
+(qvd);
+
+
+///$tab Empresas Aportantes - Malla 10
+Qualify *;
+
+//Validaciones 10 y 12
+Empresas_Aportantes_Malla10_12:
+
+LOAD
+    TIP_IDENTIFICACION,
+    NUM_IDENTIFICACION,
+    NOM_EMPRESA,
+    COD_MUNICIPIO_DANE,
+    DIR_CORRESPONDECIA,
+    EST_VINCULACION,
+    TIP_APORTANTE,
+    TIP_SECTOR,
+    ACT_ECONOMICA,
+    SIT_EMPRESA_LEY_1429,
+    PRO_PAGO_LEY_1429,
+    SIT_EMPRESA_LEY_590,
+    PRO_PAGO_LEY_590,
+    APO_TOTAL_MENSUAL,
+    INT_PAGADOS_MORA,
+    VAL_REINTEGROS,
+    "Fecha expedición documento",
+    "Primer nombre",
+    "Segundo nombre",
+    "Primer Apellido",
+    "Segundo Apellido",
+    "Tipo afiliación",
+    "Estado del Afiliado Principal",
+    "Fecha activación",
+    "Fecha desafiliación",
+    "Dígito de verificación",
+    "Nombre / Razon social",
+    "Tipo Aportante",
+    Periodo,
+    TIPO_IDENTIFICACION,
+    VALIDACION_10_12,
+//     VALIDACION_10_12_NO_ENCONTRADAS,
+//     VALIDACION_10_12_INDEPENDIENTES,
+    AÑO,
+    MES,
+    DIA
+FROM [lib://Conexión Modelos Adicionales (srvqlik_admin)/Malla Validaciones Genesys/Empresas y Aportantes/QVD/Transformed/MALLA10_12_$(vPeriodo).qvd]
+(qvd);
+
+
+
+Qualify *;
+
+Empresas_Aportantes_Malla10_12_Cruce_Inverso:
+
+LOAD
+    TIP_IDENTIFICACION,
+    NUM_IDENTIFICACION,
+    NOM_EMPRESA,
+    COD_MUNICIPIO_DANE,
+    DIR_CORRESPONDECIA,
+    EST_VINCULACION,
+    TIP_APORTANTE,
+    TIP_SECTOR,
+    ACT_ECONOMICA,
+    SIT_EMPRESA_LEY_1429,
+    PRO_PAGO_LEY_1429,
+    SIT_EMPRESA_LEY_590,
+    PRO_PAGO_LEY_590,
+    APO_TOTAL_MENSUAL,
+    INT_PAGADOS_MORA,
+    VAL_REINTEGROS,
+    TIPO_IDENTIFICACION,
+    "Fecha expedición documento",
+    "Primer nombre",
+    "Segundo nombre",
+    "Primer Apellido",
+    "Segundo Apellido",
+    "Tipo afiliación",
+    "Estado del Afiliado Principal",
+    "Fecha activación",
+    "Fecha desafiliación",
+    "Dígito de verificación",
+    "Nombre / Razon social",
+    "Tipo Aportante",
+    Periodo,
+    VALIDACION_10_12
+FROM [lib://Conexión Modelos Adicionales (srvqlik_admin)/Malla Validaciones Genesys/Empresas y Aportantes/QVD/Transformed/MALLA10_12_CRUCE_INVERSO_$(vPeriodo).qvd]
+(qvd);
+
+
+
+
+
+
+///$tab Empresas Aportantes - Malla 11
+Qualify *;
+
+//Validaciones 11 y 13
+Empresas_Aportantes_Malla11_13:
+
+LOAD
+    TIP_IDENTIFICACION,
+    NUM_IDENTIFICACION,
+    NOM_EMPRESA,
+    COD_MUNICIPIO_DANE,
+    DIR_CORRESPONDECIA,
+    EST_VINCULACION,
+    TIP_APORTANTE,
+    TIP_SECTOR,
+    ACT_ECONOMICA,
+    SIT_EMPRESA_LEY_1429,
+    PRO_PAGO_LEY_1429,
+    SIT_EMPRESA_LEY_590,
+    PRO_PAGO_LEY_590,
+    APO_TOTAL_MENSUAL,
+    INT_PAGADOS_MORA,
+    VAL_REINTEGROS,
+    "Fecha expedición documento",
+    "Primer nombre",
+    "Segundo nombre",
+    "Primer Apellido",
+    "Segundo Apellido",
+    "Tipo afiliación",
+    "Estado del Afiliado Principal",
+    "Fecha activación",
+    "Fecha desafiliación",
+    "Dígito de verificación",
+    "Nombre / Razon social",
+    "Tipo Aportante",
+    Periodo,
+    TIPO_IDENTIFICACION,
+    VALIDACION_11_13,
+//     VALIDACION_11_13_NO_ENCONTRADAS,
+//     VALIDACION_11_13_PENSIONADOS,
+    AÑO,
+    MES,
+    DIA
+FROM [lib://Conexión Modelos Adicionales (srvqlik_admin)/Malla Validaciones Genesys/Empresas y Aportantes/QVD/Transformed/MALLA11_13_$(vPeriodo).qvd]
+(qvd);
+
+
+
+Qualify *;
+
+Empresas_Aportantes_Malla11_13_Cruce_Inverso:
+
+LOAD
+    TIP_IDENTIFICACION,
+    NUM_IDENTIFICACION,
+    NOM_EMPRESA,
+    COD_MUNICIPIO_DANE,
+    DIR_CORRESPONDECIA,
+    EST_VINCULACION,
+    TIP_APORTANTE,
+    TIP_SECTOR,
+    ACT_ECONOMICA,
+    SIT_EMPRESA_LEY_1429,
+    PRO_PAGO_LEY_1429,
+    SIT_EMPRESA_LEY_590,
+    PRO_PAGO_LEY_590,
+    APO_TOTAL_MENSUAL,
+    INT_PAGADOS_MORA,
+    VAL_REINTEGROS,
+    TIPO_IDENTIFICACION,
+    "Fecha expedición documento",
+    "Primer nombre",
+    "Segundo nombre",
+    "Primer Apellido",
+    "Segundo Apellido",
+    "Tipo afiliación",
+    "Estado del Afiliado Principal",
+    "Fecha activación",
+    "Fecha desafiliación",
+    "Dígito de verificación",
+    "Nombre / Razon social",
+    "Tipo Aportante",
+    Periodo,
+    VALIDACION_11_13
+FROM [lib://Conexión Modelos Adicionales (srvqlik_admin)/Malla Validaciones Genesys/Empresas y Aportantes/QVD/Transformed/MALLA11_13_CRUCE_INVERSO_$(vPeriodo).qvd]
+(qvd);
+
+
+
+
+///$tab Empresas Aportantes - Malla 14
+Qualify *;
+
+Empresas_Aportantes_Malla14:
+
+
+LOAD
+    TIP_IDENTIFICACION,
+    NUM_IDENTIFICACION,
+    "Nombre / Razon social",
+    "Dígito de verificación",
+    "Tipo Aportante",
+    Periodo,
+    NOM_EMPRESA,
+    COD_MUNICIPIO_DANE,
+    DIR_CORRESPONDECIA,
+    EST_VINCULACION,
+    TIP_APORTANTE,
+    TIP_SECTOR,
+    ACT_ECONOMICA,
+    SIT_EMPRESA_LEY_1429,
+    PRO_PAGO_LEY_1429,
+    SIT_EMPRESA_LEY_590,
+    PRO_PAGO_LEY_590,
+    APO_TOTAL_MENSUAL,
+    INT_PAGADOS_MORA,
+    VAL_REINTEGROS,
+//     Periodo,
+    TOTAL_MONTO_APORTE,
+    TOTAL_INTERESES_MORA,
+    AÑO,
+    MES,
+    DIA,
+    "Tipo de ajuste",
+    "Tipo de identificación aportante",
+    "Número de identificación aportante",
+    "Tipo aportante",
+    "Fecha de recaudo",
+    "Estado del aporte",
+    REINTEGROS,
+    VALIDACION_14,
+    TOTAL_CIERRE_CONTABLE,
+    "Tipo identificación",
+    "Número identificación aportante",
+    TOTAL_MONTO_APORTE_CIERRE,
+    TOTAL_MONTO_INTERESES_MORA_CIERRE,
+    VALIDACION_14_CIERRE_CONTABLE,
+    VALIDACION_TOTAL_CIERRE_CONTABLE
+FROM [lib://Conexión Modelos Adicionales (srvqlik_admin)/Malla Validaciones Genesys/Empresas y Aportantes/QVD/Extracted/VALIDACION_14_CIERRE_CONTABLE_$(vPeriodo).qvd]
+(qvd);
+
+
+///$tab Empresas Aportantes - Malla 15
+Qualify *;
+
+Empresas_Aportantes_Malla15:
+
+LOAD
+    TIP_IDENTIFICACION,
+    NUM_IDENTIFICACION,
+    "Dígito de verificación",
+    "Nombre / Razon social",
+    "Tipo Aportante",
+    NOM_EMPRESA,
+    COD_MUNICIPIO_DANE,
+    DIR_CORRESPONDECIA,
+    EST_VINCULACION,
+    TIP_APORTANTE,
+    TIP_SECTOR,
+    ACT_ECONOMICA,
+    SIT_EMPRESA_LEY_1429,
+    PRO_PAGO_LEY_1429,
+    SIT_EMPRESA_LEY_590,
+    PRO_PAGO_LEY_590,
+    APO_TOTAL_MENSUAL,
+    INT_PAGADOS_MORA,
+    VAL_REINTEGROS,
+    Periodo,
+    TOTAL_MONTO_APORTE,
+    TOTAL_INTERESES_MORA,
+    AÑO,
+    MES,
+    DIA,
+    "Tipo identificación",
+    "Número identificación aportante",
+//     Periodo,
+    TOTAL_MONTO_APORTE_CIERRE,
+    TOTAL_MONTO_INTERESES_MORA_CIERRE,
+    VALIDACION_15,
+    VALIDACION_TOTAL_INTERESES_MORA
+FROM [lib://Conexión Modelos Adicionales (srvqlik_admin)/Malla Validaciones Genesys/Empresas y Aportantes/QVD/Extracted/VALIDACION_15_NO_ENCONTRADAS_$(vPeriodo).qvd]
+(qvd);
+
+// EXIT SCRIPT;
+///$tab Empresas aportantes  - Malla 16
+Qualify *;
+
+Empresas_Aportantes_Malla16:
+
+LOAD
+    LLAVE,
+    TIP_IDENTIFICACION_EMPRESA,
+    NUM_IDENTIFICACION_EMPRESA,
+    TIP_IDENTIFICACION_AFILIADO,
+    NUM_IDENTIFICACION_AFILIADO,
+    PRI_NOMBRE,
+    SEG_NOMBRE,
+    PRI_APELLIDO,
+    SEG_APELLIDO,
+    FEC_NACIMIENTO,
+    GENERO_CCF,
+    ORI_SEXUAL,
+    NIVEL_ESCOLARIDAD,
+    COD_OCUPACION_DANE,
+    FACTOR_VULNERABILIDAD,
+    ESTADO_CIVIL,
+    PERTENENCIA_ETNICA,
+    PAIS_RESIDENCIA_BENEFICIARIO,
+    COD_MUNICIPIO_DANE,
+    ARE_GEOGRAFICA_RESIDENCIA,
+    COD_MUNICIPIO_LABOR_DANE,
+    AREA_GEOGRAFICA_LABOR,
+    SAL_BASICO,
+    TIP_AFILIADO,
+    CATEGORIA_CCF,
+    BEN_CUOTA_MONETARIA,
+    AÑO,
+    MES
+FROM [lib://Conexión Modelos Adicionales (srvqlik_admin)/Malla Validaciones Genesys/Empresas y Aportantes/QVD/Transformed/MALLA16_$(vPeriodo).qvd]
+(qvd);
+
+
+///$tab Empresas Mora
+Qualify *;
+
+Empresas_Mora_Drive:
+
+LOAD
+    TIP_IDENTIFICACION,
+    NUM_IDENTIFICACION_EMPRESA,
+    NOM_EMPRESA,
+    COD_MUNICIPIO_DANE,
+    DIR_EMPRESA,
+    REP_LEGAL,
+    FEC_INICIO_MORA,
+    SAL_MORA,
+    PER_MORA,
+    GES_COBRO,
+    ACU_PAGO,
+    CAR_RECUPERADA,
+    COR_ELECTRONICO
+FROM [lib://Conexión Modelos Adicionales (srvqlik_admin)/Malla Validaciones Genesys/Empresas en mora/QVD/Extracted/EMPRESAS_MORA_DRIVE_$(vPeriodo).qvd]
+(qvd);
+
+
+///$tab Empresas Mora - Malla 1
+Qualify *;
+
+Empresas_Mora_Malla1:
+
+LOAD
+    TIP_IDENTIFICACION,
+    NUM_IDENTIFICACION_EMPRESA,
+    "Tipo identificación aportante",
+    "Número Identificación aportante",
+    "Razón social o nombre",
+    "Estado afiliación aportante",
+    "Fecha minima de ingreso a Linea de Cobro",
+    Fecha_fin_mes_reporte,
+    Cantidad_dias,
+    "Última acción de cobro",
+    NOM_EMPRESA,
+    COD_MUNICIPIO_DANE,
+    DIR_EMPRESA,
+    REP_LEGAL,
+    FEC_INICIO_MORA,
+    SAL_MORA,
+    PER_MORA,
+    GES_COBRO,
+    ACU_PAGO,
+    CAR_RECUPERADA,
+    COR_ELECTRONICO,
+    VALIDACION_1,
+    AÑO,
+    MES,
+    DIA
+FROM [lib://Conexión Modelos Adicionales (srvqlik_admin)/Malla Validaciones Genesys/Empresas en mora/QVD/Extracted/VALIDACION_1_EMPRESAS_MORA_$(vPeriodo).qvd]
+(qvd);
+
+
+///$tab Empresas Mora - Malla 3
+Qualify *;
+
+Empresas_Mora_Malla3:
+
+LOAD
+    TIP_IDENTIFICACION,
+    NUM_IDENTIFICACION_EMPRESA,
+    "Tipo identificación aportante",
+    "Número Identificación aportante",
+    "Razón social o nombre",
+    "Estado afiliación aportante",
+    "N° de Operación de cartera",
+    "Nombre de Linea de Cobro",
+    "Fecha de ingreso a Linea de Cobro",
+    Deuda,
+    "Periodo adeudado",
+    "Última acción de cobro",
+    "Fecha última acción de cobro",
+    "Cantidad de periodos en mora",
+    "Tipo Identificación Representante Legal",
+    "Número de Indentificación Representante Legal",
+    "Nombre Representante Legal",
+    "Correo representante legal",
+    "Celular representante legal",
+    "Dirección Ubicación Principal",
+    "Correo electrónico ubicación principal",
+    "Código Departamento",
+    Departamento,
+    "Código Municipio",
+    Municipio,
+    "Fecha afiliación Empleador",
+    "Teléfono fijo ubicación principal",
+    "Celular ubicación principal",
+    "Código CIIU",
+    "Actividad económica",
+    "Clasificación actividad económica",
+    "Último período aporte",
+    "Fecha registro último aporte",
+    "Valor último aporte",
+    "Dirección Ubicación judicial",
+    "Correo electrónico ubicación judicial",
+    "Teléfono fijo ubicación judicial",
+    "Beneficio de ley",
+    "Responsables de contacto CCF1",
+    "Responsables de contacto CCF2",
+    Fecha_fin_mes_reporte,
+    Cantidad_dias,
+    VALIDACION_1,
+    VALIDACION_3,
+    NOM_EMPRESA,
+    COD_MUNICIPIO_DANE,
+    DIR_EMPRESA,
+    REP_LEGAL,
+    FEC_INICIO_MORA,
+    SAL_MORA,
+    PER_MORA,
+    GES_COBRO,
+    ACU_PAGO,
+    CAR_RECUPERADA,
+    COR_ELECTRONICO,
+    VALIDACION_3_UNIDAS,
+    AÑO,
+    MES,
+    DIA
+FROM [lib://Conexión Modelos Adicionales (srvqlik_admin)/Malla Validaciones Genesys/Empresas en mora/QVD/Extracted/VALIDACION_3_EMPRESAS_MORA_$(vPeriodo).qvd]
+(qvd);
+
+
+
+
+Qualify *;
+
+Empresas_Mora_Malla3_Cruce_Inverso:
+
+LOAD
+    TIP_IDENTIFICACION,
+    NUM_IDENTIFICACION_EMPRESA,
+    NOM_EMPRESA,
+    COD_MUNICIPIO_DANE,
+    DIR_EMPRESA,
+    REP_LEGAL,
+    FEC_INICIO_MORA,
+    SAL_MORA,
+    PER_MORA,
+    GES_COBRO,
+    ACU_PAGO,
+    CAR_RECUPERADA,
+    COR_ELECTRONICO,
+    "Tipo identificación aportante",
+    "Número Identificación aportante",
+    "Razón social o nombre",
+    "Estado afiliación aportante",
+    "N° de Operación de cartera",
+    "Nombre de Linea de Cobro",
+    "Fecha de ingreso a Linea de Cobro",
+    Deuda,
+    "Periodo adeudado",
+    "Última acción de cobro",
+    "Fecha última acción de cobro",
+    "Cantidad de periodos en mora",
+    "Tipo Identificación Representante Legal",
+    "Número de Indentificación Representante Legal",
+    "Nombre Representante Legal",
+    "Correo representante legal",
+    "Celular representante legal",
+    "Dirección Ubicación Principal",
+    "Correo electrónico ubicación principal",
+    "Código Departamento",
+    Departamento,
+    "Código Municipio",
+    Municipio,
+    "Fecha afiliación Empleador",
+    "Teléfono fijo ubicación principal",
+    "Celular ubicación principal",
+    "Código CIIU",
+    "Actividad económica",
+    "Clasificación actividad económica",
+    "Último período aporte",
+    "Fecha registro último aporte",
+    "Valor último aporte",
+    "Dirección Ubicación judicial",
+    "Correo electrónico ubicación judicial",
+    "Teléfono fijo ubicación judicial",
+    "Beneficio de ley",
+    "Responsables de contacto CCF1",
+    "Responsables de contacto CCF2",
+    Fecha_fin_mes_reporte,
+    Cantidad_dias,
+    VALIDACION_1,
+    VALIDACION_3,
+    VALIDACION_3_CRUCE_INVERSO
+FROM [lib://Conexión Modelos Adicionales (srvqlik_admin)/Malla Validaciones Genesys/Empresas en mora/QVD/Extracted/VALIDACION_3_CRUCE_INVERSO_EMPRESAS_MORA_$(vPeriodo).qvd]
+(qvd);
+
+
+
+///$tab Empresas Mora - Malla 4
+Qualify *;
+
+Empresas_Mora_Malla4:
+
+LOAD
+    TIP_IDENTIFICACION,
+    NUM_IDENTIFICACION_EMPRESA,
+    "Tipo identificación aportante",
+    "Número Identificación aportante",
+    "Razón social o nombre",
+    "Estado afiliación aportante",
+    "Cantidad de periodos en mora",
+    cantidad_nit,
+    cantidad_periodo_adeudado,
+    NOM_EMPRESA,
+    COD_MUNICIPIO_DANE,
+    DIR_EMPRESA,
+    REP_LEGAL,
+    FEC_INICIO_MORA,
+    SAL_MORA,
+    PER_MORA,
+    GES_COBRO,
+    ACU_PAGO,
+    CAR_RECUPERADA,
+    COR_ELECTRONICO,
+    VALIDACION_4,
+    VALIDACION_4_CANTIDAD_PERIODOS_MORA_83,
+    VALIDACION_4_CANTIDAD_NIT_83,
+    VALIDACION_4_CANTIDAD_PERIODO_ADEUDADO_83,
+    AÑO,
+    MES,
+    DIA
+FROM [lib://Conexión Modelos Adicionales (srvqlik_admin)/Malla Validaciones Genesys/Empresas en mora/QVD/Extracted/VALIDACION_4_EMPRESAS_MORA_$(vPeriodo).qvd]
+(qvd);
+
+
+///$tab Empresas Mora - Malla 5
+Qualify *;
+
+Empresas_Mora_Malla5:
+
+LOAD
+    TIP_IDENTIFICACION,
+    NUM_IDENTIFICACION_EMPRESA,
+    "Tipo identificación aportante",
+    "Número Identificación aportante",
+    "Razón social o nombre",
+    "Estado afiliación aportante",
+    total_deuda,
+    NOM_EMPRESA,
+    COD_MUNICIPIO_DANE,
+    DIR_EMPRESA,
+    REP_LEGAL,
+    FEC_INICIO_MORA,
+    SAL_MORA,
+    PER_MORA,
+    GES_COBRO,
+    ACU_PAGO,
+    CAR_RECUPERADA,
+    COR_ELECTRONICO,
+    VALIDACION_5,
+    VALIDACION_5_TOTAL_DEUDA,
+    AÑO,
+    MES,
+    DIA
+FROM [lib://Conexión Modelos Adicionales (srvqlik_admin)/Malla Validaciones Genesys/Empresas en mora/QVD/Extracted/VALIDACION_5_EMPRESAS_MORA_$(vPeriodo).qvd]
+(qvd);
+
+
+///$tab Empresas Mora - Malla 8
+Qualify *;
+
+Empresas_Mora_Malla8:
+
+LOAD
+    TIP_IDENTIFICACION,
+    NUM_IDENTIFICACION_EMPRESA,
+    NOM_EMPRESA,
+    COD_MUNICIPIO_DANE,
+    DIR_EMPRESA,
+    REP_LEGAL,
+    FEC_INICIO_MORA,
+    SAL_MORA,
+    PER_MORA,
+    GES_COBRO,
+    ACU_PAGO,
+    CAR_RECUPERADA,
+    COR_ELECTRONICO,
+    "Tipo identificación aportante",
+    "Número identificación aportante",
+    "Fecha de envío",
+    "Resultado de entrega",
+    "Línea de Cobro",
+    "Razón social o nombre",
+    "Estado afiliación aportante",
+    "Estado cartera aportante",
+    VALIDACION_8_LINEA_COBRO,
+    VALIDACION_8_PERIODO,
+    VALIDACION_8_RESULTADO_ENTREGA,
+    VALIDACION_8_GES_COBRO,
+    VALIDACION_8_VALOR_GES_COBRO,
+    AÑO,
+    MES,
+    DIA
+FROM [lib://Conexión Modelos Adicionales (srvqlik_admin)/Malla Validaciones Genesys/Empresas en mora/QVD/Extracted/VALIDACION_8_EMPRESAS_MORA_$(vPeriodo).qvd]
+(qvd);
+
+
+///$tab Empresas Mora - Malla 7,9,10,11,12
+Qualify *;
+
+//VALIDACIONES 7_9_10_11_12
+Empresas_Mora_Malla7_9_10_11_12:
+
+LOAD
+    TIP_IDENTIFICACION,
+    NUM_IDENTIFICACION_EMPRESA,
+    NOM_EMPRESA,
+    COD_MUNICIPIO_DANE,
+    DIR_EMPRESA,
+    REP_LEGAL,
+    FEC_INICIO_MORA,
+    SAL_MORA,
+    PER_MORA,
+    GES_COBRO,
+    ACU_PAGO,
+    CAR_RECUPERADA,
+    COR_ELECTRONICO,
+    VALIDACION_7,
+    VALIDACION_9,
+    VALIDACION_10_TIP_IDENTIFICACION,
+    VALIDACION_10_NUM_IDENTIFICACION_EMPRESA,
+    VALIDACION_10_NOM_EMPRESA,
+    VALIDACION_10_COD_MUNICIPIO_DANE,
+    VALIDACION_10_DIR_EMPRESA,
+    VALIDACION_10_REP_LEGAL,
+    VALIDACION_10_FEC_INICIO_MORA,
+    VALIDACION_10_AÑO_FEC_INICIO_MORA,
+    VALIDACION_10_SAL_MORA,
+    VALIDACION_10_PER_MORA,
+    VALIDACION_10_GES_COBRO,
+    VALIDACION_10_ACU_PAGO,
+    VALIDACION_10_CAR_RECUPERADA,
+    VALIDACION_10_COR_ELECTRONICO,
+    AÑO,
+    MES,
+    DIA
+FROM [lib://Conexión Modelos Adicionales (srvqlik_admin)/Malla Validaciones Genesys/Empresas en mora/QVD/Extracted/VALIDACIONES_EMPRESAS_MORA_DRIVE_$(vPeriodo).qvd]
+(qvd);
+
+
+
+
+///$tab Empresas Mora - Malla 13
+Qualify *;
+
+Empresas_Mora_Malla13:
+
+LOAD
+    TIP_IDENTIFICACION,
+    NUM_IDENTIFICACION_EMPRESA,
+    NOM_EMPRESA,
+    COD_MUNICIPIO_DANE,
+    DIR_EMPRESA,
+    REP_LEGAL,
+    FEC_INICIO_MORA,
+    SAL_MORA,
+    PER_MORA,
+    GES_COBRO,
+    ACU_PAGO,
+    CAR_RECUPERADA,
+    COR_ELECTRONICO,
+    "Tipo identificación aportante",
+    "Número Identificación aportante",
+    "Razón social o nombre",
+    "Estado afiliación aportante",
+    "Fecha minima de ingreso a Linea de Cobro",
+    VALIDACION_13_EMPRESAS_MORA,
+    VALIDACION_13,
+    AÑO,
+    MES,
+    DIA
+FROM [lib://Conexión Modelos Adicionales (srvqlik_admin)/Malla Validaciones Genesys/Empresas en mora/QVD/Extracted/VALIDACION_13_EMPRESAS_MORA_$(vPeriodo).qvd]
+(qvd);
+
+
+///$tab Exit
+Exit Script;
