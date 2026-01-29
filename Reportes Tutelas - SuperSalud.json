@@ -1,0 +1,56 @@
+
+SHEETS
+{"qInfo":{"qId":"eaAsjY","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"eaAsjY","approved":false,"published":false,"owner":"auth0|166b54d4fba4b038422556fdd27fb4ea209eb8f8e094777af8f6c60653624a58","ownerId":"6335cbef79eaea523b82a5c9","createdDate":"2025-12-17T15:32:10.288Z","modifiedDate":"2025-12-17T15:32:10.288Z","encrypted":true,"privileges":["read","update","delete","publish","change_owner"],"title":"Mi nueva hoja (2)","description":""},"qData":[]}
+{"qInfo":{"qId":"jzvb","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"jzvb","approved":false,"published":false,"owner":"auth0|166b54d4fba4b038422556fdd27fb4ea209eb8f8e094777af8f6c60653624a58","ownerId":"6335cbef79eaea523b82a5c9","createdDate":"2025-12-17T15:32:10.299Z","modifiedDate":"2025-12-17T15:32:10.299Z","encrypted":true,"privileges":["read","update","delete","publish","change_owner"],"title":"Mi nueva hoja (1)","description":""},"qData":[]}
+{"qInfo":{"qId":"kYjNr","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"kYjNr","approved":false,"published":false,"owner":"auth0|166b54d4fba4b038422556fdd27fb4ea209eb8f8e094777af8f6c60653624a58","ownerId":"6335cbef79eaea523b82a5c9","createdDate":"2025-12-17T15:32:10.312Z","modifiedDate":"2025-12-17T15:32:10.312Z","encrypted":true,"privileges":["read","update","delete","publish","change_owner"],"title":"Mi nueva hoja","description":""},"qData":[]}
+
+OBJECTS ON SHEETS
+{"name":"rPQJxm","type":"sn-table","col":0,"row":0,"colspan":24,"rowspan":12,"bounds":{"y":0,"x":0,"width":100,"height":100}}
+{"name":"NKvUqEZ","type":"sn-table","col":0,"row":0,"colspan":12,"rowspan":6,"bounds":{"y":0,"x":0,"width":50,"height":50}}
+{"name":"Mmjam","type":"sn-table","col":0,"row":6,"colspan":24,"rowspan":6,"bounds":{"y":50,"x":0,"width":100,"height":50}}
+{"name":"UmusqQ","type":"sn-table","col":12,"row":0,"colspan":12,"rowspan":6,"bounds":{"y":0,"x":50,"width":50,"height":50}}
+{"name":"fzNXmMr","type":"sn-table","col":0,"row":0,"colspan":23,"rowspan":10,"bounds":{"y":0,"x":0,"width":95.83333333333334,"height":83.33333333333334}}
+
+DIMENSIONS
+
+MEASURES
+
+VARIABLES
+{"qName":"va\u00f1ofiscal","qDefinition":"25","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"ab7e4189-98ed-4001-89e9-c54bd097f82c","qType":"variable"},"qData":[],"qIsScriptCreated":true}
+{"qName":"va\u00f1o","qDefinition":"2025","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"4937e77b-b6f0-43b6-8a89-f70d9b1be524","qType":"variable"},"qData":[],"qIsScriptCreated":true}
+{"qName":"vperiodo","qDefinition":"202502","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"f91f41fa-7c25-445e-8351-e77eae04a91f","qType":"variable"},"qData":[],"qIsScriptCreated":true}
+{"qName":"vfechaSistemaFinal","qDefinition":"2025-12-31","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"17ad6d50-f335-42ef-8658-16b90d82a06f","qType":"variable"},"qData":[],"qIsScriptCreated":true}
+{"qName":"vfechaSistemaInicial","qDefinition":"2025-01-01","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"26b61ff1-85ef-40fc-875a-72f7ee65432c","qType":"variable"},"qData":[],"qIsScriptCreated":true}
+{"qName":"vtrimestre","qDefinition":"04","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"83d3961f-f983-4ba5-8a1e-81fd794d7337","qType":"variable"},"qData":[],"qIsScriptCreated":true}
+{"qName":"vSemestreAlmera","qDefinition":"02","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"3123124b-118f-438b-acff-c29ede7ac364","qType":"variable"},"qData":[],"qIsScriptCreated":true}
+{"qName":"vSemestreCampo","qDefinition":"022025","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"773da7a9-69f5-4a4c-bfc1-198a8f371357","qType":"variable"},"qData":[],"qIsScriptCreated":true}
+{"qName":"vNumeroRegistros","qDefinition":"1481","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"eb1bde37-e1e8-4a08-ac46-955243693b32","qType":"variable"},"qData":[],"qIsScriptCreated":true}
+{"qName":"vfechaSistemaFinalNombreArchivo","qDefinition":"20251231","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"ebb9de8f-ecd1-4bfb-ab3f-cf9c00d7ab5e","qType":"variable"},"qData":[],"qIsScriptCreated":true}
+{"qName":"vtrimestreAbogados","qDefinition":"I","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"d2901734-1514-4483-bf31-ca4015c5bba0","qType":"variable"},"qData":[]}
+{"qName":"vsemestre","qDefinition":"0120252025","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"a143fde8-4e34-4af8-88db-5062fe0245ec","qType":"variable"},"qData":[]}
+{"qName":"vRegistros","qDefinition":"0","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"68f36885-cd25-4ea0-a00c-6cc25486bd9d","qType":"variable"},"qData":[]}
+{"qName":"CodigoTrimestre","qDefinition":"20","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"a04fa694-8769-4549-9ac2-0f7963f59806","qType":"variable"},"qData":[]}
+{"qName":"vmes","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"46c29fb1-814f-438f-9f9a-15922062cf0d","qType":"variable"},"qData":[]}
+{"qName":"vsiglo","qDefinition":"20","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"75771179-957b-4f77-bd46-c82a81b6c54a","qType":"variable"},"qData":[]}
+{"qName":"vfechaGeneracion","qDefinition":"2025-05-01","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"93b5733a-5d94-4cee-ae65-3481d15bec8d","qType":"variable"},"qData":[]}
+{"qName":"vfechaFinal","qDefinition":"2025-06-30","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"1d217166-6554-41b7-a284-cdb8f61325b8","qType":"variable"},"qData":[]}
+{"qName":"vfechaInicial","qDefinition":"2025-04-01","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"e2cf3aaf-cdcd-444c-83e4-1b88b205702e","qType":"variable"},"qData":[]}
+{"qName":"vReporte","qDefinition":"Reporte Tutelas - Registros repetidos para el trimestre II del 2025","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"b45117b6-009c-4892-8bc9-b5314e1443bd","qType":"variable"},"qData":[]}
+{"qName":"vMensajeInconsistencias","qDefinition":"<center><B><H2>Cantidad de registros <BR> <\/H2><\/B><\/center><center><H1><B>2<\/H1><\/B><\/center><BR><center><B><H2>Los registros a revisar los encontrara en el siguiente enlace:<\/H2><\/B><\/center><center><B><link>https:\/\/drive.google.com\/drive\/u\/1\/folders\/18mScF0ibw_SqjDJx47ITlbDQGEuTxyWF<\/center><\/B>","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"98d7869f-5480-4b96-bbb2-d3eb360b6c2d","qType":"variable"},"qData":[]}
+{"qName":"vFieldName","qDefinition":"Pretensiones&\"_\"&Registro_completo","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"b7fb0b25-421c-4d0b-b705-ad0e5048f303","qType":"variable"},"qData":[]}
+{"qName":"vOldName","qDefinition":"Registro completo","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"91a5614a-be2f-4424-ac30-93d68aeb5f7a","qType":"variable"},"qData":[]}
+{"qName":"i","qDefinition":"14","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"2be1b8ab-6122-4763-9ecb-fb38aeb51570","qType":"variable"},"qData":[]}
+{"qName":"vNumFields","qDefinition":"13","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"c3ec5549-d444-4e6d-a34e-9705f4f14481","qType":"variable"},"qData":[]}
+{"qName":"vNewName","qDefinition":"Pretensiones&\"_\"&Registro_completo","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"78aa9ac6-e59f-4aab-8341-3a68eb200652","qType":"variable"},"qData":[]}
+{"qName":"vConcat","qDefinition":" [Pretensiones&\"_\"&Tipo_de_Registro] & CHR(124) & [Pretensiones&\"_\"&Consecutivo_de_registro] & CHR(124) & [Pretensiones&\"_\"&Tipo_ID_Entidad] & CHR(124) & [Pretensiones&\"_\"&NIT_Entidad] & CHR(124) & [Pretensiones&\"_\"&Tipo_de_Documento] & CHR(124) & [Pretensiones&\"_\"&N\u00famero_de_identificaci\u00f3n] & CHR(124) & [Pretensiones&\"_\"&N\u00famero_de_Radicado] & CHR(124) & [Pretensiones&\"_\"&Problema_Jur\u00eddico] & CHR(124) & [Pretensiones&\"_\"&C\u00f3digo_de_la_Causa_del_problema_juridico] & CHR(124) & [Pretensiones&\"_\"&C\u00f3digo_de_la_Pretensi\u00f3n] & CHR(124) & [Pretensiones&\"_\"&Indicador_de_actualizaci\u00f3n_del_registro] & CHR(124) & [Pretensiones&\"_\"&Validaci\u00f3n_\u00fanicos] & CHR(124) & [Pretensiones&\"_\"&Registro_completo]","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"d317ca59-2346-43c6-bb71-bd395103cfc7","qType":"variable"},"qData":[]}
+{"qName":"vIdCol","qDefinition":"1|NI|890806490|2025-01-01|2025-12-31|1726","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"abcf65b7-43f2-492a-99d5-4c4b18b0454e","qType":"variable"},"qData":[]}
+
+FIELDS
+{"qIsHidden":true,"qIsSystem":true,"qName":"$Field","qCardinal":2,"qTags":["$hidden","$system","$ascii","$text","$key"],"qSrcTables":[]}
+{"qIsHidden":true,"qIsSystem":true,"qName":"$Table","qCardinal":1,"qTags":["$hidden","$system","$ascii","$text","$key"],"qSrcTables":[]}
+{"qIsHidden":true,"qIsSystem":true,"qName":"$Rows","qCardinal":1,"qTags":["$hidden","$system","$numeric","$integer"],"qSrcTables":[]}
+{"qIsHidden":true,"qIsSystem":true,"qName":"$Fields","qCardinal":1,"qTags":["$hidden","$system","$numeric","$integer"],"qSrcTables":[]}
+{"qIsHidden":true,"qIsSystem":true,"qName":"$FieldNo","qCardinal":2,"qTags":["$hidden","$system","$numeric","$integer"],"qSrcTables":[]}
+{"qIsHidden":true,"qIsSystem":true,"qName":"$Info","qCardinal":1,"qTags":["$hidden","$system","$ascii","$text"],"qSrcTables":[]}
+{"qName":"Pretension","qCardinal":28,"qTags":["$text"],"qSrcTables":["Mapping_Codigo_Pretension"]}
+{"qName":"Codigo","qCardinal":28,"qTags":["$numeric","$integer"],"qSrcTables":["Mapping_Codigo_Pretension"]}
