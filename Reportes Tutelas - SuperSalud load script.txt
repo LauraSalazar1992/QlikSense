@@ -1,0 +1,2532 @@
+///$tab Main
+$(Must_Include=lib://0. Scripts:DataFiles/Main.qvs);
+
+
+
+///$tab Variables
+//OBTENEMOS LA FECHA DEL SISTEMA PARA LA GENERACIÓN DEL REPORTE
+LET vfechaSistemaInicial = date(YearStart(ConvertToLocalTime(UTC((today(1))), 'GMT-05:00'),-1),'YYYY-MM-DD');
+
+// LET vfechaSistemaInicial = '2025-07-01';
+
+LET vfechaSistemaFinal = date(monthend(ConvertToLocalTime(UTC((today(1))), 'GMT-05:00'),-1),'YYYY-MM-DD');
+
+LET vfechaSistemaFinalNombreArchivo = date(monthend(ConvertToLocalTime(UTC((today(1))), 'GMT-05:00'),-1),'YYYYMMDD');
+
+
+LET vtrimestre=num(ceil(NUM(MONTH(vfechaSistemaFinal)/3,'00')),'00');
+LET vSemestreAlmera=num(ceil(NUM(MONTH(vfechaSistemaFinal)/6,'00')),'00');
+
+// LET CodigoTrimestre= if(vtrimestre='01','20',
+// 							if(vtrimestre='02','21',
+//                             	if(vtrimestre='03','22',
+//                                 	if(vtrimestre='04','23'))));
+	
+ 
+LET vaño=Year(vfechaSistemaInicial);
+LET vperiodo=vaño&vSemestreAlmera;
+LET vSemestreCampo = vSemestreAlmera&vaño;
+LET vañofiscal= mid(vfechaSistemaInicial,3,2) ;
+
+
+// TRACE Fecha Inicial:  $(vfechaSistemaInicial);
+// TRACE Fecha Final:  $(vfechaSistemaFinal);
+// trace Trimestre:  $(vtrimestre);
+// TRACE Periodo: $(vperiodo);
+TRACE Semestre: $(vSemestreAlmera);
+TRACE Semestre Campo: $(vSemestreCampo);
+
+// exit script;
+///$tab Políticas para agregar
+/*
+
+1. Numero radicas max 23 dígitos / no debe tener letras 
+2. Validación gestación
+	+ Hombres no 
+	+ Mayores a 50 y menores a 14 no pueden estar en gestación
+3. Si no se tiene tipo de afiliación no se reporta
+4. Impugnación --> SI
+	+ El campo de segunda instancia no debe estar nulo
+5. Campo base de validación --> Causa de Demora o Negación
+	+ Presentó causas de demora o postergación --> no puede estar nulo este --> Descripción Causa de Demora
+	+ Presentó causas de demora o postergación y negación --> no pueden están nulos los campos --> Descripción Causa de Demora / Descripción Causa de Negación
+	+ Presentó negación --> Siempre debe ir en el campo Descripción Causa de Negación --> Otras razones
+
+
+*/
+///$tab Carga Reporte Drive V.2
+LIB CONNECT TO 'DESARROLLO:Google Drive - Hojas de Calculo';
+
+[Creación_Reporte]:
+LOAD
+	[Código],
+	Periodo,
+	[Consecutivo de registro],
+	[Tipo de identificación de la entidad reportadora],
+	[Número de identificación de la entidad reportadora],
+	CodTip,
+	[Tipo de documento de identidad del beneficiario],
+	[Número de identificación],
+	[Nombre del beneficiario],
+	[Apellido del beneficiario],
+	[País de origen],
+	Migrante,
+	[Régimen de afiliación del usuario],
+	[Código de habilitación de la entidad objeto de reporte],
+	[Fecha de nacimiento],
+	Sexo,
+	[Gestación],
+	Etnia,
+	[Población especial],
+	[Tipo de afiliado],
+	[Municipio de residencia],
+	[Municipio en el cuál fue interpuesta la tutela],
+	[Número de radicado de la acción de tutela en salud],
+	[Fecha de radicado],
+	[Problema Jurídico],
+	[Fuente de Financiación],
+	[Causa de Demora o Negación],
+	[Descripción Causa de Demora],
+	[Descripción Causa de Negación],
+	[Diagnóstico Principal],
+	[Otro Diagnóstico Relacionado],
+	[Diagnóstico Enfermedad Huérfana],
+	[Código de la Causa del problema juridico],
+	[Código de la Pretensión],
+	[Decisión Primera Instancia],
+	[Impugnación],
+	[Decisión Segunda Instancia],
+	[Incidente de Desacato];
+
+SELECT 
+	[Código],
+	Periodo,
+	[Consecutivo de registro],
+	[Tipo de identificación de la entidad reportadora],
+	[Número de identificación de la entidad reportadora],
+	CodTip,
+	[Tipo de documento de identidad del beneficiario],
+	[Número de identificación],
+	[Nombre del beneficiario],
+	[Apellido del beneficiario],
+	[País de origen],
+	Migrante,
+	[Régimen de afiliación del usuario],
+	[Código de habilitación de la entidad objeto de reporte],
+	[Fecha de nacimiento],
+	Sexo,
+	[Gestación],
+	Etnia,
+	[Población especial],
+	[Tipo de afiliado],
+	[Municipio de residencia],
+	[Municipio en el cuál fue interpuesta la tutela],
+	[Número de radicado de la acción de tutela en salud],
+	[Fecha de radicado],
+	[Problema Jurídico],
+	[Fuente de Financiación],
+	[Causa de Demora o Negación],
+	[Descripción Causa de Demora],
+	[Descripción Causa de Negación],
+	[Diagnóstico Principal],
+	[Otro Diagnóstico Relacionado],
+	[Diagnóstico Enfermedad Huérfana],
+	[Código de la Causa del problema juridico],
+	[Código de la Pretensión],
+	[Decisión Primera Instancia],
+	[Impugnación],
+	[Decisión Segunda Instancia],
+	[Incidente de Desacato]
+FROM GetWorksheetV2
+WITH PROPERTIES (
+worksheetKey='1wRtHtH_fsgynF4-zg7z8JKH5vENhEo9iCUxd8XqyfCU:_',
+gidOverride='55199743',
+generatedNumberedColumns='false',
+skipRows=''
+);
+
+STORE [Creación_Reporte] INTO [lib://DESARROLLO:Conexión S3/Modelos Adicionales Tecnologia/Tutelas Almera/Reportes Normativos/Supersalud/Extracted/Inicio_Reporte.qvd](qvd);
+STORE [Creación_Reporte] INTO [lib://DESARROLLO:Conexión S3/Modelos Adicionales Tecnologia/Tutelas Almera/Reportes Normativos/Supersalud/Extracted/Inicio_Reporte.xls](txt);
+
+Drop Table [Creación_Reporte];
+
+// EXIT SCRIPT;
+
+
+///$tab 5. Mapping Drive Beneficios
+LIB CONNECT TO 'DESARROLLO:Google Drive - Hojas de Calculo';
+
+[Mapping_Codigo_Pais]:
+Mapping
+LOAD 
+	Column6 as Pais, 
+	Column7 as Codigo
+WHERE Column6 <> ''   ;
+
+SELECT Column6,
+	Column7
+FROM GetWorksheetV2
+WITH PROPERTIES (
+worksheetKey='1aytz0QvVF8TJ8kEHCTfWfrspkiheV3aN-hnFG2lKT-s:_',
+gidOverride='699132401',
+generatedNumberedColumns='false',
+skipRows='1'
+);
+
+
+[Mapping_Codigo_Migrante]:
+Mapping
+LOAD 
+	Migrante, 
+	Column10 as Codigo
+WHERE Migrante <> ''   ;
+
+SELECT Migrante,
+	Column10
+FROM GetWorksheetV2
+WITH PROPERTIES (
+worksheetKey='1aytz0QvVF8TJ8kEHCTfWfrspkiheV3aN-hnFG2lKT-s:_',
+gidOverride='699132401',
+generatedNumberedColumns='false',
+skipRows='1'
+);
+
+
+[Mapping_Codigo_Contributivo]:
+Mapping
+LOAD 
+	UPPER(Column12) as [Nombre], 
+	Column13 as [Codigo]
+WHERE Column12 <> ''   ;
+
+SELECT Column12,
+	Column13
+FROM GetWorksheetV2
+WITH PROPERTIES (
+worksheetKey='1aytz0QvVF8TJ8kEHCTfWfrspkiheV3aN-hnFG2lKT-s:_',
+gidOverride='699132401',
+generatedNumberedColumns='false',
+skipRows='1'
+);
+
+
+[Mapping_Codigo_Etnia]:
+Mapping
+LOAD 
+	UPPER(Column26) as [Etnia], 
+	Column27 as [Codigo]
+WHERE Column26 <> ''   ;
+
+SELECT Column26,
+	Column27
+FROM GetWorksheetV2
+WITH PROPERTIES (
+worksheetKey='1aytz0QvVF8TJ8kEHCTfWfrspkiheV3aN-hnFG2lKT-s:_',
+gidOverride='699132401',
+generatedNumberedColumns='false',
+skipRows='1'
+);
+
+
+[Mapping_Codigo_Cotizante]:
+Mapping
+LOAD 
+	upper(Column30) as [Cotizante], 
+	Column31 as [Codigo]
+WHERE Column30 <> ''   ;    
+
+SELECT Column30,
+	Column31
+FROM GetWorksheetV2
+WITH PROPERTIES (
+worksheetKey='1aytz0QvVF8TJ8kEHCTfWfrspkiheV3aN-hnFG2lKT-s:_',
+gidOverride='699132401',
+generatedNumberedColumns='false',
+skipRows='1'
+);
+
+
+LIB CONNECT TO 'DESARROLLO:Conexión NbPg Foniñez - Prueba';
+
+[Mapping_Codigo_Municipio]:
+Mapping
+LOAD
+	UPPER(trim(descripcion)) AS descripcion,
+// 	nombre_divipola,
+    cod_municipio;
+
+SELECT
+	descripcion,
+	"cod_municipio",
+	"nombre_divipola"
+FROM "public"."municipio";
+
+
+// Mapping_Codigo_Municipio:
+// MAPPING LOAD * INLINE [
+//     original, reemplazo
+//     Á, A
+//     É, E
+//     Í, I
+//     Ó, O
+//     Ú, U
+//     á, a
+//     é, e
+//     í, i
+//     ó, o
+//     ú, u
+//     Ñ, N
+//     ñ, n
+// ];
+
+
+
+
+
+///$tab 6. Beneficiarios
+Tem_Beneficiarios_Tutelas:
+
+LOAD Distinct
+    Periodo,
+    '2' as "Tipo de registro",
+//     "Consecutivo de registro",
+    "Tipo de identificación de la entidad reportadora",
+    "Número de identificación de la entidad reportadora",
+    CodTip as "Tipo de documento de identidad del beneficiario",
+    "Número de identificación",
+    SubField(UPPER("Nombre del beneficiario"),'|',1) as "Nombre del beneficiario",
+    SubField(UPPER("Apellido del beneficiario"),'|',1) as "Apellido del beneficiario",
+    ApplyMap('Mapping_Codigo_Pais',"País de origen",'REVISAR') as "País de origen",
+    ApplyMap('Mapping_Codigo_Migrante',Migrante,'REVISAR') AS Migrante,
+    ApplyMap('Mapping_Codigo_Contributivo',UPPER("Régimen de afiliación del usuario"),'REVISAR') AS "Régimen de afiliación del usuario",
+    "Código de habilitación de la entidad objeto de reporte",
+    if(IsNull("Fecha de nacimiento"),'REVISAR',"Fecha de nacimiento") AS "Fecha de nacimiento",
+	Sexo,
+    if(Gestación='SI',1,2) AS [Gestación],
+    ApplyMap('Mapping_Codigo_Etnia',UPPER(Etnia),'07') AS Etnia,
+    Null() as "Población especial",
+    ApplyMap('Mapping_Codigo_Cotizante',UPPER("Tipo de afiliado"),'REVISAR') AS "Tipo de afiliado",
+    num(ApplyMap('Mapping_Codigo_Municipio',UPPER("Municipio de residencia"),'REVISAR'),'00000') AS "Municipio de residencia",
+//     "Municipio de residencia" AS 1,
+    'I' AS "Indicador de actualización del registro",
+    2
+    &CodTip&"Número de identificación" as "Validación únicos"
+FROM [lib://DESARROLLO:Conexión S3/Modelos Adicionales Tecnologia/Tutelas Almera/Reportes Normativos/Supersalud/Extracted/Inicio_Reporte.qvd]
+(qvd);
+
+NoConcatenate
+
+Beneficiarios_Tutelas:
+LOAD Distinct
+    Periodo,
+    "Tipo de registro",
+//     "Consecutivo de registro",
+    "Tipo de identificación de la entidad reportadora",
+    "Número de identificación de la entidad reportadora",
+    "Tipo de documento de identidad del beneficiario",
+    "Número de identificación",
+    "Nombre del beneficiario",
+    "Apellido del beneficiario",
+    "País de origen",
+    Migrante,
+    "Régimen de afiliación del usuario",
+    "Código de habilitación de la entidad objeto de reporte",
+    "Fecha de nacimiento",
+    Sexo,
+    Gestación,
+    Etnia,
+    "Población especial",
+    "Tipo de afiliado",
+    "Municipio de residencia",
+//     "1",
+    "Indicador de actualización del registro",
+    "Validación únicos",
+    
+//Concantenación    
+        "Tipo de registro"
+//         & CHR(124) & "Consecutivo de registro"
+        & CHR(124) & "Tipo de identificación de la entidad reportadora"
+        & CHR(124) & "Número de identificación de la entidad reportadora"
+        & CHR(124) & "Tipo de documento de identidad del beneficiario"
+        & CHR(124) & "Número de identificación"
+        & CHR(124) & "Nombre del beneficiario"
+        & CHR(124) & "Apellido del beneficiario"
+        & CHR(124) & "País de origen"
+    	& CHR(124) &  Migrante
+        & CHR(124) & "Régimen de afiliación del usuario"
+        & CHR(124) & "Código de habilitación de la entidad objeto de reporte"
+        & CHR(124) & "Fecha de nacimiento"
+        & CHR(124) & Sexo
+        & CHR(124) & Gestación
+        & CHR(124) & Etnia
+        & CHR(124) & "Población especial"
+        & CHR(124) & "Tipo de afiliado"
+        & CHR(124) & "Municipio de residencia"
+        & CHR(124) & "Indicador de actualización del registro"
+        AS "Registro completo"
+Resident Tem_Beneficiarios_Tutelas;
+Drop Table Tem_Beneficiarios_Tutelas;
+
+
+
+// STORE [Beneficiarios_Tutelas] INTO [lib://TUTELAS ALMERA:DataFiles/Reportes Normativos/Supersalud/Extracted/BD_Beneficiarios_Tutelas_$(vperiodo).qvd](qvd);
+STORE [Beneficiarios_Tutelas] INTO [lib://DESARROLLO:Conexión S3/Modelos Adicionales Tecnologia/Tutelas Almera/Reportes Normativos/Supersalud/Extracted/BD_Beneficiarios_Tutelas_$(vperiodo).qvd](qvd);
+Drop table Beneficiarios_Tutelas;
+// exit script;
+
+
+
+///$tab 7. Mapping Drive Datos Generales
+LIB CONNECT TO 'DESARROLLO:Google Drive - Hojas de Calculo';
+
+Mapping_Codigo_Primera_Instancia:
+Mapping
+LOAD 
+	Upper(Column43) as Primera_Instancia, 
+	Column44 as Codigo
+WHERE Column43 <>'';
+
+SELECT Column43,
+	Column44
+FROM GetWorksheetV2
+WITH PROPERTIES (
+worksheetKey='1aytz0QvVF8TJ8kEHCTfWfrspkiheV3aN-hnFG2lKT-s:_',
+gidOverride='699132401',
+generatedNumberedColumns='false',
+skipRows='1'
+);
+
+
+[Mapping_Codigo_Segunda_Instancia]:
+Mapping
+LOAD 
+	Upper(Column47) as Segunda_Instancia, 
+	Column48 as Codigo
+WHERE Column47 <>'';
+
+SELECT Column47,
+	Column48
+FROM GetWorksheetV2
+WITH PROPERTIES (
+worksheetKey='1aytz0QvVF8TJ8kEHCTfWfrspkiheV3aN-hnFG2lKT-s:_',
+gidOverride='699132401',
+generatedNumberedColumns='false',
+skipRows='1'
+);
+
+LIB CONNECT TO 'DESARROLLO:Conexión NbPg Foniñez - Prueba';
+
+[Mapping_Codigo_Municipio_Divipola]:
+Mapping
+LOAD
+	TRIM(nombre_divipola) AS nombre_divipola,
+    cod_municipio;
+
+SELECT
+	descripcion,
+	"nombre_divipola",
+	"cod_municipio"	
+FROM "public"."municipio";
+
+
+
+// Mapping_Codigo_Municipio_Divipola:
+// MAPPING LOAD * INLINE [
+//     original, reemplazo
+//     Á, A
+//     É, E
+//     Í, I
+//     Ó, O
+//     Ú, U
+//     á, a
+//     é, e
+//     í, i
+//     ó, o
+//     ú, u
+//     Ñ, N
+//     ñ, n
+// ];
+
+
+
+
+
+///$tab 8. Datos generales
+Tem_Datos_Generales_Tutelas:
+
+LOAD
+	'3' as "Tipo de Registro",
+//     "Consecutivo de registro",
+    "Tipo de identificación de la entidad reportadora",
+    "Número de identificación de la entidad reportadora",
+    CodTip as "Tipo de documento de identidad del beneficiario de la tutela",
+	"Número de identificación" as "Número de identificación del  beneficiario de la tutela",
+    IF(UPPER("Municipio en el cuál fue interpuesta la tutela")='BOGOTÁ','11001',
+	NUM(ApplyMap('Mapping_Codigo_Municipio_Divipola',UPPER("Municipio en el cuál fue interpuesta la tutela"),'REVISAR'),'00000')) AS "Municipio en el cuál fue interpuesta la tutela",
+	"Número de radicado de la acción de tutela en salud",
+    "Fecha de radicado",
+    ApplyMap('Mapping_Codigo_Primera_Instancia',Upper("Decisión Primera Instancia"),'REVISAR') as "Decisión Primera Instancia",
+    if(IsNull("Impugnación") or TRIM("Impugnación")='','REVISAR',if(upper("Impugnación")='SI',1,2)) AS "Impugnación",
+    ApplyMap('Mapping_Codigo_Segunda_Instancia',Upper("Decisión Segunda Instancia"),'REVISAR') as "Decisión Segunda Instancia",
+    if(IsNull("Incidente de Desacato") or TRIM("Incidente de Desacato")='','REVISAR',if(upper("Incidente de Desacato")='SI',1,2)) AS "Incidente de Desacato",
+    'I' AS "Indicador de actualización del registro",
+    3
+    &CodTip
+    &"Número de identificación"
+    &"Número de radicado de la acción de tutela en salud" as "Validación únicos"
+FROM [lib://DESARROLLO:Conexión S3/Modelos Adicionales Tecnologia/Tutelas Almera/Reportes Normativos/Supersalud/Extracted/Inicio_Reporte.qvd]
+(qvd);
+
+NoConcatenate
+
+Datos_Generales_Tutelas:
+LOAD Distinct
+    "Tipo de Registro",
+//     "Consecutivo de registro",
+    "Tipo de identificación de la entidad reportadora",
+    "Número de identificación de la entidad reportadora",
+    "Tipo de documento de identidad del beneficiario de la tutela",
+    "Número de identificación del  beneficiario de la tutela",
+    "Municipio en el cuál fue interpuesta la tutela",
+    "Número de radicado de la acción de tutela en salud",
+    "Fecha de radicado",
+    "Decisión Primera Instancia",
+    Impugnación,
+    "Decisión Segunda Instancia",
+    "Incidente de Desacato",
+    "Indicador de actualización del registro",
+    "Validación únicos",
+    
+
+ // Concatenación para crear el registro completo
+    "Tipo de Registro"
+//         & CHR(124) & "Consecutivo de registro"
+        & CHR(124) & "Tipo de identificación de la entidad reportadora"
+        & CHR(124) & "Número de identificación de la entidad reportadora"
+        & CHR(124) & "Tipo de documento de identidad del beneficiario de la tutela"
+        & CHR(124) & "Número de identificación del  beneficiario de la tutela"
+        & CHR(124) & "Municipio en el cuál fue interpuesta la tutela"
+        & CHR(124) & "Número de radicado de la acción de tutela en salud"
+        & CHR(124) & "Fecha de radicado"
+        & CHR(124) & "Decisión Primera Instancia"
+        & CHR(124) & Impugnación
+        & CHR(124) & "Decisión Segunda Instancia"
+        & CHR(124) & "Incidente de Desacato"
+        & CHR(124) & "Indicador de actualización del registro"
+        AS "Registro completo"
+Resident Tem_Datos_Generales_Tutelas;
+Drop Table Tem_Datos_Generales_Tutelas;
+
+STORE [Datos_Generales_Tutelas] INTO [lib://DESARROLLO:Conexión S3/Modelos Adicionales Tecnologia/Tutelas Almera/Reportes Normativos/Supersalud/Extracted/BD_Datos_Generales_Tutelas_$(vperiodo).qvd](qvd);
+Drop table Datos_Generales_Tutelas;
+// exit script;
+
+///$tab 9. Mapping Prob. Juridicos
+LIB CONNECT TO 'DESARROLLO:Google Drive - Hojas de Calculo';
+
+[Mapping_Codigo_Problema_Juridico]:
+Mapping
+LOAD 
+	upper(Column51) as Problema_Juridico, 
+	Column52 as Codigo
+WHERE Column52 <>'';
+
+SELECT Column51,
+	Column52
+FROM GetWorksheetV2
+WITH PROPERTIES (
+worksheetKey='1aytz0QvVF8TJ8kEHCTfWfrspkiheV3aN-hnFG2lKT-s:_',
+gidOverride='699132401',
+generatedNumberedColumns='false',
+skipRows=''
+);
+
+
+[Mapping_Codigo_Fuente]:
+Mapping
+LOAD 
+	UPPER(Column69) as [Fuente], 
+	Column70 as [Codigo]
+WHERE Column70 <>'';
+
+SELECT Column70,
+	Column69
+FROM GetWorksheetV2
+WITH PROPERTIES (
+worksheetKey='1aytz0QvVF8TJ8kEHCTfWfrspkiheV3aN-hnFG2lKT-s:_',
+gidOverride='699132401',
+generatedNumberedColumns='true',
+skipRows=''
+);
+
+
+
+[Mapping_Codigo_Causa_Demora]:
+Mapping
+LOAD 
+	upper(Column74) as [Causa_demora], 
+	Column75 as [Codigo]
+   
+WHERE Column75 <>'';    
+
+SELECT Column74,
+	Column75
+    
+FROM GetWorksheetV2
+WITH PROPERTIES (
+worksheetKey='1aytz0QvVF8TJ8kEHCTfWfrspkiheV3aN-hnFG2lKT-s:_',
+gidOverride='699132401',
+generatedNumberedColumns='True',
+skipRows=''
+);
+
+[Mapping_Codigo_Descripcion_Demora]:
+Mapping
+LOAD 
+	upper(Column79) as [Descripcion_demora], 
+	Column80 as [Codigo]
+WHERE Column80 <>'';
+
+SELECT Column79,
+	Column80
+FROM GetWorksheetV2
+WITH PROPERTIES (
+worksheetKey='1aytz0QvVF8TJ8kEHCTfWfrspkiheV3aN-hnFG2lKT-s:_',
+gidOverride='699132401',
+generatedNumberedColumns='true',
+skipRows=''
+);
+
+[Mapping_Codigo_Descripcion_Negacion]:
+Mapping
+LOAD 
+	UPPER(Column84) as [Descripcion_Negacion], 
+	Column85 as [Codigo]
+WHERE Column85 <>'';
+
+SELECT Column85,
+	Column84
+FROM GetWorksheetV2
+WITH PROPERTIES (
+worksheetKey='1aytz0QvVF8TJ8kEHCTfWfrspkiheV3aN-hnFG2lKT-s:_',
+gidOverride='699132401',
+generatedNumberedColumns='true',
+skipRows=''
+);
+
+
+
+
+
+
+///$tab 10. Problemas Juridicos
+Tem_Problemas_Juridicos_Tutelas:
+
+LOAD 
+	'4' as "Tipo de Registro",
+//     "Consecutivo de registro",
+    "Tipo de identificación de la entidad reportadora" as  "Tipo ID Entidad",
+    "Número de identificación de la entidad reportadora" as "NIT Entidad",
+    CodTip as "Tipo de Documento",
+	"Número de identificación",
+    "Número de radicado de la acción de tutela en salud" as "Número de Radicado",
+    ApplyMap('Mapping_Codigo_Problema_Juridico',Upper("Problema Jurídico"),'REVISAR') as "Problema Jurídico",
+    IF(UPPER("Fuente de Financiación")='NO APLICA' or UPPER("Fuente de Financiación")='N/A',Null(),ApplyMap('Mapping_Codigo_Fuente',Upper("Fuente de Financiación"),'REVISAR')) as "Fuente de Financiación",
+    IF(UPPER("Causa de Demora o Negación")='NO APLICA' or UPPER("Causa de Demora o Negación")='N/A',Null(),ApplyMap('Mapping_Codigo_Causa_Demora',Upper("Causa de Demora o Negación"),'REVISAR')) as "Causa de Demora o Negación",
+    IF(UPPER("Descripción Causa de Demora")='NO APLICA' or UPPER("Descripción Causa de Demora")='N/A',Null(),ApplyMap('Mapping_Codigo_Descripcion_Demora',Upper("Descripción Causa de Demora"),'REVISAR')) as "Descripción Causa de Demora",
+    IF(UPPER("Descripción Causa de Negación")='NO APLICA' or UPPER("Descripción Causa de Negación")='N/A',Null(),ApplyMap('Mapping_Codigo_Descripcion_Negacion',Upper("Descripción Causa de Negación"),'REVISAR')) as "Descripción Causa de Negación",
+    IF(UPPER("Diagnóstico Principal")='NO APLICA' or UPPER("Diagnóstico Principal")='N/A',Null(),"Diagnóstico Principal") as "Diagnóstico Principal",
+    IF(UPPER("Otro Diagnóstico Relacionado")='NO APLICA' or UPPER("Otro Diagnóstico Relacionado")='N/A',Null(),"Otro Diagnóstico Relacionado") as "Otro Diagnóstico Relacionado",
+    IF(UPPER("Diagnóstico Enfermedad Huérfana")='NO APLICA' or UPPER("Diagnóstico Enfermedad Huérfana")='N/A',Null(),"Diagnóstico Enfermedad Huérfana") as "Diagnóstico Enfermedad Huérfana",
+    'I' AS "Indicador de actualización del registro",
+    4
+    &"Número de radicado de la acción de tutela en salud"
+    &ApplyMap('Mapping_Codigo_Problema_Juridico',Upper("Problema Jurídico"),'REVISAR') AS "Validación únicos"
+    
+  
+FROM [lib://DESARROLLO:Conexión S3/Modelos Adicionales Tecnologia/Tutelas Almera/Reportes Normativos/Supersalud/Extracted/Inicio_Reporte.qvd]
+(qvd);
+
+
+NoConcatenate
+
+Problemas_Juridicos_Tutelas:
+LOAD Distinct
+    "Tipo de Registro",
+//     "Consecutivo de registro",
+    "Tipo ID Entidad",
+    "NIT Entidad",
+    "Tipo de Documento",
+    "Número de identificación",
+    "Número de Radicado",
+    "Problema Jurídico",
+    "Fuente de Financiación",
+    "Causa de Demora o Negación",
+    "Descripción Causa de Demora",
+    "Descripción Causa de Negación",
+    "Diagnóstico Principal",
+    "Otro Diagnóstico Relacionado",
+    "Diagnóstico Enfermedad Huérfana",
+    "Indicador de actualización del registro",
+    "Validación únicos",
+    
+ // Concatenación para crear el registro completo
+    "Tipo de Registro"
+//         & CHR(124) & "Consecutivo de registro"
+        & CHR(124) & "Tipo ID Entidad"
+        & CHR(124) & "NIT Entidad"
+        & CHR(124) & "Tipo de Documento"
+        & CHR(124) & "Número de identificación"
+        & CHR(124) & "Número de Radicado"
+        & CHR(124) & "Problema Jurídico"
+        & CHR(124) & "Fuente de Financiación"
+        & CHR(124) & "Causa de Demora o Negación"
+        & CHR(124) & "Descripción Causa de Demora"
+        & CHR(124) & "Descripción Causa de Negación"
+        & CHR(124) & "Diagnóstico Principal"
+        & CHR(124) & "Otro Diagnóstico Relacionado"
+        & CHR(124) & "Diagnóstico Enfermedad Huérfana"
+        & CHR(124) & "Indicador de actualización del registro"
+        AS "Registro completo"
+Resident Tem_Problemas_Juridicos_Tutelas;
+Drop Table Tem_Problemas_Juridicos_Tutelas;
+
+STORE [Problemas_Juridicos_Tutelas] INTO [lib://DESARROLLO:Conexión S3/Modelos Adicionales Tecnologia/Tutelas Almera/Reportes Normativos/Supersalud/Extracted/BD_Problemas_Juridicos_Tutelas_$(vperiodo).qvd](qvd);
+Drop table Problemas_Juridicos_Tutelas;
+// exit script;
+///$tab 11. Mapping Causas / Pretensiones
+LIB CONNECT TO 'DESARROLLO:Google Drive - Hojas de Calculo';
+
+// [Mapping_Codigo_Problema_Juridico]:
+// Mapping
+// LOAD 
+// 	upper(Column39) as Problema_Juridico, 
+// 	Column40 as Codigo
+// WHERE Column39 <>'';
+
+// SELECT Column39,
+// 	Column40
+// FROM GetWorksheetV2
+// WITH PROPERTIES (
+// worksheetKey='1aytz0QvVF8TJ8kEHCTfWfrspkiheV3aN-hnFG2lKT-s:_',
+// gidOverride='699132401',
+// generatedNumberedColumns='false',
+// skipRows=''
+// );
+
+
+[Mapping_Codigo_Causa_Problema_Juridico]:
+Mapping
+LOAD 
+	upper(Column71) as [Causa_Problema_Juridico], 
+	Column72 as [Codigo]
+WHERE Column71 <>'';
+
+SELECT Column71,
+	Column72
+FROM GetWorksheetV2
+WITH PROPERTIES (
+worksheetKey='1aytz0QvVF8TJ8kEHCTfWfrspkiheV3aN-hnFG2lKT-s:_',
+gidOverride='699132401',
+generatedNumberedColumns='false',
+skipRows='1'
+);
+
+
+[Mapping_Codigo_Pretension]:
+LOAD 
+	UPPER(Column75) as [Pretension], 
+	Column76 as [Codigo]
+WHERE Column75 <>'';
+
+SELECT Column75,
+	Column76
+FROM GetWorksheetV2
+WITH PROPERTIES (
+worksheetKey='1aytz0QvVF8TJ8kEHCTfWfrspkiheV3aN-hnFG2lKT-s:_',
+gidOverride='699132401',
+generatedNumberedColumns='false',
+skipRows='1'
+);
+
+
+
+
+
+
+
+///$tab 12. Causas
+Tem_Causas:
+
+LOAD
+	'5' as "Tipo de Registro",
+//     "Consecutivo de registro",
+    "Tipo de identificación de la entidad reportadora" as  "Tipo ID Entidad",
+    "Número de identificación de la entidad reportadora" as "NIT Entidad",
+    CodTip as "Tipo de Documento",
+	"Número de identificación",
+    "Número de radicado de la acción de tutela en salud" as "Número de Radicado",
+    ApplyMap('Mapping_Codigo_Problema_Juridico',Upper("Problema Jurídico"),'REVISAR') as "Problema Jurídico",
+    ApplyMap('Mapping_Codigo_Causa_Problema_Juridico',Upper("Código de la Causa del problema juridico"),'REVISAR') as "Código de la Causa del problema juridico",
+	
+    'I' AS "Indicador de actualización del registro",
+    5
+    &"Número de radicado de la acción de tutela en salud"
+    &ApplyMap('Mapping_Codigo_Problema_Juridico',Upper("Problema Jurídico"),'REVISAR')
+    &ApplyMap('Mapping_Codigo_Causa_Problema_Juridico',Upper("Código de la Causa del problema juridico"),'REVISAR') AS "Validación únicos"
+      
+FROM [lib://DESARROLLO:Conexión S3/Modelos Adicionales Tecnologia/Tutelas Almera/Reportes Normativos/Supersalud/Extracted/Inicio_Reporte.qvd]
+(qvd);
+
+NoConcatenate
+
+Causas:
+LOAD Distinct
+    "Tipo de Registro",
+//     "Consecutivo de registro",
+    "Tipo ID Entidad",
+    "NIT Entidad",
+    "Tipo de Documento",
+    "Número de identificación",
+    "Número de Radicado",
+    "Problema Jurídico",
+    "Código de la Causa del problema juridico",
+    "Indicador de actualización del registro",
+    "Validación únicos",
+    
+    // Concatenación para crear el registro completo
+    "Tipo de Registro"
+//         & CHR(124) & "Consecutivo de registro"
+        & CHR(124) & "Tipo ID Entidad"
+        & CHR(124) & "NIT Entidad"
+        & CHR(124) & "Tipo de Documento"
+        & CHR(124) & "Número de identificación"
+        & CHR(124) & "Número de Radicado"
+        & CHR(124) & "Problema Jurídico"
+        & CHR(124) & "Código de la Causa del problema juridico"
+        & CHR(124) & "Indicador de actualización del registro"
+        AS "Registro completo"
+Resident Tem_Causas;
+Drop Table Tem_Causas;
+
+STORE [Causas] INTO [lib://DESARROLLO:Conexión S3/Modelos Adicionales Tecnologia/Tutelas Almera/Reportes Normativos/Supersalud/Extracted/BD_Causas_Tutelas_$(vperiodo).qvd](qvd);
+Drop table Causas;
+// exit script;
+
+///$tab 13. Pretensiones
+Tem_Pretensiones:
+
+LOAD
+	'6' as "Tipo de Registro",
+//     "Consecutivo de registro",
+    "Tipo de identificación de la entidad reportadora" as  "Tipo ID Entidad",
+    "Número de identificación de la entidad reportadora" as "NIT Entidad",
+    CodTip as "Tipo de Documento",
+	"Número de identificación",
+    "Número de radicado de la acción de tutela en salud" as "Número de Radicado",
+    ApplyMap('Mapping_Codigo_Problema_Juridico',Upper("Problema Jurídico"),'REVISAR') as "Problema Jurídico",
+    ApplyMap('Mapping_Codigo_Causa_Problema_Juridico',Upper("Código de la Causa del problema juridico"),'REVISAR') as "Código de la Causa del problema juridico",
+    ApplyMap('Mapping_Codigo_Pretension',Upper("Código de la Pretensión"),'REVISAR') as "Código de la Pretensión",
+	
+    'I' AS "Indicador de actualización del registro",
+    6
+    &"Número de radicado de la acción de tutela en salud"
+    &ApplyMap('Mapping_Codigo_Problema_Juridico',Upper("Problema Jurídico"),'REVISAR')
+    &ApplyMap('Mapping_Codigo_Causa_Problema_Juridico',Upper("Código de la Causa del problema juridico"),'REVISAR')
+    &ApplyMap('Mapping_Codigo_Pretension',Upper("Código de la Pretensión"),'REVISAR') AS "Validación únicos"
+      
+FROM [lib://DESARROLLO:Conexión S3/Modelos Adicionales Tecnologia/Tutelas Almera/Reportes Normativos/Supersalud/Extracted/Inicio_Reporte.qvd]
+(qvd);
+
+NoConcatenate
+
+Pretensiones:
+LOAD Distinct
+    "Tipo de Registro",
+//     "Consecutivo de registro",
+    "Tipo ID Entidad",
+    "NIT Entidad",
+    "Tipo de Documento",
+    "Número de identificación",
+    "Número de Radicado",
+    "Problema Jurídico",
+    "Código de la Causa del problema juridico",
+    "Código de la Pretensión",
+    "Indicador de actualización del registro",
+    "Validación únicos",
+    
+    // Concatenación para crear el registro completo
+    "Tipo de Registro"
+//         & CHR(124) & "Consecutivo de registro"
+        & CHR(124) & "Tipo ID Entidad"
+        & CHR(124) & "NIT Entidad"
+        & CHR(124) & "Tipo de Documento"
+        & CHR(124) & "Número de identificación"
+        & CHR(124) & "Número de Radicado"
+        & CHR(124) & "Problema Jurídico"
+        & CHR(124) & "Código de la Causa del problema juridico"
+        & CHR(124) & "Código de la Pretensión"
+        & CHR(124) & "Indicador de actualización del registro"
+        AS "Registro completo"
+Resident Tem_Pretensiones;
+Drop Table Tem_Pretensiones;
+
+STORE [Pretensiones] INTO [lib://DESARROLLO:Conexión S3/Modelos Adicionales Tecnologia/Tutelas Almera/Reportes Normativos/Supersalud/Extracted/BD_Pretensiones_$(vperiodo).qvd](qvd);
+Drop table Pretensiones;
+// exit script;
+
+///$tab 14. Unión
+/*
+
+EN LA UNION SOLO DEBEN QUEDAR MAXIMO 5 REGISTROS POR 
+
+*/
+
+BD_Union:
+//Beneficiarios
+LOAD Distinct
+    "Tipo de registro" as "Tipo de Registro",
+//     "Consecutivo de registro",
+    "Tipo de identificación de la entidad reportadora",
+    "Número de identificación de la entidad reportadora",
+    "Tipo de documento de identidad del beneficiario",
+    "Número de identificación",
+    "Nombre del beneficiario",
+    "Apellido del beneficiario",
+    "País de origen",
+    Migrante,
+    "Régimen de afiliación del usuario",
+    "Código de habilitación de la entidad objeto de reporte",
+    "Fecha de nacimiento",
+    Sexo,
+    Gestación,
+    Etnia,
+    "Población especial",
+    "Tipo de afiliado",
+    "Municipio de residencia",
+    "Indicador de actualización del registro",
+    "Validación únicos",
+    "Registro completo"
+FROM [lib://DESARROLLO:Conexión S3/Modelos Adicionales Tecnologia/Tutelas Almera/Reportes Normativos/Supersalud/Extracted/BD_Beneficiarios_Tutelas_$(vperiodo).qvd](qvd);
+
+Concatenate
+
+//Datos Generales
+LOAD
+    "Tipo de Registro",
+//     "Consecutivo de registro",
+    "Tipo de identificación de la entidad reportadora",
+    "Número de identificación de la entidad reportadora",
+    "Tipo de documento de identidad del beneficiario de la tutela",
+    "Número de identificación del  beneficiario de la tutela" as "Número de identificación",
+    "Municipio en el cuál fue interpuesta la tutela",
+    "Número de radicado de la acción de tutela en salud",
+    "Fecha de radicado",
+    "Decisión Primera Instancia",
+    Impugnación,
+    "Decisión Segunda Instancia",
+    "Incidente de Desacato",
+    "Indicador de actualización del registro",
+    "Validación únicos",
+    "Registro completo"
+FROM [lib://DESARROLLO:Conexión S3/Modelos Adicionales Tecnologia/Tutelas Almera/Reportes Normativos/Supersalud/Extracted/BD_Datos_Generales_Tutelas_$(vperiodo).qvd](qvd);
+
+Concatenate
+
+//Problemas Juridicos
+LOAD
+    "Tipo de Registro",
+//     "Consecutivo de registro",
+    "Tipo ID Entidad",
+    "NIT Entidad",
+    "Tipo de Documento",
+    "Número de identificación",
+    "Número de Radicado",
+    "Problema Jurídico",
+    "Fuente de Financiación",
+    "Causa de Demora o Negación",
+    "Descripción Causa de Demora",
+    "Descripción Causa de Negación",
+    "Diagnóstico Principal",
+    "Otro Diagnóstico Relacionado",
+    "Diagnóstico Enfermedad Huérfana",
+    "Indicador de actualización del registro",
+    "Validación únicos",
+    "Registro completo"
+FROM [lib://DESARROLLO:Conexión S3/Modelos Adicionales Tecnologia/Tutelas Almera/Reportes Normativos/Supersalud/Extracted/BD_Problemas_Juridicos_Tutelas_$(vperiodo).qvd]
+(qvd);
+
+Concatenate
+
+//Causas
+LOAD
+    "Tipo de Registro",
+//     "Consecutivo de registro",
+    "Tipo ID Entidad",
+    "NIT Entidad",
+    "Tipo de Documento",
+    "Número de identificación",
+    "Número de Radicado",
+    "Problema Jurídico",
+    "Código de la Causa del problema juridico",
+    "Indicador de actualización del registro",
+    "Validación únicos",
+    "Registro completo"
+FROM [lib://DESARROLLO:Conexión S3/Modelos Adicionales Tecnologia/Tutelas Almera/Reportes Normativos/Supersalud/Extracted/BD_Causas_Tutelas_$(vperiodo).qvd]
+(qvd);
+
+Concatenate
+
+//Pretensiones
+LOAD
+    "Tipo de Registro",
+//     "Consecutivo de registro",
+    "Tipo ID Entidad",
+    "NIT Entidad",
+    "Tipo de Documento",
+    "Número de identificación",
+    "Número de Radicado",
+    "Problema Jurídico",
+    "Código de la Causa del problema juridico",
+    "Código de la Pretensión",
+    "Indicador de actualización del registro",
+    "Validación únicos",
+    "Registro completo"
+FROM [lib://DESARROLLO:Conexión S3/Modelos Adicionales Tecnologia/Tutelas Almera/Reportes Normativos/Supersalud/Extracted/BD_Pretensiones_$(vperiodo).qvd]
+(qvd);
+
+
+// STORE [BD_Union] INTO [lib://TUTELAS ALMERA:DataFiles/Reportes Normativos/Supersalud/Extracted/Tem_BD_Almera_$(vperiodo).qvd](qvd);
+STORE [BD_Union] INTO [lib://DESARROLLO:Conexión S3/Modelos Adicionales Tecnologia/Tutelas Almera/Reportes Normativos/Supersalud/Extracted/BD_Union_Tutelas_$(vperiodo).qvd](qvd);
+
+let vNumeroRegistros= NoOfRows('BD_Union');
+
+Drop table BD_Union;
+exit script;
+
+///$tab 15. Registro de Control
+Registro_de_Control:
+LOAD
+    [Tipo de Registro],
+    [Tipo de Identificación Entidad],
+    [NIT Entidad],
+    [Fecha Inicial del Período],
+    [Fecha Final del Período],
+    [Número Total de Registros],
+    // Concatenación
+    [Tipo de Registro] 
+    & CHR(124) & [Tipo de Identificación Entidad]
+    & CHR(124) & [NIT Entidad]
+    & CHR(124) & [Fecha Inicial del Período]
+    & CHR(124) & [Fecha Final del Período]
+    & CHR(124) & [Número Total de Registros] as "Registro completo"
+INLINE [
+    "Tipo de Registro", "Tipo de Identificación Entidad", "NIT Entidad", "Fecha Inicial del Período", "Fecha Final del Período", "Número Total de Registros"
+    1, NI, 890806490, '$(vfechaSistemaInicial)', '$(vfechaSistemaFinal)', '$(vNumeroRegistros)'
+];
+///$tab 16. Datos + Registro Control
+Tem_Datos_Union_Registro_Control:
+LOAD 
+    // Reconstruimos el campo agregando RecNo() como segundo valor
+    SubField([Registro completo],'|',1) & '|' & 
+    RecNo() & '|' & 
+    Mid([Registro completo], Index([Registro completo],'|',1)+1) 
+    AS [Registro completo]
+FROM [lib://DESARROLLO:Conexión S3/Modelos Adicionales Tecnologia/Tutelas Almera/Reportes Normativos/Supersalud/Extracted/BD_Union_Tutelas_$(vperiodo).qvd](qvd);
+
+Concatenate
+
+LOAD 
+    [Tipo de Registro],
+    [Tipo de Identificación Entidad],
+    [NIT Entidad],
+    [Fecha Inicial del Período],
+    [Fecha Final del Período],
+    [Número Total de Registros],
+	"Registro completo"
+Resident Registro_de_Control;
+Drop table Registro_de_Control;
+
+NoConcatenate
+
+Datos_Union_Registro_Control:
+LOAD *
+Resident Tem_Datos_Union_Registro_Control
+Order By "Registro completo";
+Drop Table Tem_Datos_Union_Registro_Control;
+
+// STORE [Datos_Union_Registro_Control] INTO [lib://TUTELAS ALMERA:DataFiles/Reportes Normativos/Supersalud/Extracted/Tem_BD_Almera_$(vperiodo).qvd](qvd);
+STORE [Datos_Union_Registro_Control] INTO [lib://DESARROLLO:Conexión S3/Modelos Adicionales Tecnologia/Tutelas Almera/Reportes Normativos/Supersalud/Extracted/BD_Union_RControl_Tutelas_$(vperiodo).qvd](qvd);
+Drop table Datos_Union_Registro_Control;
+// exit script;
+///$tab 17. Quitar Encabezados
+NewHeader:
+LOAD
+    "Registro completo"
+FROM [lib://DESARROLLO:Conexión S3/Modelos Adicionales Tecnologia/Tutelas Almera/Reportes Normativos/Supersalud/Extracted/BD_Union_RControl_Tutelas_$(vperiodo).qvd](qvd)
+WHERE 
+  RecNo()=1;
+LET vIdCol=peek('Registro completo', -1, 'NewHeader'); //to replace the id column header
+// LET IdValCol=peek('value', -1, 'NewHeader'); ////to replace the value column header
+DROP TABLE NewHeader;
+
+Data:
+LOAD
+    "Registro completo" as '$(vIdCol)'
+FROM [lib://DESARROLLO:Conexión S3/Modelos Adicionales Tecnologia/Tutelas Almera/Reportes Normativos/Supersalud/Extracted/BD_Union_RControl_Tutelas_$(vperiodo).qvd](qvd)
+WHERE RecNo()>1
+;
+
+STORE [Data] INTO [lib://DESARROLLO:Conexión S3/Modelos Adicionales Tecnologia/Tutelas Almera/Reportes Normativos/Supersalud/Reporte XLS/BD_Reporte_Final_$(vperiodo).qvd](qvd);
+STORE [Data] INTO [lib://DESARROLLO:Conexión S3/Modelos Adicionales Tecnologia/Tutelas Almera/Reportes Normativos/Supersalud/Reporte XLS/IVC170TIDS$(vfechaSistemaFinalNombreArchivo)NI000890806490.txt](txt);
+Drop Table Data;
+
+exit script;
+
+
+///$tab Exit script
+exit script;
+///$tab 3.2  Almera Final
+LIB CONNECT TO 'DESARROLLO:Google Drive - Hojas de Calculo';
+
+Tem_Reporte_Super:
+LOAD
+    ID,
+    "Código padre",
+    Consecutivo,
+    Código,
+    "Fecha creación",
+    "Hora creación",
+    Usuario,
+    Estado,
+    "Fecha registro",
+    "Hora registro",
+    "Fecha vencimiento",
+    "Fecha respuesta",
+    "Hora respuesta",
+    "Días salida",
+    "Días transcurrido",
+    "Tiempo restante",
+    Área,
+    Cargo,
+    Asunto,
+    "Número de guía",
+    Radicación_Juzgado,
+    Radicación_Email,
+    Radicación_País,
+    Radicación_Departamento,
+    Radicación_Municipio,
+    Radicación_Dirección,
+    Radicación_Teléfono,
+    Radicación_Asunto,
+    Ruta_Nombre,
+    Ruta_Cargo,
+    Ruta_Area,
+    "Registrado_Fecha Límite",
+    "Registrado_Hora Límite",
+    Replace(
+    Replace(
+        Replace(
+            Replace(NUMERO_RADICADO, ' ', ''),
+        Chr(160), ''),
+    Chr(10), ''),
+	Chr(13), '') as NUMERO_RADICADO,
+    "Registrado_Número de oficio",
+    "Tiene medida provisional",
+    "Medida Provisional",
+    Gerencia,
+    Tema,
+    Pretensiones,
+    "Causas acciones de tutela",
+    "Subclasificación de causas",
+    "Contestación definitiva",
+    "Espera de fallo_Acuse de recibido",
+    "Notificación de actuaciones_Resultado de la tutela",
+    "Enviar a Revisión_Usuario",
+    "Enviar a Revisión_Fecha",
+    "Enviar a Revisión_Hora",
+    "Devolver para ajustes_Comentarios",
+    "Devolver para ajustes_Usuario",
+    "Devolver para ajustes_Fecha",
+    "Devolver para ajustes_Hora",
+    "Enviar Respuesta_Usuario",
+    "Enviar Respuesta_Fecha",
+    "Enviar Respuesta_Hora",
+    "Reenviar Respuesta_Usuario",
+    "Reenviar Respuesta_Fecha",
+    "Reenviar Respuesta_Hora",
+    "Enviar para notificación de actuaciones_Observaciones",
+    "Enviar para notificación de actuaciones_Usuario",
+    "Enviar para notificación de actuaciones_Fecha",
+    "Enviar para notificación de actuaciones_Hora",
+    "Enviar a Fallo de Segunda Instancia_Usuario",
+    "Enviar a Fallo de Segunda Instancia_Fecha",
+    "Enviar a Fallo de Segunda Instancia_Hora",
+    "Enviar a otra instancia_Usuario",
+    "Enviar a otra instancia_Fecha",
+    "Enviar a otra instancia_Hora",
+    "Fecha de Radicado",
+    Trámite,
+    "Tipo de Proceso Judicial",
+    "Tipo de Tutela",
+    Estado1,
+    Probabilidad,
+    "Valor Embargos",
+    "Instancia Procesal",
+    "Bienes Embargados",
+    Sentencia,
+    Trimestre,
+    "Recurso Procesal",
+    "Problema Jurídico",
+    "Fuente de Financiación",
+    "Causa de Demora o Negación",
+    "Descripción de Causa de Demora",
+    "Descripción Causa de Negación",
+    "Diagnóstico Principal",
+    "Otro Diagnóstico Relacionado",
+    "Diagnóstico Enfermedad Huérfana",
+    "Código de la Causa del Problema Jurídico",
+    "Código de la Pretensión"
+//     "Estado asignación",
+//     "Usuario que asigna",
+//     Asignado,
+//     Fecha,
+//     Hora,
+//     "Fecha límite",
+//     "Hora límite",
+//     "Tipo respuesta",
+//     Respuesta,
+//     "Fecha respuesta1",
+//     "Hora respuesta1",
+//     Adjuntos
+FROM [lib://DESARROLLO:Conexión S3/Modelos Adicionales Tecnologia/Tutelas Almera/Reportes Normativos/Supersalud/Extracted/Tem_BD_Almera_$(vperiodo).qvd](qvd)
+WHERE NUMERO_RADICADO <> ''
+;
+
+NoConcatenate
+
+Tem2_Reporte_Super:
+
+LOAD *,
+	Replace(
+    Replace(
+        Replace(
+            Replace(NUMERO_RADICADO, ' ', ''),
+        Chr(160), ''),
+    Chr(10), ''),
+	Chr(13), '') AS LLAVE
+
+Resident Tem_Reporte_Super;
+Drop table Tem_Reporte_Super;
+
+Left join
+
+LOAD
+// 	NUMERO_RADICADO,
+    	Replace(
+    Replace(
+        Replace(
+            Replace(NUMERO_RADICADO, ' ', ''),
+        Chr(160), ''),
+    Chr(10), ''),
+	Chr(13), '') AS LLAVE,
+	[Nombre 1],
+	[Nombre 2],
+	[Apellido 1],
+	[Apellido 2],
+	[Tipo de Accionante],
+    [Nombre Tipo de Documento],
+    [Tipo de Documento],
+	[Número de documento],
+    "Fecha de nacimiento",
+   	Migrante,
+    Genero
+FROM [lib://DESARROLLO:Conexión S3/Modelos Adicionales Tecnologia/Tutelas Almera/Reportes Normativos/Supersalud/Extracted/BD_Accionantes_$(vperiodo).qvd](qvd);
+
+
+STORE [Tem2_Reporte_Super] INTO [lib://TUTELAS ALMERA:DataFiles/Reportes Normativos/Supersalud/Extracted/Final_BD_Almera_$(vperiodo).qvd](qvd);
+STORE [Tem2_Reporte_Super] INTO [lib://DESARROLLO:Conexión S3/Modelos Adicionales Tecnologia/Tutelas Almera/Reportes Normativos/Supersalud/Extracted/Final_BD_Almera_$(vperiodo).qvd](qvd);
+Drop table Tem2_Reporte_Super;
+// exit script;
+    
+
+
+
+// exit script;
+
+///$tab 4. Inicio reporte
+Tem_Creación_Reporte:
+
+LOAD
+	'$(vSemestreCampo)' 										AS Periodo,
+    RowNo() 													AS "Consecutivo de registro",
+    'NI' 														AS "Tipo de identificación de la entidad reportadora",
+    '890806490'													AS "Número de identificación de la entidad reportadora",
+    "Tipo de Documento" 										AS "CodTip",
+    "Nombre Tipo de Documento"									AS "Tipo de documento de identidad del beneficiario",
+    PurgeChar(PurgeChar("Número de documento",','),'.')			AS "Número de identificación",
+    [Nombre 1]&'|'&[Nombre 2]									AS "Nombre del beneficiario",
+    [Apellido 1]&'|'&[Apellido 2]								AS "Apellido del beneficiario",
+    ApplyMap('Nombre_Pais',TRIM("Número de documento"),'COLOMBIA')		AS "País de origen", 
+    if(Migrante='SI','Migrante regular','Desconocido') 			AS Migrante,   
+    
+    
+    
+    
+    ApplyMap('Nombre_Regimen',TRIM("Número de documento"),'')	AS "Régimen de afiliación del usuario",
+    
+    
+    
+    
+    '170010087207'												AS "Código de habilitación de la entidad objeto de reporte",
+	if(IsNull("Fecha de nacimiento"),ApplyMap('F_Nacimiento',TRIM("Número de documento"),"Fecha de nacimiento"),"Fecha de nacimiento")		AS "Fecha de nacimiento",
+ 	if(IF(IsNull(Genero),ApplyMap('Genero',TRIM("Número de documento"),Genero),Genero)='F','M',	
+    	if(IF(IsNull(Genero),ApplyMap('Genero',TRIM("Número de documento"),Genero),Genero)='M','H','REVISAR'))    
+    AS "Sexo",	
+	
+    IF(IF(IsNull(Genero),ApplyMap('Genero',TRIM("Número de documento"),Genero),Genero) = 'F',
+        ApplyMap('Gestación',TRIM("Número de documento"),'NO'),'N/A')
+        AS Gestación,
+        
+	TRIM(if(IsNull(ApplyMap('Nombre_Etnia',TRIM("Número de documento"),'Ninguna de las anteriores')),'Ninguna de las anteriores',ApplyMap('Nombre_Etnia',TRIM("Número de documento"),'Ninguna de las anteriores')))		AS Etnia,
+	ApplyMap('Nombre_Población_Especial',TRIM("Número de documento"),'No')		AS "Población especial",
+	ApplyMap('Tipo_Afiliado',TRIM("Número de documento"),'') 	AS "Tipo de afiliado",
+   	ApplyMap('Mapping_Municipio',TRIM("Número de documento"),'MANIZALES')	AS "Municipio de residencia",  
+	Radicación_Municipio										AS "Municipio en el cuál fue interpuesta la tutela",
+	NUMERO_RADICADO												AS "Número de radicado de la acción de tutela en salud",
+    "Fecha registro"											AS "Fecha de radicado",
+//     '' AS "Decisión Primera Instancia",
+//     '' AS "Impugnación",
+//     '' AS "Decisión Segunda Instancia",
+//     '' AS "Incidente de Desacato",
+    "Problema Jurídico",
+    "Fuente de Financiación",
+    "Causa de Demora o Negación",
+    "Descripción de Causa de Demora" as "Descripción Causa de Demora",
+    "Descripción Causa de Negación",
+    "Diagnóstico Principal",
+    "Otro Diagnóstico Relacionado",
+    "Diagnóstico Enfermedad Huérfana",
+    "Código de la Causa del Problema Jurídico" as "Código de la Causa del problema juridico",
+    "Código de la Pretensión",
+    Código
+FROM [lib://DESARROLLO:Conexión S3/Modelos Adicionales Tecnologia/Tutelas Almera/Reportes Normativos/Supersalud/Extracted/Final_BD_Almera_$(vperiodo).qvd](qvd);
+
+LEFT JOIN 
+
+//Mientras nos pasan el archivo final
+LOAD
+    Código,
+    "Decisión Primera Instancia",
+    Impugnación,
+    "Decisión Segunda Instancia",
+    "Incidente de Desacato"
+FROM [lib://DESARROLLO:Conexión S3/Modelos Adicionales Tecnologia/Tutelas Almera/Reportes Normativos/Supersalud/Extracted/Radicado de tutelas - Registros.xlsx]
+(ooxml, embedded labels, table is [Radicado de tutelas.xlsx - Regi]);
+
+STORE [Tem_Creación_Reporte] INTO [lib://DESARROLLO:Conexión S3/Modelos Adicionales Tecnologia/Tutelas Almera/Reportes Normativos/Supersalud/Extracted/Tem_Inicio_Reporte.qvd](qvd);
+
+
+NoConcatenate
+
+Creación_Reporte:
+
+LOAD
+    Código,
+    Periodo,
+    "Consecutivo de registro",
+    "Tipo de identificación de la entidad reportadora",
+    "Número de identificación de la entidad reportadora",
+    CodTip,
+    "Tipo de documento de identidad del beneficiario",
+    
+    "Número de identificación",
+    UPPER(MapSubString('MAP_TILDES', "Nombre del beneficiario")) as "Nombre del beneficiario",
+    UPPER(MapSubString('MAP_TILDES', "Apellido del beneficiario")) as "Apellido del beneficiario",
+    "País de origen",
+    if(Migrante='Desconocido','No es migrante',Migrante) as Migrante,
+    If(WildMatch("Régimen de afiliación del usuario", 'Subsidiado*'), 
+       'Subsidiado', 
+       "Régimen de afiliación del usuario") as "Régimen de afiliación del usuario",
+    "Código de habilitación de la entidad objeto de reporte",
+    "Fecha de nacimiento",
+    Sexo,
+    Gestación,
+    Etnia,
+    "Población especial",
+    "Tipo de afiliado",
+    if(IsNull("Municipio de residencia"),'MANIZALES',"Municipio de residencia") as "Municipio de residencia",
+    "Municipio en el cuál fue interpuesta la tutela",
+    "Número de radicado de la acción de tutela en salud",
+    "Fecha de radicado",
+    "Problema Jurídico",
+    "Fuente de Financiación",
+    "Causa de Demora o Negación",
+    "Descripción Causa de Demora",
+    "Descripción Causa de Negación",
+    "Diagnóstico Principal",
+    "Otro Diagnóstico Relacionado",
+    "Diagnóstico Enfermedad Huérfana",
+    "Código de la Causa del problema juridico",
+    "Código de la Pretensión",
+    "Decisión Primera Instancia",
+    Impugnación,
+    "Decisión Segunda Instancia",
+    "Incidente de Desacato"
+Resident Tem_Creación_Reporte;
+Drop table Tem_Creación_Reporte;
+
+
+STORE [Creación_Reporte] INTO [lib://DESARROLLO:Conexión S3/Modelos Adicionales Tecnologia/Tutelas Almera/Reportes Normativos/Supersalud/Extracted/Inicio_Reporte.qvd](qvd);
+STORE [Creación_Reporte] INTO [lib://DESARROLLO:Conexión S3/Modelos Adicionales Tecnologia/Tutelas Almera/Reportes Normativos/Supersalud/Extracted/Inicio_Reporte.xls](txt);
+
+Drop Table [Creación_Reporte];
+
+EXIT SCRIPT;
+
+    
+    
+
+
+    
+
+
+
+
+
+
+
+///$tab 3.1 Accionantes
+LIB CONNECT TO 'DESARROLLO:Google Drive - Hojas de Calculo';
+
+
+Tem_Accionantes:
+LOAD Distinct
+	trim(PurgeChar(PurgeChar(PurgeChar([Número de Radicado],'-'),'.'),''))  as NUMERO_RADICADO,
+        	Replace(
+    Replace(
+        Replace(
+            Replace(PurgeChar(PurgeChar(PurgeChar([Número de Radicado],'-'),'.'),' '), ' ', ''),
+        Chr(160), ''),
+    Chr(10), ''),
+	Chr(13), '') AS LLAVE,
+	[Nombre 1],
+	[Nombre 2],
+	[Apellido 1],
+	[Apellido 2],
+	[Tipo de Accionante],
+    [Tipo de Documento] as [Nombre Tipo de Documento],
+    Applymap('Mapping_tipo_doc',[Tipo de Documento],'NO CRUZA') as [Tipo de Documento],
+	Replace(
+    Replace(
+        Replace(
+            Replace(trim(PurgeChar(PurgeChar(PurgeChar([Número de documento],'-'),'.'),' ')), ' ', ''),
+        Chr(160), ''),
+    Chr(10), ''),
+	Chr(13), '') as [Número de documento],
+	[Código de Habilitación]   
+    
+
+FROM [lib://DESARROLLO:Conexión S3/Modelos Adicionales Tecnologia/Tutelas Almera/XLS/accionantes.xlsx]
+(ooxml, embedded labels, table is Registros)
+WHERE NOT IsNull([Número de Radicado])
+;
+
+// exit script;
+
+NoConcatenate
+
+Accionantes:
+LOAD Distinct
+	LLAVE,
+    NUMERO_RADICADO,
+//     [Nombre 1],
+// 	[Nombre 2],
+// 	[Apellido 1],
+// 	[Apellido 2],
+	[Tipo de Documento],
+	[Tipo de Accionante],
+    [Nombre Tipo de Documento],
+    [Número de documento],
+	ApplyMap('Mapping_Fecha_Nacimiento',[Número de documento],Null()) AS "Fecha de nacimiento",
+    ApplyMap('Mapping_Migrante',[Número de documento],'NO') AS Migrante,
+    ApplyMap('Mapping_Genero',[Número de documento],Null()) AS Genero,
+   	if(IsNull([Nombre 2]),ApplyMap('Mapping_Nombre1',[Número de documento],[Nombre 1]),[Nombre 1]) AS [Nombre 1],
+    if(IsNull([Nombre 2]),ApplyMap('Mapping_Nombre2',[Número de documento],Null()),[Nombre 2]) AS [Nombre 2],
+    if(IsNull([Nombre 2]),ApplyMap('Mapping_Apellido1',[Número de documento],Null()),[Apellido 1]) AS [Apellido 1],
+    if(IsNull([Nombre 2]),ApplyMap('Mapping_Apellido2',[Número de documento],Null()),[Apellido 2]) AS [Apellido 2]
+    
+Resident Tem_Accionantes;
+Drop Table Tem_Accionantes;
+
+STORE [Accionantes] INTO [lib://TUTELAS ALMERA:DataFiles/Reportes Normativos/Supersalud/Extracted/BD_Accionantes_$(vperiodo).qvd](qvd);
+STORE [Accionantes] INTO [lib://DESARROLLO:Conexión S3/Modelos Adicionales Tecnologia/Tutelas Almera/Reportes Normativos/Supersalud/Extracted/BD_Accionantes_$(vperiodo).qvd](qvd);
+Drop table Accionantes;
+// exit script;
+
+
+
+
+
+///$tab 2. Mapping Salud
+Nombre_Pais:
+Mapping
+LOAD
+	TRIM(NUMERO_DOCUMENTO) AS NUMERO_DOCUMENTO,
+	NOMBRE_PAIS
+FROM [lib://DESARROLLO:Conexión S3/Modelos Adicionales Tecnologia/Tutelas Almera/Reportes Normativos/Supersalud/Extracted/BD_Salud_$(vperiodo).qvd](qvd);
+
+Nombre_Regimen:
+Mapping
+LOAD
+	TRIM(NUMERO_DOCUMENTO) AS NUMERO_DOCUMENTO,
+	REGMIMEN
+FROM [lib://DESARROLLO:Conexión S3/Modelos Adicionales Tecnologia/Tutelas Almera/Reportes Normativos/Supersalud/Extracted/BD_Salud_$(vperiodo).qvd](qvd);
+
+F_Nacimiento:
+Mapping
+LOAD
+	TRIM(NUMERO_DOCUMENTO) AS NUMERO_DOCUMENTO,
+	FECHA_NACIMIENTO
+FROM [lib://DESARROLLO:Conexión S3/Modelos Adicionales Tecnologia/Tutelas Almera/Reportes Normativos/Supersalud/Extracted/BD_Salud_$(vperiodo).qvd](qvd);
+
+Genero:
+Mapping
+LOAD
+	TRIM(NUMERO_DOCUMENTO) AS NUMERO_DOCUMENTO,
+	LEFT(SEXO,1) AS SEXO
+FROM [lib://DESARROLLO:Conexión S3/Modelos Adicionales Tecnologia/Tutelas Almera/Reportes Normativos/Supersalud/Extracted/BD_Salud_$(vperiodo).qvd](qvd);
+
+Gestación:
+Mapping
+LOAD
+	TRIM(NUMERO_DOCUMENTO) AS NUMERO_DOCUMENTO,
+	GESTANTE
+FROM [lib://DESARROLLO:Conexión S3/Modelos Adicionales Tecnologia/Tutelas Almera/Reportes Normativos/Supersalud/Extracted/BD_Salud_$(vperiodo).qvd](qvd);
+
+Nombre_Etnia:
+Mapping
+LOAD
+	TRIM(NUMERO_DOCUMENTO) AS NUMERO_DOCUMENTO,
+	"Nombre Etnia"
+FROM [lib://DESARROLLO:Conexión S3/Modelos Adicionales Tecnologia/Tutelas Almera/Reportes Normativos/Supersalud/Extracted/BD_Salud_$(vperiodo).qvd](qvd);
+
+Nombre_Población_Especial:
+Mapping
+LOAD
+	TRIM(NUMERO_DOCUMENTO) AS NUMERO_DOCUMENTO,
+	"Nombre Población Especial"
+FROM [lib://DESARROLLO:Conexión S3/Modelos Adicionales Tecnologia/Tutelas Almera/Reportes Normativos/Supersalud/Extracted/BD_Salud_$(vperiodo).qvd](qvd);
+
+Tipo_Afiliado:
+Mapping
+LOAD
+	TRIM(NUMERO_DOCUMENTO) AS NUMERO_DOCUMENTO,
+	TPO_DE_AFILIADO
+FROM [lib://DESARROLLO:Conexión S3/Modelos Adicionales Tecnologia/Tutelas Almera/Reportes Normativos/Supersalud/Extracted/BD_Salud_$(vperiodo).qvd](qvd);
+
+///$tab 1. BD Salud
+LIB CONNECT TO 'DESARROLLO:Google Drive - Hojas de Calculo';
+
+Mapping_Nombre_Etnia:
+Mapping
+LOAD
+	[Código etnia], 
+	[Concepto etnia];
+    
+SELECT *
+FROM GetWorksheetV2
+WITH PROPERTIES (
+worksheetKey='1aytz0QvVF8TJ8kEHCTfWfrspkiheV3aN-hnFG2lKT-s:_',
+gidOverride='0',
+generatedNumberedColumns='false',
+skipRows=''
+);
+
+
+Mapping_Nombre_Población_Especial:
+Mapping
+LOAD
+	[Código población especial], 
+	[Concepto población especial];
+    
+SELECT *
+FROM GetWorksheetV2
+WITH PROPERTIES (
+worksheetKey='1aytz0QvVF8TJ8kEHCTfWfrspkiheV3aN-hnFG2lKT-s:_',
+gidOverride='0',
+generatedNumberedColumns='false',
+skipRows=''
+);
+
+Mapping_tipo_doc:
+Mapping
+LOAD
+	[Concepto tipo documento],
+	[Código tipo documento];
+
+ SELECT *
+ FROM GetWorksheetV2
+ WITH PROPERTIES (
+ worksheetKey='1aytz0QvVF8TJ8kEHCTfWfrspkiheV3aN-hnFG2lKT-s:_',
+ gidOverride='0',
+ generatedNumberedColumns='false',
+ skipRows=''
+ );
+
+
+LIB CONNECT TO 'DESARROLLO:Conexión Salud Producción Srvsas';
+
+Mapping_Gestante:
+Mapping
+LOAD
+	CEDULA&ADICIONAL&DATE(FECHA,'YYYY-MM-DD') AS LLAVE,
+    'SI' AS GESTANTE;
+
+SELECT
+	CEDULA,
+    ADICIONAL,
+    FECHA
+FROM REPORTE_TUTELAS_GESTANTES;
+
+
+
+LIB CONNECT TO 'DESARROLLO:Conexión Salud Producción Srvsas';
+
+BD_Salud:
+
+LOAD
+	TIPO_DOCUMENTO,
+	NUMERO_DOCUMENTO,
+    PRIMER_NOMBRE,
+    SEGUNDO_NOMBRE,
+    PRIMER_APELLIDO,
+    SEGUNDO_APELLIDO,
+    CODIGO_PAIS,
+    NOMBRE_PAIS,
+    REGMIMEN,
+    FECHA_NACIMIENTO,
+    SEXO,
+    ETNIA,
+    ApplyMap('Mapping_Nombre_Etnia',TRIM(ETNIA),'') AS "Nombre Etnia", //Hacer el mapping con la tabla de equivalencia del drive
+    POBLACION_ESPECIAL,
+    ApplyMap('Mapping_Nombre_Población_Especial',TRIM(POBLACION_ESPECIAL),'') AS "Nombre Población Especial", //Hacer el mapping con la tabla de equivalencia en drive
+    TPO_DE_AFILIADO,
+    DATE(FECHA_ULTMA_PRESTACION,'YYYY-MM-DD') AS FECHA_ULTMA_PRESTACION,
+    CIUDAD,
+    CEDULA,
+    ADICIONAL,
+    ApplyMap('Mapping_Gestante',CEDULA&ADICIONAL&DATE(FECHA_ULTMA_PRESTACION,'YYYY-MM-DD'),'NO') AS GESTANTE
+    ;
+
+
+SELECT 
+	TIPO_DOCUMENTO,
+	NUMERO_DOCUMENTO,
+    PRIMER_NOMBRE,
+    SEGUNDO_NOMBRE,
+    PRIMER_APELLIDO,
+    SEGUNDO_APELLIDO,
+    CODIGO_PAIS,
+    NOMBRE_PAIS,
+    REGMIMEN,
+    FECHA_NACIMIENTO,
+    SEXO,
+    ETNIA,
+    POBLACION_ESPECIAL,
+    TPO_DE_AFILIADO,
+    FECHA_ULTMA_PRESTACION,
+    CIUDAD,
+    CEDULA,
+    ADICIONAL
+from reporte_tutelas;
+
+STORE [BD_Salud] INTO [lib://TUTELAS ALMERA:DataFiles/Reportes Normativos/Supersalud/Extracted/BD_Salud_$(vperiodo).qvd](qvd);
+STORE [BD_Salud] INTO [lib://DESARROLLO:Conexión S3/Modelos Adicionales Tecnologia/Tutelas Almera/Reportes Normativos/Supersalud/Extracted/BD_Salud_$(vperiodo).qvd](qvd);
+Drop table BD_Salud;
+// exit script;
+
+///$tab 0. Mapping
+// --------------------------- MAPPING MDM ----------------------------------- //
+
+Mapping_Fecha_Nacimiento:
+Mapping
+LOAD
+    TRIM(DOCUMENTO) AS DOCUMENTO,
+    FECHA_NACIMIENTO
+FROM [lib://MDM:DataFiles/Datos_MDM.QVD](qvd);
+
+Mapping_Municipio:
+Mapping
+LOAD
+    TRIM(DOCUMENTO) AS DOCUMENTO,
+    NOMBRE_MUNICIPIO
+FROM [lib://MDM:DataFiles/Datos_MDM.QVD](qvd);
+
+Mapping_Genero:
+Mapping
+LOAD
+    TRIM(DOCUMENTO) AS DOCUMENTO,
+    if(GENERO='MASCULINO','M',
+    	if(GENERO='FEMENINO','F',NULL())) AS 
+        GENERO
+FROM [lib://MDM:DataFiles/Datos_MDM.QVD](qvd);
+
+Mapping_Nombre1:
+Mapping
+LOAD
+    TRIM(DOCUMENTO) AS DOCUMENTO,
+    PRIMER_NOMBRE
+FROM [lib://MDM:DataFiles/Datos_MDM.QVD](qvd);
+
+Mapping_Nombre2:
+Mapping
+LOAD
+    TRIM(DOCUMENTO) AS DOCUMENTO,
+    SEGUNDO_NOMBRE
+FROM [lib://MDM:DataFiles/Datos_MDM.QVD](qvd);
+
+Mapping_Apellido1:
+Mapping
+LOAD
+    TRIM(DOCUMENTO) AS DOCUMENTO,
+    PRIMER_APELLIDO
+FROM [lib://MDM:DataFiles/Datos_MDM.QVD](qvd);
+
+Mapping_Apellido2:
+Mapping
+LOAD
+    TRIM(DOCUMENTO) AS DOCUMENTO,
+    SEGUNDO_APELLIDO
+FROM [lib://MDM:DataFiles/Datos_MDM.QVD](qvd);
+
+Mapping_Migrante:
+Mapping
+LOAD
+    DOCUMENTO,
+    'SI' AS MIGRANTE
+FROM [lib://MIGRACIÓN COLOMBIA:DataFiles/Final_Migracion_Servicios.qvd](qvd)
+WHERE (num(ceil(NUM(MONTH(FECHAS)/6,'00')),'00') = '$(vSemestreAlmera)') AND (AÑO ='$(vaño)')
+;
+
+MAP_TILDES:
+MAPPING LOAD * INLINE [
+    original, reemplazo
+    Á, A
+    É, E
+    Í, I
+    Ó, O
+    Ú, U
+    á, a
+    é, e
+    í, i
+    ó, o
+    ú, u
+    Ñ, N
+    ñ, n
+];
+///$tab 3. Almera BD
+NoConcatenate
+
+BD_Almera:
+
+LOAD Distinct
+    ID,
+    "Código padre",
+    Consecutivo,
+    'R-' & 
+    SubField(Código, '-', 1) & '-' & 
+    SubField(Código, '-', 2) & '-' & 
+    Num(SubField(Código, '-', 3), '0000') AS Código,
+    "Fecha creación",
+    "Hora creación",
+    Usuario,
+    Estado,
+    "Fecha registro",
+    "Hora registro",
+    "Fecha vencimiento",
+    "Fecha respuesta",
+    "Hora respuesta",
+    "Días salida",
+    "Días transcurrido",
+    "Tiempo restante",
+    Área,
+    Cargo,
+    Asunto,
+    "Número de guía",
+    Radicación_Juzgado,
+    Radicación_Email,
+    Radicación_País,
+    Radicación_Departamento,
+    Radicación_Municipio,
+    Radicación_Dirección,
+    Radicación_Teléfono,
+    Radicación_Asunto,
+    Ruta_Nombre,
+    Ruta_Cargo,
+    Ruta_Area,
+    "Registrado_Fecha Límite",
+    "Registrado_Hora Límite",
+        Replace(
+    Replace(
+        Replace(
+            Replace(trim(PurgeChar(PurgeChar(PurgeChar("Registrado_Número de Radicado de Tutela",'-'),'.'),' ')), ' ', ''),
+        Chr(160), ''),
+    Chr(10), ''),
+	Chr(13), '') AS NUMERO_RADICADO,
+    "Registrado_Número de oficio",
+    "Tiene medida provisional",
+    "Medida Provisional",
+    Gerencia,
+    Tema,
+    Pretensiones,
+    "Causas acciones de tutela",
+    "Subclasificación de causas",
+    "Contestación definitiva",
+    "Espera de fallo_Acuse de recibido",
+    "Notificación de actuaciones_Resultado de la tutela",
+    "Enviar a Revisión_Usuario",
+    "Enviar a Revisión_Fecha",
+    "Enviar a Revisión_Hora",
+    "Devolver para ajustes_Comentarios",
+    "Devolver para ajustes_Usuario",
+    "Devolver para ajustes_Fecha",
+    "Devolver para ajustes_Hora",
+    "Enviar Respuesta_Usuario",
+    "Enviar Respuesta_Fecha",
+    "Enviar Respuesta_Hora",
+    "Reenviar Respuesta_Usuario",
+    "Reenviar Respuesta_Fecha",
+    "Reenviar Respuesta_Hora",
+    "Enviar para notificación de actuaciones_Observaciones",
+    "Enviar para notificación de actuaciones_Usuario",
+    "Enviar para notificación de actuaciones_Fecha",
+    "Enviar para notificación de actuaciones_Hora",
+    "Enviar a Fallo de Segunda Instancia_Usuario",
+    "Enviar a Fallo de Segunda Instancia_Fecha",
+    "Enviar a Fallo de Segunda Instancia_Hora",
+    "Enviar a otra instancia_Usuario",
+    "Enviar a otra instancia_Fecha",
+    "Enviar a otra instancia_Hora",
+    "Fecha de Radicado",
+    Trámite,
+    "Tipo de Proceso Judicial",
+    "Tipo de Tutela",
+    Estado1,
+    IF(IsNull(Probabilidad),'Baja',Probabilidad) as Probabilidad,
+    "Valor Embargos",
+    IF(IsNull("Instancia Procesal"),'única',"Instancia Procesal") as "Instancia Procesal",
+    if(IsNull("Bienes Embargados"),'NINGUNO',UPPER("Bienes Embargados")) as "Bienes Embargados",
+    IF(IsNull(Sentencia),'No Aplica',Sentencia) as Sentencia,
+    Trimestre,
+    IF(IsNull("Recurso Procesal"),'Otros',"Recurso Procesal") as "Recurso Procesal",
+    "Problema Jurídico",
+    "Fuente de Financiación",
+    "Causa de Demora o Negación",
+    "Descripción de Causa de Demora",
+    "Descripción Causa de Negación",
+    "Diagnóstico Principal",
+    "Otro Diagnóstico Relacionado",
+    "Diagnóstico Enfermedad Huérfana",
+    "Código de la Causa del Problema Jurídico",
+    "Código de la Pretensión"
+//     "Estado asignación",
+//     "Usuario que asigna",
+//     Asignado,
+//     Fecha,
+//     Hora,
+//     "Fecha límite",
+//     "Hora límite",
+//     "Tipo respuesta",
+//     Respuesta,
+//     "Fecha respuesta1",
+//     "Hora respuesta1",
+//     Adjuntos
+    
+FROM [lib://DESARROLLO:Conexión S3/Modelos Adicionales Tecnologia/Tutelas Almera/XLS/reportetutelas.xlsx]
+(ooxml, embedded labels, table is Registros)
+WHERE 1=1 
+AND (num(ceil(NUM(MONTH("Fecha registro")/6,'00')),'00') = '$(vSemestreAlmera)') 
+AND (YEAR("Fecha registro")='$(vaño)')
+AND Gerencia = 'SALUD'
+;
+
+
+STORE [BD_Almera] INTO [lib://TUTELAS ALMERA:DataFiles/Reportes Normativos/Supersalud/Extracted/Tem_BD_Almera_$(vperiodo).qvd](qvd);
+STORE [BD_Almera] INTO [lib://DESARROLLO:Conexión S3/Modelos Adicionales Tecnologia/Tutelas Almera/Reportes Normativos/Supersalud/Extracted/Tem_BD_Almera_$(vperiodo).qvd](qvd);
+Drop table BD_Almera;
+exit script;
+
+
+///$tab Sección 3
+LOAD
+    ID,
+    "Código padre",
+    Consecutivo,
+    Código,
+    "Fecha creación",
+    "Hora creación",
+    Usuario,
+    Estado,
+    "Fecha registro",
+    "Hora registro",
+    "Fecha vencimiento",
+    "Fecha respuesta",
+    "Hora respuesta",
+    "Días salida",
+    "Días transcurrido",
+    "Tiempo restante",
+    Área,
+    Cargo,
+    Asunto,
+    "Número de guía",
+    Radicación_Juzgado,
+    Radicación_Email,
+    Radicación_País,
+    Radicación_Departamento,
+    Radicación_Municipio,
+    Radicación_Dirección,
+    Radicación_Teléfono,
+    Radicación_Asunto,
+    Ruta_Nombre,
+    Ruta_Cargo,
+    Ruta_Area,
+    "Registrado_Fecha Límite",
+    "Registrado_Hora Límite",
+    "Registrado_Número de Radicado de Tutela",
+    "Registrado_Número de oficio",
+    "Tiene medida provisional",
+    "Medida Provisional",
+    Gerencia,
+    Tema,
+    Pretensiones,
+    "Causas acciones de tutela",
+    "Subclasificación de causas",
+    "Contestación definitiva",
+    "Espera de fallo_Acuse de recibido",
+    "Notificación de actuaciones_Resultado de la tutela",
+    "Enviar a Revisión_Usuario",
+    "Enviar a Revisión_Fecha",
+    "Enviar a Revisión_Hora",
+    "Devolver para ajustes_Comentarios",
+    "Devolver para ajustes_Usuario",
+    "Devolver para ajustes_Fecha",
+    "Devolver para ajustes_Hora",
+    "Enviar Respuesta_Usuario",
+    "Enviar Respuesta_Fecha",
+    "Enviar Respuesta_Hora",
+    "Reenviar Respuesta_Usuario",
+    "Reenviar Respuesta_Fecha",
+    "Reenviar Respuesta_Hora",
+    "Enviar para notificación de actuaciones_Observaciones",
+    "Enviar para notificación de actuaciones_Usuario",
+    "Enviar para notificación de actuaciones_Fecha",
+    "Enviar para notificación de actuaciones_Hora",
+    "Enviar a Fallo de Segunda Instancia_Usuario",
+    "Enviar a Fallo de Segunda Instancia_Fecha",
+    "Enviar a Fallo de Segunda Instancia_Hora",
+    "Enviar a otra instancia_Usuario",
+    "Enviar a otra instancia_Fecha",
+    "Enviar a otra instancia_Hora",
+    "Fecha de Radicado",
+    Trámite,
+    "Tipo de Proceso Judicial",
+    "Tipo de Tutela",
+    Estado1,
+    Probabilidad,
+    "Valor Embargos",
+    "Instancia Procesal",
+    "Bienes Embargados",
+    Sentencia,
+    Trimestre,
+    "Recurso Procesal",
+    "Problema Jurídico",
+    "Fuente de Financiación",
+    "Causa de Demora o Negación",
+    "Descripción de Causa de Demora",
+    "Descripción Causa de Negación",
+    "Diagnóstico Principal",
+    "Otro Diagnóstico Relacionado",
+    "Diagnóstico Enfermedad Huérfana",
+    "Código de la Causa del Problema Jurídico",
+    "Código de la Pretensión",
+    Cuantía,
+    Provisión,
+    "Clase de Pretensión"
+FROM [lib://DESARROLLO:Conexión S3/Modelos Adicionales Tecnologia/Tutelas Almera/XLS/reportetutelas.xlsx]
+(ooxml, embedded labels, table is Registros);
+
+
+
+  
+
+
+
+
+
+
+///$tab 0. Mapping
+// ---------------------------- MAPPING DRIVE ---------------------- //
+
+LIB CONNECT TO 'DESARROLLO:Google Drive - Hojas de Calculo';
+
+[Mapping_Codigos]:
+LOAD 
+	Column1, 
+	Column2, 
+	Column4, 
+	Column5, 
+	Column7, 
+	Column8;
+
+SELECT Column1,
+	Column2,
+	Column4,
+	Column5,
+	Column7,
+	Column8
+FROM GetWorksheetV2
+WITH PROPERTIES (
+worksheetKey='1aytz0QvVF8TJ8kEHCTfWfrspkiheV3aN-hnFG2lKT-s:_',
+gidOverride='0',
+generatedNumberedColumns='true',
+skipRows='2'
+);
+
+Cod_Tipo_Proceso:
+Mapping
+Load
+	Column2 as Concepto,
+	Column1 as Codigo    
+Resident Mapping_Codigos;
+
+
+Cod_Inst_Procesal:
+Mapping
+Load
+	Column5 as Concepto,
+	Column4 as Codigo    
+Resident Mapping_Codigos;
+
+
+Cod_Tipo_Sentencia:
+Mapping
+Load
+	Column8 as Concepto,
+	Column7 as Codigo    
+Resident Mapping_Codigos;
+
+
+
+// ----------------- MAPPING OTROS -------------------------------- //
+
+LIB CONNECT TO 'DESARROLLO:Conexión Salud Producción Srvsas';
+
+Mapping_Gestante:
+Mapping
+LOAD
+	CEDULA&ADICIONAL&DATE(FECHA,'YYYY-MM-DD') AS LLAVE,
+    'SI' AS GESTANTE;
+
+SELECT
+	CEDULA,
+    ADICIONAL,
+    FECHA
+FROM REPORTE_TUTELAS_GESTANTES;
+
+
+
+// --------------------------- MAPPING MDM ----------------------------------- //
+
+Mapping_Fecha_Nacimiento:
+Mapping
+LOAD
+    TRIM(DOCUMENTO) AS DOCUMENTO,
+    FECHA_NACIMIENTO
+FROM [lib://MDM:DataFiles/Datos_MDM.QVD](qvd);
+
+Mapping_Municipio:
+Mapping
+LOAD
+    TRIM(DOCUMENTO) AS DOCUMENTO,
+    NOMBRE_MUNICIPIO
+FROM [lib://MDM:DataFiles/Datos_MDM.QVD](qvd);
+
+Mapping_Genero:
+Mapping
+LOAD
+    TRIM(DOCUMENTO) AS DOCUMENTO,
+    if(GENERO='MASCULINO','M',
+    	if(GENERO='FEMENINO','F',NULL())) AS 
+        GENERO
+FROM [lib://MDM:DataFiles/Datos_MDM.QVD](qvd);
+
+Mapping_Nombre1:
+Mapping
+LOAD
+    TRIM(DOCUMENTO) AS DOCUMENTO,
+    PRIMER_NOMBRE
+FROM [lib://MDM:DataFiles/Datos_MDM.QVD](qvd);
+
+Mapping_Nombre2:
+Mapping
+LOAD
+    TRIM(DOCUMENTO) AS DOCUMENTO,
+    SEGUNDO_NOMBRE
+FROM [lib://MDM:DataFiles/Datos_MDM.QVD](qvd);
+
+Mapping_Apellido1:
+Mapping
+LOAD
+    TRIM(DOCUMENTO) AS DOCUMENTO,
+    PRIMER_APELLIDO
+FROM [lib://MDM:DataFiles/Datos_MDM.QVD](qvd);
+
+Mapping_Apellido2:
+Mapping
+LOAD
+    TRIM(DOCUMENTO) AS DOCUMENTO,
+    SEGUNDO_APELLIDO
+FROM [lib://MDM:DataFiles/Datos_MDM.QVD](qvd);
+
+exit script;
+
+///$tab Sección 2
+[Mapping_Codigos_2]:
+LOAD 
+	[TIPO DE PROCESO] as Column0, 
+	Column1, 
+	[INSTANCIA PROCESAL] as Column2, 
+	Column3, 
+	[TABLA 75_ TIPO DE SENTENCIA] as Column4, 
+	Column5;
+
+SELECT [TIPO DE PROCESO],
+	Column1,
+	[INSTANCIA PROCESAL],
+	Column3,
+	[TABLA 75_ TIPO DE SENTENCIA],
+	Column5
+FROM GetWorksheetV2
+WITH PROPERTIES (
+worksheetKey='1aytz0QvVF8TJ8kEHCTfWfrspkiheV3aN-hnFG2lKT-s:_',
+gidOverride='699132401',
+generatedNumberedColumns='false',
+skipRows='12'
+);
+
+Cod_Tipo_Prob_Exito:
+Mapping
+Load
+	Column1 as Concepto,
+	Column0 as Codigo    
+Resident Mapping_Codigos_2;
+
+
+Cod_Estado_Proceso:
+Mapping
+Load
+	Column3 as Concepto,
+	Column2 as Codigo    
+Resident Mapping_Codigos_2;
+
+
+Cod_Recurso_Procesal:
+Mapping
+Load
+	Column5 as Concepto,
+	Column4 as Codigo    
+Resident Mapping_Codigos_2;
+
+Drop Table Mapping_Codigos;
+Drop Table Mapping_Codigos_2;
+
+
+
+
+
+
+
+
+
+
+
+///$tab Carga Reporte Drive _ ajustes
+LIB CONNECT TO 'DESARROLLO:Google Drive - Hojas de Calculo';
+
+MAP_TILDES:
+MAPPING LOAD * INLINE [
+    original, reemplazo
+    Á, A
+    É, E
+    Í, I
+    Ó, O
+    Ú, U
+    á, a
+    é, e
+    í, i
+    ó, o
+    ú, u
+    Ñ, N
+    ñ, n
+];
+
+Creación_Reporte:
+
+LOAD Distinct
+    Periodo,
+//     "Consecutivo de registro",
+    "Tipo de identificación de la entidad reportadora",
+    "Número de identificación de la entidad reportadora",
+    CodTip,
+    "Tipo de documento de identidad del beneficiario",
+    "Número de identificación",
+    UPPER(MapSubString('MAP_TILDES', "Nombre del beneficiario")) as "Nombre del beneficiario",
+    UPPER(MapSubString('MAP_TILDES', "Apellido del beneficiario")) as "Apellido del beneficiario",
+    "País de origen",
+    if(Migrante='NO','No es migrante',Migrante) AS Migrante,
+    "Régimen de afiliación del usuario",
+    "Código de habilitación de la entidad objeto de reporte",
+//     if(IsNull("Fecha de nacimiento") OR "Fecha de nacimiento"='',ApplyMap('Fecha_Nacimiento_Trazadoras',TRIM("Número de identificación"),''),date("Fecha de nacimiento",'YYYY-MM-DD')) AS 
+    date("Fecha de nacimiento",'YYYY-MM-DD') AS "Fecha de nacimiento",
+    if(Sexo='M','H',
+    	if(Sexo='F','M')) as Sexo,
+    Gestación,
+    Etnia,
+    "Población especial",
+    "Tipo de afiliado",
+//     if(IsNull("Municipio de residencia") OR "Municipio de residencia"='',ApplyMap('Muni',TRIM("Número de identificación"),''),"Municipio de residencia") AS 
+    "Municipio de residencia",
+    "Municipio en el cuál fue interpuesta la tutela",
+    NUMERO_RADICADO,
+    "Número de radicado de la acción de tutela en salud",
+    Len("Número de radicado de la acción de tutela en salud") as Cat_Caracteres_Radicado,
+    date("Fecha de radicado",'YYYY-MM-DD') AS "Fecha de radicado",
+    "Decisión Primera Instancia",
+    Impugnación,
+    "Decisión Segunda Instancia",
+    "Incidente de Desacato",
+    "Problema Jurídico",
+    "Fuente de Financiación",
+    "Causa de Demora o Negación",
+    "Descripción Causa de Demora",
+    "Descripción Causa de Negación",
+    "Diagnóstico Principal",
+    "Otro Diagnóstico Relacionado",
+    "Diagnóstico Enfermedad Huérfana",
+    "Código de la Causa del problema juridico",
+    "Código de la Pretensión"
+WHERE Periodo <> '' 
+AND 
+"Régimen de afiliación del usuario" <>'' // Estas personas se doprean por que no fueron presuntamente atentidas en salud
+;
+// FROM [lib://DESARROLLO:Conexión S3/Modelos Adicionales Tecnologia/Tutelas Almera/Reportes Normativos/Supersalud/Extracted/Prueba_Reporte SUPER SALUD.xlsx]
+// (ooxml, embedded labels, table is Rep_Work);
+
+SELECT 
+	Periodo,
+	[Consecutivo de registro],
+	[Tipo de identificación de la entidad reportadora],
+	[Número de identificación de la entidad reportadora],
+	CodTip,
+	[Tipo de documento de identidad del beneficiario],
+	[Número de identificación],
+	[Nombre del beneficiario],
+	[Apellido del beneficiario],
+	[País de origen],
+	Migrante,
+	[Régimen de afiliación del usuario],
+	[Código de habilitación de la entidad objeto de reporte],
+	[Fecha de nacimiento],
+	Sexo,
+	[Gestación],
+	Etnia,
+	[Población especial],
+	[Tipo de afiliado],
+	[Municipio de residencia],
+	[Municipio en el cuál fue interpuesta la tutela],
+	NUMERO_RADICADO,
+	[Número de radicado de la acción de tutela en salud],
+	[Fecha de radicado],
+	[Decisión Primera Instancia],
+	[Impugnación],
+	[Decisión Segunda Instancia],
+	[Incidente de Desacato],
+	[Problema Jurídico],
+	[Fuente de Financiación],
+	[Causa de Demora o Negación],
+	[Descripción Causa de Demora],
+	[Descripción Causa de Negación],
+	[Diagnóstico Principal],
+	[Otro Diagnóstico Relacionado],
+	[Diagnóstico Enfermedad Huérfana],
+	[Código de la Causa del problema juridico],
+	[Código de la Pretensión]
+FROM GetWorksheetV2
+WITH PROPERTIES (
+worksheetKey='1N8YQfnr0IfH3s9d0yjT2jQwWzAa5-guYCO8Ez9_bzZM:_',
+gidOverride='1243209187',
+generatedNumberedColumns='false',
+skipRows=''
+);
+
+
+STORE [Creación_Reporte] INTO [lib://DESARROLLO:Conexión S3/Modelos Adicionales Tecnologia/Tutelas Almera/Reportes Normativos/Supersalud/Extracted/Inicio_Reporte.qvd](qvd);
+// STORE [Creación_Reporte] INTO [lib://DESARROLLO:Conexión S3/Modelos Adicionales Tecnologia/Tutelas Almera/Reportes Normativos/Supersalud/Extracted/Inicio_Reporte.xls](txt);
+Drop Table [Creación_Reporte];
+
+
+
+// exit script;
+///$tab Sección
+LIB CONNECT TO 'DESARROLLO:Conexión Salud Producción Srvsas';
+
+
+SELECT 
+	TIPO_DOCUMENTO,
+	NUMERO_DOCUMENTO,
+    PRIMER_NOMBRE,
+    SEGUNDO_NOMBRE,
+    PRIMER_APELLIDO,
+    SEGUNDO_APELLIDO,
+    CODIGO_PAIS,
+    NOMBRE_PAIS,
+    REGMIMEN,
+    FECHA_NACIMIENTO,
+    SEXO,
+    ETNIA,
+    POBLACION_ESPECIAL,
+    TPO_DE_AFILIADO,
+    FECHA_ULTMA_PRESTACION,
+    CIUDAD,
+    CEDULA,
+    ADICIONAL
+from reporte_tutelas;
+
+exit script;
+
+///$tab **************************
+
+///$tab Ajustes Individuales
+/*
+
+REVISAR SI CONSECUTIVO LO CREO EN LA UNIÓN O MANEJO ESE MISMO CONSECUTIVO QUE TENGO AHORA PERO LO PARTO CON SUBFIELD PARA AGREGARLE EL CONSECUTIVO
+
+*/
+
+// Nombre_Regimen:
+// Mapping
+// LOAD
+// 	TRIM(NUMERO_DOCUMENTO) AS NUMERO_DOCUMENTO,
+// 	FECHA_NACIMIENTO
+// FROM [lib://DESARROLLO:Conexión S3/Modelos Adicionales Tecnologia/Tutelas Almera/Reportes Normativos/Supersalud/Extracted/BD_Salud_$(vperiodo).qvd](qvd);
+
+Nombre_Regimen:
+Mapping
+LOAD
+    TRIM(DOCUMENTO) AS DOCUMENTO,
+    NOMBRE_MUNICIPIO
+FROM [lib://MDM:DataFiles/Datos_MDM.QVD](qvd);
+
+
+
+LIB CONNECT TO 'DESARROLLO:Google Drive - Hojas de Calculo';
+
+[GetWorksheetV2]:
+LOAD 
+	Cedula,
+	ApplyMap('Nombre_Regimen',TRIM(Cedula),'') as regimen
+;
+
+SELECT Cedula
+FROM GetWorksheetV2
+WITH PROPERTIES (
+worksheetKey='1N8YQfnr0IfH3s9d0yjT2jQwWzAa5-guYCO8Ez9_bzZM:_',
+gidOverride='765198627',
+generatedNumberedColumns='false',
+skipRows=''
+);
+
+exit script;
+///$tab 14. Union
+// Subrutina para cargar un QVD, renombrar sus campos con prefijo único y crear el campo Registro completo
+SUB CargarYUnirQVD(vArchivo, vTablaDestino, vFuente)
+    // 1. Cargar campos y renombrarlos con prefijo
+    TempTable:
+    LOAD
+        // Creamos dinámicamente nombres únicos: Prefijo_Campo
+        // Iteramos con la función FieldName() para obtener cada nombre y agregarle el prefijo
+        // La macro Replace() quita espacios para evitar errores
+        // Nota: No se puede usar directamente FieldName() en el script, por eso el renombrado se hace en la siguiente etapa
+        * 
+    FROM [$(vArchivo)] (qvd);
+
+    // 2. Renombrar los campos con el prefijo de la fuente
+    FOR i = 1 TO NoOfFields('TempTable')
+        LET vOldName = FieldName($(i), 'TempTable');
+        LET vNewName = Replace('$(vFuente)&"_"&$(vOldName)', ' ', '_'); // Prefijo + Campo (sin espacios)
+        RENAME FIELD [$(vOldName)] TO [$(vNewName)];
+    NEXT
+
+    // 3. Crear la cadena concatenada dinámica
+    LET vNumFields = NoOfFields('TempTable');
+    LET vConcat = '';
+
+    FOR i = 1 TO $(vNumFields)
+        LET vFieldName = FieldName($(i), 'TempTable');
+        IF $(i) = $(vNumFields) THEN
+            LET vConcat = '$(vConcat) [' & '$(vFieldName)' & ']';
+        ELSE
+            LET vConcat = '$(vConcat) [' & '$(vFieldName)' & '] & CHR(124) &';
+        ENDIF
+    NEXT
+
+    // 4. Cargar a la tabla final con el campo Fuente y el Registro completo
+    $(vTablaDestino):
+    LOAD
+        *,
+        '$(vFuente)' AS Fuente,
+        $(vConcat) AS "Registro completo"
+    RESIDENT TempTable;
+
+    // 5. Limpiar tabla temporal
+    DROP TABLE TempTable;
+END SUB
+
+// ---------- CARGA DE LOS QVDs ----------
+CALL CargarYUnirQVD('lib://DESARROLLO:Conexión S3/Modelos Adicionales Tecnologia/Tutelas Almera/Reportes Normativos/Supersalud/Extracted/BD_Beneficiarios_Tutelas_$(vperiodo).qvd', 'Tutelas_Unificadas', 'Beneficiarios');
+CALL CargarYUnirQVD('lib://DESARROLLO:Conexión S3/Modelos Adicionales Tecnologia/Tutelas Almera/Reportes Normativos/Supersalud/Extracted/BD_Datos_Generales_Tutelas_$(vperiodo).qvd', 'Tutelas_Unificadas', 'DatosGenerales');
+CALL CargarYUnirQVD('lib://DESARROLLO:Conexión S3/Modelos Adicionales Tecnologia/Tutelas Almera/Reportes Normativos/Supersalud/Extracted/BD_Causas_Tutelas_$(vperiodo).qvd', 'Tutelas_Unificadas', 'Causas');
+CALL CargarYUnirQVD('lib://DESARROLLO:Conexión S3/Modelos Adicionales Tecnologia/Tutelas Almera/Reportes Normativos/Supersalud/Extracted/BD_Problemas_Juridicos_Tutelas_$(vperiodo).qvd', 'Tutelas_Unificadas', 'ProblemasJuridicos');
+CALL CargarYUnirQVD('lib://DESARROLLO:Conexión S3/Modelos Adicionales Tecnologia/Tutelas Almera/Reportes Normativos/Supersalud/Extracted/BD_Pretensiones_$(vperiodo).qvd', 'Tutelas_Unificadas', 'Pretensiones');
+
+// Guardar el resultado unificado sin encabezados
+STORE Tutelas_Unificadas INTO [lib://DESARROLLO:Conexión S3/Modelos Adicionales Tecnologia/Tutelas Almera/Reportes Normativos/Supersalud/Extracted/Tutelas_Unificadas_SinEncabezados.qvd](qvd);
+
+EXIT SCRIPT;
+
+///$tab 5. Notificación inconsistencia
+Notificación:
+LOAD
+    NUMERO_RADICADO,
+    FECHA_INICIO_PROCESO,
+    DESPACHO_JUDICIAL,
+//     COD_PROCESO,
+//     DEMANDANTE,
+//     CC_NIT,
+//     PRETENSIONES,
+//     CUANTIA,
+//     PROVISION,
+//     COD_ESTADO,
+//     COD_PROBABILIDAD,
+//     DEMANDADO,
+//     IDENTIFICACION_DEMANDADO,
+//     VALOR_EMBARGOS,
+//     COD_INSTANCIA_PROCESAL,
+//     CUANTIA_FALLO,
+//     BIENES_EMBARGADOS,
+//     COD_SENTENCIA,
+    TRIMESTRE
+//     COD_RECURSO_PROCESAL,
+//     VALIDACION
+FROM [lib://DESARROLLO:Conexión S3/Modelos Adicionales Tecnologia/Tutelas Almera/Reportes Normativos/Supersalud/Extracted/Tx2_Reporte_Super_$(vperiodo).qvd](qvd)
+WHERE VALIDACION = 'REPETIDO'
+;
+
+
+NoConcatenate
+
+//--------------------------------------------------------------------------------------------------------------------------------
+
+//Archivo para los usuarios de salud
+Archivo_Notificacion_Tutelas:
+
+LOAD 
+	NUMERO_RADICADO,
+    FECHA_INICIO_PROCESO,
+    DESPACHO_JUDICIAL,
+    TRIMESTRE
+    Resident Notificación
+    Order By NUMERO_RADICADO;
+    Drop Table Notificación;
+
+STORE Archivo_Notificacion_Tutelas INTO [lib://DESARROLLO:Google Drive/18mScF0ibw_SqjDJx47ITlbDQGEuTxyWF/Inconsistencias_Reporte_Super_$(vperiodo).csv](txt);
+STORE Archivo_Notificacion_Tutelas INTO [lib://DESARROLLO:Conexión S3/Modelos Adicionales Tecnologia/Tutelas Almera/Reportes Normativos/Supersalud/Inconsistencias/Inconsistencias_Reporte_Super_$(vperiodo).qvd](qvd);
+
+// exit script;
+
+LET vRegistros = NoOfRows('Archivo_Notificacion_Tutelas');
+if(vRegistros>0) then
+
+LIB CONNECT TO 'DESARROLLO:Conexión Envío Correos';
+
+
+LET vReporte= 'Reporte Tutelas - Registros repetidos para el trimestre $(vtrimestreAbogados) del $(vaño)' ; //
+LET vMensajeInconsistencias=  '<center><B><H2>Cantidad de registros <BR> </H2></B></center>' 
+								& '<center><H1><B>' & $(vRegistros) & '</H1></B></center>'  
+                                &
+                                '<BR><center><B><H2>Los registros a revisar los encontrara en el siguiente enlace:'&'</H2></B></center>'
+                                &'<center><B><link>'&'https://drive.google.com/drive/u/1/folders/18mScF0ibw_SqjDJx47ITlbDQGEuTxyWF'&'</center></B>'
+                                &
+
+;
+
+RestConnectorMasterTable:
+LOAD status, 
+	result;
+
+
+SELECT status,
+	result
+FROM SendEmail
+WITH PROPERTIES (
+// to= 'gid_nestora@confamiliares.com',
+to= 'gid_nestora@confamiliares.com; mariacamila.barreto@confamiliares.com; oscarandres.arias@confa.co; gid_lizethb@confa.co',
+subject='$(vReporte)',
+message='$(vMensajeInconsistencias)',
+html='true',
+fromName='INCONSISTENCIA REPORTE TUTELAS - SUPERSALUD',
+fromEmail='proyecto.bi@confamiliares.com.co',
+cc='',
+bcc=''
+);
+
+
+end if
+Drop table Archivo_Notificacion_Tutelas;
+
+// exit script;
+///$tab 6. Creación Reporte
+Reporte_4_099_Final:
+LOAD
+    NUMERO_RADICADO 				AS NUM_RADICADO,
+    FECHA_INICIO_PROCESO 			AS FEC_INICIO_PROCESO,
+    DESPACHO_JUDICIAL				AS DES_JUDICIAL,
+    COD_PROCESO						AS CLA_PROCESO,
+    DEMANDANTE						AS NOM_DEMANDANTE,
+    CC_NIT							AS TIP_NUM_IDENTIFICACION_DEMANDANTE, 
+    DEMANDADO						AS NOM_DEMANDADO,
+    IDENTIFICACION_DEMANDADO 		AS TIP_NUM_IDENTIFICACION_DEMANDADO,    
+    PRETENSIONES 					AS OBJ_PRETENSIONES,
+    CUANTIA							AS VAL_CUANTIA,
+    VALOR_EMBARGOS					AS VAL_EMBARGOS,
+    BIENES_EMBARGADOS 				AS BIE_EMBARGADOS, 
+	PurgeChar(PROVISION,'.')						AS SUM_PROVISION,
+    COD_PROBABILIDAD				AS PRO_EXITO,
+    if(COD_INSTANCIA_PROCESAL='',2,COD_INSTANCIA_PROCESAL) 			AS INSTANCIA_PROCESAL_JUDICIAL,
+	COD_RECURSO_PROCESAL 			AS REC_PROCESAL,
+   	COD_ESTADO 						AS EST_PROCESO,
+	COD_SENTENCIA 					AS TIP_SENTENCIA, 
+    CUANTIA_FALLO					AS CUA_FALLO
+
+FROM [lib://DESARROLLO:Conexión S3/Modelos Adicionales Tecnologia/Tutelas Almera/Reportes Normativos/Supersalud/Extracted/Tx2_Reporte_Super_$(vperiodo).qvd](qvd);
+
+// STORE [Reporte_4_099_Final] INTO [lib://TUTELAS ALMERA:DataFiles/Reportes Normativos/Supersalud/Extracted/BD_Almera_$(vperiodo).qvd](qvd);
+STORE [Reporte_4_099_Final] INTO [lib://DESARROLLO:Conexión S3/Modelos Adicionales Tecnologia/Tutelas Almera/Reportes Normativos/Supersalud/Reporte XLS/Prueba_CCF0114-099A$(CodigoTrimestre)$(vaño).csv](txt);
+STORE [Reporte_4_099_Final] INTO [lib://DESARROLLO:Conexión S3/Modelos Adicionales Tecnologia/Tutelas Almera/Reportes Normativos/Supersalud/Reporte XLS/Prueba_CCF0114-099A$(CodigoTrimestre)$(vaño).qvd](qvd);
+
+STORE Reporte_4_099_Final INTO [lib://DESARROLLO:Google Drive/0B_oMyqQEiAa-a000MWJGd0dFMGs/Prueba_CCF0114-099A$(CodigoTrimestre)$(vaño).csv](txt);
+
+Drop table Reporte_4_099_Final;
+
+exit script;
