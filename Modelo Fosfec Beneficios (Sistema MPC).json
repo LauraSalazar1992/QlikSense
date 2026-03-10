@@ -1,0 +1,324 @@
+
+SHEETS
+{"qInfo":{"qId":"049a2123-9d01-427f-af4c-0fe3c9a90de2","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"049a2123-9d01-427f-af4c-0fe3c9a90de2","approved":false,"published":true,"publishTime":"2026-03-10T13:16:42.236Z","owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-10-27T04:58:34.902Z","modifiedDate":"2026-03-10T13:16:41.982Z","encrypted":true,"privileges":["read","publish"],"title":"5. Reporte Postulaci\u00f3n","description":""},"qData":[]}
+{"qInfo":{"qId":"254d5da3-2155-4ee6-a928-713ba5daaeb7","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"254d5da3-2155-4ee6-a928-713ba5daaeb7","approved":false,"published":true,"publishTime":"2026-03-10T13:16:48.254Z","owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-10-27T05:08:34.806Z","modifiedDate":"2026-03-10T13:16:47.956Z","encrypted":true,"privileges":["read","publish"],"title":"7. Desprovisi\u00f3n","description":""},"qData":[]}
+{"qInfo":{"qId":"299bf344-2c8f-4bf0-9a96-79ef78776ca7","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"299bf344-2c8f-4bf0-9a96-79ef78776ca7","approved":false,"published":true,"publishTime":"2026-03-10T13:16:35.677Z","owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-10-27T04:59:42.785Z","modifiedDate":"2026-03-10T13:16:35.304Z","encrypted":true,"privileges":["read","publish"],"title":"3. Empresas Postulantes","description":""},"qData":[]}
+{"qInfo":{"qId":"3627fc5f-bf83-4464-a883-5af3a0985779","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"3627fc5f-bf83-4464-a883-5af3a0985779","approved":false,"published":true,"publishTime":"2026-03-10T13:16:28.203Z","owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-10-27T05:08:19.106Z","modifiedDate":"2026-03-10T13:16:27.736Z","encrypted":true,"privileges":["read","publish"],"title":"1. Indicadores postulaci\u00f3n","description":""},"qData":[]}
+{"qInfo":{"qId":"38957bff-f5fc-4aa2-97a1-d994ca2280be","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"38957bff-f5fc-4aa2-97a1-d994ca2280be","approved":false,"published":true,"publishTime":"2026-03-10T13:16:32.261Z","owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-10-27T04:23:04.132Z","modifiedDate":"2026-03-10T13:16:31.924Z","encrypted":true,"privileges":["read","publish"],"title":"2. Caracterizaci\u00f3n postulaciones","description":""},"qData":[]}
+{"qInfo":{"qId":"4d1fe470-f5ec-443f-a792-baf5a36c7aeb","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"4d1fe470-f5ec-443f-a792-baf5a36c7aeb","approved":false,"published":true,"publishTime":"2026-03-10T13:16:54.094Z","owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-12-04T03:07:44.931Z","modifiedDate":"2026-03-10T13:16:53.834Z","encrypted":true,"privileges":["read","publish"],"title":"9. Control de operaciones","description":""},"qData":[]}
+{"qInfo":{"qId":"549436a9-f8d8-46da-9c82-a7467e88c5bd","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"549436a9-f8d8-46da-9c82-a7467e88c5bd","approved":false,"published":true,"publishTime":"2026-03-10T13:16:51.149Z","owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-10-27T05:08:45.463Z","modifiedDate":"2026-03-10T13:16:50.908Z","encrypted":true,"privileges":["read","publish"],"title":"8. Nuevas Asignaciones","description":""},"qData":[]}
+{"qInfo":{"qId":"601728c2-6924-4b4d-980a-8e4085fe48c5","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"601728c2-6924-4b4d-980a-8e4085fe48c5","approved":false,"published":true,"publishTime":"2026-03-10T15:06:46.359Z","owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2026-03-10T01:31:38.197Z","modifiedDate":"2026-03-10T15:06:49.284Z","encrypted":true,"privileges":["read","publish"],"title":"4. Posibles Cesantes","description":""},"qData":[]}
+{"qInfo":{"qId":"d90ff8d7-79cc-41f3-942b-c57b791455f7","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"d90ff8d7-79cc-41f3-942b-c57b791455f7","approved":false,"published":true,"publishTime":"2026-03-10T13:16:45.215Z","owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-10-27T05:08:29.453Z","modifiedDate":"2026-03-10T13:16:44.932Z","encrypted":true,"privileges":["read","publish"],"title":"6. Provisi\u00f3n","description":""},"qData":[]}
+
+OBJECTS ON SHEETS
+{"name":"f8adc597-5f94-4a32-93d5-c90d3e965ad4","type":"filterpane","col":0,"row":1,"colspan":24,"rowspan":1,"bounds":{"y":8.333333333333332,"x":0,"width":100,"height":8.333333333333332}}
+{"name":"cdd44476-2166-4465-a0b7-f42da285c0af","type":"table","col":0,"row":8,"colspan":12,"rowspan":4,"bounds":{"y":66.66666666666666,"x":0,"width":50,"height":33.33333333333333}}
+{"name":"53cd5ed6-3aea-4160-a187-1327c9e3182f","type":"table","col":12,"row":8,"colspan":12,"rowspan":4,"bounds":{"y":66.66666666666666,"x":50,"width":50,"height":33.33333333333333}}
+{"name":"cc46047b-b65f-4be2-9db2-570f2c774906","type":"swr-sense-navigation","col":0,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":0,"width":12.5,"height":8.333333333333332}}
+{"name":"77ad9222-ba46-47cb-8f9a-0d272b272ed1","type":"swr-sense-navigation","col":12,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":50,"width":12.5,"height":8.333333333333332}}
+{"name":"d4edbeab-2e3e-4e01-9405-e48b24deda0d","type":"swr-sense-navigation","col":15,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":62.5,"width":12.5,"height":8.333333333333332}}
+{"name":"1675b9e5-8bb6-441c-8b38-18394fb39463","type":"swr-sense-navigation","col":18,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":75,"width":12.5,"height":8.333333333333332}}
+{"name":"70243e06-cd5a-49aa-8413-8f904297d195","type":"swr-sense-navigation","col":3,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":12.5,"width":12.5,"height":8.333333333333332}}
+{"name":"45a6e1bc-546b-4829-866c-0bea4d29a9cc","type":"swr-sense-navigation","col":6,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":25,"width":12.5,"height":8.333333333333332}}
+{"name":"582dfdcd-5396-4160-9ad6-551ed348a67b","type":"table","col":0,"row":2,"colspan":24,"rowspan":6,"bounds":{"y":16.666666666666664,"x":0,"width":100,"height":50}}
+{"name":"GHPMLWJ","type":"swr-sense-navigation","col":21,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":87.5,"width":12.5,"height":8.333333333333332}}
+{"name":"baavAu","type":"swr-sense-navigation","col":9,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":37.5,"width":12.5,"height":8.333333333333332}}
+{"name":"a2677820-cdd5-40f3-86ca-4def1e2a24fa","type":"filterpane","col":0,"row":1,"colspan":24,"rowspan":1,"bounds":{"y":8.333333333333332,"x":0,"width":100,"height":8.333333333333332}}
+{"name":"4ee80be3-6b19-4574-856a-5b7455a79269","type":"swr-sense-navigation","col":0,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":0,"width":12.5,"height":8.333333333333332}}
+{"name":"a601516b-cb7b-41f1-b96f-ee3d445a55c2","type":"swr-sense-navigation","col":12,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":50,"width":12.5,"height":8.333333333333332}}
+{"name":"6ea71dcf-b73d-4b6c-9a53-b455caa475df","type":"swr-sense-navigation","col":15,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":62.5,"width":12.5,"height":8.333333333333332}}
+{"name":"0ff73fb0-ce57-47ec-b283-7d491351fa57","type":"swr-sense-navigation","col":18,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":75,"width":12.5,"height":8.333333333333332}}
+{"name":"c269f7f9-2dea-42ae-a1f8-79dd21e1139b","type":"kpi","col":0,"row":2,"colspan":9,"rowspan":3,"bounds":{"y":16.666666666666664,"x":0,"width":37.5,"height":25}}
+{"name":"3370583c-ab37-45d2-8e15-a8bd8a8b9bf7","type":"kpi","col":9,"row":2,"colspan":5,"rowspan":1,"bounds":{"y":16.666666666666664,"x":37.5,"width":20.833333333333336,"height":8.333333333333332}}
+{"name":"e8f8a7a1-fd6c-4d3f-a24c-1713a65d9c27","type":"kpi","col":14,"row":2,"colspan":5,"rowspan":1,"bounds":{"y":16.666666666666664,"x":58.333333333333336,"width":20.833333333333336,"height":8.333333333333332}}
+{"name":"ec1a10e4-94a1-4241-84bf-17a920aef0b1","type":"kpi","col":19,"row":2,"colspan":5,"rowspan":1,"bounds":{"y":16.666666666666664,"x":79.16666666666666,"width":20.833333333333336,"height":8.333333333333332}}
+{"name":"c4e99ca6-2d4b-4f38-8750-0cc7849ad39c","type":"kpi","col":9,"row":3,"colspan":15,"rowspan":2,"bounds":{"y":25,"x":37.5,"width":62.5,"height":16.666666666666664}}
+{"name":"20e79982-69e1-433a-a01a-666ce332517d","type":"table","col":10,"row":5,"colspan":14,"rowspan":7,"bounds":{"y":41.66666666666667,"x":41.66666666666667,"width":58.333333333333336,"height":58.333333333333336}}
+{"name":"5dc8deab-4c57-4d76-b08d-5716f138d69a","type":"swr-sense-navigation","col":3,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":12.5,"width":12.5,"height":8.333333333333332}}
+{"name":"6963edf2-41ad-4113-b23c-0f3f848adaee","type":"swr-sense-navigation","col":6,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":25,"width":12.5,"height":8.333333333333332}}
+{"name":"myjHvZK","type":"linechart","col":0,"row":5,"colspan":10,"rowspan":7,"bounds":{"y":41.66666666666667,"x":0,"width":41.66666666666667,"height":58.333333333333336}}
+{"name":"uqWpyA","type":"swr-sense-navigation","col":21,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":87.5,"width":12.5,"height":8.333333333333332}}
+{"name":"rxnvqyd","type":"swr-sense-navigation","col":9,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":37.5,"width":12.5,"height":8.333333333333332}}
+{"name":"4aea0faf-6ea3-48f2-ba03-8a635a077697","type":"kpi","col":0,"row":2,"colspan":6,"rowspan":2,"bounds":{"y":16.666666666666664,"x":0,"width":25,"height":16.666666666666664}}
+{"name":"ee6424f0-d541-4608-9053-77e31c19dbe0","type":"filterpane","col":0,"row":1,"colspan":21,"rowspan":1,"bounds":{"y":8.333333333333332,"x":0,"width":87.5,"height":8.333333333333332}}
+{"name":"92170d0f-dd85-4313-b375-80f99f9a05af","type":"table","col":12,"row":2,"colspan":12,"rowspan":5,"bounds":{"y":16.666666666666664,"x":50,"width":50,"height":41.66666666666667}}
+{"name":"7db7b145-e48f-42c5-b1bd-5b5776d5208f","type":"barchart","col":0,"row":4,"colspan":12,"rowspan":8,"bounds":{"y":33.33333333333333,"x":0,"width":50,"height":66.66666666666666}}
+{"name":"947f17b6-0885-438b-b10e-825ac5c08764","type":"swr-sense-navigation","col":0,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":0,"width":12.5,"height":8.333333333333332}}
+{"name":"a3171fd0-39ca-4563-bbe6-72c1a5ad1a70","type":"swr-sense-navigation","col":12,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":50,"width":12.5,"height":8.333333333333332}}
+{"name":"4349b8cc-4772-4ffe-8a27-8fcfb3859654","type":"swr-sense-navigation","col":15,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":62.5,"width":12.5,"height":8.333333333333332}}
+{"name":"f7ec91c9-9be8-4872-9369-576791d3d954","type":"swr-sense-navigation","col":18,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":75,"width":12.5,"height":8.333333333333332}}
+{"name":"118950f2-0cd1-4df0-88b1-e4ff096cb9f5","type":"swr-sense-navigation","col":21,"row":1,"colspan":3,"rowspan":1,"bounds":{"y":8.333333333333332,"x":87.5,"width":12.5,"height":8.333333333333332}}
+{"name":"8d808613-29d2-4236-beb9-8847ebf4929e","type":"kpi","col":6,"row":2,"colspan":6,"rowspan":2,"bounds":{"y":16.666666666666664,"x":25,"width":25,"height":16.666666666666664}}
+{"name":"3b3f2b19-1167-412b-811a-7f2ba69055a1","type":"table","col":12,"row":7,"colspan":12,"rowspan":5,"bounds":{"y":58.333333333333336,"x":50,"width":50,"height":41.66666666666667}}
+{"name":"0670b28e-7c54-4097-ae5c-7d53e8c83dc7","type":"swr-sense-navigation","col":3,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":12.5,"width":12.5,"height":8.333333333333332}}
+{"name":"5b6663b6-a3f3-423a-b6e4-b689e0950745","type":"swr-sense-navigation","col":6,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":25,"width":12.5,"height":8.333333333333332}}
+{"name":"xQNX","type":"swr-sense-navigation","col":21,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":87.5,"width":12.5,"height":8.333333333333332}}
+{"name":"atkUxtc","type":"swr-sense-navigation","col":9,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":37.5,"width":12.5,"height":8.333333333333332}}
+{"name":"9de6b151-717e-4815-97cf-c5eae83a3e4c","type":"kpi","col":0,"row":2,"colspan":8,"rowspan":3,"bounds":{"y":16.666666666666664,"x":0,"width":33.33333333333333,"height":25}}
+{"name":"cbf460de-d6b6-4f14-b859-bc3164905590","type":"kpi","col":16,"row":4,"colspan":4,"rowspan":1,"bounds":{"y":33.33333333333333,"x":66.66666666666666,"width":16.666666666666664,"height":8.333333333333332}}
+{"name":"22448575-e08c-470d-a26c-63a1febcbc1c","type":"kpi","col":20,"row":4,"colspan":4,"rowspan":1,"bounds":{"y":33.33333333333333,"x":83.33333333333334,"width":16.666666666666664,"height":8.333333333333332}}
+{"name":"c6217f73-3d2a-41cd-acd6-4966a9733417","type":"kpi","col":8,"row":4,"colspan":4,"rowspan":1,"bounds":{"y":33.33333333333333,"x":33.33333333333333,"width":16.666666666666664,"height":8.333333333333332}}
+{"name":"8ea341cc-651c-4970-8df0-726ac98ce8cf","type":"kpi","col":12,"row":4,"colspan":4,"rowspan":1,"bounds":{"y":33.33333333333333,"x":50,"width":16.666666666666664,"height":8.333333333333332}}
+{"name":"a70a8315-64d7-472a-a8c6-7759378ce353","type":"barchart","col":12,"row":5,"colspan":12,"rowspan":4,"bounds":{"y":41.66666666666667,"x":50,"width":50,"height":33.33333333333333}}
+{"name":"fcfcef71-705b-46be-908a-36861e313a8c","type":"filterpane","col":0,"row":1,"colspan":21,"rowspan":1,"bounds":{"y":8.333333333333332,"x":0,"width":87.5,"height":8.333333333333332}}
+{"name":"24d40a31-2b9f-405d-84c8-42c45c76e628","type":"kpi","col":16,"row":2,"colspan":4,"rowspan":2,"bounds":{"y":16.666666666666664,"x":66.66666666666666,"width":16.666666666666664,"height":16.666666666666664}}
+{"name":"02e7654c-7efa-487f-91c6-49454a27a70e","type":"kpi","col":20,"row":2,"colspan":4,"rowspan":2,"bounds":{"y":16.666666666666664,"x":83.33333333333334,"width":16.666666666666664,"height":16.666666666666664}}
+{"name":"7a4c0757-2192-4092-9e4f-960aeca84406","type":"kpi","col":12,"row":2,"colspan":4,"rowspan":2,"bounds":{"y":16.666666666666664,"x":50,"width":16.666666666666664,"height":16.666666666666664}}
+{"name":"7a18a95f-17e1-47b3-926d-a35f554826c1","type":"linechart","col":0,"row":5,"colspan":12,"rowspan":7,"bounds":{"y":41.66666666666667,"x":0,"width":50,"height":58.333333333333336}}
+{"name":"4950cef6-9425-4c67-9860-b840d07171e2","type":"kpi","col":8,"row":2,"colspan":4,"rowspan":2,"bounds":{"y":16.666666666666664,"x":33.33333333333333,"width":16.666666666666664,"height":16.666666666666664}}
+{"name":"744f1b98-1a9c-440b-aecd-0a07f8aa5310","type":"barchart","col":12,"row":9,"colspan":12,"rowspan":3,"bounds":{"y":75,"x":50,"width":50,"height":25}}
+{"name":"704d4c7f-45fa-4192-85a9-686641451c17","type":"swr-sense-navigation","col":0,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":0,"width":12.5,"height":8.333333333333332}}
+{"name":"e69ca335-6290-436b-bc2f-50a9704d3c6f","type":"swr-sense-navigation","col":12,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":50,"width":12.5,"height":8.333333333333332}}
+{"name":"dcb4db7b-7f2e-4df0-90bb-68ce53107b56","type":"swr-sense-navigation","col":15,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":62.5,"width":12.5,"height":8.333333333333332}}
+{"name":"e30bdef1-1a99-447b-ac99-b9f772e5c9c4","type":"swr-sense-navigation","col":18,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":75,"width":12.5,"height":8.333333333333332}}
+{"name":"1a75893d-a833-4c42-abca-a64d94f08deb","type":"swr-sense-navigation","col":21,"row":1,"colspan":3,"rowspan":1,"bounds":{"y":8.333333333333332,"x":87.5,"width":12.5,"height":8.333333333333332}}
+{"name":"2994cf6d-2357-447d-8cfa-868477962134","type":"swr-sense-navigation","col":3,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":12.5,"width":12.5,"height":8.333333333333332}}
+{"name":"c3f4e8cf-9fa5-476b-b31c-20e0679eb4c4","type":"swr-sense-navigation","col":6,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":25,"width":12.5,"height":8.333333333333332}}
+{"name":"ZWtWJJ","type":"swr-sense-navigation","col":21,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":87.5,"width":12.5,"height":8.333333333333332}}
+{"name":"UNKBmLb","type":"swr-sense-navigation","col":9,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":37.5,"width":12.5,"height":8.333333333333332}}
+{"name":"cfa978b4-3799-40cc-b59e-7514d1d6764a","type":"kpi","col":0,"row":2,"colspan":6,"rowspan":2,"bounds":{"y":16.666666666666664,"x":0,"width":25,"height":16.666666666666664}}
+{"name":"1345f0c6-1e3f-448e-9ecb-df43877ce702","type":"filterpane","col":0,"row":1,"colspan":21,"rowspan":1,"bounds":{"y":8.333333333333332,"x":0,"width":87.5,"height":8.333333333333332}}
+{"name":"b617d56d-c178-4f18-b907-6d0373739b1d","type":"kpi","col":6,"row":2,"colspan":6,"rowspan":2,"bounds":{"y":16.666666666666664,"x":25,"width":25,"height":16.666666666666664}}
+{"name":"f1fb3802-e1bd-42b6-b8ef-1b275e0eb572","type":"kpi","col":12,"row":2,"colspan":6,"rowspan":2,"bounds":{"y":16.666666666666664,"x":50,"width":25,"height":16.666666666666664}}
+{"name":"f30180a3-4c21-4350-a039-be199f027008","type":"piechart","col":12,"row":4,"colspan":6,"rowspan":4,"bounds":{"y":33.33333333333333,"x":50,"width":25,"height":33.33333333333333}}
+{"name":"d6989afd-27c8-4ccc-a5d9-982704652f84","type":"barchart","col":12,"row":8,"colspan":12,"rowspan":4,"bounds":{"y":66.66666666666666,"x":50,"width":50,"height":33.33333333333333}}
+{"name":"ac918fa2-3375-4f70-848c-ee165b430986","type":"barchart","col":0,"row":8,"colspan":12,"rowspan":4,"bounds":{"y":66.66666666666666,"x":0,"width":50,"height":33.33333333333333}}
+{"name":"73543e19-7d97-4365-86fd-120e9c54baa4","type":"barchart","col":0,"row":4,"colspan":12,"rowspan":4,"bounds":{"y":33.33333333333333,"x":0,"width":50,"height":33.33333333333333}}
+{"name":"ddbf6758-5222-4741-a2e7-e8c6c2a59936","type":"kpi","col":18,"row":2,"colspan":6,"rowspan":2,"bounds":{"y":16.666666666666664,"x":75,"width":25,"height":16.666666666666664}}
+{"name":"1ae8b892-47eb-4788-8309-211019b9efb7","type":"swr-sense-navigation","col":3,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":12.5,"width":12.5,"height":8.333333333333332}}
+{"name":"d07a8f44-fae4-4dc8-bbe6-9ce242ef92ad","type":"swr-sense-navigation","col":0,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":0,"width":12.5,"height":8.333333333333332}}
+{"name":"b3d3f6d8-95a6-462a-bfc4-258f02c81287","type":"swr-sense-navigation","col":12,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":50,"width":12.5,"height":8.333333333333332}}
+{"name":"d060d3fc-0685-4497-8681-f1e9c514608f","type":"swr-sense-navigation","col":15,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":62.5,"width":12.5,"height":8.333333333333332}}
+{"name":"9168fe70-dc8c-4c3e-8b78-951ceaa5fb83","type":"swr-sense-navigation","col":18,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":75,"width":12.5,"height":8.333333333333332}}
+{"name":"34eb5b48-7582-45af-898b-bd957f654dcb","type":"swr-sense-navigation","col":21,"row":1,"colspan":3,"rowspan":1,"bounds":{"y":8.333333333333332,"x":87.5,"width":12.5,"height":8.333333333333332}}
+{"name":"415c4650-41ff-4196-92b7-707a78974da3","type":"histogram","col":18,"row":4,"colspan":6,"rowspan":4,"bounds":{"y":33.33333333333333,"x":75,"width":25,"height":33.33333333333333}}
+{"name":"3032a488-013d-43ca-a317-9cc4e34b8993","type":"swr-sense-navigation","col":6,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":25,"width":12.5,"height":8.333333333333332}}
+{"name":"PPZCuQ","type":"swr-sense-navigation","col":21,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":87.5,"width":12.5,"height":8.333333333333332}}
+{"name":"DpYyJz","type":"swr-sense-navigation","col":9,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":37.5,"width":12.5,"height":8.333333333333332}}
+{"name":"3ff9a342-720e-41df-ba38-6a379f87b997","type":"filterpane","col":0,"row":1,"colspan":21,"rowspan":1,"bounds":{"y":8.333333333333332,"x":0,"width":87.5,"height":8.333333333333332}}
+{"name":"bdcf78be-845b-4bee-bfbc-3926b5aec593","type":"swr-sense-navigation","col":3,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":12.5,"width":12.5,"height":8.333333333333332}}
+{"name":"f6db4d13-3c59-476d-a129-cc93178b7886","type":"swr-sense-navigation","col":0,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":0,"width":12.5,"height":8.333333333333332}}
+{"name":"fedfbf41-a464-4df5-9b6d-8060997d6a43","type":"swr-sense-navigation","col":12,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":50,"width":12.5,"height":8.333333333333332}}
+{"name":"7f9b6c36-1d90-46b7-bc5d-224c483db2bb","type":"swr-sense-navigation","col":15,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":62.5,"width":12.5,"height":8.333333333333332}}
+{"name":"75897233-a6d2-4e81-b218-407a0e9e3faa","type":"swr-sense-navigation","col":18,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":75,"width":12.5,"height":8.333333333333332}}
+{"name":"bbc7fcf3-4a88-4db6-84c2-5b87d410b824","type":"swr-sense-navigation","col":21,"row":1,"colspan":3,"rowspan":1,"bounds":{"y":8.333333333333332,"x":87.5,"width":12.5,"height":8.333333333333332}}
+{"name":"01fa1a0b-1a53-474b-9b1e-da021f524387","type":"swr-sense-navigation","col":6,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":25,"width":12.5,"height":8.333333333333332}}
+{"name":"d45b98b1-d047-41a5-9138-edcc0db0284d","type":"swr-sense-navigation","col":21,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":87.5,"width":12.5,"height":8.333333333333332}}
+{"name":"PpbzDp","type":"table","col":12,"row":8,"colspan":12,"rowspan":4,"bounds":{"y":66.66666666666666,"x":50,"width":50,"height":33.33333333333333}}
+{"name":"BHyWe","type":"kpi","col":6,"row":2,"colspan":6,"rowspan":2,"bounds":{"y":16.666666666666664,"x":25,"width":25,"height":16.666666666666664}}
+{"name":"tyfvQbc","type":"table","col":12,"row":2,"colspan":12,"rowspan":6,"bounds":{"y":16.666666666666664,"x":50,"width":50,"height":50}}
+{"name":"ZjPyE","type":"kpi","col":0,"row":4,"colspan":6,"rowspan":2,"bounds":{"y":33.33333333333333,"x":0,"width":25,"height":16.666666666666664}}
+{"name":"aMCm","type":"kpi","col":6,"row":4,"colspan":6,"rowspan":2,"bounds":{"y":33.33333333333333,"x":25,"width":25,"height":16.666666666666664}}
+{"name":"wUuvnu","type":"barchart","col":0,"row":6,"colspan":12,"rowspan":6,"bounds":{"y":50,"x":0,"width":50,"height":50}}
+{"name":"fjrduQ","type":"kpi","col":0,"row":2,"colspan":6,"rowspan":2,"bounds":{"y":16.666666666666664,"x":0,"width":25,"height":16.666666666666664}}
+{"name":"PeHpqEA","type":"swr-sense-navigation","col":9,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":37.5,"width":12.5,"height":8.333333333333332}}
+{"name":"20f12eaa-b9f9-44c7-8e55-b5037fcd669f","type":"filterpane","col":0,"row":1,"colspan":24,"rowspan":1,"bounds":{"y":8.333333333333332,"x":0,"width":100,"height":8.333333333333332}}
+{"name":"d75e63eb-0dc3-416a-8e16-da4aa84fed8e","type":"swr-sense-navigation","col":0,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":0,"width":12.5,"height":8.333333333333332}}
+{"name":"e6733254-7ed4-4a8d-a9a8-76999635bfd9","type":"swr-sense-navigation","col":12,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":50,"width":12.5,"height":8.333333333333332}}
+{"name":"798f6919-b2dd-4d6f-b509-6770b879a28a","type":"swr-sense-navigation","col":15,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":62.5,"width":12.5,"height":8.333333333333332}}
+{"name":"db88a5c7-d511-4391-9e63-7bbfeeb2c71d","type":"swr-sense-navigation","col":18,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":75,"width":12.5,"height":8.333333333333332}}
+{"name":"8dc1b90d-36df-4e67-a995-39c6114cc6ab","type":"table","col":0,"row":4,"colspan":24,"rowspan":8,"bounds":{"y":33.33333333333333,"x":0,"width":100,"height":66.66666666666666}}
+{"name":"58c11ee3-e342-4c15-819c-d0d8653e6458","type":"kpi","col":0,"row":2,"colspan":12,"rowspan":2,"bounds":{"y":16.666666666666664,"x":0,"width":50,"height":16.666666666666664}}
+{"name":"206c91c4-c537-4a0c-848b-2a80e9fdbfec","type":"kpi","col":12,"row":2,"colspan":12,"rowspan":2,"bounds":{"y":16.666666666666664,"x":50,"width":50,"height":16.666666666666664}}
+{"name":"3253b4db-42a9-4059-a1b2-01ca3ad6bd52","type":"swr-sense-navigation","col":3,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":12.5,"width":12.5,"height":8.333333333333332}}
+{"name":"21fd8be3-ddb5-43ff-8350-f9d35cd28450","type":"swr-sense-navigation","col":6,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":25,"width":12.5,"height":8.333333333333332}}
+{"name":"JTaep","type":"swr-sense-navigation","col":21,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":87.5,"width":12.5,"height":8.333333333333332}}
+{"name":"jsNR","type":"swr-sense-navigation","col":9,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":37.5,"width":12.5,"height":8.333333333333332}}
+{"name":"88353c10-9b02-4a8f-8c11-95408551f2b0","type":"swr-sense-navigation","col":0,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":0,"width":12.5,"height":8.333333333333332}}
+{"name":"67002806-5b24-47ae-b861-77ef692b5a0d","type":"swr-sense-navigation","col":12,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":50,"width":12.5,"height":8.333333333333332}}
+{"name":"7a7e81b1-2062-4d1a-b9c6-56c6f65f3d3c","type":"swr-sense-navigation","col":15,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":62.5,"width":12.5,"height":8.333333333333332}}
+{"name":"7306171d-6036-404d-b7a3-a37573898376","type":"swr-sense-navigation","col":18,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":75,"width":12.5,"height":8.333333333333332}}
+{"name":"654d7d04-88ba-446d-b7da-30a44cf31e3b","type":"swr-sense-navigation","col":3,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":12.5,"width":12.5,"height":8.333333333333332}}
+{"name":"b2ca338b-c802-4c79-8300-bd1d433bf05d","type":"swr-sense-navigation","col":6,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":25,"width":12.5,"height":8.333333333333332}}
+{"name":"17f5a231-cdd4-43d3-b1a3-364e9818e1dc","type":"swr-sense-navigation","col":21,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":87.5,"width":12.5,"height":8.333333333333332}}
+{"name":"LckAjA","type":"swr-sense-navigation","col":9,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":37.5,"width":12.5,"height":8.333333333333332}}
+{"name":"NanKJ","type":"filterpane","col":0,"row":1,"colspan":24,"rowspan":1,"bounds":{"y":8.333333333333332,"x":0,"width":100,"height":8.333333333333332}}
+{"name":"knes","type":"kpi","col":0,"row":2,"colspan":5,"rowspan":1,"bounds":{"y":16.666666666666664,"x":0,"width":20.833333333333336,"height":8.333333333333332}}
+{"name":"pPghHu","type":"kpi","col":5,"row":2,"colspan":5,"rowspan":1,"bounds":{"y":16.666666666666664,"x":20.833333333333336,"width":20.833333333333336,"height":8.333333333333332}}
+{"name":"GJhsX","type":"kpi","col":14,"row":2,"colspan":5,"rowspan":1,"bounds":{"y":16.666666666666664,"x":58.333333333333336,"width":20.833333333333336,"height":8.333333333333332}}
+{"name":"CpY","type":"kpi","col":19,"row":2,"colspan":5,"rowspan":1,"bounds":{"y":16.666666666666664,"x":79.16666666666666,"width":20.833333333333336,"height":8.333333333333332}}
+{"name":"tyRVmw","type":"barchart","col":0,"row":3,"colspan":10,"rowspan":9,"bounds":{"y":25,"x":0,"width":41.66666666666667,"height":75}}
+{"name":"nzvCxT","type":"kpi","col":10,"row":2,"colspan":4,"rowspan":1,"bounds":{"y":16.666666666666664,"x":41.66666666666667,"width":16.666666666666664,"height":8.333333333333332}}
+{"name":"pmdcd","type":"piechart","col":10,"row":3,"colspan":7,"rowspan":4,"bounds":{"y":25,"x":41.66666666666667,"width":29.166666666666668,"height":33.33333333333333}}
+{"name":"PBcaPjp","type":"table","col":17,"row":3,"colspan":7,"rowspan":9,"bounds":{"y":25,"x":70.83333333333334,"width":29.166666666666668,"height":75}}
+{"name":"pwZJuAC","type":"histogram","col":10,"row":7,"colspan":7,"rowspan":5,"bounds":{"y":58.333333333333336,"x":41.66666666666667,"width":29.166666666666668,"height":41.66666666666667}}
+{"name":"c74d01a7-2089-486f-a65c-a4c4972e7b62","type":"filterpane","col":0,"row":1,"colspan":24,"rowspan":1,"bounds":{"y":8.333333333333332,"x":0,"width":100,"height":8.333333333333332}}
+{"name":"6a2130ae-8196-4d25-b0ba-c6caa692237e","type":"swr-sense-navigation","col":0,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":0,"width":12.5,"height":8.333333333333332}}
+{"name":"c001edd1-874d-41ef-8dce-7fe9ae2c0e1d","type":"swr-sense-navigation","col":12,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":50,"width":12.5,"height":8.333333333333332}}
+{"name":"d5c3858d-0122-461e-9e0f-742d30f0b9ff","type":"swr-sense-navigation","col":15,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":62.5,"width":12.5,"height":8.333333333333332}}
+{"name":"ba39f47b-4e7b-4fb9-8e3f-e5007d73fdbe","type":"swr-sense-navigation","col":18,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":75,"width":12.5,"height":8.333333333333332}}
+{"name":"032c02c0-f1d5-4cff-946a-6fd375fbe3c3","type":"kpi","col":0,"row":2,"colspan":6,"rowspan":3,"bounds":{"y":16.666666666666664,"x":0,"width":25,"height":25}}
+{"name":"9d648753-b582-4bf8-83c1-b73ca3f4e5c1","type":"kpi","col":6,"row":3,"colspan":3,"rowspan":1,"bounds":{"y":25,"x":25,"width":12.5,"height":8.333333333333332}}
+{"name":"6f8a222d-1751-487c-bdc6-6c1bc6003433","type":"kpi","col":6,"row":4,"colspan":3,"rowspan":1,"bounds":{"y":33.33333333333333,"x":25,"width":12.5,"height":8.333333333333332}}
+{"name":"a2f98bc5-9019-4b9e-977a-7b62e3d3b1c1","type":"kpi","col":12,"row":2,"colspan":4,"rowspan":1,"bounds":{"y":16.666666666666664,"x":50,"width":16.666666666666664,"height":8.333333333333332}}
+{"name":"b82ddb1e-1934-4184-bffb-8043af16de97","type":"kpi","col":16,"row":2,"colspan":4,"rowspan":1,"bounds":{"y":16.666666666666664,"x":66.66666666666666,"width":16.666666666666664,"height":8.333333333333332}}
+{"name":"e4bd330f-bcaf-43e9-a6a6-7da9a65111e1","type":"kpi","col":20,"row":2,"colspan":4,"rowspan":1,"bounds":{"y":16.666666666666664,"x":83.33333333333334,"width":16.666666666666664,"height":8.333333333333332}}
+{"name":"6257cec1-9ee2-4293-bb83-414d800b5678","type":"kpi","col":12,"row":3,"colspan":12,"rowspan":2,"bounds":{"y":25,"x":50,"width":50,"height":16.666666666666664}}
+{"name":"0abd5b8d-df66-4484-94c8-b28272102e69","type":"kpi","col":6,"row":2,"colspan":6,"rowspan":1,"bounds":{"y":16.666666666666664,"x":25,"width":25,"height":8.333333333333332}}
+{"name":"3f69df96-b93c-4ebe-b45a-cd7fcbadde4f","type":"kpi","col":9,"row":3,"colspan":3,"rowspan":1,"bounds":{"y":25,"x":37.5,"width":12.5,"height":8.333333333333332}}
+{"name":"b4c6980e-376c-4be3-9487-1e7e8f01869d","type":"kpi","col":9,"row":4,"colspan":3,"rowspan":1,"bounds":{"y":33.33333333333333,"x":37.5,"width":12.5,"height":8.333333333333332}}
+{"name":"20804dbb-752c-4f78-868a-9af64cb4e319","type":"linechart","col":0,"row":5,"colspan":12,"rowspan":7,"bounds":{"y":41.66666666666667,"x":0,"width":50,"height":58.333333333333336}}
+{"name":"263f8cd0-b7b2-4ba1-9d42-1eea9b70c137","type":"table","col":12,"row":5,"colspan":12,"rowspan":7,"bounds":{"y":41.66666666666667,"x":50,"width":50,"height":58.333333333333336}}
+{"name":"6284020b-404c-437b-aba1-bcd1227881cd","type":"swr-sense-navigation","col":3,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":12.5,"width":12.5,"height":8.333333333333332}}
+{"name":"4ed662ab-6856-4bf7-9228-7f42b298207e","type":"swr-sense-navigation","col":6,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":25,"width":12.5,"height":8.333333333333332}}
+{"name":"CUggpVC","type":"swr-sense-navigation","col":21,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":87.5,"width":12.5,"height":8.333333333333332}}
+{"name":"XaZXUr","type":"swr-sense-navigation","col":9,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":37.5,"width":12.5,"height":8.333333333333332}}
+
+DIMENSIONS
+{"qInfo":{"qId":"hkcxGk","qType":"dimension"},"qMeta":{"_resourcetype":"app.object","_objecttype":"dimension","id":"hkcxGk","approved":false,"published":false,"owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-07-24T05:22:31.928Z","modifiedDate":"2025-12-04T02:05:19.408Z","encrypted":true,"privileges":["read","update","delete","publish"],"title":"Departamento - Municipio postulaci\u00f3n","description":"","tags":[]},"qData":[]}
+
+MEASURES
+{"qInfo":{"qId":"306cd991-563a-47df-b416-9ae43ea8d41f","qType":"measure"},"qMeta":{"_resourcetype":"app.object","_objecttype":"measure","id":"306cd991-563a-47df-b416-9ae43ea8d41f","approved":false,"published":false,"owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-10-03T05:51:32.672Z","modifiedDate":"2025-10-03T05:52:02.963Z","encrypted":true,"privileges":["read","update","delete","publish"],"title":"Total Desprovisi\u00f3n","description":"","tags":[]},"qData":[]}
+{"qInfo":{"qId":"322da739-6237-46a9-b5de-20b2d949affa","qType":"measure"},"qMeta":{"_resourcetype":"app.object","_objecttype":"measure","id":"322da739-6237-46a9-b5de-20b2d949affa","approved":false,"published":false,"owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-10-03T05:44:28.148Z","modifiedDate":"2025-12-04T02:50:36.782Z","encrypted":true,"privileges":["read","update","delete","publish"],"title":"Provision Transferencia","description":"","tags":[]},"qData":[]}
+{"qInfo":{"qId":"45bf6037-c691-49cc-ab58-a67ab7869937","qType":"measure"},"qMeta":{"_resourcetype":"app.object","_objecttype":"measure","id":"45bf6037-c691-49cc-ab58-a67ab7869937","approved":false,"published":false,"owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-07-24T06:15:23.146Z","modifiedDate":"2025-07-24T06:16:03.610Z","encrypted":true,"privileges":["read","update","delete","publish"],"title":"Tasa de rechazo","description":"","tags":[]},"qData":[]}
+{"qInfo":{"qId":"4fb4baa4-6984-4be2-9499-2cde863cda43","qType":"measure"},"qMeta":{"_resourcetype":"app.object","_objecttype":"measure","id":"4fb4baa4-6984-4be2-9499-2cde863cda43","approved":false,"published":false,"owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-10-03T05:43:52.642Z","modifiedDate":"2025-12-04T02:50:06.485Z","encrypted":true,"privileges":["read","update","delete","publish"],"title":"Provision pension","description":"","tags":[]},"qData":[]}
+{"qInfo":{"qId":"5ca6ba1d-dcb8-4c79-8dfd-b1e8e9406dd5","qType":"measure"},"qMeta":{"_resourcetype":"app.object","_objecttype":"measure","id":"5ca6ba1d-dcb8-4c79-8dfd-b1e8e9406dd5","approved":false,"published":false,"owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-10-03T05:48:24.387Z","modifiedDate":"2025-12-04T02:57:26.461Z","encrypted":true,"privileges":["read","update","delete","publish"],"title":"Desprovisi\u00f3n Pensi\u00f3n","description":"","tags":[]},"qData":[]}
+{"qInfo":{"qId":"7164e73a-3b17-4a63-bdd3-2da5f4306cbd","qType":"measure"},"qMeta":{"_resourcetype":"app.object","_objecttype":"measure","id":"7164e73a-3b17-4a63-bdd3-2da5f4306cbd","approved":false,"published":false,"owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-07-24T06:22:55.394Z","modifiedDate":"2025-07-24T06:23:10.589Z","encrypted":true,"privileges":["read","update","delete","publish"],"title":"Tasa de aprobaci\u00f3n","description":"","tags":[]},"qData":[]}
+{"qInfo":{"qId":"DTmmdq","qType":"measure"},"qMeta":{"_resourcetype":"app.object","_objecttype":"measure","id":"DTmmdq","approved":false,"published":false,"owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-07-24T06:06:13.285Z","modifiedDate":"2025-10-08T14:25:34.321Z","encrypted":true,"privileges":["read","update","delete","publish"],"title":"Inconsistencias en la postulaci\u00f3n","description":"","tags":[]},"qData":[]}
+{"qInfo":{"qId":"DWtQQB","qType":"measure"},"qMeta":{"_resourcetype":"app.object","_objecttype":"measure","id":"DWtQQB","approved":false,"published":false,"owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-10-03T05:42:50.371Z","modifiedDate":"2025-12-04T02:49:30.474Z","encrypted":true,"privileges":["read","update","delete","publish"],"title":"Provision salud","description":"","tags":[]},"qData":[]}
+{"qInfo":{"qId":"Gqapbt","qType":"measure"},"qMeta":{"_resourcetype":"app.object","_objecttype":"measure","id":"Gqapbt","approved":false,"published":false,"owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-12-04T02:25:30.934Z","modifiedDate":"2025-12-04T02:25:30.934Z","encrypted":true,"privileges":["read","update","delete","publish"],"title":"Postulaciones con inconsistencias","description":"","tags":[]},"qData":[]}
+{"qInfo":{"qId":"HMV","qType":"measure"},"qMeta":{"_resourcetype":"app.object","_objecttype":"measure","id":"HMV","approved":false,"published":false,"owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-12-04T02:46:41.937Z","modifiedDate":"2025-12-04T02:52:24.330Z","encrypted":true,"privileges":["read","update","delete","publish"],"title":"Asignados","description":"","tags":[]},"qData":[]}
+{"qInfo":{"qId":"VJEYXAT","qType":"measure"},"qMeta":{"_resourcetype":"app.object","_objecttype":"measure","id":"VJEYXAT","approved":false,"published":false,"owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-12-04T02:48:29.306Z","modifiedDate":"2025-12-04T02:48:29.306Z","encrypted":true,"privileges":["read","update","delete","publish"],"title":"Reactivados","description":"","tags":[]},"qData":[]}
+{"qInfo":{"qId":"XPNjaQ","qType":"measure"},"qMeta":{"_resourcetype":"app.object","_objecttype":"measure","id":"XPNjaQ","approved":false,"published":false,"owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-12-04T02:26:42.776Z","modifiedDate":"2025-12-04T02:26:42.776Z","encrypted":true,"privileges":["read","update","delete","publish"],"title":"Devoluciones subsanadas","description":"","tags":[]},"qData":[]}
+{"qInfo":{"qId":"ZEsNmDq","qType":"measure"},"qMeta":{"_resourcetype":"app.object","_objecttype":"measure","id":"ZEsNmDq","approved":false,"published":false,"owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-12-04T02:13:20.974Z","modifiedDate":"2025-12-04T02:13:20.974Z","encrypted":true,"privileges":["read","update","delete","publish"],"title":"Postulaciones en devoluci\u00f3n","description":"","tags":[]},"qData":[]}
+{"qInfo":{"qId":"a053e0a7-5d72-40fd-b711-307c424d46f8","qType":"measure"},"qMeta":{"_resourcetype":"app.object","_objecttype":"measure","id":"a053e0a7-5d72-40fd-b711-307c424d46f8","approved":false,"published":false,"owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-10-03T05:50:40.980Z","modifiedDate":"2025-12-04T02:58:26.673Z","encrypted":true,"privileges":["read","update","delete","publish"],"title":"Desprovisi\u00f3n Transferencia","description":"","tags":[]},"qData":[]}
+{"qInfo":{"qId":"aYppVvC","qType":"measure"},"qMeta":{"_resourcetype":"app.object","_objecttype":"measure","id":"aYppVvC","approved":false,"published":false,"owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-12-04T02:17:48.387Z","modifiedDate":"2025-12-04T02:17:48.387Z","encrypted":true,"privileges":["read","update","delete","publish"],"title":"Cantidad de empresas","description":"","tags":[]},"qData":[]}
+{"qInfo":{"qId":"bDaJKJG","qType":"measure"},"qMeta":{"_resourcetype":"app.object","_objecttype":"measure","id":"bDaJKJG","approved":false,"published":false,"owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-12-04T02:12:05.230Z","modifiedDate":"2025-12-04T02:12:05.230Z","encrypted":true,"privileges":["read","update","delete","publish"],"title":"Postulaciones denegadas","description":"","tags":[]},"qData":[]}
+{"qInfo":{"qId":"c02e4841-52bb-436d-bbf6-3e826fb961ea","qType":"measure"},"qMeta":{"_resourcetype":"app.object","_objecttype":"measure","id":"c02e4841-52bb-436d-bbf6-3e826fb961ea","approved":false,"published":false,"owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-07-24T06:13:37.316Z","modifiedDate":"2025-07-24T06:14:37.586Z","encrypted":true,"privileges":["read","update","delete","publish"],"title":"Tasa de subsanaci\u00f3n","description":"","tags":[]},"qData":[]}
+{"qInfo":{"qId":"cjkGrw","qType":"measure"},"qMeta":{"_resourcetype":"app.object","_objecttype":"measure","id":"cjkGrw","approved":false,"published":false,"owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-12-04T02:45:51.101Z","modifiedDate":"2025-12-04T02:45:51.101Z","encrypted":true,"privileges":["read","update","delete","publish"],"title":"N\u00famero de provisiones","description":"","tags":[]},"qData":[]}
+{"qInfo":{"qId":"e610987f-46ad-4a79-9395-af767e0be71f","qType":"measure"},"qMeta":{"_resourcetype":"app.object","_objecttype":"measure","id":"e610987f-46ad-4a79-9395-af767e0be71f","approved":false,"published":false,"owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-10-03T05:45:18.708Z","modifiedDate":"2025-10-03T05:45:48.974Z","encrypted":true,"privileges":["read","update","delete","publish"],"title":"Total Provisi\u00f3n","description":"","tags":[]},"qData":[]}
+{"qInfo":{"qId":"fad30ee4-a516-4db2-a87b-6ed5ad164cc2","qType":"measure"},"qMeta":{"_resourcetype":"app.object","_objecttype":"measure","id":"fad30ee4-a516-4db2-a87b-6ed5ad164cc2","approved":false,"published":false,"owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-10-03T05:49:10.135Z","modifiedDate":"2025-12-04T02:56:59.012Z","encrypted":true,"privileges":["read","update","delete","publish"],"title":"Desprovisi\u00f3n Salud","description":"","tags":[]},"qData":[]}
+{"qInfo":{"qId":"mvV","qType":"measure"},"qMeta":{"_resourcetype":"app.object","_objecttype":"measure","id":"mvV","approved":false,"published":false,"owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-12-04T02:55:48.123Z","modifiedDate":"2025-12-04T02:55:48.123Z","encrypted":true,"privileges":["read","update","delete","publish"],"title":"N\u00famero de desprovisiones","description":"","tags":[]},"qData":[]}
+{"qInfo":{"qId":"pjgyJCD","qType":"measure"},"qMeta":{"_resourcetype":"app.object","_objecttype":"measure","id":"pjgyJCD","approved":false,"published":false,"owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-10-22T16:56:17.203Z","modifiedDate":"2025-12-04T02:10:19.188Z","encrypted":true,"privileges":["read","update","delete","publish"],"title":"N\u00famero de postulaciones","description":"","tags":[]},"qData":[]}
+{"qInfo":{"qId":"wscTRgm","qType":"measure"},"qMeta":{"_resourcetype":"app.object","_objecttype":"measure","id":"wscTRgm","approved":false,"published":false,"owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-12-04T02:10:54.522Z","modifiedDate":"2025-12-04T02:10:54.522Z","encrypted":true,"privileges":["read","update","delete","publish"],"title":"Postulaciones aprobadas","description":"","tags":[]},"qData":[]}
+
+VARIABLES
+{"qName":"vfechaDiariaFormato","qDefinition":"10\/03\/2026","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"c1119cd2-d9df-438c-8b9f-2eec06ede2ca","qType":"variable"},"qData":[],"qIsScriptCreated":true}
+{"qName":"va\u00f1o","qDefinition":"2026","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"e08d6016-f611-4215-bd85-4d12aa66b0f4","qType":"variable"},"qData":[],"qIsScriptCreated":true}
+{"qName":"vmes","qDefinition":"03","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"bc11c8a8-6de4-42cc-a593-83f1b75b3647","qType":"variable"},"qData":[],"qIsScriptCreated":true}
+{"qName":"vmesAnterior","qDefinition":"02","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"f24d8792-8a3d-4d94-ad24-553e714fa673","qType":"variable"},"qData":[],"qIsScriptCreated":true}
+{"qName":"vdia","qDefinition":"10","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"23f86aae-be93-4ca5-9250-5539b393be05","qType":"variable"},"qData":[],"qIsScriptCreated":true}
+{"qName":"vmes_nombre","qDefinition":"MARZO","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"10ceefa9-718d-45be-bb36-8e90e76fbe33","qType":"variable"},"qData":[],"qIsScriptCreated":true}
+{"qName":"vfecha_inicial","qDefinition":"2026-03-01","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"1d274ccb-de91-45c5-8904-3ba26734a325","qType":"variable"},"qData":[],"qIsScriptCreated":true}
+{"qName":"vfecha_final","qDefinition":"2026-03-31","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"28cfdc03-0687-4722-8746-92c96090bb22","qType":"variable"},"qData":[],"qIsScriptCreated":true}
+{"qName":"vperiodo","qDefinition":"202603","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"df23a82f-bd6b-495f-9d9b-4f2588364794","qType":"variable"},"qData":[],"qIsScriptCreated":true}
+{"qName":"contrato","qDefinition":"24000457","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"c637a448-107b-48f0-b325-19432ae68f76","qType":"variable"},"qData":[],"qIsScriptCreated":true}
+{"qName":"vmensaje","qDefinition":"Hoy no se manda notificaci\u00f3n","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"e23d53e4-fc99-4123-9bc6-2e2d360636af","qType":"variable"},"qData":[],"qIsScriptCreated":true}
+{"qName":"fecha_envio","qDefinition":"10\/03\/2026 10:11:35 AM","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"6f233b91-1694-45df-b4c9-0a93aa225b09","qType":"variable"},"qData":[],"qIsScriptCreated":true}
+
+FIELDS
+{"qIsHidden":true,"qIsSystem":true,"qName":"$Field","qCardinal":109,"qTags":["$text","$key","$hidden","$system"],"qSrcTables":[]}
+{"qIsHidden":true,"qIsSystem":true,"qName":"$Table","qCardinal":6,"qTags":["$text","$key","$hidden","$system"],"qSrcTables":[]}
+{"qIsHidden":true,"qIsSystem":true,"qName":"$Rows","qCardinal":5,"qTags":["$numeric","$integer","$hidden","$system"],"qSrcTables":[]}
+{"qIsHidden":true,"qIsSystem":true,"qName":"$Fields","qCardinal":6,"qTags":["$numeric","$integer","$hidden","$system"],"qSrcTables":[]}
+{"qIsHidden":true,"qIsSystem":true,"qName":"$FieldNo","qCardinal":50,"qTags":["$numeric","$integer","$hidden","$system"],"qSrcTables":[]}
+{"qIsHidden":true,"qIsSystem":true,"qName":"$Info","qCardinal":1,"qTags":["$text","$ascii","$hidden","$system"],"qSrcTables":[]}
+{"qName":"%key_principal","qCardinal":112045,"qTags":["$text","$ascii","$key"],"qSrcTables":["Tabla","caracter\u00edsticas"]}
+{"qName":"A\u00d1O","qCardinal":5,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla"]}
+{"qName":"MES","qCardinal":12,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla"]}
+{"qName":"MES_NUMERO","qCardinal":12,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla"]}
+{"qName":"%ID_radicacion","qCardinal":10270,"qTags":["$text","$ascii","$key"],"qSrcTables":["Tabla","nuevas_asignaciones"]}
+{"qName":"tipo_beneficio","qCardinal":5,"qTags":["$text","$ascii"],"qSrcTables":["Tabla"]}
+{"qName":"numero_identificacion","qCardinal":64964,"qTags":["$text","$ascii"],"qSrcTables":["Tabla"]}
+{"qName":"fecha_postulacion","qCardinal":531,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["Tabla"]}
+{"qName":"fecha_aprobacion","qCardinal":249,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["Tabla"]}
+{"qName":"%ID_postulacion","qCardinal":22888,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla"]}
+{"qName":"%ID_aprobacion","qCardinal":22294,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla"]}
+{"qName":"%key_postulacion_his","qCardinal":22888,"qTags":["$numeric","$integer","$key"],"qSrcTables":["Tabla","Historico1"]}
+{"qName":"%key_radicacion_his","qCardinal":14261,"qTags":["$numeric","$integer","$key"],"qSrcTables":["Tabla","Historico2"]}
+{"qName":"estado_aprobacion","qCardinal":2,"qTags":["$text","$ascii"],"qSrcTables":["Tabla"]}
+{"qName":"cod_estado_solicitud_postulacion","qCardinal":2,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla"]}
+{"qName":"cod_observacion_postulacion","qCardinal":7,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla"]}
+{"qName":"cod_estado_solicitud_radicado","qCardinal":5,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla"]}
+{"qName":"estado_solicitud_postulacion","qCardinal":2,"qTags":["$text","$ascii"],"qSrcTables":["Tabla"]}
+{"qName":"observacion_postulacion","qCardinal":8,"qTags":["$text","$ascii"],"qSrcTables":["Tabla"]}
+{"qName":"estado_solicitud_radicado","qCardinal":5,"qTags":["$text","$ascii"],"qSrcTables":["Tabla"]}
+{"qName":"cod_estado_beneficio","qCardinal":6,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla"]}
+{"qName":"estado_beneficio","qCardinal":6,"qTags":["$text","$ascii"],"qSrcTables":["Tabla"]}
+{"qName":"fecha_cancelado","qCardinal":84,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["Tabla"]}
+{"qName":"observacion_cancelado","qCardinal":0,"qTags":["$text","$ascii"],"qSrcTables":["Tabla"]}
+{"qName":"vigencia","qCardinal":4,"qTags":["$text","$ascii"],"qSrcTables":["Tabla"]}
+{"qName":"RADICADO","qCardinal":2,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla"]}
+{"qName":"APROBADO","qCardinal":2,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla"]}
+{"qName":"cod_estado_beneficio_provision","qCardinal":6,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla"]}
+{"qName":"estado_beneficio_provision","qCardinal":6,"qTags":["$text","$ascii"],"qSrcTables":["Tabla"]}
+{"qName":"id_detalle_provisiones","qCardinal":8160,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla"]}
+{"qName":"fecha_provision","qCardinal":42,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["Tabla"]}
+{"qName":"reactivado","qCardinal":2,"qTags":["$text","$ascii"],"qSrcTables":["Tabla"]}
+{"qName":"fecha_suspension","qCardinal":57,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["Tabla"]}
+{"qName":"observacion_provisi\u00f3n","qCardinal":42,"qTags":["$text","$ascii"],"qSrcTables":["Tabla"]}
+{"qName":"provisionado_salud","qCardinal":18,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla"]}
+{"qName":"provisionado_pension","qCardinal":18,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla"]}
+{"qName":"provisionado_cuota_monetaria","qCardinal":1,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla"]}
+{"qName":"provisionado_bono","qCardinal":16,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla"]}
+{"qName":"total_provisionado","qCardinal":42,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla"]}
+{"qName":"fecha_desprovision","qCardinal":198,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["Tabla"]}
+{"qName":"id_detalle_desprovisiones","qCardinal":5889,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla"]}
+{"qName":"cod_estado_beneficio_desprovision","qCardinal":5,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla"]}
+{"qName":"estado_beneficio_desprovision","qCardinal":4,"qTags":["$text","$ascii"],"qSrcTables":["Tabla"]}
+{"qName":"observacion_desprovision","qCardinal":3,"qTags":["$text"],"qSrcTables":["Tabla"]}
+{"qName":"desprovisionado_salud","qCardinal":23,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla"]}
+{"qName":"desprovisionado_pension","qCardinal":23,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla"]}
+{"qName":"desprovisionado_cuota","qCardinal":1,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla"]}
+{"qName":"desprovisionado_bono","qCardinal":18,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla"]}
+{"qName":"total_desprovisionado","qCardinal":90,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla"]}
+{"qName":"%key_postulacion_his2","qCardinal":22888,"qTags":["$numeric","$integer","$key"],"qSrcTables":["Tabla","Tiempos"]}
+{"qName":"tipo_identificacion","qCardinal":4,"qTags":["$text"],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"primer_nombre","qCardinal":1726,"qTags":["$text"],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"segundo_nombre","qCardinal":1125,"qTags":["$text"],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"primer_apellido","qCardinal":1153,"qTags":["$text"],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"segundo_apellido","qCardinal":1068,"qTags":["$text"],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"genero","qCardinal":3,"qTags":["$text","$ascii"],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"categoria","qCardinal":5,"qTags":["$text","$ascii"],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"municipio","qCardinal":177,"qTags":["$text"],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"departamento","qCardinal":37,"qTags":["$text","$ascii"],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"ultima_ccf","qCardinal":3,"qTags":["$text","$ascii"],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"nit_empleador","qCardinal":11978,"qTags":["$text","$ascii"],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"nombre_empresa","qCardinal":12573,"qTags":["$text"],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"nombre_empresa2","qCardinal":12054,"qTags":[],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"nombre_eps","qCardinal":39,"qTags":["$text"],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"nombre_afp","qCardinal":7,"qTags":["$text","$ascii"],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"tipo_trabajador_aportes","qCardinal":3,"qTags":["$text","$ascii"],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"fecha_nacimiento","qCardinal":8599,"qTags":["$numeric","$integer"],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"direccion_solicitante","qCardinal":21285,"qTags":["$text"],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"telefono_solicitante","qCardinal":15295,"qTags":["$text","$ascii"],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"celular_solicitante","qCardinal":21027,"qTags":["$text","$ascii"],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"correo_solicitante","qCardinal":21129,"qTags":["$text","$ascii"],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"tiempo_aporte","qCardinal":938,"qTags":["$numeric","$integer"],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"fecha_retiro_genesys","qCardinal":1131,"qTags":[],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"nombre_completo","qCardinal":13752,"qTags":["$text"],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"actividad_economica_empresa","qCardinal":344,"qTags":["$text"],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"sector_economico_empresa","qCardinal":32,"qTags":["$text"],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"registro_agencia_empleo","qCardinal":2,"qTags":["$text","$ascii"],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"nombre_empresa_estandar","qCardinal":4113,"qTags":["$text"],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"fecha_nacimiento_estandar","qCardinal":10847,"qTags":[],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"edad","qCardinal":75,"qTags":["$numeric","$integer"],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"cod_estado_nuevas_asig","qCardinal":1,"qTags":["$numeric","$integer"],"qSrcTables":["nuevas_asignaciones"]}
+{"qName":"estado_nuevas_asig","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["nuevas_asignaciones"]}
+{"qName":"estado_trabajador","qCardinal":3,"qTags":["$text","$ascii"],"qSrcTables":["nuevas_asignaciones"]}
+{"qName":"fecha_ingreso_trabajador","qCardinal":1614,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["nuevas_asignaciones"]}
+{"qName":"fecha_cruce","qCardinal":14,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["nuevas_asignaciones"]}
+{"qName":"estado_asignacion","qCardinal":3,"qTags":["$text","$ascii"],"qSrcTables":["nuevas_asignaciones"]}
+{"qName":"resultado_afiliacion","qCardinal":3,"qTags":["$text","$ascii"],"qSrcTables":["nuevas_asignaciones"]}
+{"qName":"observacion_resultado","qCardinal":33,"qTags":["$text","$ascii"],"qSrcTables":["nuevas_asignaciones"]}
+{"qName":"observaciones_cruce","qCardinal":2,"qTags":["$text"],"qSrcTables":["nuevas_asignaciones"]}
+{"qName":"fecha_postulacion_his","qCardinal":357,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["Historico1"]}
+{"qName":"hora_postulacion_his","qCardinal":6771,"qTags":["$text","$ascii"],"qSrcTables":["Historico1"]}
+{"qName":"cod_estado_postulacion_his","qCardinal":3,"qTags":["$numeric","$integer"],"qSrcTables":["Historico1"]}
+{"qName":"estado_postulacion_his","qCardinal":3,"qTags":["$text","$ascii"],"qSrcTables":["Historico1"]}
+{"qName":"cod_obs_postulacion_his","qCardinal":12,"qTags":["$numeric","$integer"],"qSrcTables":["Historico1"]}
+{"qName":"obs_postulacion_his","qCardinal":12,"qTags":["$text"],"qSrcTables":["Historico1"]}
+{"qName":"sinc_usuario","qCardinal":17,"qTags":["$text","$ascii"],"qSrcTables":["Historico1"]}
+{"qName":"cod_estado_detalle_postulacion_radicacion_his","qCardinal":11,"qTags":["$numeric","$integer"],"qSrcTables":["Historico2"]}
+{"qName":"estado_detalle_postulacion_radicacion_his","qCardinal":10,"qTags":["$text","$ascii"],"qSrcTables":["Historico2"]}
+{"qName":"fecha_radicacion_his","qCardinal":358,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["Historico2"]}
+{"qName":"fecha_inicial","qCardinal":306,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["Tiempos"]}
+{"qName":"hora_inicial","qCardinal":3624,"qTags":["$numeric"],"qSrcTables":["Tiempos"]}
+{"qName":"fecha_final","qCardinal":357,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["Tiempos"]}
+{"qName":"hora_final","qCardinal":6061,"qTags":["$numeric"],"qSrcTables":["Tiempos"]}
+{"qName":"cod_estado_postulacion_his2","qCardinal":3,"qTags":["$numeric","$integer"],"qSrcTables":["Tiempos"]}
+{"qName":"estado_postulacion_his2","qCardinal":3,"qTags":["$text","$ascii"],"qSrcTables":["Tiempos"]}
+{"qName":"cod_obs_postulacion_his2","qCardinal":12,"qTags":["$numeric","$integer"],"qSrcTables":["Tiempos"]}
+{"qName":"obs_postulacion_his2","qCardinal":12,"qTags":["$text"],"qSrcTables":["Tiempos"]}
+{"qName":"sinc_usuario2","qCardinal":17,"qTags":["$text","$ascii"],"qSrcTables":["Tiempos"]}
+{"qName":"HORAS","qCardinal":12935,"qTags":["$numeric"],"qSrcTables":["Tiempos"]}
