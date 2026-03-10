@@ -1,0 +1,2087 @@
+///$tab Main + Variables
+SET ThousandSep='.';
+SET DecimalSep=',';
+SET MoneyThousandSep='.';
+SET MoneyDecimalSep=',';
+SET MoneyFormat='$ #.##0,00;($ #.##0,00)';
+SET TimeFormat='hh:mm:ss TT';
+SET DateFormat='DD/MM/YYYY';
+SET TimestampFormat='DD/MM/YYYY hh:mm:ss[.fff] TT';
+SET MonthNames='ENERO;FEBRERO;MARZO;ABRIL;MAYO;JUNIO;JULIO;AGOSTO;SEPTIEMBRE;OCTUBRE;NOVIEMBRE;DICIEMBRE';
+SET DayNames='lunes;martes;miércoles;jueves;viernes;sábado;domingo';
+SET LongMonthNames='enero;febrero;marzo;abril;mayo;junio;julio;agosto;septiembre;octubre;noviembre;diciembre';
+SET LongDayNames='lunes;martes;miércoles;jueves;viernes;sábado;domingo';
+SET FirstWeekDay=6;
+SET BrokenWeeks=1;
+SET ReferenceDay=0;
+SET FirstMonthOfYear=1;
+SET CollationLocale='es-CO';
+
+
+// Variables
+LET vfechaDiariaFormato = date(today(1),'DD/MM/YYYY');
+LET vaño= year(vfechaDiariaFormato);
+LET vmes= NUM(MONTH(vfechaDiariaFormato),'00');
+LET vmesAnterior= NUM(vmes-1,'00');
+LET vdia= num(day(vfechaDiariaFormato),'00');
+LET vmes_nombre = Month(vfechaDiariaFormato);
+LET vfecha_inicial= DATE(MonthStart(vfechaDiariaFormato, 0),'YYYY-MM-DD');
+LET vfecha_final= DATE(MonthEnd(vfechaDiariaFormato, 0), 'YYYY-MM-DD');
+LET vperiodo= vaño&vmes;
+
+
+//VARIABLE QUE LLAMA EL ARCHIVO DONDE ESTA CONFIGURADA LA SUBRUTINA PARA HACER LA RECARGA DE LA SIGUIENTE APLICACIÓN
+$(Include=[lib://TAREAS AUTOMATICAS:DataFiles/Tarea recarga.txt]);
+
+LET contrato = '24000457';
+LET vmensaje = 'Hoy no se manda notificación';
+
+// Se restan 5 horas porque el server de qlik está en otro lado
+LET fecha_envio = Timestamp(Now() - 5/24);
+Trace $(fecha_envio);
+Trace $(vdia);
+
+///$tab Tildes
+Mapa_Tildes:
+Mapping LOAD * INLINE [
+Original, Reemplazo
+á, a
+é, e
+í, i
+ó, o
+ú, u
+Á, A
+É, E
+Í, I
+Ó, O
+Ú, U
+];
+///$tab Carga de datos
+// Tabla principal:
+Tabla:
+LOAD
+	%key_principal,
+    AÑO,
+//     text(MES) as MES,
+	Dual(MES, Match(MES, 'ENERO', 'FEBRERO', 'MARZO', 'ABRIL', 'MAYO', 'JUNIO', 'JULIO', 'AGOSTO', 'SEPTIEMBRE', 'OCTUBRE', 'NOVIEMBRE', 'DICIEMBRE')) as MES,
+// 	MES,
+	MES_NUMERO,
+    %ID_radicacion,
+    tipo_beneficio,
+    numero_identificacion,
+    fecha_postulacion,
+//     tipo_identificacion,
+    fecha_aprobacion,
+    %ID_postulacion,
+	%ID_aprobacion,
+    %key_postulacion_his,
+    %key_radicacion_his, 
+    estado_aprobacion,
+    
+    cod_estado_solicitud_postulacion,
+    cod_observacion_postulacion,    
+    cod_estado_solicitud_radicado,
+    estado_solicitud_postulacion, 
+    observacion_postulacion,
+    estado_solicitud_radicado,   
+    cod_estado_beneficio,
+    estado_beneficio,
+    fecha_cancelado,
+    observacion_cancelado, 
+    vigencia,
+    RADICADO,
+    APROBADO,   
+
+    cod_estado_beneficio_provision, 
+    estado_beneficio_provision, 
+    id_detalle_provisiones, 
+    fecha_provision,   
+    reactivado, 
+    fecha_suspension,
+    observacion_provisión,
+    provisionado_salud, 
+	provisionado_pension, 
+	provisionado_cuota_monetaria, 
+	provisionado_bono, 
+	total_provisionado,
+    
+	fecha_desprovision,
+	id_detalle_desprovisiones, 
+    cod_estado_beneficio_desprovision,
+    estado_beneficio_desprovision,
+    observacion_desprovision,
+ 	desprovisionado_salud, 
+	desprovisionado_pension, 
+	desprovisionado_cuota, 
+	desprovisionado_bono, 
+	total_desprovisionado,
+    
+    %key_postulacion_his as %key_postulacion_his2
+
+FROM [lib://SISTEMA FOSFEC:DataFiles/Tx_tabla_general.QVD]
+(qvd);
+
+
+
+// Características
+características:
+LOAD
+	%key_principal,
+    tipo_identificacion,
+    primer_nombre, 
+	segundo_nombre, 
+	primer_apellido, 
+	segundo_apellido,
+	genero,    
+	categoria,
+    MapSubstring('Mapa_Tildes', municipio) AS municipio,
+//     municipio,
+    departamento,
+    ultima_ccf,
+    nit_empleador, 
+	nombre_empresa, 
+    nombre_empresa2, 
+    nombre_eps,
+    nombre_afp,
+    tipo_trabajador_aportes,     
+	fecha_nacimiento,    
+	direccion_solicitante,  
+	telefono_solicitante,   
+	celular_solicitante,    
+	correo_solicitante, 	
+    tiempo_aporte,     
+ 	fecha_retiro_genesys, // fecha de perdida del empleo.    
+    nombre_completo,
+    actividad_economica_empresa,
+    sector_economico_empresa,
+    registro_agencia_empleo,
+//     actividad_economica_empresa_detalle,
+    nombre_empresa_estandar, 
+    fecha_nacimiento_estandar,    
+	edad   
+FROM [lib://SISTEMA FOSFEC:DataFiles/Tx_caracteristicas_postulacion.QVD]
+(qvd)
+;
+
+// Nuevas asignaciones
+nuevas_asignaciones:
+LOAD
+	%ID_radicacion,
+    cod_estado_nuevas_asig,
+    estado_nuevas_asig,
+    estado_trabajador, 
+    fecha_ingreso_trabajador,   
+    fecha_cruce,    
+    estado_asignacion,
+    resultado_afiliacion,
+    observacion_resultado,   
+    observaciones_cruce	
+FROM [lib://SISTEMA FOSFEC:DataFiles/Tx_nuevas_asignaciones.QVD]
+(qvd)
+;
+
+Historico1:
+LOAD
+	%key_postulacion_his,
+    fecha_postulacion_his,
+    hora_postulacion_his,
+    cod_estado_postulacion_his,
+    estado_postulacion_his,
+    cod_obs_postulacion_his,
+    obs_postulacion_his,
+    sinc_usuario
+FROM [lib://SISTEMA FOSFEC:DataFiles/Tx_historico_postulacion.QVD]
+(qvd)
+;
+
+Historico2:
+LOAD
+	%key_radicacion_his,
+    cod_estado_detalle_postulacion_radicacion_his,
+    estado_detalle_postulacion_radicacion_his,
+    fecha_radicacion_his
+FROM [lib://SISTEMA FOSFEC:DataFiles/Tx_historico_radicacion.QVD]
+(qvd)
+;
+
+
+Tiempos:
+LOAD
+	%key_postulacion_his as %key_postulacion_his2,
+    fecha_inicial,
+	hora_inicial,
+	fecha_final,
+	hora_final,
+    cod_estado_postulacion_his as cod_estado_postulacion_his2,
+    estado_postulacion_his as estado_postulacion_his2,
+    cod_obs_postulacion_his as cod_obs_postulacion_his2,
+    obs_postulacion_his as obs_postulacion_his2,
+    sinc_usuario as sinc_usuario2,
+    HORAS
+FROM [lib://SISTEMA FOSFEC:DataFiles/Tx_tiempos_gestion_postulacion.QVD]
+(qvd)
+;
+
+///$tab Exit
+Exit Script;
+///$tab Carga de datos 2
+// Tabla principal:
+Tabla:
+LOAD
+	%key_principal,
+    AÑO,
+    MES,
+	MES_NUMERO,
+    %ID_radicacion,
+    tipo_beneficio,
+    numero_identificacion,
+    fecha_postulacion,
+    tipo_identificacion,
+    fecha_aprobacion,
+    %ID_postulacion,
+	%ID_aprobacion,
+    %key_postulacion_his,
+    %key_radicacion_his, 
+    estado_aprobacion,
+    
+    cod_estado_solicitud_postulacion,
+    cod_observacion_postulacion,    
+    cod_estado_solicitud_radicado,
+    estado_solicitud_postulacion, 
+    observacion_postulacion,
+    estado_solicitud_radicado,   
+    cod_estado_beneficio,
+    estado_beneficio,
+    fecha_cancelado,
+    observacion_cancelado, 
+    vigencia,
+    RADICADO,
+    APROBADO,   
+
+    cod_estado_beneficio_provision, 
+    estado_beneficio_provision, 
+    id_detalle_provisiones, 
+    fecha_provision,   
+    reactivado, 
+    fecha_suspension,
+    observacion_provisión,
+    provisionado_salud, 
+	provisionado_pension, 
+	provisionado_cuota_monetaria, 
+	provisionado_bono, 
+	total_provisionado,
+    
+	fecha_desprovision,
+	id_detalle_desprovisiones, 
+    cod_estado_beneficio_desprovision,
+    estado_beneficio_desprovision,
+    observacion_desprovision,
+ 	desprovisionado_salud, 
+	desprovisionado_pension, 
+	desprovisionado_cuota, 
+	desprovisionado_bono, 
+	total_desprovisionado,
+    
+    fecha_inicial,
+	hora_inicial,
+	fecha_final,
+	hora_final,
+    cod_estado_postulacion_his as cod_estado_postulacion_his2,
+    estado_postulacion_his as estado_postulacion_his2,
+    cod_obs_postulacion_his as cod_obs_postulacion_his2,
+    obs_postulacion_his as obs_postulacion_his2,
+    sinc_usuario as sinc_usuario2,
+    HORAS,
+    
+
+    %key_postulacion_his as %key_postulacion_his2
+
+FROM [lib://SISTEMA FOSFEC:DataFiles/Tx_tabla_general.QVD]
+(qvd);
+
+// Características
+características:
+LOAD
+	%key_principal,
+    primer_nombre, 
+	segundo_nombre, 
+	primer_apellido, 
+	segundo_apellido,
+	genero,    
+	categoria,    
+    municipio,
+    departamento,
+    ultima_ccf,
+    nit_empleador, 
+	nombre_empresa, 
+    nombre_empresa2, 
+    nombre_eps,
+    nombre_afp,
+    tipo_trabajador_aportes,     
+	fecha_nacimiento,    
+	direccion_solicitante,  
+	telefono_solicitante,   
+	celular_solicitante,    
+	correo_solicitante, 	
+    tiempo_aporte,     
+ 	fecha_retiro_genesys, // fecha de perdida del empleo.    
+    nombre_completo,
+    actividad_economica_empresa,
+    actividad_economica_empresa_detalle,
+    nombre_empresa_estandar, 
+    fecha_nacimiento_estandar,    
+	edad   
+FROM [lib://SISTEMA FOSFEC:DataFiles/Tx_caracteristicas_postulacion.QVD]
+(qvd)
+;
+
+// Nuevas asignaciones
+nuevas_asignaciones:
+LOAD
+	%ID_radicacion,
+    cod_estado_nuevas_asig,
+    estado_nuevas_asig,
+    estado_trabajador, 
+    fecha_ingreso_trabajador,   
+    fecha_cruce,    
+    estado_asignacion,
+    resultado_afiliacion,
+    observacion_resultado,   
+    observaciones_cruce	
+FROM [lib://SISTEMA FOSFEC:DataFiles/Tx_nuevas_asignaciones.QVD]
+(qvd)
+;
+
+Historico1:
+LOAD
+	%key_postulacion_his,
+    fecha_postulacion_his,
+    hora_postulacion_his,
+    cod_estado_postulacion_his,
+    estado_postulacion_his,
+    cod_obs_postulacion_his,
+    obs_postulacion_his,
+    sinc_usuario
+FROM [lib://SISTEMA FOSFEC:DataFiles/Tx_historico_postulacion.QVD]
+(qvd)
+;
+
+Historico2:
+LOAD
+	%key_radicacion_his,
+    cod_estado_detalle_postulacion_radicacion_his,
+    estado_detalle_postulacion_radicacion_his,
+    fecha_radicacion_his
+FROM [lib://SISTEMA FOSFEC:DataFiles/Tx_historico_radicacion.QVD]
+(qvd)
+;
+
+
+// Tiempos:
+// LOAD
+// 	%key_postulacion_his as %key_postulacion_his2,
+//     fecha_inicial,
+// 	hora_inicial,
+// 	fecha_final,
+// 	hora_final,
+//     cod_estado_postulacion_his as cod_estado_postulacion_his2,
+//     estado_postulacion_his as estado_postulacion_his2,
+//     cod_obs_postulacion_his as cod_obs_postulacion_his2,
+//     obs_postulacion_his as obs_postulacion_his2,
+//     sinc_usuario as sinc_usuario2,
+//     HORAS
+// FROM [lib://SISTEMA FOSFEC:DataFiles/Tx_tiempos_gestion_postulacion.QVD]
+// (qvd)
+// ;
+
+
+///$tab Mapping
+Mapping_beneficios:
+Mapping
+LOAD
+    id_beneficio,
+    valor
+FROM [lib://SISTEMA FOSFEC:DataFiles/beneficios.QVD]
+(qvd);
+
+
+Mapping_estado_solicitud:
+Mapping
+LOAD
+    id_estado_solicitud,
+    estado_solicitud
+FROM [lib://SISTEMA FOSFEC:DataFiles/estado_solicitud.QVD]
+(qvd);
+
+
+// 1. Postulación
+Mapping_estado_solicitud_1:
+Mapping
+LOAD
+    id_estado_solicitud,
+    estado_solicitud
+FROM [lib://SISTEMA FOSFEC:DataFiles/estado_solicitud.QVD]
+(qvd)
+where tipo = 1
+;
+
+// 2. Solicitud beneficio
+Mapping_estado_solicitud_2:
+Mapping
+LOAD
+    id_estado_solicitud,
+    estado_solicitud
+FROM [lib://SISTEMA FOSFEC:DataFiles/estado_solicitud.QVD]
+(qvd)
+where tipo = 2
+;
+
+// 3. Beneficio
+Mapping_estado_solicitud_3:
+Mapping
+LOAD
+    id_estado_solicitud,
+    estado_solicitud
+FROM [lib://SISTEMA FOSFEC:DataFiles/estado_solicitud.QVD]
+(qvd)
+where tipo = 3
+;
+
+Mapping_categoria:
+Mapping
+LOAD
+    id_categoria,
+    nombre_categoria
+FROM [lib://SISTEMA FOSFEC:DataFiles/categorias.QVD]
+(qvd);
+
+Mapping_entidad_bancaria:
+Mapping
+LOAD
+    id_entidad_bancaria,
+    nombre_entidad
+FROM [lib://SISTEMA FOSFEC:DataFiles/entidad_bancaria.QVD]
+(qvd);
+
+Mapping_observacion_postulacion:
+Mapping
+LOAD
+    id_observaciones_postulacion,
+    observacion
+FROM [lib://SISTEMA FOSFEC:DataFiles/observaciones_validacion_postulacion.QVD]
+(qvd);
+
+
+Mapping_cod_supervisor_estado:
+Mapping
+LOAD
+	id_supervisor,
+    numero_usuario_JDE_estado
+FROM [lib://INDICADORES OT:DataFiles/Tx_Usuarios_JDE.qvd]
+(qvd);
+
+
+Mapping_nombre_empresa:
+Mapping
+LOAD
+	Text(NUMERO_IDENTIFICACION_EMPRESA),
+    NOMBRE_EMPRESA
+FROM [lib://SISTEMA FOSFEC:DataFiles/Ex_equivalencias_empresas.QVD]
+(qvd);
+
+
+Mapping_actividad_economica_empresa:
+Mapping
+LOAD
+	Text(NUMERO_IDENTIFICACION_EMPRESA),
+	NOMBRE_ACTIVIDAD_ECONOMICA_SECCION
+FROM [lib://SISTEMA FOSFEC:DataFiles/Ex_equivalencias_empresas.QVD]
+(qvd);
+
+
+Mapping_actividad_economica_empresa_detalle:
+Mapping
+LOAD
+	Text(NUMERO_IDENTIFICACION_EMPRESA),
+	NOMBRE_ACTIVIDAD_ECONOMICA
+FROM [lib://SISTEMA FOSFEC:DataFiles/Ex_equivalencias_empresas.QVD]
+(qvd);
+
+Mapping_estado_solicitud_general:
+Mapping
+LOAD
+    id_estado_solicitud,
+    estado_solicitud
+FROM [lib://SISTEMA FOSFEC:DataFiles/estado_solicitud.QVD]
+(qvd)
+;
+
+Mapping_fecha_nacimiento:
+Mapping
+LOAD
+	CEDULA_PERSONA,
+    DATE(FECHA_NACIMIENTO_PERSONA, 'YYYY-MM-DD') AS FECHA_NACIMIENTO_PERSONA
+FROM [lib://2. REPORTES ESTADÍSTICOS-MAESTRO PERSONAS:DataFiles/Maestro_Total_Personas_Nasfa.QVD]
+(qvd);
+
+
+
+///$tab Sección 7
+provisiones:
+LOAD
+    numero_radicado, 
+//     fecha_radicacion, 
+    id_detalle_provisiones, 
+    id_encabezado_archivo,
+    reactivado, 
+
+	estado_beneficio as cod_estado_beneficio_provision, 
+    ApplyMap('Mapping_estado_solicitud_general', estado_beneficio, 'SIN ESTADO') as estado_beneficio_provision,
+	
+    // fechas
+    fecha_aprobacion,
+	fecha_realizacion_provisionamiento as fecha_provision, 
+	fecha_suspension, 
+    
+	// provision
+	provisionado_salud, 
+	provisionado_pension, 
+	provisionado_cuota_monetaria, 
+	provisionado_bono, 
+	total_provisionado, 
+    
+	meses_liquidados, 
+	meses_pendientes,     
+ 	observacion as observacion_provisión,
+    
+	// Datos personales
+// 	caja_compensacion, 
+	numero_identificacion
+// 	nombre_completo, 
+// 	municipio, 
+// 	departamento, 
+// 	barrio, 
+// 	direccion, 
+// 	telefono, 
+// 	celular, 
+// 	correo_electronico, 
+// 	nombre_eps, 
+// 	nombre_afp
+
+
+FROM [lib://SISTEMA FOSFEC:DataFiles/detalle_provisiones.QVD]
+(qvd)
+// where numero_radicado = 'AA1120040554'
+;
+left Join
+LOAD
+	id_encabezado_archivo,
+    estado_gestion as estado_gestion_provision
+FROM [lib://SISTEMA FOSFEC:DataFiles/encabezado_archivo_adicional.QVD]
+(qvd)
+where id_planilla_archivo = 5
+;
+
+///$tab 1. Carga tabla principal
+Postulacion_radicacion:
+LOAD
+    id_postulacion_radicacion,
+    numero_identificacion&'-'&Date(fecha_radicacion,'YYYY-MM-DD') as %key_radicacion,
+    
+    numero_radicado,
+    Date(fecha_radicacion,'YYYY-MM-DD') as fecha_radicacion,
+    
+    estado_solicitud as cod_estado_solicitud_radicado,
+    ApplyMap('Mapping_estado_solicitud_2', estado_solicitud, 'SIN ESTADO') as estado_solicitud_radicado,    
+    fecha_cancelado,
+    dias_radicados,
+    normatividad,
+    discapacidad,
+    condicion_discapacidad,   
+    
+    
+    caja_compensacion,
+    numero_identificacion,
+    nombre_solicitante,    
+    observacion_devolucion,
+    id_encabezado_archivo,
+    sinc_fecha,
+    sinc_hora,
+    sinc_accion,
+    sinc_usuario,
+    observacion_genesys,
+    nombre_trabajador,
+    fecha_ingreso_trabajador,
+    nombre_empresa,
+    estado_trabajador,
+    id_observacion_cancelacion,
+    motivo_cancelacion,
+    dias_vencimiento,
+    vigencia,
+    sinc_fecha_actualizacion,
+    sinc_hora_actualizacion,
+    sinc_usuario_actualizacion,
+    observacion_cancelado,
+    registro_front,
+    fecha_desistido,
+    fecha_recepcion
+FROM [lib://SISTEMA FOSFEC:DataFiles/detalle_postulacion_radicacion.QVD]
+(qvd)
+;
+
+
+///$tab 2. Carga tablas históricas
+Postulacion_historico:
+Load
+	%key_postulacion_his,
+    fecha_postulacion_his,
+    hora_postulacion_his,
+    cod_estado_postulacion_his,
+    estado_postulacion_his,
+    cod_obs_postulacion_his,
+    obs_postulacion_his
+FROM [lib://SISTEMA FOSFEC:DataFiles/Tx_historico_postulacion.QVD]
+(qvd)
+;
+
+Radicacion_historico:
+LOAD 
+	%key_radicacion_his,
+    cod_estado_detalle_postulacion_radicacion_his,
+    estado_detalle_postulacion_radicacion_his,
+    fecha_radicacion_his
+FROM [lib://SISTEMA FOSFEC:DataFiles/Tx_historico_radicacion.QVD]
+(qvd);
+
+
+///$tab 3. Tabla Aprobación
+Aprobación:
+Load 
+	%ID_radicacion,
+    
+    fecha_aprobacion,
+    AÑO,
+    MES,
+    MES_NUMERO, 
+    
+	cod_estado_beneficio,
+    estado_beneficio,
+    APROBADO,
+    
+    %ID_aprobacion
+    
+FROM [lib://SISTEMA FOSFEC:DataFiles/Tx_aprobacion.QVD]
+(qvd)
+;
+
+
+///$tab 4. Tabla Provisión
+provision:
+Load 
+	%ID_radicacion,
+    
+    fecha_provision,
+    AÑO,   
+	MES,
+	MES_NUMERO,  
+    
+//     reactivado,     
+	observacion_provisión,    
+ 	cod_estado_beneficio_provision,    
+ 	estado_beneficio_provision,   
+	provisionado_salud, 
+	provisionado_pension, 
+	provisionado_cuota_monetaria, 
+	provisionado_bono, 
+	total_provisionado,  
+    REACTIVADO,
+	estado_gestion_provision,
+    
+    %ID_provision
+FROM [lib://SISTEMA FOSFEC:DataFiles/Tx_provision.QVD]
+(qvd)
+;
+///$tab 5. Link Table
+Link_Table:
+
+LOAD DISTINCT
+    %ID_radicacion,
+    AÑO, MES, MES_NUMERO
+    RESIDENT Tabla_principal;
+
+CONCATENATE(Link_Table)
+
+LOAD DISTINCT 
+    %ID_radicacion,
+    AÑO, MES, MES_NUMERO
+Resident Aprobación;
+
+CONCATENATE(Link_Table)
+
+LOAD DISTINCT 
+    %ID_radicacion,
+    AÑO, MES, MES_NUMERO
+Resident provision;
+
+
+
+DROP FIELDS
+    AÑO, MES, MES_NUMERO
+    FROM Tabla_principal;
+
+DROP FIELDS
+    AÑO, MES, MES_NUMERO
+    FROM Aprobación;
+    
+DROP FIELDS
+    AÑO, MES, MES_NUMERO
+    FROM provision;
+
+///$tab Tabla principal
+Tabla:
+Load 
+	%key_principal,
+    %key_postulacion_his,
+    numero_radicado,
+    fecha_preradicacion,
+    fecha_postulacion,
+    AÑO,
+    MES,
+    MES_NUMERO,
+    fecha_gestion,
+    tipo_beneficio,
+    fecha_radicacion,
+    id_postulacion_radicacion,
+    dias_radicados,
+    RADICADO,
+    fecha_provision,
+    reactivado,
+    provisionado_salud,
+    provisionado_pension,
+    provisionado_cuota_monetaria,
+    provisionado_bono,
+    total_provisionado,
+    cod_estado_beneficio_provision,
+    estado_beneficio_provision,
+    fecha_suspension,
+    observacion_provisión,
+    id_detalle_desprovisiones,
+    fecha_desprovision,
+    desprovisionado_salud,
+    desprovisionado_pension,
+    desprovisionado_cuota,
+    desprovisionado_bono,
+    total_desprovisionado,
+    cod_estado_beneficio_desprovision,
+    estado_beneficio_desprovision,
+    observacion_desprovision,
+    id_nueva_asignacion,
+    resultado_afiliacion,
+    observacion_resultado,
+    estado_asignacion,
+    validacion_afiliacion,
+    fecha_cruce,
+    observaciones_cruce,
+    cod_estado_nuevas_asig,
+    estado_nuevas_asig
+FROM [lib://SISTEMA FOSFEC:DataFiles/Tx_tabla_general.QVD]
+(qvd)
+; 
+
+Características:
+LOAD
+	%key_principal,
+    numero_identificacion,
+    tipo_identificacion,
+    primer_nombre,
+    segundo_nombre,
+    primer_apellido,
+    segundo_apellido,
+    genero,
+    categoria,
+    municipio,
+    departamento,
+    ultima_ccf,
+    nit_empleador,
+    nombre_empresa,
+    nombre_eps,
+    nombre_afp,
+    tipo_trabajador_aportes,
+    fecha_nacimiento,
+    direccion_solicitante,
+    telefono_solicitante,
+    celular_solicitante,
+    correo_solicitante,
+    entidad_bancaria,
+    tiempo_aporte,
+    nombre_completo,
+    actividad_economica_empresa,
+    actividad_economica_empresa_detalle,
+    nombre_empresa_estandar,
+    fecha_nacimiento_estandar,
+    edad,
+    cod_estado_solicitud,
+    estado_solicitud,
+    cod_observacion_gestion,
+    observacion_gestion,
+    fecha_correccion,
+    fecha_cesacion,
+    fecha_retiro_pila,
+    fecha_ingreso_pila,
+    cod_estado_solicitud_radicado,
+    estado_solicitud_radicado,
+    fecha_cancelado,
+    discapacidad,
+    condicion_discapacidad,
+    fecha_ingreso_trabajador,
+    estado_trabajador,
+    vigencia,
+    observacion_cancelado,
+    fecha_recepcion,
+    fecha_aprobacion,
+    cod_estado_beneficio,
+    estado_beneficio,
+    IF(departamento = 'CALDAS', 'CALDAS', 'OTRO DEPARTAMENTO') as departamento_general
+
+FROM [lib://SISTEMA FOSFEC:DataFiles/Tx_caracteristicas_postulacion.QVD]
+(qvd);
+
+
+Historico1:
+LOAD
+	%key_postulacion_his,
+    fecha_postulacion_his,
+    hora_postulacion_his,
+    cod_estado_postulacion_his,
+    estado_postulacion_his,
+    cod_obs_postulacion_his,
+    obs_postulacion_his,
+    sinc_usuario
+FROM [lib://SISTEMA FOSFEC:DataFiles/Tx_historico_postulacion.QVD]
+(qvd)
+;
+
+Historico2:
+LOAD
+	id_postulacion_radicacion,
+    cod_estado_detalle_postulacion_radicacion_his,
+    estado_detalle_postulacion_radicacion_his,
+    fecha_radicacion_his
+FROM [lib://SISTEMA FOSFEC:DataFiles/Tx_historico_radicacion.QVD]
+(qvd)
+;
+
+
+///$tab Sección 8
+Tabla_general:
+LOAD
+	%key_principal,
+    %key_postulacion_his,
+    numero_radicado,    
+    fecha_preradicacion,
+	fecha_postulacion,
+	AÑO,	
+    MES,
+    MES_NUMERO,
+    fecha_gestion,    
+	tipo_beneficio,
+    fecha_radicacion,
+    id_postulacion_radicacion,    
+    dias_radicados,    
+    RADICADO
+FROM [lib://SISTEMA FOSFEC:DataFiles/Tx_detalle_postulacion.QVD]
+(qvd)
+;    
+
+Concatenate
+LOAD
+	%key_principal,
+	numero_radicado,
+	AÑO,	
+    MES,
+    MES_NUMERO,    
+ 	tipo_beneficio  
+FROM [lib://SISTEMA FOSFEC:DataFiles/Tx_aprobacion.QVD]
+(qvd);
+
+Concatenate
+LOAD
+	%key_principal,
+	numero_radicado,
+	fecha_provision,
+ 	AÑO,	
+    MES,
+    MES_NUMERO,   
+    reactivado,   
+	tipo_beneficio,    
+	provisionado_salud, 
+	provisionado_pension, 
+	provisionado_cuota_monetaria, 
+	provisionado_bono, 
+	total_provisionado
+FROM [lib://SISTEMA FOSFEC:DataFiles/Tx_provision.QVD]
+(qvd);
+
+Concatenate
+LOAD
+	%key_principal,
+	numero_radicado,
+	id_detalle_desprovisiones,     
+	fecha_desprovision,  
+ 	AÑO,	
+    MES,
+    MES_NUMERO, 
+ 	desprovisionado_salud, 
+	desprovisionado_pension, 
+	desprovisionado_cuota, 
+	desprovisionado_bono, 
+	total_desprovisionado,    
+	tipo_beneficio
+FROM [lib://SISTEMA FOSFEC:DataFiles/Tx_desprovision.QVD]
+(qvd);
+
+Concatenate
+LOAD
+	%key_principal,
+	numero_radicado,
+    id_nueva_asignacion,   
+    resultado_afiliacion,
+    observacion_resultado,   
+    estado_asignacion,
+    validacion_afiliacion,
+    fecha_cruce,
+    observaciones_cruce,
+ 	AÑO,	
+    MES,
+    MES_NUMERO
+FROM [lib://SISTEMA FOSFEC:DataFiles/Tx_nuevas_asignaciones.QVD]
+(qvd)
+;
+	
+
+
+
+Exit Script;
+
+//Identificar las variables que se deben pegar a la tabla de características más abajo.
+// cod_estado_solicitud,
+// estado_solicitud,
+// cod_observacion_gestion, 
+// observacion_gestion, 
+// fecha_retiro_genesys,
+// fecha_correccion, 
+// fecha_cesacion, // fecha de perdida del empleo.    
+// fecha_retiro_pila,     
+// fecha_ingreso_pila,  
+// cod_estado_solicitud_radicado,
+// estado_solicitud_radicado,
+// fecha_cancelado,
+// dias_radicados,
+// discapacidad, // Sólo disponible para los radicados.
+// condicion_discapacidad,// Sólo disponible para los radicados.  
+// fecha_ingreso_trabajador,
+// estado_trabajador,
+// vigencia,
+// observacion_cancelado,    
+// fecha_recepcion 
+
+// Tx_detalle_postulacion.QVD
+
+
+// fecha_aprobacion,
+// cod_estado_beneficio,
+// estado_beneficio
+
+// Tx_aprobacion.QVD
+
+cod_estado_beneficio_provision,
+estado_beneficio_provision,
+fecha_suspension, 
+observacion_provisión,
+
+
+cod_estado_beneficio_desprovision,
+estado_beneficio_desprovision,
+observacion_desprovision,
+
+
+cod_estado_nuevas_asig,
+estado_nuevas_asig,
+
+
+///$tab Postulación  asignación beneficios
+Postulacion_asignacion_beneficios:
+LOAD
+	Year(Date(fecha_radicacion, 'YYYY-MM-DD')) as AÑO,
+    Month(Date(fecha_radicacion, 'YYYY-MM-DD')) as MES,
+    num(Month(Date(fecha_radicacion, 'YYYY-MM-DD')),'00') as MES_NUMERO, 
+
+    id_postulacion_beneficios,
+    numero_radicado,
+    fecha_radicacion,
+    caja_compensacion,
+    numero_identificacion,
+    nombre_beneficiario,
+    municipio,
+    departamento,
+    nombre_eps,
+    nombre_afp,
+    fecha_aprobacion,
+    fecha_provisionamiento,
+    estado_beneficio as cod_estado_beneficio,
+    ApplyMap('Mapping_estado_solicitud', estado_beneficio, 'SIN ESTADO') as estado_beneficio,
+    
+    meses_derecho,
+    meses_liquidados,
+    meses_pendientes,
+    total_provision_salud,
+    total_provisionado_pension,
+    total_provision_cuota,
+    total_provision_bono_alimentacion,
+    total_provisionado,
+    total_desprovisionado,
+    total_desprovisionado_salud,
+    total_desprovisionado_pension,
+    total_desprovisionado_cuota,
+    total_desprovisionado_bono_alimentacion,
+    fecha_perdida_suspension,
+    fecha_desprovision,
+    periodo_liquidado,
+    confirmacion_pagos_salud,
+    confirmacion_pagos_pension,
+    confirmacion_pagos_cuota,
+    confirmacion_pagos_bono,
+    total_confirmacion_pagos,
+    liquidado_salud,
+    liquidado_pension,
+    liquidado_cuota_monetaria,
+    liquidado_bono_alimentacion,
+    total_liquidado,
+    monto_pendiente_salud,
+    monto_pendiente_pension,
+    monto_pendiente_cuota_monetaria,
+    monto_pendiente_bono_alimentacion,
+    total_pendiente,
+    vigencia,
+    id_encabezado_archivo,
+    sinc_fecha,
+    sinc_hora,
+    sinc_accion,
+    sinc_usuario,
+    observacion_genesys,
+    nombre_trabajador,
+    fecha_ingreso_trabajador,
+    nombre_empresa,
+    estado_trabajador,
+    observacion_beneficio,
+    id_observacion_cancelacion,
+    motivo_cancelacion,
+    tipo_liquidacion,
+    estado_liquidacion,
+    sinc_fecha_actualizacion,
+    sinc_hora_actualizacion,
+    sinc_usuario_actualizacion,
+    normatividad,
+    fecha_cancelacion_plataforma,
+    tipo_identificacion,
+    primer_nombre,
+    segundo_nombre,
+    primer_apellido,
+    segundo_apellido,
+    genero,
+    fecha_bloqueo,
+    fecha_suspension_cancelacion,
+    usuario_gestion,
+    observacion,
+    transfe_economica,
+    fecha_recepcion
+FROM [lib://SISTEMA FOSFEC:DataFiles/detalle_postulacion_asignacion_beneficios.QVD]
+(qvd);
+
+
+///$tab ---- Carga vieja -----
+
+///$tab 1. Postulación
+Postulaciones:
+LOAD
+	Year(Date(fecha_preradicacion, 'YYYY-MM-DD')) as AÑO,
+    Month(Date(fecha_preradicacion, 'YYYY-MM-DD')) as MES,
+    num(Month(Date(fecha_preradicacion, 'YYYY-MM-DD')),'00') as MES_NUMERO,    
+
+	// Identificación del postulado
+	id_contenido_archivo as %key_postulacion, // llave con la histórica
+    numero_identificacion&'-'&Date(fecha_preradicacion, 'YYYY-MM-DD') as %key_radicacion, // llave tabla postulados radicacion
+    id_encabezado_archivo, 
+	numero_identificacion, // numero de identificacion del postulado
+ 	tipo_identificacion, 
+    primer_nombre, 
+	segundo_nombre, 
+	primer_apellido, 
+	segundo_apellido,    
+	nombre_solicitante, // Primer Apellido, Primer nombre    
+      
+    // Características poblacionales
+    genero,    
+ 	categoria,       
+    IF(match(categoria, 'A','B'), 'Si', 'No') as postulacion_transferencia,
+    IF(match(categoria, 'A','B','C'), 'Si', 'No') as postulacion_salud,
+    IF(match(categoria, 'A','B','C'), 'Si', 'No') as postulacion_pensión,
+    
+ 	municipio,    
+	departamento, 
+    IF(departamento = 'CALDAS', 'CALDAS', 'OTRO DEPARTAMENTO') as departamento_general,
+	caja_compensacion, 
+    ultima_ccf, 
+    
+    nit_empleador, 
+	nombre_empresa, // No está estandarizado
+    ApplyMap('Mapping_nombre_empresa', Text(nit_empleador), 'SIN NOMBRE') as nombre_empresa2,
+    ApplyMap('Mapping_actividad_economica_empresa',Text(nit_empleador),'SIN ACTIVIDAD') as actividad_economica_empresa,
+    ApplyMap('Mapping_actividad_economica_empresa_detalle',Text(nit_empleador),'SIN ACTIVIDAD') as actividad_economica_empresa_detalle,
+    
+    nit_ultima_empresa,   
+	nombre_ultima_empresa, // No está estandarizado
+ 	nombre_eps, 
+	nombre_afp,    
+    recibido_por, 
+	validado_por, 
+    tipo_trabajador_aportes, 
+    
+    // Características individuales
+    Date#(fecha_nacimiento, 'YYYY-MM-DD') as fecha_nacimiento,     
+    ApplyMap('Mapping_fecha_nacimiento', numero_identificacion, 'SIN FECHA') as fecha_nacimiento2,      
+	direccion_solicitante,  
+	telefono_solicitante, 
+	celular_solicitante, 
+	correo_solicitante,     
+	tipo_cuenta, 
+	numero_cuenta, 
+	entidad_bancaria, 
+    tiempo_aporte, // dias (? 
+    ruta_certificado_bancario, 
+        
+    // Gestión de la postulación
+ 	responsable_gestion, 
+	estado_solicitud as cod_estado_solicitud,   
+    ApplyMap('Mapping_estado_solicitud_1', estado_solicitud, 'SIN ESTADO') as estado_solicitud,    
+	observacion_gestion as cod_observacion_gestion, 
+    ApplyMap('Mapping_observacion_postulacion', observacion_gestion, 'SIN OBSERVACION') as observacion_gestion,
+	fecha_gestion, 
+	codigo_jde, 
+	reportado_jde, 
+	esta_en_gestion, 
+	usuario_en_gestion, 
+
+	// Fechas
+	fecha_retiro_genesys, // fecha de perdida del empleo.    
+	fecha_preradicacion, // fecha de la postulación
+    Date(fecha_preradicacion, 'YYYY-MM-DD') as fecha_postulacion,
+	fecha_correccion, 
+    fecha_cesacion, 
+	fecha_retiro_pila,     
+	fecha_ingreso_pila, 
+        
+    // Aclarar
+	resultado_validacion, // Control interno sistema 
+	estado_validacion, //      
+	observacion_genesys, 
+	ultimo_periodo,     
+    
+    // Genesys
+	tiempo_aportes_formalizado_inde, 
+	tiempo_aportes_no_formalizado, 
+	tiempo_aportes_pensionado, 
+	ultima_empresa_no_formalizado, 
+	nit_ultima_empresa_no_formalizado, 
+    
+    // Campos nulos (nuevos desarrollos)
+	fecha_primer_pago, 
+	valor_pago, 
+	fecha_devolucion, 
+	valor_devolucion, 
+ 	nueva_vigencia, 
+	reactivado_jde // Va a aparecer como condición después de que salgan los nuevos desarrollos.  
+    
+// 	sinc_fecha, 
+// 	sinc_hora, 
+// 	sinc_accion, 
+// 	sinc_usuario, 
+// 	sinc_usuario_actualizacion, 
+// 	sinc_fecha_actualizacion, 
+// 	sinc_hora_actualizacion, 
+    
+    
+FROM [lib://SISTEMA FOSFEC:DataFiles/detalle_archivo_postulacion.QVD]
+(qvd)
+;
+
+NoConcatenate
+Postulaciones2:
+LOAD
+	AÑO,
+    MES,
+    MES_NUMERO,    
+
+	// Identificación del postulado
+	%key_postulacion, // llave con la histórica
+    %key_radicacion, // llave tabla postulados radicacion
+    id_encabezado_archivo, 
+	numero_identificacion, // numero de identificacion del postulado
+ 	tipo_identificacion, 
+    primer_nombre, 
+	segundo_nombre, 
+	primer_apellido, 
+	segundo_apellido,    
+	nombre_solicitante, // Primer Apellido, Primer nombre    
+      
+    // Características poblacionales
+    genero,    
+ 	categoria,       
+    postulacion_transferencia,
+    postulacion_salud,
+    postulacion_pensión,
+    
+ 	municipio,    
+	departamento,   
+    departamento_general,
+	caja_compensacion, 
+    ultima_ccf, 
+    
+    nit_empleador, 
+	IF(nombre_empresa2 = 'SIN NOMBRE', nombre_empresa, nombre_empresa2) as nombre_empresa,
+    actividad_economica_empresa,
+    actividad_economica_empresa_detalle,
+    
+    
+    nit_ultima_empresa,   
+	nombre_ultima_empresa, // No está estandarizado
+ 	nombre_eps, 
+	nombre_afp,    
+    recibido_por, 
+	validado_por, 
+    tipo_trabajador_aportes, 
+    
+    // Características individuales
+//  	fecha_nacimiento,     
+//     fecha_nacimiento2,   
+	IF(fecha_nacimiento2 = 'SIN FECHA', fecha_nacimiento, fecha_nacimiento2) as fecha_nacimiento,
+    
+	direccion_solicitante,  
+	telefono_solicitante, 
+	celular_solicitante, 
+	correo_solicitante,     
+	tipo_cuenta, 
+	numero_cuenta, 
+	entidad_bancaria, 
+    tiempo_aporte, // dias (? 
+    ruta_certificado_bancario, 
+        
+    // Gestión de la postulación
+ 	responsable_gestion, 
+	cod_estado_solicitud,   
+    estado_solicitud,    
+	cod_observacion_gestion, 
+    observacion_gestion,
+	fecha_gestion, 
+	codigo_jde, 
+	reportado_jde, 
+	esta_en_gestion, 
+	usuario_en_gestion, 
+
+	// Fechas
+	fecha_retiro_genesys, // fecha de perdida del empleo.    
+	fecha_preradicacion, // fecha de la postulación
+    fecha_postulacion,
+	fecha_correccion, 
+    fecha_cesacion, 
+	fecha_retiro_pila,     
+	fecha_ingreso_pila, 
+        
+    // Aclarar
+	resultado_validacion, // Control interno sistema 
+	estado_validacion, //      
+	observacion_genesys, 
+	ultimo_periodo,     
+    
+    // Genesys
+	tiempo_aportes_formalizado_inde, 
+	tiempo_aportes_no_formalizado, 
+	tiempo_aportes_pensionado, 
+	ultima_empresa_no_formalizado, 
+	nit_ultima_empresa_no_formalizado, 
+    
+    // Campos nulos (nuevos desarrollos)
+	fecha_primer_pago, 
+	valor_pago, 
+	fecha_devolucion, 
+	valor_devolucion, 
+ 	nueva_vigencia, 
+	reactivado_jde // Va a aparecer como condición después de que salgan los nuevos desarrollos.  
+    
+Resident Postulaciones;
+Drop table Postulaciones;
+
+
+NoConcatenate
+Postulaciones3:
+LOAD
+	*,
+	Floor((fecha_postulacion - fecha_nacimiento) / 365.25) AS edad
+Resident Postulaciones2;
+Drop table Postulaciones2;
+
+
+// Exit Script;
+
+
+
+
+
+
+///$tab 2. Postulacion Histórico
+Postulacion_historico:
+LOAD
+// 	id_detalle_archivo_postulacion_his, 
+    detalle_archivo_postulacion_id as %key_postulacion, // llave con la tabla de postulación.
+    Date(sinc_fecha, 'YYYY-MM-DD') as fecha_postulacion_his,
+    sinc_hora as hora_postulacion_his,
+	estado_detalle_archivo_postulacion_his as cod_estado_postulacion_his,
+    ApplyMap('Mapping_estado_solicitud_1', estado_detalle_archivo_postulacion_his, 'SIN ESTADO') as estado_postulacion_his,
+    
+	observacion_validacion_postulacion_id as cod_obs_postulacion_his,
+    ApplyMap('Mapping_observacion_postulacion', observacion_validacion_postulacion_id, 'SIN OBSERVACION') as obs_postulacion_his,
+    
+    sinc_usuario // usuario de red
+  
+from [lib://SISTEMA FOSFEC:DataFiles/detalle_archivo_postulacion_his.QVD]
+(qvd)
+;
+
+
+
+
+///$tab 3. Postulacion radicacion
+Postulacion_radicacion:
+LOAD
+    id_postulacion_radicacion,
+    numero_identificacion&'-'&Date(fecha_radicacion,'YYYY-MM-DD') as %key_radicacion,
+    
+    numero_radicado,
+    Date(fecha_radicacion,'YYYY-MM-DD') as fecha_radicacion,
+    
+    estado_solicitud as cod_estado_solicitud_radicado,
+    ApplyMap('Mapping_estado_solicitud_2', estado_solicitud, 'SIN ESTADO') as estado_solicitud_radicado,    
+    fecha_cancelado,
+    dias_radicados,
+    normatividad,
+    discapacidad,
+    condicion_discapacidad   
+    
+    
+//     caja_compensacion,
+//     numero_identificacion,
+//     nombre_solicitante,    
+//     observacion_devolucion,
+//     id_encabezado_archivo,
+//     sinc_fecha,
+//     sinc_hora,
+//     sinc_accion,
+//     sinc_usuario,
+//     observacion_genesys,
+//     nombre_trabajador,
+//     fecha_ingreso_trabajador,
+//     nombre_empresa,
+//     estado_trabajador,
+//     id_observacion_cancelacion,
+//     motivo_cancelacion,
+//     dias_vencimiento,
+//     vigencia,
+//     sinc_fecha_actualizacion,
+//     sinc_hora_actualizacion,
+//     sinc_usuario_actualizacion,
+//     observacion_cancelado,
+//     registro_front,
+//     fecha_desistido,
+//     fecha_recepcion,
+FROM [lib://SISTEMA FOSFEC:DataFiles/detalle_postulacion_radicacion.QVD]
+(qvd)
+;
+
+
+///$tab 4. Postulación radicación histórico
+Postulacion_radicacion_his:
+LOAD 
+	detalle_postulacion_radicacion_id as id_postulacion_radicacion, // lave con la tabla de radicación
+	estado_detalle_postulacion_radicacion_his as cod_estado_detalle_postulacion_radicacion_his, 
+    ApplyMap('Mapping_estado_solicitud_general', estado_detalle_postulacion_radicacion_his, 'SIN ESTADO') as estado_detalle_postulacion_radicacion_his,
+    
+	sinc_fecha as fecha_radicacion_his
+// 	observacion_his, 
+// 	observacion_devolucion_his
+FROM [lib://SISTEMA FOSFEC:DataFiles/detalle_postulacion_radicacion_his.QVD]
+(qvd)
+;
+
+
+///$tab 5. Provisión
+provisiones:
+LOAD
+    numero_radicado, 
+//     fecha_radicacion, 
+    id_detalle_provisiones, 
+    reactivado, 
+
+	estado_beneficio as cod_estado_beneficio_provision, 
+    ApplyMap('Mapping_estado_solicitud_general', estado_beneficio, 'SIN ESTADO') as estado_beneficio_provision,
+	
+    // fechas
+    fecha_aprobacion,
+	fecha_realizacion_provisionamiento as fecha_provision, 
+	fecha_suspension, 
+    
+	// provision
+	provisionado_salud, 
+	provisionado_pension, 
+	provisionado_cuota_monetaria, 
+	provisionado_bono, 
+	total_provisionado, 
+    
+	meses_liquidados, 
+	meses_pendientes,     
+ 	observacion as observacion_provisión
+    
+	// Datos personales
+// 	caja_compensacion, 
+// 	numero_identificacion, 
+// 	nombre_completo, 
+// 	municipio, 
+// 	departamento, 
+// 	barrio, 
+// 	direccion, 
+// 	telefono, 
+// 	celular, 
+// 	correo_electronico, 
+// 	nombre_eps, 
+// 	nombre_afp
+
+
+FROM [lib://SISTEMA FOSFEC:DataFiles/detalle_provisiones.QVD]
+(qvd)
+;
+///$tab 6. Desprovisión
+Desprovisión:
+LOAD 
+	numero_radicado, 
+	id_detalle_desprovisiones, 
+
+	estado_beneficio as cod_estado_beneficio2,
+    ApplyMap('Mapping_estado_solicitud_general', estado_beneficio, 'SIN ESTADO') as estado_beneficio_desprovision,    
+ 
+	fecha_realizacion_desprovisionamiento as fecha_desprovision,     
+	desprovisionado_salud, 
+	desprovisionado_pension, 
+	desprovisionado_cuota, 
+	desprovisionado_bono, 
+	total_desprovisionado, 
+ 	observacion as observacion_desprovision   
+
+FROM [lib://SISTEMA FOSFEC:DataFiles/detalle_desprovisiones.QVD]
+(qvd)
+;
+///$tab 7. Nuevas Asignaciones
+nuevas_asignaciones:
+LOAD
+	numero_radicado,
+    id_nueva_asignacion,
+    
+    estado as cod_estado_nuevas_asig,
+    ApplyMap('Mapping_estado_solicitud_general', estado, 'SIN ESTADO') as estado_nuevas_asig,
+    resultado_afiliacion,    
+    observacion_resultado,   
+    estado_asignacion,
+    validacion_afiliacion,
+    fecha_cruce,
+    observaciones_cruce
+ 
+ 
+//     estado_trabajador,    
+//     fecha_ingreso_trabajador,    
+    
+//     fecha_radicacion,
+//     fecha_aprobacion,
+//     fecha_provisionamiento,    
+    
+FROM [lib://SISTEMA FOSFEC:DataFiles/detalle_nuevas_asignaciones.QVD]
+(qvd);
+
+///$tab Sección 6
+Postulacion_radicacion:
+LOAD
+	Year(Date(fecha_radicacion, 'YYYY-MM-DD')) as AÑO,
+    Month(Date(fecha_radicacion, 'YYYY-MM-DD')) as MES,
+    num(Month(Date(fecha_radicacion, 'YYYY-MM-DD')),'00') as MES_NUMERO, 
+
+    numero_identificacion&'-'&Date(fecha_radicacion,'YYYY-MM-DD') as %key_radicacion,	
+    id_postulacion_radicacion,
+
+    
+    numero_radicado,
+    Date(fecha_radicacion,'YYYY-MM-DD') as fecha_radicacion,
+    
+    estado_solicitud as cod_estado_solicitud_radicado,
+    ApplyMap('Mapping_estado_solicitud_2', estado_solicitud, 'SIN ESTADO') as estado_solicitud_radicado,    
+    
+    fecha_cancelado,
+    dias_radicados,
+    normatividad,
+    discapacidad,
+    condicion_discapacidad,   
+    
+    
+    caja_compensacion,
+    numero_identificacion,
+    nombre_solicitante,    
+    observacion_devolucion, // No tiene datos
+    id_encabezado_archivo,
+    sinc_fecha,
+    sinc_hora,
+    sinc_accion,
+    sinc_usuario,
+    observacion_genesys,
+    nombre_trabajador,
+    fecha_ingreso_trabajador,
+    nombre_empresa,
+    estado_trabajador,
+    id_observacion_cancelacion,
+    motivo_cancelacion,
+    dias_vencimiento,
+    vigencia,
+    sinc_fecha_actualizacion,
+    sinc_hora_actualizacion,
+    sinc_usuario_actualizacion,
+    observacion_cancelado,
+    registro_front,
+    fecha_desistido,
+    fecha_recepcion
+    
+FROM [lib://SISTEMA FOSFEC:DataFiles/detalle_postulacion_radicacion.QVD]
+(qvd)
+;
+
+Exit Script;
+///$tab Exit
+Exit Script;
+///$tab EXIT
+Exit Script;
+///$tab 4. Provisiones
+Provisiones:
+LOAD
+	// Llaves
+    id_detalle_provisiones, // llave
+    numero_radicado,
+//     Date(fecha_radicacion,'YYYY-MM-DD') as fecha_radicacion,
+    
+    
+    // Información personal provisionado
+//     numero_identificacion,
+//     nombre_completo,    
+//     municipio,
+//     caja_compensacion,
+//     departamento,
+//     barrio,
+//     direccion,
+//     telefono,
+//     celular,
+//     correo_electronico,
+//     nombre_eps,
+//     nombre_afp,
+    
+    // Beneficio
+    estado_beneficio as cod_estado_beneficio,
+    ApplyMap('Mapping_estado_solicitud', estado_beneficio) as estado_beneficio,
+    reactivado,
+    
+    // Fechas
+    Date(fecha_aprobacion,'YYYY-MM-DD') as fecha_aprobacion,
+    Date(fecha_realizacion_provisionamiento,'YYYY-MM-DD') as fecha_realizacion_provisionamiento,
+    Date(fecha_suspension,'YYYY-MM-DD') as fecha_suspension,// fecha perdida del beneficio
+    
+    
+	// Valores provisión
+    provisionado_salud,
+    provisionado_pension,
+    provisionado_cuota_monetaria,
+    provisionado_bono,
+    total_provisionado,
+    
+    
+//     meses_liquidados,
+//     meses_pendientes,
+    
+    
+//     observacion,
+//     id_encabezado_archivo,
+//     sinc_fecha,
+//     sinc_hora,
+//     sinc_accion,
+//     sinc_usuario,
+//     codigo_jde,
+//     reportado_jde,
+//     sinc_usuario_act,
+//     normatividad,
+    genera_provision_interna_transfe,
+    genera_provision_interna_cuota,
+    reportado_jde_salud,
+    reportado_jde_pension,
+    reportado_jde_bono,
+    reportado_jde_cuota
+FROM [lib://SISTEMA FOSFEC:DataFiles/detalle_provisiones.QVD]
+(qvd);
+
+
+///$tab Sección 5
+LOAD
+    id_contenido_archivo,
+    caja_compensacion,
+    fecha_preradicacion,
+    fecha_correccion,
+    tipo_identificacion,
+    numero_identificacion,
+    nombre_solicitante,
+    telefono_solicitante,
+    celular_solicitante,
+    correo_solicitante,
+    direccion_solicitante,
+    municipio,
+    departamento,
+    nombre_eps,
+    nombre_afp,
+    nit_empleador,
+    nombre_empresa,
+    fecha_cesacion,
+    tipo_cuenta,
+    numero_cuenta,
+    entidad_bancaria,
+    recibido_por,
+    validado_por,
+    resultado_validacion,
+    estado_validacion,
+    sinc_fecha,
+    sinc_hora,
+    sinc_accion,
+    sinc_usuario,
+    id_encabezado_archivo,
+    tiempo_aporte,
+    categoria,
+    ultima_ccf,
+    nombre_ultima_empresa,
+    observacion_genesys,
+    responsable_gestion,
+    estado_solicitud,
+    observacion_gestion,
+    fecha_gestion,
+    primer_nombre,
+    segundo_nombre,
+    primer_apellido,
+    segundo_apellido,
+    genero,
+    ruta_certificado_bancario,
+    sinc_usuario_actualizacion,
+    sinc_fecha_actualizacion,
+    sinc_hora_actualizacion,
+    codigo_jde,
+    reportado_jde,
+    esta_en_gestion,
+    usuario_en_gestion,
+    fecha_nacimiento,
+    fecha_retiro_genesys,
+    tipo_trabajador_aportes,
+    fecha_retiro_pila,
+    fecha_ingreso_pila,
+    ultimo_periodo,
+    nit_ultima_empresa,
+    tiempo_aportes_formalizado_inde,
+    tiempo_aportes_no_formalizado,
+    tiempo_aportes_pensionado,
+    ultima_empresa_no_formalizado,
+    nit_ultima_empresa_no_formalizado,
+    fecha_primer_pago,
+    valor_pago,
+    fecha_devolucion,
+    valor_devolucion,
+    nueva_vigencia,
+    reactivado_jde
+FROM [lib://SISTEMA FOSFEC:DataFiles/detalle_archivo_postulacion.QVD]
+(qvd);
+
+
+
+
+
+
+
+Exit Script;
+///$tab Sección 4
+LOAD
+*
+FROM [lib://SISTEMA FOSFEC:DataFiles/estado_solicitud.QVD]
+(qvd);
+
+
+
+
+
+
+Exit Script;
+///$tab Sección 3
+// Postulacion_radicacion:
+// LOAD
+//     id_postulacion_radicacion,
+//     Year(Date(fecha_radicacion, 'YYYY-MM-DD')) as AÑO,
+//     numero_identificacion&'-'&Date(fecha_radicacion,'YYYY-MM-DD') as %key_radicacion,
+    
+//     numero_radicado,
+//     Date(fecha_radicacion,'YYYY-MM-DD') as fecha_radicacion,
+    
+    
+//     caja_compensacion,
+//     numero_identificacion,
+//     nombre_solicitante,
+//     estado_solicitud as cod_estado_solicitud_radicado,
+//     ApplyMap('Mapping_estado_solicitud_2', estado_solicitud, 'SIN ESTADO') as estado_solicitud_radicado,    
+//     fecha_cancelado,
+//     dias_radicados,
+//     normatividad,
+//     discapacidad,
+//     condicion_discapacidad    
+    
+// //     observacion_devolucion,
+// //     id_encabezado_archivo,
+// //     sinc_fecha,
+// //     sinc_hora,
+// //     sinc_accion,
+// //     sinc_usuario,
+// //     observacion_genesys,
+// //     nombre_trabajador,
+// //     fecha_ingreso_trabajador,
+// //     nombre_empresa,
+// //     estado_trabajador,
+// //     id_observacion_cancelacion,
+// //     motivo_cancelacion,
+// //     dias_vencimiento,
+// //     vigencia,
+// //     sinc_fecha_actualizacion,
+// //     sinc_hora_actualizacion,
+// //     sinc_usuario_actualizacion,
+// //     observacion_cancelado,
+// //     registro_front,
+// //     fecha_desistido,
+// //     fecha_recepcion,
+// FROM [lib://SISTEMA FOSFEC:DataFiles/detalle_postulacion_radicacion.QVD]
+// (qvd)
+// ;
+
+
+
+// Exit Script;
+///$tab Sección 2
+// LOAD
+// 	tipo,
+//     id_estado_solicitud,
+//     estado_solicitud
+// FROM [lib://SISTEMA FOSFEC:DataFiles/estado_solicitud.QVD]
+// (qvd)
+// // where tipo = 2
+// ;
+///$tab Postulacion radicacion histórico
+detalle_postulacion_radicacion_his:
+LOAD
+    id_detalle_postulacion_radicacion_his,
+    detalle_postulacion_radicacion_id,
+    estado_detalle_postulacion_radicacion_his,
+    sinc_fecha,
+    sinc_hora,
+    sinc_accion,
+    sinc_usuario,
+    observacion_his,
+    observacion_devolucion_his
+FROM [lib://SISTEMA FOSFEC:DataFiles/detalle_postulacion_radicacion_his.QVD]
+(qvd);
+
+
+///$tab Postulación  asignación beneficios histórico
+Postulacion_asignacion_beneficios_his:
+LOAD
+    detalle_postulacion_asignacion_beneficios_his_id,
+    estado_his,
+    observacion_his,
+    detalle_postulacion_asignacion_beneficios_id,
+    sinc_fecha,
+    sinc_hora,
+    sinc_accion,
+    sinc_usuario
+FROM [lib://SISTEMA FOSFEC:DataFiles/detalle_postulacion_asignacion_beneficios_his.QVD]
+(qvd);
+
+
+///$tab Sección
+
+///$tab Pendientes
+// El sistema consulta genesys y trae los campos
+// Si la postulación pasó por un estado devuelto, tomar la fecha en la que corrigió.
+
+// para relacionar postulacion y provision usar el número de cedula y el # de radicado
+// preradicado devuelto es un id de observación.
+
+// El ultimo estado se guarda en detalle_archivo_postulacion
+// relacionar la observación del histórico con la de la tabla principal.
+
+// Cual es la diferencia entre radicación y preradicación
+
+// Con tecnología:
+// Aclarar relación entre estado_solicitud y estado_postulacion_his
+///$tab Desprovisiones
+Desprovisiones:
+LOAD
+    id_detalle_desprovisiones,
+    numero_radicado,
+    fecha_radicacion,
+    caja_compensacion,
+    numero_identificacion,
+    nombre_completo,
+    municipio,
+    departamento,
+    barrio,
+    direccion,
+    telefono,
+    celular,
+    correo_electronico,
+    nombre_eps,
+    nombre_afp,
+    estado_beneficio,
+    fecha_aprobacion,
+    fecha_realizacion_desprovisionamiento,
+    desprovisionado_salud,
+    desprovisionado_pension,
+    desprovisionado_cuota,
+    desprovisionado_bono,
+    total_desprovisionado,
+    fecha_suspension,
+    meses_liquidados,
+    meses_pendientes,
+    observacion, // 3 observaciones
+    normatividad,
+    id_encabezado_archivo,
+    sinc_fecha,
+    sinc_hora,
+    sinc_accion,
+    sinc_usuario,
+    reportado_jde_salud,
+    reportado_jde_pension,
+    reportado_jde_bono,
+    reportado_jde_cuota
+FROM [lib://SISTEMA FOSFEC:DataFiles/detalle_desprovisiones.QVD]
+(qvd);
+
+
+///$tab Diferencia provision beneficio
+diferencia_provision_beneficio:
+LOAD
+    id_diferencia_provision_beneficio,
+    ano,
+    mes,
+    id_ley_decreto,
+    id_beneficio,
+    valor_beneficio,
+    cantidad_estadistico,
+    suma_dato_beneficio,
+    diferencia,
+    observacion,
+    sinc_fecha,
+    sinc_hora,
+    sinc_accion,
+    sinc_usuario,
+    estado_gestion,
+    id_encabezado_archivo_adicional
+FROM [lib://SISTEMA FOSFEC:DataFiles/diferencia_provision_beneficio.QVD]
+(qvd);
+
+
+///$tab Detalle deudas presuntas
+Deudas_presuntas:
+LOAD
+    id_detalle_deudas_presuntas_eps_afp,
+    id_deudas_presuntas_eps_afp,
+    numero_documento,
+    periodo,
+    valor,
+    ruta_adjunto,
+    aprobacion_profesional,
+    id_eps_afp,
+    nombre_completo,
+    numero_plantilla,
+    estado,
+    sinc_fecha,
+    sinc_hora,
+    sinc_accion,
+    sinc_usuario,
+    observacion
+FROM [lib://SISTEMA FOSFEC:DataFiles/detalle_deudas_presuntas_eps_afp.QVD]
+(qvd);
+
+
+///$tab Nuevas asignaciones
+Nuevas_asignaciones:
+LOAD
+    id_nueva_asignacion,
+    numero_radicado,
+    fecha_radicacion,
+    fecha_aprobacion,
+    fecha_provisionamiento,
+    estado,
+    tipo_documento,
+    identificacion,
+    caja_compensacion,
+    primer_nombre,
+    segundo_nombre,
+    primer_apellido,
+    segundo_apellido,
+    nombre_eps,
+    nombre_afp,
+    direccion,
+    telefono,
+    celular,
+    nombre_ciudad,
+    barrio,
+    correo_electronico,
+    resultado_afiliacion,
+    observacion_resultado,
+    id_encabezado_archivo,
+    sinc_fecha,
+    sinc_hora,
+    sinc_accion,
+    sinc_usuario,
+    estado_asignacion,
+    validacion_afiliacion,
+    fecha_cruce,
+    observaciones_cruce,
+    normatividad,
+    fecha_ingreso_trabajador,
+    estado_trabajador,
+    nombre_empresa_trabajador
+FROM [lib://SISTEMA FOSFEC:DataFiles/detalle_nuevas_asignaciones.QVD]
+(qvd);
+
+
+///$tab Nuevas asignaciones his
+Nuevas_asignaciones_his:
+LOAD
+    id_nueva_asignacion_his,
+    resultado_afiliacion_his,
+    observacion_resultado_his,
+    fecha,
+    hora,
+    accion,
+    usuario,
+    nueva_asignacion_id
+FROM [lib://SISTEMA FOSFEC:DataFiles/detalle_nuevas_asignaciones_his.QVD]
+(qvd);
+
+
+///$tab Seccion
+Tabla:
+LOAD
+	distinct
+    TIPO_IDENTIFICACION_EMPRESA,
+    NOMBRE_TIPO_IDENTIFICACION,
+    ESTADO_EMPRESA,
+    NOMBRE_ESTADO_EMPRESA,
+    CODIGO_TIPO_APORTANTE,
+    NOMBRE_TIPO_APORTANTE,
+    NUMERO_IDENTIFICACION_EMPRESA,
+    NOMBRE_EMPRESA,
+    CODIGO_ACTIVIDAD_ECONOMICA_INTERNA,
+    NOMBRE_ACTIVIDAD_ECONOMICA_SECCION,
+    ACTIVIDAD_ECONOMICA,
+    NOMBRE_ACTIVIDAD_ECONOMICA,    
+	PERIODO_LIQUIDADO
+FROM [lib://INDICADORES VARIABLES TRAZADORAS:DataFiles/Empresas_Totales.qvd]
+(qvd);
+
+left Join
+LOAD
+	TIPO_IDENTIFICACION_EMPRESA,
+    max(PERIODO_LIQUIDADO) as PERIODO_MAXIMO
+Resident Tabla
+group by TIPO_IDENTIFICACION_EMPRESA
+;
+
+NoConcatenate
+Tabla2:
+LOAD
+    TIPO_IDENTIFICACION_EMPRESA,
+    NOMBRE_TIPO_IDENTIFICACION,
+    ESTADO_EMPRESA,
+    NOMBRE_ESTADO_EMPRESA,
+    CODIGO_TIPO_APORTANTE,
+    NOMBRE_TIPO_APORTANTE,
+    NUMERO_IDENTIFICACION_EMPRESA,
+    NOMBRE_EMPRESA,
+    CODIGO_ACTIVIDAD_ECONOMICA_INTERNA,
+    NOMBRE_ACTIVIDAD_ECONOMICA_SECCION,
+    ACTIVIDAD_ECONOMICA,
+    NOMBRE_ACTIVIDAD_ECONOMICA,    
+	PERIODO_LIQUIDADO,
+    PERIODO_MAXIMO,
+    if(PERIODO_LIQUIDADO = PERIODO_MAXIMO, 'Si', 'No') as validacion
+Resident Tabla;
+drop table Tabla;
+
+NoConcatenate
+Tabla3:
+LOAD
+	TIPO_IDENTIFICACION_EMPRESA,
+    NOMBRE_TIPO_IDENTIFICACION,
+    ESTADO_EMPRESA,
+    NOMBRE_ESTADO_EMPRESA,
+    CODIGO_TIPO_APORTANTE,
+    NOMBRE_TIPO_APORTANTE,
+    NUMERO_IDENTIFICACION_EMPRESA,
+    NOMBRE_EMPRESA,
+    CODIGO_ACTIVIDAD_ECONOMICA_INTERNA,
+    NOMBRE_ACTIVIDAD_ECONOMICA_SECCION,
+    ACTIVIDAD_ECONOMICA,
+    NOMBRE_ACTIVIDAD_ECONOMICA,    
+	PERIODO_LIQUIDADO
+Resident Tabla2
+where validacion = 'Si'
+and CODIGO_TIPO_APORTANTE  = 1
+;
+drop table Tabla2;
+
+
+// Crear tabla final eliminando duplicados
+NoConcatenate
+Tabla4:
+LOAD
+    FirstSortedValue(TIPO_IDENTIFICACION_EMPRESA, -PERIODO_LIQUIDADO) as TIPO_IDENTIFICACION_EMPRESA,
+    FirstSortedValue(NOMBRE_TIPO_IDENTIFICACION, -PERIODO_LIQUIDADO) as NOMBRE_TIPO_IDENTIFICACION,
+    FirstSortedValue(ESTADO_EMPRESA, -PERIODO_LIQUIDADO) as ESTADO_EMPRESA,
+    FirstSortedValue(NOMBRE_ESTADO_EMPRESA, -PERIODO_LIQUIDADO) as NOMBRE_ESTADO_EMPRESA,
+    FirstSortedValue(CODIGO_TIPO_APORTANTE, -PERIODO_LIQUIDADO) as CODIGO_TIPO_APORTANTE,
+    FirstSortedValue(NOMBRE_TIPO_APORTANTE, -PERIODO_LIQUIDADO) as NOMBRE_TIPO_APORTANTE,
+    NUMERO_IDENTIFICACION_EMPRESA,
+    FirstSortedValue(NOMBRE_EMPRESA, -PERIODO_LIQUIDADO) as NOMBRE_EMPRESA,
+    FirstSortedValue(CODIGO_ACTIVIDAD_ECONOMICA_INTERNA, -PERIODO_LIQUIDADO) as CODIGO_ACTIVIDAD_ECONOMICA_INTERNA,
+    FirstSortedValue(NOMBRE_ACTIVIDAD_ECONOMICA_SECCION, -PERIODO_LIQUIDADO) as NOMBRE_ACTIVIDAD_ECONOMICA_SECCION,
+    FirstSortedValue(ACTIVIDAD_ECONOMICA, -PERIODO_LIQUIDADO) as ACTIVIDAD_ECONOMICA,
+    FirstSortedValue(NOMBRE_ACTIVIDAD_ECONOMICA, -PERIODO_LIQUIDADO) as NOMBRE_ACTIVIDAD_ECONOMICA,
+    FirstSortedValue(PERIODO_LIQUIDADO, -PERIODO_LIQUIDADO) as PERIODO_LIQUIDADO
+RESIDENT Tabla3
+GROUP BY NUMERO_IDENTIFICACION_EMPRESA;
+
+drop table Tabla3;
+
+
+
+Exit Script;
