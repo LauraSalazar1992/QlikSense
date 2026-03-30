@@ -1,14 +1,14 @@
 
 SHEETS
-{"qInfo":{"qId":"049a2123-9d01-427f-af4c-0fe3c9a90de2","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"049a2123-9d01-427f-af4c-0fe3c9a90de2","approved":false,"published":true,"publishTime":"2026-03-10T13:16:42.236Z","owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-10-27T04:58:34.902Z","modifiedDate":"2026-03-10T13:16:41.982Z","encrypted":true,"privileges":["read","publish"],"title":"5. Reporte Postulaci\u00f3n","description":""},"qData":[]}
-{"qInfo":{"qId":"254d5da3-2155-4ee6-a928-713ba5daaeb7","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"254d5da3-2155-4ee6-a928-713ba5daaeb7","approved":false,"published":true,"publishTime":"2026-03-10T13:16:48.254Z","owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-10-27T05:08:34.806Z","modifiedDate":"2026-03-10T13:16:47.956Z","encrypted":true,"privileges":["read","publish"],"title":"7. Desprovisi\u00f3n","description":""},"qData":[]}
-{"qInfo":{"qId":"299bf344-2c8f-4bf0-9a96-79ef78776ca7","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"299bf344-2c8f-4bf0-9a96-79ef78776ca7","approved":false,"published":true,"publishTime":"2026-03-10T13:16:35.677Z","owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-10-27T04:59:42.785Z","modifiedDate":"2026-03-10T13:16:35.304Z","encrypted":true,"privileges":["read","publish"],"title":"3. Empresas Postulantes","description":""},"qData":[]}
-{"qInfo":{"qId":"3627fc5f-bf83-4464-a883-5af3a0985779","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"3627fc5f-bf83-4464-a883-5af3a0985779","approved":false,"published":true,"publishTime":"2026-03-10T13:16:28.203Z","owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-10-27T05:08:19.106Z","modifiedDate":"2026-03-10T13:16:27.736Z","encrypted":true,"privileges":["read","publish"],"title":"1. Indicadores postulaci\u00f3n","description":""},"qData":[]}
-{"qInfo":{"qId":"38957bff-f5fc-4aa2-97a1-d994ca2280be","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"38957bff-f5fc-4aa2-97a1-d994ca2280be","approved":false,"published":true,"publishTime":"2026-03-10T13:16:32.261Z","owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-10-27T04:23:04.132Z","modifiedDate":"2026-03-10T13:16:31.924Z","encrypted":true,"privileges":["read","publish"],"title":"2. Caracterizaci\u00f3n postulaciones","description":""},"qData":[]}
-{"qInfo":{"qId":"4d1fe470-f5ec-443f-a792-baf5a36c7aeb","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"4d1fe470-f5ec-443f-a792-baf5a36c7aeb","approved":false,"published":true,"publishTime":"2026-03-10T13:16:54.094Z","owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-12-04T03:07:44.931Z","modifiedDate":"2026-03-10T13:16:53.834Z","encrypted":true,"privileges":["read","publish"],"title":"9. Control de operaciones","description":""},"qData":[]}
-{"qInfo":{"qId":"549436a9-f8d8-46da-9c82-a7467e88c5bd","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"549436a9-f8d8-46da-9c82-a7467e88c5bd","approved":false,"published":true,"publishTime":"2026-03-10T13:16:51.149Z","owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-10-27T05:08:45.463Z","modifiedDate":"2026-03-10T13:16:50.908Z","encrypted":true,"privileges":["read","publish"],"title":"8. Nuevas Asignaciones","description":""},"qData":[]}
-{"qInfo":{"qId":"601728c2-6924-4b4d-980a-8e4085fe48c5","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"601728c2-6924-4b4d-980a-8e4085fe48c5","approved":false,"published":true,"publishTime":"2026-03-10T15:06:46.359Z","owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2026-03-10T01:31:38.197Z","modifiedDate":"2026-03-10T15:06:49.284Z","encrypted":true,"privileges":["read","publish"],"title":"4. Posibles Cesantes","description":""},"qData":[]}
-{"qInfo":{"qId":"d90ff8d7-79cc-41f3-942b-c57b791455f7","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"d90ff8d7-79cc-41f3-942b-c57b791455f7","approved":false,"published":true,"publishTime":"2026-03-10T13:16:45.215Z","owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-10-27T05:08:29.453Z","modifiedDate":"2026-03-10T13:16:44.932Z","encrypted":true,"privileges":["read","publish"],"title":"6. Provisi\u00f3n","description":""},"qData":[]}
+{"qInfo":{"qId":"049a2123-9d01-427f-af4c-0fe3c9a90de2","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"049a2123-9d01-427f-af4c-0fe3c9a90de2","approved":false,"published":true,"publishTime":"2026-03-30T18:45:41.800Z","owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-10-27T04:58:34.902Z","modifiedDate":"2026-03-26T00:54:13.122Z","encrypted":true,"privileges":["read","publish"],"title":"5. Reporte Postulaci\u00f3n","description":""},"qData":[]}
+{"qInfo":{"qId":"254d5da3-2155-4ee6-a928-713ba5daaeb7","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"254d5da3-2155-4ee6-a928-713ba5daaeb7","approved":false,"published":true,"publishTime":"2026-03-30T18:45:45.283Z","owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-10-27T05:08:34.806Z","modifiedDate":"2026-03-26T01:16:13.821Z","encrypted":true,"privileges":["read","publish"],"title":"7. Desprovisi\u00f3n","description":""},"qData":[]}
+{"qInfo":{"qId":"299bf344-2c8f-4bf0-9a96-79ef78776ca7","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"299bf344-2c8f-4bf0-9a96-79ef78776ca7","approved":false,"published":true,"publishTime":"2026-03-30T18:45:38.197Z","owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-10-27T04:59:42.785Z","modifiedDate":"2026-03-27T21:25:19.064Z","encrypted":true,"privileges":["read","publish"],"title":"3. Empresas Postulantes","description":""},"qData":[]}
+{"qInfo":{"qId":"3627fc5f-bf83-4464-a883-5af3a0985779","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"3627fc5f-bf83-4464-a883-5af3a0985779","approved":false,"published":true,"publishTime":"2026-03-30T18:45:34.171Z","owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-10-27T05:08:19.106Z","modifiedDate":"2026-03-10T13:16:27.736Z","encrypted":true,"privileges":["read","publish"],"title":"1. Indicadores postulaci\u00f3n","description":""},"qData":[]}
+{"qInfo":{"qId":"38957bff-f5fc-4aa2-97a1-d994ca2280be","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"38957bff-f5fc-4aa2-97a1-d994ca2280be","approved":false,"published":true,"publishTime":"2026-03-30T18:45:36.386Z","owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-10-27T04:23:04.132Z","modifiedDate":"2026-03-10T13:16:31.924Z","encrypted":true,"privileges":["read","publish"],"title":"2. Caracterizaci\u00f3n postulaciones","description":""},"qData":[]}
+{"qInfo":{"qId":"4d1fe470-f5ec-443f-a792-baf5a36c7aeb","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"4d1fe470-f5ec-443f-a792-baf5a36c7aeb","approved":false,"published":true,"publishTime":"2026-03-30T19:00:34.509Z","owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-12-04T03:07:44.931Z","modifiedDate":"2026-03-30T19:01:00.364Z","encrypted":true,"privileges":["read","publish"],"title":"9. Control de operaciones","description":""},"qData":[]}
+{"qInfo":{"qId":"549436a9-f8d8-46da-9c82-a7467e88c5bd","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"549436a9-f8d8-46da-9c82-a7467e88c5bd","approved":false,"published":true,"publishTime":"2026-03-30T18:45:47.091Z","owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-10-27T05:08:45.463Z","modifiedDate":"2026-03-26T01:28:14.884Z","encrypted":true,"privileges":["read","publish"],"title":"8. Nuevas Asignaciones","description":""},"qData":[]}
+{"qInfo":{"qId":"601728c2-6924-4b4d-980a-8e4085fe48c5","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"601728c2-6924-4b4d-980a-8e4085fe48c5","approved":false,"published":true,"publishTime":"2026-03-30T18:45:39.959Z","owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2026-03-10T01:31:38.197Z","modifiedDate":"2026-03-26T20:41:18.403Z","encrypted":true,"privileges":["read","publish"],"title":"4. Posibles Cesantes","description":""},"qData":[]}
+{"qInfo":{"qId":"d90ff8d7-79cc-41f3-942b-c57b791455f7","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"d90ff8d7-79cc-41f3-942b-c57b791455f7","approved":false,"published":true,"publishTime":"2026-03-30T18:45:43.597Z","owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-10-27T05:08:29.453Z","modifiedDate":"2026-03-26T01:12:43.164Z","encrypted":true,"privileges":["read","publish"],"title":"6. Provisi\u00f3n","description":""},"qData":[]}
 
 OBJECTS ON SHEETS
 {"name":"f8adc597-5f94-4a32-93d5-c90d3e965ad4","type":"filterpane","col":0,"row":1,"colspan":24,"rowspan":1,"bounds":{"y":8.333333333333332,"x":0,"width":100,"height":8.333333333333332}}
@@ -104,26 +104,30 @@ OBJECTS ON SHEETS
 {"name":"bbc7fcf3-4a88-4db6-84c2-5b87d410b824","type":"swr-sense-navigation","col":21,"row":1,"colspan":3,"rowspan":1,"bounds":{"y":8.333333333333332,"x":87.5,"width":12.5,"height":8.333333333333332}}
 {"name":"01fa1a0b-1a53-474b-9b1e-da021f524387","type":"swr-sense-navigation","col":6,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":25,"width":12.5,"height":8.333333333333332}}
 {"name":"d45b98b1-d047-41a5-9138-edcc0db0284d","type":"swr-sense-navigation","col":21,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":87.5,"width":12.5,"height":8.333333333333332}}
-{"name":"PpbzDp","type":"table","col":12,"row":8,"colspan":12,"rowspan":4,"bounds":{"y":66.66666666666666,"x":50,"width":50,"height":33.33333333333333}}
-{"name":"BHyWe","type":"kpi","col":6,"row":2,"colspan":6,"rowspan":2,"bounds":{"y":16.666666666666664,"x":25,"width":25,"height":16.666666666666664}}
-{"name":"tyfvQbc","type":"table","col":12,"row":2,"colspan":12,"rowspan":6,"bounds":{"y":16.666666666666664,"x":50,"width":50,"height":50}}
-{"name":"ZjPyE","type":"kpi","col":0,"row":4,"colspan":6,"rowspan":2,"bounds":{"y":33.33333333333333,"x":0,"width":25,"height":16.666666666666664}}
+{"name":"PpbzDp","type":"table","col":12,"row":6,"colspan":12,"rowspan":6,"bounds":{"y":50,"x":50,"width":50,"height":50}}
+{"name":"BHyWe","type":"kpi","col":0,"row":4,"colspan":6,"rowspan":2,"bounds":{"y":33.33333333333333,"x":0,"width":25,"height":16.666666666666664}}
+{"name":"tyfvQbc","type":"table","col":12,"row":2,"colspan":12,"rowspan":4,"bounds":{"y":16.666666666666664,"x":50,"width":50,"height":33.33333333333333}}
+{"name":"ZjPyE","type":"kpi","col":6,"row":2,"colspan":6,"rowspan":2,"bounds":{"y":16.666666666666664,"x":25,"width":25,"height":16.666666666666664}}
 {"name":"aMCm","type":"kpi","col":6,"row":4,"colspan":6,"rowspan":2,"bounds":{"y":33.33333333333333,"x":25,"width":25,"height":16.666666666666664}}
 {"name":"wUuvnu","type":"barchart","col":0,"row":6,"colspan":12,"rowspan":6,"bounds":{"y":50,"x":0,"width":50,"height":50}}
-{"name":"fjrduQ","type":"kpi","col":0,"row":2,"colspan":6,"rowspan":2,"bounds":{"y":16.666666666666664,"x":0,"width":25,"height":16.666666666666664}}
+{"name":"fjrduQ","type":"kpi","col":0,"row":2,"colspan":6,"rowspan":2,"bounds":{"x":0,"y":16.666666666666664,"width":25,"height":16.666666666666664}}
 {"name":"PeHpqEA","type":"swr-sense-navigation","col":9,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":37.5,"width":12.5,"height":8.333333333333332}}
 {"name":"20f12eaa-b9f9-44c7-8e55-b5037fcd669f","type":"filterpane","col":0,"row":1,"colspan":24,"rowspan":1,"bounds":{"y":8.333333333333332,"x":0,"width":100,"height":8.333333333333332}}
 {"name":"d75e63eb-0dc3-416a-8e16-da4aa84fed8e","type":"swr-sense-navigation","col":0,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":0,"width":12.5,"height":8.333333333333332}}
 {"name":"e6733254-7ed4-4a8d-a9a8-76999635bfd9","type":"swr-sense-navigation","col":12,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":50,"width":12.5,"height":8.333333333333332}}
 {"name":"798f6919-b2dd-4d6f-b509-6770b879a28a","type":"swr-sense-navigation","col":15,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":62.5,"width":12.5,"height":8.333333333333332}}
 {"name":"db88a5c7-d511-4391-9e63-7bbfeeb2c71d","type":"swr-sense-navigation","col":18,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":75,"width":12.5,"height":8.333333333333332}}
-{"name":"8dc1b90d-36df-4e67-a995-39c6114cc6ab","type":"table","col":0,"row":4,"colspan":24,"rowspan":8,"bounds":{"y":33.33333333333333,"x":0,"width":100,"height":66.66666666666666}}
-{"name":"58c11ee3-e342-4c15-819c-d0d8653e6458","type":"kpi","col":0,"row":2,"colspan":12,"rowspan":2,"bounds":{"y":16.666666666666664,"x":0,"width":50,"height":16.666666666666664}}
-{"name":"206c91c4-c537-4a0c-848b-2a80e9fdbfec","type":"kpi","col":12,"row":2,"colspan":12,"rowspan":2,"bounds":{"y":16.666666666666664,"x":50,"width":50,"height":16.666666666666664}}
+{"name":"8dc1b90d-36df-4e67-a995-39c6114cc6ab","type":"table","col":11,"row":5,"colspan":13,"rowspan":7,"bounds":{"y":41.66666666666667,"x":45.83333333333333,"width":54.166666666666664,"height":58.333333333333336}}
+{"name":"58c11ee3-e342-4c15-819c-d0d8653e6458","type":"kpi","col":8,"row":4,"colspan":8,"rowspan":1,"bounds":{"y":33.33333333333333,"x":33.33333333333333,"width":33.33333333333333,"height":8.333333333333332}}
+{"name":"206c91c4-c537-4a0c-848b-2a80e9fdbfec","type":"kpi","col":16,"row":4,"colspan":8,"rowspan":1,"bounds":{"y":33.33333333333333,"x":66.66666666666666,"width":33.33333333333333,"height":8.333333333333332}}
 {"name":"3253b4db-42a9-4059-a1b2-01ca3ad6bd52","type":"swr-sense-navigation","col":3,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":12.5,"width":12.5,"height":8.333333333333332}}
 {"name":"21fd8be3-ddb5-43ff-8350-f9d35cd28450","type":"swr-sense-navigation","col":6,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":25,"width":12.5,"height":8.333333333333332}}
 {"name":"JTaep","type":"swr-sense-navigation","col":21,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":87.5,"width":12.5,"height":8.333333333333332}}
 {"name":"jsNR","type":"swr-sense-navigation","col":9,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":37.5,"width":12.5,"height":8.333333333333332}}
+{"name":"qBrJgCx","type":"kpi","col":0,"row":2,"colspan":8,"rowspan":3,"bounds":{"y":16.666666666666664,"x":0,"width":33.33333333333333,"height":25}}
+{"name":"gEm","type":"linechart","col":0,"row":5,"colspan":11,"rowspan":7,"bounds":{"y":41.66666666666667,"x":0,"width":45.83333333333333,"height":58.333333333333336}}
+{"name":"wYjFW","type":"kpi","col":8,"row":2,"colspan":8,"rowspan":2,"bounds":{"y":16.666666666666664,"x":33.33333333333333,"width":33.33333333333333,"height":16.666666666666664}}
+{"name":"TakTuYq","type":"kpi","col":16,"row":2,"colspan":8,"rowspan":2,"bounds":{"y":16.666666666666664,"x":66.66666666666666,"width":33.33333333333333,"height":16.666666666666664}}
 {"name":"88353c10-9b02-4a8f-8c11-95408551f2b0","type":"swr-sense-navigation","col":0,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":0,"width":12.5,"height":8.333333333333332}}
 {"name":"67002806-5b24-47ae-b861-77ef692b5a0d","type":"swr-sense-navigation","col":12,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":50,"width":12.5,"height":8.333333333333332}}
 {"name":"7a7e81b1-2062-4d1a-b9c6-56c6f65f3d3c","type":"swr-sense-navigation","col":15,"row":0,"colspan":3,"rowspan":1,"bounds":{"y":0,"x":62.5,"width":12.5,"height":8.333333333333332}}
@@ -177,148 +181,143 @@ MEASURES
 {"qInfo":{"qId":"DTmmdq","qType":"measure"},"qMeta":{"_resourcetype":"app.object","_objecttype":"measure","id":"DTmmdq","approved":false,"published":false,"owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-07-24T06:06:13.285Z","modifiedDate":"2025-10-08T14:25:34.321Z","encrypted":true,"privileges":["read","update","delete","publish"],"title":"Inconsistencias en la postulaci\u00f3n","description":"","tags":[]},"qData":[]}
 {"qInfo":{"qId":"DWtQQB","qType":"measure"},"qMeta":{"_resourcetype":"app.object","_objecttype":"measure","id":"DWtQQB","approved":false,"published":false,"owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-10-03T05:42:50.371Z","modifiedDate":"2025-12-04T02:49:30.474Z","encrypted":true,"privileges":["read","update","delete","publish"],"title":"Provision salud","description":"","tags":[]},"qData":[]}
 {"qInfo":{"qId":"Gqapbt","qType":"measure"},"qMeta":{"_resourcetype":"app.object","_objecttype":"measure","id":"Gqapbt","approved":false,"published":false,"owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-12-04T02:25:30.934Z","modifiedDate":"2025-12-04T02:25:30.934Z","encrypted":true,"privileges":["read","update","delete","publish"],"title":"Postulaciones con inconsistencias","description":"","tags":[]},"qData":[]}
-{"qInfo":{"qId":"HMV","qType":"measure"},"qMeta":{"_resourcetype":"app.object","_objecttype":"measure","id":"HMV","approved":false,"published":false,"owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-12-04T02:46:41.937Z","modifiedDate":"2025-12-04T02:52:24.330Z","encrypted":true,"privileges":["read","update","delete","publish"],"title":"Asignados","description":"","tags":[]},"qData":[]}
+{"qInfo":{"qId":"HMV","qType":"measure"},"qMeta":{"_resourcetype":"app.object","_objecttype":"measure","id":"HMV","approved":false,"published":false,"owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-12-04T02:46:41.937Z","modifiedDate":"2026-03-26T01:04:39.433Z","encrypted":true,"privileges":["read","update","delete","publish"],"title":"Asignados","description":"","tags":[]},"qData":[]}
 {"qInfo":{"qId":"VJEYXAT","qType":"measure"},"qMeta":{"_resourcetype":"app.object","_objecttype":"measure","id":"VJEYXAT","approved":false,"published":false,"owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-12-04T02:48:29.306Z","modifiedDate":"2025-12-04T02:48:29.306Z","encrypted":true,"privileges":["read","update","delete","publish"],"title":"Reactivados","description":"","tags":[]},"qData":[]}
 {"qInfo":{"qId":"XPNjaQ","qType":"measure"},"qMeta":{"_resourcetype":"app.object","_objecttype":"measure","id":"XPNjaQ","approved":false,"published":false,"owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-12-04T02:26:42.776Z","modifiedDate":"2025-12-04T02:26:42.776Z","encrypted":true,"privileges":["read","update","delete","publish"],"title":"Devoluciones subsanadas","description":"","tags":[]},"qData":[]}
-{"qInfo":{"qId":"ZEsNmDq","qType":"measure"},"qMeta":{"_resourcetype":"app.object","_objecttype":"measure","id":"ZEsNmDq","approved":false,"published":false,"owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-12-04T02:13:20.974Z","modifiedDate":"2025-12-04T02:13:20.974Z","encrypted":true,"privileges":["read","update","delete","publish"],"title":"Postulaciones en devoluci\u00f3n","description":"","tags":[]},"qData":[]}
+{"qInfo":{"qId":"ZEsNmDq","qType":"measure"},"qMeta":{"_resourcetype":"app.object","_objecttype":"measure","id":"ZEsNmDq","approved":false,"published":false,"owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-12-04T02:13:20.974Z","modifiedDate":"2026-03-26T00:57:08.566Z","encrypted":true,"privileges":["read","update","delete","publish"],"title":"Postulaciones en devoluci\u00f3n","description":"","tags":[]},"qData":[]}
 {"qInfo":{"qId":"a053e0a7-5d72-40fd-b711-307c424d46f8","qType":"measure"},"qMeta":{"_resourcetype":"app.object","_objecttype":"measure","id":"a053e0a7-5d72-40fd-b711-307c424d46f8","approved":false,"published":false,"owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-10-03T05:50:40.980Z","modifiedDate":"2025-12-04T02:58:26.673Z","encrypted":true,"privileges":["read","update","delete","publish"],"title":"Desprovisi\u00f3n Transferencia","description":"","tags":[]},"qData":[]}
 {"qInfo":{"qId":"aYppVvC","qType":"measure"},"qMeta":{"_resourcetype":"app.object","_objecttype":"measure","id":"aYppVvC","approved":false,"published":false,"owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-12-04T02:17:48.387Z","modifiedDate":"2025-12-04T02:17:48.387Z","encrypted":true,"privileges":["read","update","delete","publish"],"title":"Cantidad de empresas","description":"","tags":[]},"qData":[]}
 {"qInfo":{"qId":"bDaJKJG","qType":"measure"},"qMeta":{"_resourcetype":"app.object","_objecttype":"measure","id":"bDaJKJG","approved":false,"published":false,"owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-12-04T02:12:05.230Z","modifiedDate":"2025-12-04T02:12:05.230Z","encrypted":true,"privileges":["read","update","delete","publish"],"title":"Postulaciones denegadas","description":"","tags":[]},"qData":[]}
 {"qInfo":{"qId":"c02e4841-52bb-436d-bbf6-3e826fb961ea","qType":"measure"},"qMeta":{"_resourcetype":"app.object","_objecttype":"measure","id":"c02e4841-52bb-436d-bbf6-3e826fb961ea","approved":false,"published":false,"owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-07-24T06:13:37.316Z","modifiedDate":"2025-07-24T06:14:37.586Z","encrypted":true,"privileges":["read","update","delete","publish"],"title":"Tasa de subsanaci\u00f3n","description":"","tags":[]},"qData":[]}
-{"qInfo":{"qId":"cjkGrw","qType":"measure"},"qMeta":{"_resourcetype":"app.object","_objecttype":"measure","id":"cjkGrw","approved":false,"published":false,"owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-12-04T02:45:51.101Z","modifiedDate":"2025-12-04T02:45:51.101Z","encrypted":true,"privileges":["read","update","delete","publish"],"title":"N\u00famero de provisiones","description":"","tags":[]},"qData":[]}
+{"qInfo":{"qId":"cjkGrw","qType":"measure"},"qMeta":{"_resourcetype":"app.object","_objecttype":"measure","id":"cjkGrw","approved":false,"published":false,"owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-12-04T02:45:51.101Z","modifiedDate":"2026-03-27T21:22:03.688Z","encrypted":true,"privileges":["read","update","delete","publish"],"title":"N\u00famero de provisiones","description":"","tags":[]},"qData":[]}
 {"qInfo":{"qId":"e610987f-46ad-4a79-9395-af767e0be71f","qType":"measure"},"qMeta":{"_resourcetype":"app.object","_objecttype":"measure","id":"e610987f-46ad-4a79-9395-af767e0be71f","approved":false,"published":false,"owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-10-03T05:45:18.708Z","modifiedDate":"2025-10-03T05:45:48.974Z","encrypted":true,"privileges":["read","update","delete","publish"],"title":"Total Provisi\u00f3n","description":"","tags":[]},"qData":[]}
 {"qInfo":{"qId":"fad30ee4-a516-4db2-a87b-6ed5ad164cc2","qType":"measure"},"qMeta":{"_resourcetype":"app.object","_objecttype":"measure","id":"fad30ee4-a516-4db2-a87b-6ed5ad164cc2","approved":false,"published":false,"owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-10-03T05:49:10.135Z","modifiedDate":"2025-12-04T02:56:59.012Z","encrypted":true,"privileges":["read","update","delete","publish"],"title":"Desprovisi\u00f3n Salud","description":"","tags":[]},"qData":[]}
-{"qInfo":{"qId":"mvV","qType":"measure"},"qMeta":{"_resourcetype":"app.object","_objecttype":"measure","id":"mvV","approved":false,"published":false,"owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-12-04T02:55:48.123Z","modifiedDate":"2025-12-04T02:55:48.123Z","encrypted":true,"privileges":["read","update","delete","publish"],"title":"N\u00famero de desprovisiones","description":"","tags":[]},"qData":[]}
+{"qInfo":{"qId":"mvV","qType":"measure"},"qMeta":{"_resourcetype":"app.object","_objecttype":"measure","id":"mvV","approved":false,"published":false,"owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-12-04T02:55:48.123Z","modifiedDate":"2026-03-27T21:20:58.441Z","encrypted":true,"privileges":["read","update","delete","publish"],"title":"N\u00famero de desprovisiones","description":"","tags":[]},"qData":[]}
 {"qInfo":{"qId":"pjgyJCD","qType":"measure"},"qMeta":{"_resourcetype":"app.object","_objecttype":"measure","id":"pjgyJCD","approved":false,"published":false,"owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-10-22T16:56:17.203Z","modifiedDate":"2025-12-04T02:10:19.188Z","encrypted":true,"privileges":["read","update","delete","publish"],"title":"N\u00famero de postulaciones","description":"","tags":[]},"qData":[]}
 {"qInfo":{"qId":"wscTRgm","qType":"measure"},"qMeta":{"_resourcetype":"app.object","_objecttype":"measure","id":"wscTRgm","approved":false,"published":false,"owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-12-04T02:10:54.522Z","modifiedDate":"2025-12-04T02:10:54.522Z","encrypted":true,"privileges":["read","update","delete","publish"],"title":"Postulaciones aprobadas","description":"","tags":[]},"qData":[]}
 
 VARIABLES
-{"qName":"vfechaDiariaFormato","qDefinition":"10\/03\/2026","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"c1119cd2-d9df-438c-8b9f-2eec06ede2ca","qType":"variable"},"qData":[],"qIsScriptCreated":true}
+{"qName":"vfechaDiariaFormato","qDefinition":"26\/03\/2026","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"c1119cd2-d9df-438c-8b9f-2eec06ede2ca","qType":"variable"},"qData":[],"qIsScriptCreated":true}
 {"qName":"va\u00f1o","qDefinition":"2026","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"e08d6016-f611-4215-bd85-4d12aa66b0f4","qType":"variable"},"qData":[],"qIsScriptCreated":true}
 {"qName":"vmes","qDefinition":"03","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"bc11c8a8-6de4-42cc-a593-83f1b75b3647","qType":"variable"},"qData":[],"qIsScriptCreated":true}
 {"qName":"vmesAnterior","qDefinition":"02","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"f24d8792-8a3d-4d94-ad24-553e714fa673","qType":"variable"},"qData":[],"qIsScriptCreated":true}
-{"qName":"vdia","qDefinition":"10","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"23f86aae-be93-4ca5-9250-5539b393be05","qType":"variable"},"qData":[],"qIsScriptCreated":true}
+{"qName":"vdia","qDefinition":"26","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"23f86aae-be93-4ca5-9250-5539b393be05","qType":"variable"},"qData":[],"qIsScriptCreated":true}
 {"qName":"vmes_nombre","qDefinition":"MARZO","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"10ceefa9-718d-45be-bb36-8e90e76fbe33","qType":"variable"},"qData":[],"qIsScriptCreated":true}
 {"qName":"vfecha_inicial","qDefinition":"2026-03-01","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"1d274ccb-de91-45c5-8904-3ba26734a325","qType":"variable"},"qData":[],"qIsScriptCreated":true}
 {"qName":"vfecha_final","qDefinition":"2026-03-31","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"28cfdc03-0687-4722-8746-92c96090bb22","qType":"variable"},"qData":[],"qIsScriptCreated":true}
 {"qName":"vperiodo","qDefinition":"202603","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"df23a82f-bd6b-495f-9d9b-4f2588364794","qType":"variable"},"qData":[],"qIsScriptCreated":true}
 {"qName":"contrato","qDefinition":"24000457","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"c637a448-107b-48f0-b325-19432ae68f76","qType":"variable"},"qData":[],"qIsScriptCreated":true}
 {"qName":"vmensaje","qDefinition":"Hoy no se manda notificaci\u00f3n","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"e23d53e4-fc99-4123-9bc6-2e2d360636af","qType":"variable"},"qData":[],"qIsScriptCreated":true}
-{"qName":"fecha_envio","qDefinition":"10\/03\/2026 10:11:35 AM","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"6f233b91-1694-45df-b4c9-0a93aa225b09","qType":"variable"},"qData":[],"qIsScriptCreated":true}
+{"qName":"fecha_envio","qDefinition":"25\/03\/2026 07:39:16 PM","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"6f233b91-1694-45df-b4c9-0a93aa225b09","qType":"variable"},"qData":[],"qIsScriptCreated":true}
 
 FIELDS
-{"qIsHidden":true,"qIsSystem":true,"qName":"$Field","qCardinal":109,"qTags":["$text","$key","$hidden","$system"],"qSrcTables":[]}
-{"qIsHidden":true,"qIsSystem":true,"qName":"$Table","qCardinal":6,"qTags":["$text","$key","$hidden","$system"],"qSrcTables":[]}
-{"qIsHidden":true,"qIsSystem":true,"qName":"$Rows","qCardinal":5,"qTags":["$numeric","$integer","$hidden","$system"],"qSrcTables":[]}
-{"qIsHidden":true,"qIsSystem":true,"qName":"$Fields","qCardinal":6,"qTags":["$numeric","$integer","$hidden","$system"],"qSrcTables":[]}
-{"qIsHidden":true,"qIsSystem":true,"qName":"$FieldNo","qCardinal":50,"qTags":["$numeric","$integer","$hidden","$system"],"qSrcTables":[]}
-{"qIsHidden":true,"qIsSystem":true,"qName":"$Info","qCardinal":1,"qTags":["$text","$ascii","$hidden","$system"],"qSrcTables":[]}
-{"qName":"%key_principal","qCardinal":112045,"qTags":["$text","$ascii","$key"],"qSrcTables":["Tabla","caracter\u00edsticas"]}
-{"qName":"A\u00d1O","qCardinal":5,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla"]}
-{"qName":"MES","qCardinal":12,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla"]}
-{"qName":"MES_NUMERO","qCardinal":12,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla"]}
-{"qName":"%ID_radicacion","qCardinal":10270,"qTags":["$text","$ascii","$key"],"qSrcTables":["Tabla","nuevas_asignaciones"]}
-{"qName":"tipo_beneficio","qCardinal":5,"qTags":["$text","$ascii"],"qSrcTables":["Tabla"]}
-{"qName":"numero_identificacion","qCardinal":64964,"qTags":["$text","$ascii"],"qSrcTables":["Tabla"]}
-{"qName":"fecha_postulacion","qCardinal":531,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["Tabla"]}
-{"qName":"fecha_aprobacion","qCardinal":249,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["Tabla"]}
-{"qName":"%ID_postulacion","qCardinal":22888,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla"]}
-{"qName":"%ID_aprobacion","qCardinal":22294,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla"]}
-{"qName":"%key_postulacion_his","qCardinal":22888,"qTags":["$numeric","$integer","$key"],"qSrcTables":["Tabla","Historico1"]}
-{"qName":"%key_radicacion_his","qCardinal":14261,"qTags":["$numeric","$integer","$key"],"qSrcTables":["Tabla","Historico2"]}
-{"qName":"estado_aprobacion","qCardinal":2,"qTags":["$text","$ascii"],"qSrcTables":["Tabla"]}
-{"qName":"cod_estado_solicitud_postulacion","qCardinal":2,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla"]}
-{"qName":"cod_observacion_postulacion","qCardinal":7,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla"]}
-{"qName":"cod_estado_solicitud_radicado","qCardinal":5,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla"]}
-{"qName":"estado_solicitud_postulacion","qCardinal":2,"qTags":["$text","$ascii"],"qSrcTables":["Tabla"]}
-{"qName":"observacion_postulacion","qCardinal":8,"qTags":["$text","$ascii"],"qSrcTables":["Tabla"]}
-{"qName":"estado_solicitud_radicado","qCardinal":5,"qTags":["$text","$ascii"],"qSrcTables":["Tabla"]}
-{"qName":"cod_estado_beneficio","qCardinal":6,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla"]}
-{"qName":"estado_beneficio","qCardinal":6,"qTags":["$text","$ascii"],"qSrcTables":["Tabla"]}
-{"qName":"fecha_cancelado","qCardinal":84,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["Tabla"]}
-{"qName":"observacion_cancelado","qCardinal":0,"qTags":["$text","$ascii"],"qSrcTables":["Tabla"]}
-{"qName":"vigencia","qCardinal":4,"qTags":["$text","$ascii"],"qSrcTables":["Tabla"]}
-{"qName":"RADICADO","qCardinal":2,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla"]}
-{"qName":"APROBADO","qCardinal":2,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla"]}
-{"qName":"cod_estado_beneficio_provision","qCardinal":6,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla"]}
-{"qName":"estado_beneficio_provision","qCardinal":6,"qTags":["$text","$ascii"],"qSrcTables":["Tabla"]}
-{"qName":"id_detalle_provisiones","qCardinal":8160,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla"]}
-{"qName":"fecha_provision","qCardinal":42,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["Tabla"]}
-{"qName":"reactivado","qCardinal":2,"qTags":["$text","$ascii"],"qSrcTables":["Tabla"]}
-{"qName":"fecha_suspension","qCardinal":57,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["Tabla"]}
-{"qName":"observacion_provisi\u00f3n","qCardinal":42,"qTags":["$text","$ascii"],"qSrcTables":["Tabla"]}
-{"qName":"provisionado_salud","qCardinal":18,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla"]}
-{"qName":"provisionado_pension","qCardinal":18,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla"]}
-{"qName":"provisionado_cuota_monetaria","qCardinal":1,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla"]}
-{"qName":"provisionado_bono","qCardinal":16,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla"]}
-{"qName":"total_provisionado","qCardinal":42,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla"]}
-{"qName":"fecha_desprovision","qCardinal":198,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["Tabla"]}
-{"qName":"id_detalle_desprovisiones","qCardinal":5889,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla"]}
-{"qName":"cod_estado_beneficio_desprovision","qCardinal":5,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla"]}
-{"qName":"estado_beneficio_desprovision","qCardinal":4,"qTags":["$text","$ascii"],"qSrcTables":["Tabla"]}
-{"qName":"observacion_desprovision","qCardinal":3,"qTags":["$text"],"qSrcTables":["Tabla"]}
-{"qName":"desprovisionado_salud","qCardinal":23,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla"]}
-{"qName":"desprovisionado_pension","qCardinal":23,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla"]}
-{"qName":"desprovisionado_cuota","qCardinal":1,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla"]}
-{"qName":"desprovisionado_bono","qCardinal":18,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla"]}
-{"qName":"total_desprovisionado","qCardinal":90,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla"]}
-{"qName":"%key_postulacion_his2","qCardinal":22888,"qTags":["$numeric","$integer","$key"],"qSrcTables":["Tabla","Tiempos"]}
+{"qIsHidden":true,"qIsSystem":true,"qName":"$Field","qCardinal":104,"qTags":["$text","$key","$hidden","$system"],"qSrcTables":[]}
+{"qIsHidden":true,"qIsSystem":true,"qName":"$Table","qCardinal":4,"qTags":["$text","$key","$hidden","$system"],"qSrcTables":[]}
+{"qIsHidden":true,"qIsSystem":true,"qName":"$Rows","qCardinal":4,"qTags":["$numeric","$integer","$hidden","$system"],"qSrcTables":[]}
+{"qIsHidden":true,"qIsSystem":true,"qName":"$Fields","qCardinal":4,"qTags":["$numeric","$integer","$hidden","$system"],"qSrcTables":[]}
+{"qIsHidden":true,"qIsSystem":true,"qName":"$FieldNo","qCardinal":53,"qTags":["$numeric","$integer","$hidden","$system"],"qSrcTables":[]}
+{"qIsHidden":true,"qIsSystem":true,"qName":"$Info","qCardinal":1,"qTags":["$ascii","$text","$hidden","$system"],"qSrcTables":[]}
+{"qName":"%key_principal","qCardinal":112429,"qTags":["$ascii","$text","$key"],"qSrcTables":["Tabla_principal","caracter\u00edsticas"]}
+{"qName":"%key_postulacion_his","qCardinal":23267,"qTags":["$numeric","$integer","$key"],"qSrcTables":["Tabla_principal","historico_postulacion"]}
+{"qName":"%key_radicacion_his","qCardinal":14608,"qTags":["$numeric","$integer","$key"],"qSrcTables":["Tabla_principal","historico_radicacion"]}
+{"qName":"%ID_radicacion","qCardinal":10617,"qTags":["$ascii","$text"],"qSrcTables":["Tabla_principal"]}
+{"qName":"A\u00d1O","qCardinal":5,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla_principal"]}
+{"qName":"MES","qCardinal":12,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla_principal"]}
+{"qName":"MES_NUMERO","qCardinal":12,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla_principal"]}
+{"qName":"PERIODO_POSTULACION","qCardinal":43,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla_principal"]}
+{"qName":"numero_identificacion","qCardinal":65035,"qTags":["$ascii","$text"],"qSrcTables":["Tabla_principal"]}
+{"qName":"tipo_beneficio","qCardinal":6,"qTags":["$ascii","$text"],"qSrcTables":["Tabla_principal"]}
+{"qName":"fecha_postulacion","qCardinal":534,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["Tabla_principal"]}
+{"qName":"cod_estado_solicitud_postulacion","qCardinal":4,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla_principal"]}
+{"qName":"estado_solicitud_postulacion","qCardinal":4,"qTags":["$ascii","$text"],"qSrcTables":["Tabla_principal"]}
+{"qName":"cod_observacion_postulacion","qCardinal":14,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla_principal"]}
+{"qName":"observacion_postulacion","qCardinal":12,"qTags":["$text"],"qSrcTables":["Tabla_principal"]}
+{"qName":"reactivado_postulacion","qCardinal":2,"qTags":["$ascii","$text"],"qSrcTables":["Tabla_principal"]}
+{"qName":"cod_estado_solicitud_radicado","qCardinal":7,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla_principal"]}
+{"qName":"estado_solicitud_radicado","qCardinal":7,"qTags":["$ascii","$text"],"qSrcTables":["Tabla_principal"]}
+{"qName":"vigencia","qCardinal":4,"qTags":["$ascii","$text"],"qSrcTables":["Tabla_principal"]}
+{"qName":"RADICADO","qCardinal":2,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla_principal"]}
+{"qName":"fecha_aprobacion","qCardinal":256,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["Tabla_principal"]}
+{"qName":"cod_estado_beneficio","qCardinal":7,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla_principal"]}
+{"qName":"estado_beneficio","qCardinal":7,"qTags":["$ascii","$text"],"qSrcTables":["Tabla_principal"]}
+{"qName":"APROBADO","qCardinal":2,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla_principal"]}
+{"qName":"fecha_provision","qCardinal":42,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["Tabla_principal"]}
+{"qName":"cod_estado_beneficio_provision","qCardinal":6,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla_principal"]}
+{"qName":"estado_beneficio_provision","qCardinal":6,"qTags":["$ascii","$text"],"qSrcTables":["Tabla_principal"]}
+{"qName":"fecha_suspension","qCardinal":57,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["Tabla_principal"]}
+{"qName":"provisionado_salud","qCardinal":18,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla_principal"]}
+{"qName":"provisionado_pension","qCardinal":18,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla_principal"]}
+{"qName":"provisionado_cuota_monetaria","qCardinal":1,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla_principal"]}
+{"qName":"provisionado_bono","qCardinal":16,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla_principal"]}
+{"qName":"total_provisionado","qCardinal":42,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla_principal"]}
+{"qName":"meses_liquidados","qCardinal":4,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla_principal"]}
+{"qName":"meses_pendientes","qCardinal":7,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla_principal"]}
+{"qName":"observacion_provisi\u00f3n","qCardinal":42,"qTags":["$ascii","$text"],"qSrcTables":["Tabla_principal"]}
+{"qName":"fecha_desprovision","qCardinal":198,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["Tabla_principal"]}
+{"qName":"cod_estado_beneficio_desprovision","qCardinal":5,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla_principal"]}
+{"qName":"estado_beneficio_desprovision","qCardinal":4,"qTags":["$ascii","$text"],"qSrcTables":["Tabla_principal"]}
+{"qName":"desprovisionado_salud","qCardinal":23,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla_principal"]}
+{"qName":"desprovisionado_pension","qCardinal":23,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla_principal"]}
+{"qName":"desprovisionado_cuota","qCardinal":1,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla_principal"]}
+{"qName":"desprovisionado_bono","qCardinal":18,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla_principal"]}
+{"qName":"total_desprovisionado","qCardinal":90,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla_principal"]}
+{"qName":"observacion_desprovision","qCardinal":3,"qTags":["$text"],"qSrcTables":["Tabla_principal"]}
+{"qName":"fecha_cruce","qCardinal":14,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["Tabla_principal"]}
+{"qName":"cod_estado_nuevas_asignaciones","qCardinal":1,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla_principal"]}
+{"qName":"estado_nuevas_asignaciones","qCardinal":1,"qTags":["$ascii","$text"],"qSrcTables":["Tabla_principal"]}
+{"qName":"observaciones_cruce","qCardinal":2,"qTags":["$text"],"qSrcTables":["Tabla_principal"]}
+{"qName":"resultado_afiliacion","qCardinal":3,"qTags":["$ascii","$text"],"qSrcTables":["Tabla_principal"]}
+{"qName":"observacion_resultado","qCardinal":33,"qTags":["$ascii","$text"],"qSrcTables":["Tabla_principal"]}
+{"qName":"estado_asignacion","qCardinal":3,"qTags":["$ascii","$text"],"qSrcTables":["Tabla_principal"]}
+{"qName":"estado_aprobacion","qCardinal":2,"qTags":["$ascii","$text"],"qSrcTables":["Tabla_principal"]}
 {"qName":"tipo_identificacion","qCardinal":4,"qTags":["$text"],"qSrcTables":["caracter\u00edsticas"]}
-{"qName":"primer_nombre","qCardinal":1726,"qTags":["$text"],"qSrcTables":["caracter\u00edsticas"]}
-{"qName":"segundo_nombre","qCardinal":1125,"qTags":["$text"],"qSrcTables":["caracter\u00edsticas"]}
-{"qName":"primer_apellido","qCardinal":1153,"qTags":["$text"],"qSrcTables":["caracter\u00edsticas"]}
-{"qName":"segundo_apellido","qCardinal":1068,"qTags":["$text"],"qSrcTables":["caracter\u00edsticas"]}
-{"qName":"genero","qCardinal":3,"qTags":["$text","$ascii"],"qSrcTables":["caracter\u00edsticas"]}
-{"qName":"categoria","qCardinal":5,"qTags":["$text","$ascii"],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"primer_nombre","qCardinal":1755,"qTags":["$text"],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"segundo_nombre","qCardinal":1141,"qTags":["$text"],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"primer_apellido","qCardinal":1169,"qTags":["$text"],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"segundo_apellido","qCardinal":1080,"qTags":["$text"],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"genero","qCardinal":3,"qTags":["$ascii","$text"],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"categoria","qCardinal":5,"qTags":["$ascii","$text"],"qSrcTables":["caracter\u00edsticas"]}
 {"qName":"municipio","qCardinal":177,"qTags":["$text"],"qSrcTables":["caracter\u00edsticas"]}
-{"qName":"departamento","qCardinal":37,"qTags":["$text","$ascii"],"qSrcTables":["caracter\u00edsticas"]}
-{"qName":"ultima_ccf","qCardinal":3,"qTags":["$text","$ascii"],"qSrcTables":["caracter\u00edsticas"]}
-{"qName":"nit_empleador","qCardinal":11978,"qTags":["$text","$ascii"],"qSrcTables":["caracter\u00edsticas"]}
-{"qName":"nombre_empresa","qCardinal":12573,"qTags":["$text"],"qSrcTables":["caracter\u00edsticas"]}
-{"qName":"nombre_empresa2","qCardinal":12054,"qTags":[],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"departamento","qCardinal":37,"qTags":["$ascii","$text"],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"ultima_ccf","qCardinal":3,"qTags":["$ascii","$text"],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"nit_empleador","qCardinal":12009,"qTags":["$ascii","$text"],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"nombre_empresa","qCardinal":12797,"qTags":["$text"],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"nombre_empresa2","qCardinal":12084,"qTags":[],"qSrcTables":["caracter\u00edsticas"]}
 {"qName":"nombre_eps","qCardinal":39,"qTags":["$text"],"qSrcTables":["caracter\u00edsticas"]}
-{"qName":"nombre_afp","qCardinal":7,"qTags":["$text","$ascii"],"qSrcTables":["caracter\u00edsticas"]}
-{"qName":"tipo_trabajador_aportes","qCardinal":3,"qTags":["$text","$ascii"],"qSrcTables":["caracter\u00edsticas"]}
-{"qName":"fecha_nacimiento","qCardinal":8599,"qTags":["$numeric","$integer"],"qSrcTables":["caracter\u00edsticas"]}
-{"qName":"direccion_solicitante","qCardinal":21285,"qTags":["$text"],"qSrcTables":["caracter\u00edsticas"]}
-{"qName":"telefono_solicitante","qCardinal":15295,"qTags":["$text","$ascii"],"qSrcTables":["caracter\u00edsticas"]}
-{"qName":"celular_solicitante","qCardinal":21027,"qTags":["$text","$ascii"],"qSrcTables":["caracter\u00edsticas"]}
-{"qName":"correo_solicitante","qCardinal":21129,"qTags":["$text","$ascii"],"qSrcTables":["caracter\u00edsticas"]}
-{"qName":"tiempo_aporte","qCardinal":938,"qTags":["$numeric","$integer"],"qSrcTables":["caracter\u00edsticas"]}
-{"qName":"fecha_retiro_genesys","qCardinal":1131,"qTags":[],"qSrcTables":["caracter\u00edsticas"]}
-{"qName":"nombre_completo","qCardinal":13752,"qTags":["$text"],"qSrcTables":["caracter\u00edsticas"]}
-{"qName":"actividad_economica_empresa","qCardinal":344,"qTags":["$text"],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"nombre_afp","qCardinal":7,"qTags":["$ascii","$text"],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"tipo_trabajador_aportes","qCardinal":3,"qTags":["$ascii","$text"],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"fecha_nacimiento","qCardinal":8710,"qTags":["$numeric","$integer"],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"direccion_solicitante","qCardinal":21648,"qTags":["$text"],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"telefono_solicitante","qCardinal":15488,"qTags":["$ascii","$text"],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"celular_solicitante","qCardinal":21360,"qTags":["$ascii","$text"],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"correo_solicitante","qCardinal":21476,"qTags":["$ascii","$text"],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"tiempo_aporte","qCardinal":943,"qTags":["$numeric","$integer"],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"fecha_retiro_genesys","qCardinal":1167,"qTags":[],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"nombre_completo","qCardinal":14093,"qTags":["$text"],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"actividad_economica_empresa","qCardinal":345,"qTags":["$text"],"qSrcTables":["caracter\u00edsticas"]}
 {"qName":"sector_economico_empresa","qCardinal":32,"qTags":["$text"],"qSrcTables":["caracter\u00edsticas"]}
-{"qName":"registro_agencia_empleo","qCardinal":2,"qTags":["$text","$ascii"],"qSrcTables":["caracter\u00edsticas"]}
-{"qName":"nombre_empresa_estandar","qCardinal":4113,"qTags":["$text"],"qSrcTables":["caracter\u00edsticas"]}
-{"qName":"fecha_nacimiento_estandar","qCardinal":10847,"qTags":[],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"registro_agencia_empleo","qCardinal":2,"qTags":["$ascii","$text"],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"nombre_empresa_estandar","qCardinal":4160,"qTags":["$text"],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"fecha_nacimiento_estandar","qCardinal":10903,"qTags":[],"qSrcTables":["caracter\u00edsticas"]}
 {"qName":"edad","qCardinal":75,"qTags":["$numeric","$integer"],"qSrcTables":["caracter\u00edsticas"]}
-{"qName":"cod_estado_nuevas_asig","qCardinal":1,"qTags":["$numeric","$integer"],"qSrcTables":["nuevas_asignaciones"]}
-{"qName":"estado_nuevas_asig","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["nuevas_asignaciones"]}
-{"qName":"estado_trabajador","qCardinal":3,"qTags":["$text","$ascii"],"qSrcTables":["nuevas_asignaciones"]}
-{"qName":"fecha_ingreso_trabajador","qCardinal":1614,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["nuevas_asignaciones"]}
-{"qName":"fecha_cruce","qCardinal":14,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["nuevas_asignaciones"]}
-{"qName":"estado_asignacion","qCardinal":3,"qTags":["$text","$ascii"],"qSrcTables":["nuevas_asignaciones"]}
-{"qName":"resultado_afiliacion","qCardinal":3,"qTags":["$text","$ascii"],"qSrcTables":["nuevas_asignaciones"]}
-{"qName":"observacion_resultado","qCardinal":33,"qTags":["$text","$ascii"],"qSrcTables":["nuevas_asignaciones"]}
-{"qName":"observaciones_cruce","qCardinal":2,"qTags":["$text"],"qSrcTables":["nuevas_asignaciones"]}
-{"qName":"fecha_postulacion_his","qCardinal":357,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["Historico1"]}
-{"qName":"hora_postulacion_his","qCardinal":6771,"qTags":["$text","$ascii"],"qSrcTables":["Historico1"]}
-{"qName":"cod_estado_postulacion_his","qCardinal":3,"qTags":["$numeric","$integer"],"qSrcTables":["Historico1"]}
-{"qName":"estado_postulacion_his","qCardinal":3,"qTags":["$text","$ascii"],"qSrcTables":["Historico1"]}
-{"qName":"cod_obs_postulacion_his","qCardinal":12,"qTags":["$numeric","$integer"],"qSrcTables":["Historico1"]}
-{"qName":"obs_postulacion_his","qCardinal":12,"qTags":["$text"],"qSrcTables":["Historico1"]}
-{"qName":"sinc_usuario","qCardinal":17,"qTags":["$text","$ascii"],"qSrcTables":["Historico1"]}
-{"qName":"cod_estado_detalle_postulacion_radicacion_his","qCardinal":11,"qTags":["$numeric","$integer"],"qSrcTables":["Historico2"]}
-{"qName":"estado_detalle_postulacion_radicacion_his","qCardinal":10,"qTags":["$text","$ascii"],"qSrcTables":["Historico2"]}
-{"qName":"fecha_radicacion_his","qCardinal":358,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["Historico2"]}
-{"qName":"fecha_inicial","qCardinal":306,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["Tiempos"]}
-{"qName":"hora_inicial","qCardinal":3624,"qTags":["$numeric"],"qSrcTables":["Tiempos"]}
-{"qName":"fecha_final","qCardinal":357,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["Tiempos"]}
-{"qName":"hora_final","qCardinal":6061,"qTags":["$numeric"],"qSrcTables":["Tiempos"]}
-{"qName":"cod_estado_postulacion_his2","qCardinal":3,"qTags":["$numeric","$integer"],"qSrcTables":["Tiempos"]}
-{"qName":"estado_postulacion_his2","qCardinal":3,"qTags":["$text","$ascii"],"qSrcTables":["Tiempos"]}
-{"qName":"cod_obs_postulacion_his2","qCardinal":12,"qTags":["$numeric","$integer"],"qSrcTables":["Tiempos"]}
-{"qName":"obs_postulacion_his2","qCardinal":12,"qTags":["$text"],"qSrcTables":["Tiempos"]}
-{"qName":"sinc_usuario2","qCardinal":17,"qTags":["$text","$ascii"],"qSrcTables":["Tiempos"]}
-{"qName":"HORAS","qCardinal":12935,"qTags":["$numeric"],"qSrcTables":["Tiempos"]}
+{"qName":"fecha_preradicacion","qCardinal":18802,"qTags":["$numeric","$timestamp"],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"numero_radicado","qCardinal":10049,"qTags":["$ascii","$text"],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"fecha_cancelado","qCardinal":86,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"discapacidad","qCardinal":3,"qTags":["$ascii","$text"],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"condicion_discapacidad","qCardinal":3,"qTags":["$ascii","$text"],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"fecha_ingreso_trabajador","qCardinal":2043,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"estado_trabajador","qCardinal":4,"qTags":["$ascii","$text"],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"fecha_inicial","qCardinal":181,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["historico_postulacion"]}
+{"qName":"hora_inicial","qCardinal":1031,"qTags":["$numeric"],"qSrcTables":["historico_postulacion"]}
+{"qName":"fecha_final","qCardinal":411,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["historico_postulacion"]}
+{"qName":"hora_final","qCardinal":15888,"qTags":["$numeric"],"qSrcTables":["historico_postulacion"]}
+{"qName":"cod_estado_postulacion_his","qCardinal":6,"qTags":["$numeric","$integer"],"qSrcTables":["historico_postulacion"]}
+{"qName":"estado_postulacion_his","qCardinal":6,"qTags":["$ascii","$text"],"qSrcTables":["historico_postulacion"]}
+{"qName":"cod_obs_postulacion_his","qCardinal":22,"qTags":["$numeric","$integer"],"qSrcTables":["historico_postulacion"]}
+{"qName":"obs_postulacion_his","qCardinal":19,"qTags":["$text"],"qSrcTables":["historico_postulacion"]}
+{"qName":"sinc_usuario","qCardinal":18,"qTags":["$ascii","$text"],"qSrcTables":["historico_postulacion"]}
+{"qName":"HORAS","qCardinal":377,"qTags":["$numeric"],"qSrcTables":["historico_postulacion"]}
+{"qName":"MINUTOS","qCardinal":377,"qTags":["$numeric"],"qSrcTables":["historico_postulacion"]}
+{"qName":"cod_estado_detalle_postulacion_radicacion_his","qCardinal":11,"qTags":["$numeric","$integer"],"qSrcTables":["historico_radicacion"]}
+{"qName":"estado_detalle_postulacion_radicacion_his","qCardinal":10,"qTags":["$ascii","$text"],"qSrcTables":["historico_radicacion"]}
+{"qName":"fecha_radicacion_his","qCardinal":358,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["historico_radicacion"]}
