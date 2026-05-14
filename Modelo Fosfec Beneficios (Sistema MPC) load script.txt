@@ -68,7 +68,7 @@ LOAD
     Dual(MES, Match(MES, 'ENERO', 'FEBRERO', 'MARZO', 'ABRIL', 'MAYO', 'JUNIO', 'JULIO', 'AGOSTO', 'SEPTIEMBRE', 'OCTUBRE', 'NOVIEMBRE', 'DICIEMBRE')) as MES,
     MES_NUMERO,
     PERIODO_POSTULACION,
-    numero_identificacion,
+    TRIM(numero_identificacion) AS numero_identificacion,
     tipo_beneficio,
     fecha_postulacion,
     cod_estado_solicitud_postulacion,
@@ -112,7 +112,13 @@ LOAD
     resultado_afiliacion,
     observacion_resultado,
     estado_asignacion,
-    estado_aprobacion
+    estado_aprobacion,
+    cuenta_jde,
+    documento_entidad,
+    nombre_entidad,
+    fecha_jde, 
+    concepto_conciliación,
+    valor_jde 
 
 FROM [lib://SISTEMA FOSFEC:DataFiles/Tx_tabla_general.QVD]
 (qvd);
