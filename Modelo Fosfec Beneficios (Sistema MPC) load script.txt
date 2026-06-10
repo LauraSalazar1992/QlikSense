@@ -76,6 +76,9 @@ LOAD
     cod_observacion_postulacion,
     observacion_postulacion,
     reactivado_postulacion,
+    usuario_postulacion,
+    fecha_gestion_postulacion,
+    hora_gestion_postulacion,
     cod_estado_solicitud_radicado,
     estado_solicitud_radicado,
     vigencia,
@@ -120,7 +123,16 @@ LOAD
     nombre_entidad,
     fecha_jde, 
     concepto_conciliación,
-    valor_jde 
+    valor_jde,
+    nombre_completo1, 
+    revision_profesional,
+    periodo_deuda,
+    valor_deuda,
+    id_eps_afp,
+    nombre_eps_afp,
+    tipo_administradora,
+    observacion_deudas_presuntas,
+    Excluir_5311
 
 FROM [lib://SISTEMA FOSFEC:DataFiles/Tx_tabla_general.QVD]
 (qvd);
