@@ -1,21 +1,22 @@
 
 SHEETS
-{"qInfo":{"qId":"049a2123-9d01-427f-af4c-0fe3c9a90de2","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"049a2123-9d01-427f-af4c-0fe3c9a90de2","approved":false,"published":true,"publishTime":"2026-05-14T18:38:04.352Z","owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-10-27T04:58:34.902Z","modifiedDate":"2026-05-14T18:38:04.096Z","encrypted":true,"privileges":["read","publish"],"title":"5. Reporte Postulaci\u00f3n","description":""},"qData":[]}
-{"qInfo":{"qId":"190c3bc0-6bb6-4862-8bae-122f7439289a","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"190c3bc0-6bb6-4862-8bae-122f7439289a","approved":false,"published":true,"publishTime":"2026-05-25T22:41:34.646Z","owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2026-05-13T00:19:36.146Z","modifiedDate":"2026-05-25T22:41:43.494Z","encrypted":true,"privileges":["read","publish"],"title":"8. Conciliaci\u00f3n Provisi\u00f3n","description":""},"qData":[]}
-{"qInfo":{"qId":"254d5da3-2155-4ee6-a928-713ba5daaeb7","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"254d5da3-2155-4ee6-a928-713ba5daaeb7","approved":false,"published":true,"publishTime":"2026-05-25T22:41:32.924Z","owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-10-27T05:08:34.806Z","modifiedDate":"2026-05-25T22:41:40.891Z","encrypted":true,"privileges":["read","publish"],"title":"7. Desprovisi\u00f3n","description":""},"qData":[]}
-{"qInfo":{"qId":"299bf344-2c8f-4bf0-9a96-79ef78776ca7","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"299bf344-2c8f-4bf0-9a96-79ef78776ca7","approved":false,"published":true,"publishTime":"2026-05-14T18:37:58.783Z","owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-10-27T04:59:42.785Z","modifiedDate":"2026-05-14T18:37:58.544Z","encrypted":true,"privileges":["read","publish"],"title":"3. Empresas Postulantes","description":""},"qData":[]}
-{"qInfo":{"qId":"2e88c353-033c-4f32-a5da-39e2b14e033b","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"2e88c353-033c-4f32-a5da-39e2b14e033b","approved":false,"published":true,"publishTime":"2026-05-14T18:38:38.402Z","owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2026-05-13T00:36:48.231Z","modifiedDate":"2026-05-14T18:38:38.170Z","encrypted":true,"privileges":["read","publish"],"title":"13. Reporte Pagos","description":""},"qData":[]}
-{"qInfo":{"qId":"35caf7a0-242a-4d1d-82cb-aedc4b1e7cd8","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"35caf7a0-242a-4d1d-82cb-aedc4b1e7cd8","approved":false,"published":true,"publishTime":"2026-05-25T22:41:36.411Z","owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2026-05-13T00:21:13.006Z","modifiedDate":"2026-05-25T22:41:45.777Z","encrypted":true,"privileges":["read","publish"],"title":"9. Conciliaci\u00f3n Desprovisi\u00f3n","description":""},"qData":[]}
-{"qInfo":{"qId":"3627fc5f-bf83-4464-a883-5af3a0985779","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"3627fc5f-bf83-4464-a883-5af3a0985779","approved":false,"published":true,"publishTime":"2026-05-14T18:37:53.197Z","owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-10-27T05:08:19.106Z","modifiedDate":"2026-05-14T18:37:52.940Z","encrypted":true,"privileges":["read","publish"],"title":"1. Indicadores postulaci\u00f3n","description":""},"qData":[]}
-{"qInfo":{"qId":"38957bff-f5fc-4aa2-97a1-d994ca2280be","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"38957bff-f5fc-4aa2-97a1-d994ca2280be","approved":false,"published":true,"publishTime":"2026-05-14T18:37:56.304Z","owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-10-27T04:23:04.132Z","modifiedDate":"2026-05-14T18:37:56.060Z","encrypted":true,"privileges":["read","publish"],"title":"2. Caracterizaci\u00f3n postulaciones","description":""},"qData":[]}
-{"qInfo":{"qId":"4d1fe470-f5ec-443f-a792-baf5a36c7aeb","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"4d1fe470-f5ec-443f-a792-baf5a36c7aeb","approved":false,"published":true,"publishTime":"2026-05-14T18:38:47.128Z","owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-12-04T03:07:44.931Z","modifiedDate":"2026-05-14T18:38:46.881Z","encrypted":true,"privileges":["read","publish"],"title":"16. Control de operaciones","description":""},"qData":[]}
-{"qInfo":{"qId":"549436a9-f8d8-46da-9c82-a7467e88c5bd","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"549436a9-f8d8-46da-9c82-a7467e88c5bd","approved":false,"published":true,"publishTime":"2026-05-14T18:38:24.386Z","owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-10-27T05:08:45.463Z","modifiedDate":"2026-05-13T23:24:52.546Z","encrypted":true,"privileges":["read","publish"],"title":"10. Nuevas Asignaciones","description":""},"qData":[]}
-{"qInfo":{"qId":"601728c2-6924-4b4d-980a-8e4085fe48c5","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"601728c2-6924-4b4d-980a-8e4085fe48c5","approved":false,"published":true,"publishTime":"2026-05-14T18:38:01.230Z","owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2026-03-10T01:31:38.197Z","modifiedDate":"2026-05-14T18:38:00.998Z","encrypted":true,"privileges":["read","publish"],"title":"4. Posibles Cesantes","description":""},"qData":[]}
-{"qInfo":{"qId":"803569ae-9442-425e-978c-2ea66b752d33","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"803569ae-9442-425e-978c-2ea66b752d33","approved":false,"published":true,"publishTime":"2026-05-14T18:38:34.219Z","owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2026-05-12T23:42:16.264Z","modifiedDate":"2026-05-14T18:38:33.962Z","encrypted":true,"privileges":["read","publish"],"title":"12. Resumen Pagos","description":""},"qData":[]}
-{"qInfo":{"qId":"8a837109-df0a-415f-b190-7f0d1b3fbac8","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"8a837109-df0a-415f-b190-7f0d1b3fbac8","approved":false,"published":true,"publishTime":"2026-05-14T18:38:43.696Z","owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2026-05-13T00:38:41.473Z","modifiedDate":"2026-05-14T18:38:43.448Z","encrypted":true,"privileges":["read","publish"],"title":"15. Indicadores Financieros","description":""},"qData":[]}
-{"qInfo":{"qId":"d90ff8d7-79cc-41f3-942b-c57b791455f7","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"d90ff8d7-79cc-41f3-942b-c57b791455f7","approved":false,"published":true,"publishTime":"2026-05-25T22:41:30.721Z","owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-10-27T05:08:29.453Z","modifiedDate":"2026-05-25T22:41:38.902Z","encrypted":true,"privileges":["read","publish"],"title":"6. Provisi\u00f3n","description":""},"qData":[]}
-{"qInfo":{"qId":"e8e9fc73-08e3-4bd3-93a9-1598f800833c","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"e8e9fc73-08e3-4bd3-93a9-1598f800833c","approved":false,"published":true,"publishTime":"2026-05-14T18:38:40.956Z","owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2026-05-13T00:37:49.731Z","modifiedDate":"2026-05-14T18:38:40.738Z","encrypted":true,"privileges":["read","publish"],"title":"14. Conciliaci\u00f3n Pagos","description":""},"qData":[]}
-{"qInfo":{"qId":"ed8138f8-a3c5-4dff-a3ee-017bc6a8b637","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"ed8138f8-a3c5-4dff-a3ee-017bc6a8b637","approved":false,"published":true,"publishTime":"2026-05-14T18:38:29.494Z","owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2026-05-13T00:33:16.935Z","modifiedDate":"2026-05-14T18:38:29.280Z","encrypted":true,"privileges":["read","publish"],"title":"11. Indicadores Liquidaci\u00f3n","description":""},"qData":[]}
+{"qInfo":{"qId":"049a2123-9d01-427f-af4c-0fe3c9a90de2","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"049a2123-9d01-427f-af4c-0fe3c9a90de2","approved":false,"published":true,"publishTime":"2026-06-10T00:22:20.057Z","owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-10-27T04:58:34.902Z","modifiedDate":"2026-06-10T00:22:19.961Z","encrypted":true,"privileges":["read","publish"],"title":"5. Reporte Postulaci\u00f3n","description":""},"qData":[]}
+{"qInfo":{"qId":"0733dd23-0d76-441b-9ce2-6dff55542dd4","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"0733dd23-0d76-441b-9ce2-6dff55542dd4","approved":false,"published":true,"publishTime":"2026-06-10T00:22:31.636Z","owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2026-06-04T14:25:24.201Z","modifiedDate":"2026-06-10T00:22:31.409Z","encrypted":true,"privileges":["read","publish"],"title":"11. Deuda presunta","description":""},"qData":[]}
+{"qInfo":{"qId":"190c3bc0-6bb6-4862-8bae-122f7439289a","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"190c3bc0-6bb6-4862-8bae-122f7439289a","approved":false,"published":true,"publishTime":"2026-06-10T00:22:25.877Z","owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2026-05-13T00:19:36.146Z","modifiedDate":"2026-06-10T00:22:25.774Z","encrypted":true,"privileges":["read","publish"],"title":"8. Conciliaci\u00f3n Provisi\u00f3n","description":""},"qData":[]}
+{"qInfo":{"qId":"254d5da3-2155-4ee6-a928-713ba5daaeb7","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"254d5da3-2155-4ee6-a928-713ba5daaeb7","approved":false,"published":true,"publishTime":"2026-06-10T00:22:23.737Z","owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-10-27T05:08:34.806Z","modifiedDate":"2026-06-10T00:22:23.619Z","encrypted":true,"privileges":["read","publish"],"title":"7. Desprovisi\u00f3n","description":""},"qData":[]}
+{"qInfo":{"qId":"299bf344-2c8f-4bf0-9a96-79ef78776ca7","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"299bf344-2c8f-4bf0-9a96-79ef78776ca7","approved":false,"published":true,"publishTime":"2026-06-10T00:22:15.964Z","owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-10-27T04:59:42.785Z","modifiedDate":"2026-06-10T00:22:15.863Z","encrypted":true,"privileges":["read","publish"],"title":"3. Empresas Postulantes","description":""},"qData":[]}
+{"qInfo":{"qId":"2e88c353-033c-4f32-a5da-39e2b14e033b","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"2e88c353-033c-4f32-a5da-39e2b14e033b","approved":false,"published":true,"publishTime":"2026-06-10T00:22:40.151Z","owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2026-05-13T00:36:48.231Z","modifiedDate":"2026-06-10T00:22:40.069Z","encrypted":true,"privileges":["read","publish"],"title":"14. Reporte Pagos","description":""},"qData":[]}
+{"qInfo":{"qId":"35caf7a0-242a-4d1d-82cb-aedc4b1e7cd8","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"35caf7a0-242a-4d1d-82cb-aedc4b1e7cd8","approved":false,"published":true,"publishTime":"2026-06-10T00:22:27.880Z","owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2026-05-13T00:21:13.006Z","modifiedDate":"2026-06-10T00:22:27.771Z","encrypted":true,"privileges":["read","publish"],"title":"9. Conciliaci\u00f3n Desprovisi\u00f3n","description":""},"qData":[]}
+{"qInfo":{"qId":"3627fc5f-bf83-4464-a883-5af3a0985779","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"3627fc5f-bf83-4464-a883-5af3a0985779","approved":false,"published":true,"publishTime":"2026-06-10T00:22:11.125Z","owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-10-27T05:08:19.106Z","modifiedDate":"2026-06-10T00:22:11.008Z","encrypted":true,"privileges":["read","publish"],"title":"1. Indicadores postulaci\u00f3n","description":""},"qData":[]}
+{"qInfo":{"qId":"38957bff-f5fc-4aa2-97a1-d994ca2280be","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"38957bff-f5fc-4aa2-97a1-d994ca2280be","approved":false,"published":true,"publishTime":"2026-06-10T00:22:13.765Z","owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-10-27T04:23:04.132Z","modifiedDate":"2026-06-10T00:22:13.648Z","encrypted":true,"privileges":["read","publish"],"title":"2. Caracterizaci\u00f3n postulaciones","description":""},"qData":[]}
+{"qInfo":{"qId":"4d1fe470-f5ec-443f-a792-baf5a36c7aeb","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"4d1fe470-f5ec-443f-a792-baf5a36c7aeb","approved":false,"published":true,"publishTime":"2026-06-10T00:22:44.730Z","owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-12-04T03:07:44.931Z","modifiedDate":"2026-06-10T00:22:44.630Z","encrypted":true,"privileges":["read","publish"],"title":"16. Control de operaciones","description":""},"qData":[]}
+{"qInfo":{"qId":"549436a9-f8d8-46da-9c82-a7467e88c5bd","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"549436a9-f8d8-46da-9c82-a7467e88c5bd","approved":false,"published":true,"publishTime":"2026-06-10T00:22:29.766Z","owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-10-27T05:08:45.463Z","modifiedDate":"2026-06-10T00:22:29.648Z","encrypted":true,"privileges":["read","publish"],"title":"10. Nuevas Asignaciones","description":""},"qData":[]}
+{"qInfo":{"qId":"5fe44fed-9e14-4324-976f-c177e4b3ab86","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"5fe44fed-9e14-4324-976f-c177e4b3ab86","approved":false,"published":true,"publishTime":"2026-06-10T00:25:24.042Z","owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2026-06-09T23:22:55.438Z","modifiedDate":"2026-06-10T00:25:23.932Z","encrypted":true,"privileges":["read","publish"],"title":"17. Indicadores Productividad","description":""},"qData":[]}
+{"qInfo":{"qId":"601728c2-6924-4b4d-980a-8e4085fe48c5","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"601728c2-6924-4b4d-980a-8e4085fe48c5","approved":false,"published":true,"publishTime":"2026-06-10T00:22:18.070Z","owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2026-03-10T01:31:38.197Z","modifiedDate":"2026-06-10T00:22:17.972Z","encrypted":true,"privileges":["read","publish"],"title":"4. Posibles Cesantes","description":""},"qData":[]}
+{"qInfo":{"qId":"803569ae-9442-425e-978c-2ea66b752d33","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"803569ae-9442-425e-978c-2ea66b752d33","approved":false,"published":true,"publishTime":"2026-06-10T00:22:37.689Z","owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2026-05-12T23:42:16.264Z","modifiedDate":"2026-06-10T00:22:37.585Z","encrypted":true,"privileges":["read","publish"],"title":"13. Resumen Pagos","description":""},"qData":[]}
+{"qInfo":{"qId":"d90ff8d7-79cc-41f3-942b-c57b791455f7","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"d90ff8d7-79cc-41f3-942b-c57b791455f7","approved":false,"published":true,"publishTime":"2026-06-10T00:22:21.893Z","owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-10-27T05:08:29.453Z","modifiedDate":"2026-06-10T00:22:21.776Z","encrypted":true,"privileges":["read","publish"],"title":"6. Provisi\u00f3n","description":""},"qData":[]}
+{"qInfo":{"qId":"e8e9fc73-08e3-4bd3-93a9-1598f800833c","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"e8e9fc73-08e3-4bd3-93a9-1598f800833c","approved":false,"published":true,"publishTime":"2026-06-10T00:22:42.090Z","owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2026-05-13T00:37:49.731Z","modifiedDate":"2026-06-10T00:22:42.006Z","encrypted":true,"privileges":["read","publish"],"title":"15. Conciliaci\u00f3n Pagos","description":""},"qData":[]}
+{"qInfo":{"qId":"ed8138f8-a3c5-4dff-a3ee-017bc6a8b637","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"ed8138f8-a3c5-4dff-a3ee-017bc6a8b637","approved":false,"published":true,"publishTime":"2026-06-10T00:22:34.077Z","owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2026-05-13T00:33:16.935Z","modifiedDate":"2026-06-10T00:22:33.997Z","encrypted":true,"privileges":["read","publish"],"title":"12. Indicadores Liquidaci\u00f3n","description":""},"qData":[]}
 
 OBJECTS ON SHEETS
 {"name":"f8adc597-5f94-4a32-93d5-c90d3e965ad4","type":"filterpane","col":0,"row":1,"colspan":24,"rowspan":1,"bounds":{"y":8.333333333333332,"x":0,"width":100,"height":8.333333333333332}}
@@ -32,6 +33,19 @@ OBJECTS ON SHEETS
 {"name":"akUhQc","type":"swr-sense-navigation","col":10,"row":0,"colspan":5,"rowspan":1,"bounds":{"y":0,"x":41.66666666666667,"width":20.833333333333336,"height":8.333333333333332}}
 {"name":"fzp","type":"swr-sense-navigation","col":15,"row":0,"colspan":5,"rowspan":1,"bounds":{"y":0,"x":62.5,"width":20.833333333333336,"height":8.333333333333332}}
 {"name":"jhvffNP","type":"swr-sense-navigation","col":20,"row":0,"colspan":4,"rowspan":1,"bounds":{"y":0,"x":83.33333333333334,"width":16.666666666666664,"height":8.333333333333332}}
+{"name":"08f20db3-8cf4-4167-8346-5ae818e3b077","type":"filterpane","col":0,"row":1,"colspan":24,"rowspan":1,"bounds":{"y":8.333333333333332,"x":0,"width":100,"height":8.333333333333332}}
+{"name":"487f107f-c747-496c-8b00-d190803f47b7","type":"swr-sense-navigation","col":0,"row":0,"colspan":5,"rowspan":1,"bounds":{"y":0,"x":0,"width":20.833333333333336,"height":8.333333333333332}}
+{"name":"7c199f8c-2db7-400f-ae8b-94c547954437","type":"swr-sense-navigation","col":5,"row":0,"colspan":5,"rowspan":1,"bounds":{"y":0,"x":20.833333333333336,"width":20.833333333333336,"height":8.333333333333332}}
+{"name":"fa0e05cf-f5f1-4f51-aa83-9ee0cf1c5049","type":"swr-sense-navigation","col":10,"row":0,"colspan":5,"rowspan":1,"bounds":{"y":0,"x":41.66666666666667,"width":20.833333333333336,"height":8.333333333333332}}
+{"name":"dfd7662b-ad98-4592-8607-9ccab3cc1a8a","type":"swr-sense-navigation","col":15,"row":0,"colspan":5,"rowspan":1,"bounds":{"y":0,"x":62.5,"width":20.833333333333336,"height":8.333333333333332}}
+{"name":"ba5e5d57-2d04-4b7a-900d-88fc260844d6","type":"swr-sense-navigation","col":20,"row":0,"colspan":4,"rowspan":1,"bounds":{"y":0,"x":83.33333333333334,"width":16.666666666666664,"height":8.333333333333332}}
+{"name":"e6dc4a15-a425-4c32-b3ee-ab48387bc61b","type":"swr-sense-navigation","col":0,"row":2,"colspan":12,"rowspan":1,"bounds":{"y":16.666666666666664,"x":0,"width":50,"height":8.333333333333332}}
+{"name":"YjmTdV","type":"swr-sense-navigation","col":12,"row":2,"colspan":12,"rowspan":1,"bounds":{"y":16.666666666666664,"x":50,"width":50,"height":8.333333333333332}}
+{"name":"bYcfPa","type":"kpi","col":0,"row":4,"colspan":11,"rowspan":1,"bounds":{"y":33.33333333333333,"x":0,"width":45.83333333333333,"height":8.333333333333332}}
+{"name":"dMpFTm","type":"kpi","col":0,"row":3,"colspan":11,"rowspan":1,"bounds":{"y":25,"x":0,"width":45.83333333333333,"height":8.333333333333332}}
+{"name":"KJySHmj","type":"sn-table","col":11,"row":7,"colspan":13,"rowspan":5,"bounds":{"y":58.333333333333336,"x":45.83333333333333,"width":54.166666666666664,"height":41.66666666666667}}
+{"name":"umzpD","type":"linechart","col":11,"row":3,"colspan":13,"rowspan":4,"bounds":{"y":25,"x":45.83333333333333,"width":54.166666666666664,"height":33.33333333333333}}
+{"name":"ETxjUm","type":"barchart","col":0,"row":5,"colspan":11,"rowspan":7,"bounds":{"y":41.66666666666667,"x":0,"width":45.83333333333333,"height":58.333333333333336}}
 {"name":"18f861ee-0319-4719-921e-056093e88486","type":"filterpane","col":0,"row":1,"colspan":24,"rowspan":1,"bounds":{"y":8.333333333333332,"x":0,"width":100,"height":8.333333333333332}}
 {"name":"41f5f8b4-6e96-44f7-9389-e920f9b4ac17","type":"swr-sense-navigation","col":0,"row":2,"colspan":6,"rowspan":1,"bounds":{"y":16.666666666666664,"x":0,"width":25,"height":8.333333333333332}}
 {"name":"11362e53-ba59-483e-bfb0-800955d25740","type":"swr-sense-navigation","col":6,"row":2,"colspan":6,"rowspan":1,"bounds":{"y":16.666666666666664,"x":25,"width":25,"height":8.333333333333332}}
@@ -86,16 +100,15 @@ OBJECTS ON SHEETS
 {"name":"HkJV","type":"swr-sense-navigation","col":15,"row":0,"colspan":5,"rowspan":1,"bounds":{"y":0,"x":62.5,"width":20.833333333333336,"height":8.333333333333332}}
 {"name":"avtUnMY","type":"swr-sense-navigation","col":20,"row":0,"colspan":4,"rowspan":1,"bounds":{"y":0,"x":83.33333333333334,"width":16.666666666666664,"height":8.333333333333332}}
 {"name":"a4ca40e7-9fcd-4a2b-83a7-03316204af10","type":"filterpane","col":0,"row":1,"colspan":24,"rowspan":1,"bounds":{"y":8.333333333333332,"x":0,"width":100,"height":8.333333333333332}}
-{"name":"ea594dda-167f-4af0-8252-8584d38d0cc5","type":"swr-sense-navigation","col":0,"row":2,"colspan":5,"rowspan":1,"bounds":{"y":16.666666666666664,"x":0,"width":20.833333333333336,"height":8.333333333333332}}
+{"name":"ea594dda-167f-4af0-8252-8584d38d0cc5","type":"swr-sense-navigation","col":0,"row":2,"colspan":6,"rowspan":1,"bounds":{"y":16.666666666666664,"x":0,"width":25,"height":8.333333333333332}}
 {"name":"5951cf86-7512-48de-bced-799362b66e59","type":"swr-sense-navigation","col":0,"row":0,"colspan":5,"rowspan":1,"bounds":{"y":0,"x":0,"width":20.833333333333336,"height":8.333333333333332}}
 {"name":"a64afe02-a0cc-4bc0-a13e-5fab09dfe041","type":"swr-sense-navigation","col":5,"row":0,"colspan":5,"rowspan":1,"bounds":{"y":0,"x":20.833333333333336,"width":20.833333333333336,"height":8.333333333333332}}
 {"name":"ce494afc-8781-4ae0-85ee-1fb971b05500","type":"swr-sense-navigation","col":10,"row":0,"colspan":5,"rowspan":1,"bounds":{"y":0,"x":41.66666666666667,"width":20.833333333333336,"height":8.333333333333332}}
 {"name":"f5b1c866-5aa1-4d33-a98b-146fd58ce0ad","type":"swr-sense-navigation","col":15,"row":0,"colspan":5,"rowspan":1,"bounds":{"y":0,"x":62.5,"width":20.833333333333336,"height":8.333333333333332}}
 {"name":"9bf4b203-157e-48bb-807b-2db93349e6b4","type":"swr-sense-navigation","col":20,"row":0,"colspan":4,"rowspan":1,"bounds":{"y":0,"x":83.33333333333334,"width":16.666666666666664,"height":8.333333333333332}}
-{"name":"9c709b18-f1cc-40e2-ad68-f81f2938b687","type":"swr-sense-navigation","col":5,"row":2,"colspan":5,"rowspan":1,"bounds":{"y":16.666666666666664,"x":20.833333333333336,"width":20.833333333333336,"height":8.333333333333332}}
-{"name":"758e1caf-042c-412f-8e0d-be948d9dec02","type":"swr-sense-navigation","col":10,"row":2,"colspan":5,"rowspan":1,"bounds":{"y":16.666666666666664,"x":41.66666666666667,"width":20.833333333333336,"height":8.333333333333332}}
-{"name":"fdc6fe93-b13e-4fd6-8623-8561ef3be4aa","type":"swr-sense-navigation","col":15,"row":2,"colspan":5,"rowspan":1,"bounds":{"y":16.666666666666664,"x":62.5,"width":20.833333333333336,"height":8.333333333333332}}
-{"name":"32039b19-5e82-4912-9a90-1bd265cec783","type":"swr-sense-navigation","col":20,"row":2,"colspan":4,"rowspan":1,"bounds":{"y":16.666666666666664,"x":83.33333333333334,"width":16.666666666666664,"height":8.333333333333332}}
+{"name":"9c709b18-f1cc-40e2-ad68-f81f2938b687","type":"swr-sense-navigation","col":6,"row":2,"colspan":6,"rowspan":1,"bounds":{"y":16.666666666666664,"x":25,"width":25,"height":8.333333333333332}}
+{"name":"758e1caf-042c-412f-8e0d-be948d9dec02","type":"swr-sense-navigation","col":12,"row":2,"colspan":6,"rowspan":1,"bounds":{"y":16.666666666666664,"x":50,"width":25,"height":8.333333333333332}}
+{"name":"fdc6fe93-b13e-4fd6-8623-8561ef3be4aa","type":"swr-sense-navigation","col":18,"row":2,"colspan":6,"rowspan":1,"bounds":{"y":16.666666666666664,"x":75,"width":25,"height":8.333333333333332}}
 {"name":"ypTehTZ","type":"table","col":0,"row":3,"colspan":24,"rowspan":9,"bounds":{"y":25,"x":0,"width":100,"height":75}}
 {"name":"51ca3ec3-a6d6-475d-8cd5-f0d9cd449baa","type":"filterpane","col":0,"row":1,"colspan":24,"rowspan":1,"bounds":{"y":8.333333333333332,"x":0,"width":100,"height":8.333333333333332}}
 {"name":"1a83009c-5e41-4d20-a4ca-a5bffaaa8058","type":"swr-sense-navigation","col":0,"row":2,"colspan":6,"rowspan":1,"bounds":{"y":16.666666666666664,"x":0,"width":25,"height":8.333333333333332}}
@@ -161,31 +174,48 @@ OBJECTS ON SHEETS
 {"name":"SdVCjrV","type":"swr-sense-navigation","col":15,"row":0,"colspan":5,"rowspan":1,"bounds":{"y":0,"x":62.5,"width":20.833333333333336,"height":8.333333333333332}}
 {"name":"DSaR","type":"swr-sense-navigation","col":20,"row":0,"colspan":4,"rowspan":1,"bounds":{"y":0,"x":83.33333333333334,"width":16.666666666666664,"height":8.333333333333332}}
 {"name":"3ff9a342-720e-41df-ba38-6a379f87b997","type":"filterpane","col":0,"row":1,"colspan":24,"rowspan":1,"bounds":{"y":8.333333333333332,"x":0,"width":100,"height":8.333333333333332}}
-{"name":"PpbzDp","type":"table","col":12,"row":6,"colspan":12,"rowspan":6,"bounds":{"y":50,"x":50,"width":50,"height":50}}
-{"name":"BHyWe","type":"kpi","col":0,"row":4,"colspan":6,"rowspan":2,"bounds":{"y":33.33333333333333,"x":0,"width":25,"height":16.666666666666664}}
-{"name":"tyfvQbc","type":"table","col":12,"row":2,"colspan":12,"rowspan":4,"bounds":{"y":16.666666666666664,"x":50,"width":50,"height":33.33333333333333}}
-{"name":"ZjPyE","type":"kpi","col":6,"row":2,"colspan":6,"rowspan":2,"bounds":{"y":16.666666666666664,"x":25,"width":25,"height":16.666666666666664}}
-{"name":"aMCm","type":"kpi","col":6,"row":4,"colspan":6,"rowspan":2,"bounds":{"y":33.33333333333333,"x":25,"width":25,"height":16.666666666666664}}
-{"name":"wUuvnu","type":"barchart","col":0,"row":6,"colspan":12,"rowspan":6,"bounds":{"y":50,"x":0,"width":50,"height":50}}
-{"name":"fjrduQ","type":"kpi","col":0,"row":2,"colspan":6,"rowspan":2,"bounds":{"x":0,"y":16.666666666666664,"width":25,"height":16.666666666666664}}
+{"name":"PpbzDp","type":"table","col":12,"row":7,"colspan":12,"rowspan":5,"bounds":{"y":58.333333333333336,"x":50,"width":50,"height":41.66666666666667}}
+{"name":"BHyWe","type":"kpi","col":0,"row":5,"colspan":6,"rowspan":2,"bounds":{"y":41.66666666666667,"x":0,"width":25,"height":16.666666666666664}}
+{"name":"tyfvQbc","type":"table","col":12,"row":3,"colspan":12,"rowspan":4,"bounds":{"y":25,"x":50,"width":50,"height":33.33333333333333}}
+{"name":"ZjPyE","type":"kpi","col":6,"row":3,"colspan":6,"rowspan":2,"bounds":{"y":25,"x":25,"width":25,"height":16.666666666666664}}
+{"name":"aMCm","type":"kpi","col":6,"row":5,"colspan":6,"rowspan":2,"bounds":{"y":41.66666666666667,"x":25,"width":25,"height":16.666666666666664}}
+{"name":"wUuvnu","type":"barchart","col":0,"row":7,"colspan":12,"rowspan":5,"bounds":{"y":58.333333333333336,"x":0,"width":50,"height":41.66666666666667}}
+{"name":"fjrduQ","type":"kpi","col":0,"row":3,"colspan":6,"rowspan":2,"bounds":{"y":25,"x":0,"width":25,"height":16.666666666666664}}
 {"name":"YpBcCNq","type":"swr-sense-navigation","col":0,"row":0,"colspan":5,"rowspan":1,"bounds":{"y":0,"x":0,"width":20.833333333333336,"height":8.333333333333332}}
 {"name":"mJmenv","type":"swr-sense-navigation","col":5,"row":0,"colspan":5,"rowspan":1,"bounds":{"y":0,"x":20.833333333333336,"width":20.833333333333336,"height":8.333333333333332}}
 {"name":"YjSbNbq","type":"swr-sense-navigation","col":10,"row":0,"colspan":5,"rowspan":1,"bounds":{"y":0,"x":41.66666666666667,"width":20.833333333333336,"height":8.333333333333332}}
 {"name":"mpzdJ","type":"swr-sense-navigation","col":15,"row":0,"colspan":5,"rowspan":1,"bounds":{"y":0,"x":62.5,"width":20.833333333333336,"height":8.333333333333332}}
 {"name":"RdEJbPx","type":"swr-sense-navigation","col":20,"row":0,"colspan":4,"rowspan":1,"bounds":{"y":0,"x":83.33333333333334,"width":16.666666666666664,"height":8.333333333333332}}
+{"name":"PWPtnec","type":"swr-sense-navigation","col":0,"row":2,"colspan":12,"rowspan":1,"bounds":{"y":16.666666666666664,"x":0,"width":50,"height":8.333333333333332}}
+{"name":"ppTHhz","type":"swr-sense-navigation","col":12,"row":2,"colspan":12,"rowspan":1,"bounds":{"y":16.666666666666664,"x":50,"width":50,"height":8.333333333333332}}
 {"name":"20f12eaa-b9f9-44c7-8e55-b5037fcd669f","type":"filterpane","col":0,"row":1,"colspan":24,"rowspan":1,"bounds":{"y":8.333333333333332,"x":0,"width":100,"height":8.333333333333332}}
-{"name":"8dc1b90d-36df-4e67-a995-39c6114cc6ab","type":"table","col":11,"row":5,"colspan":13,"rowspan":7,"bounds":{"y":41.66666666666667,"x":45.83333333333333,"width":54.166666666666664,"height":58.333333333333336}}
-{"name":"58c11ee3-e342-4c15-819c-d0d8653e6458","type":"kpi","col":8,"row":4,"colspan":8,"rowspan":1,"bounds":{"y":33.33333333333333,"x":33.33333333333333,"width":33.33333333333333,"height":8.333333333333332}}
-{"name":"206c91c4-c537-4a0c-848b-2a80e9fdbfec","type":"kpi","col":16,"row":4,"colspan":8,"rowspan":1,"bounds":{"y":33.33333333333333,"x":66.66666666666666,"width":33.33333333333333,"height":8.333333333333332}}
-{"name":"qBrJgCx","type":"kpi","col":0,"row":2,"colspan":8,"rowspan":3,"bounds":{"y":16.666666666666664,"x":0,"width":33.33333333333333,"height":25}}
-{"name":"gEm","type":"linechart","col":0,"row":5,"colspan":11,"rowspan":7,"bounds":{"y":41.66666666666667,"x":0,"width":45.83333333333333,"height":58.333333333333336}}
-{"name":"wYjFW","type":"kpi","col":8,"row":2,"colspan":8,"rowspan":2,"bounds":{"y":16.666666666666664,"x":33.33333333333333,"width":33.33333333333333,"height":16.666666666666664}}
-{"name":"TakTuYq","type":"kpi","col":16,"row":2,"colspan":8,"rowspan":2,"bounds":{"y":16.666666666666664,"x":66.66666666666666,"width":33.33333333333333,"height":16.666666666666664}}
+{"name":"8dc1b90d-36df-4e67-a995-39c6114cc6ab","type":"table","col":11,"row":6,"colspan":13,"rowspan":6,"bounds":{"y":50,"x":45.83333333333333,"width":54.166666666666664,"height":50}}
+{"name":"58c11ee3-e342-4c15-819c-d0d8653e6458","type":"kpi","col":8,"row":5,"colspan":8,"rowspan":1,"bounds":{"y":41.66666666666667,"x":33.33333333333333,"width":33.33333333333333,"height":8.333333333333332}}
+{"name":"206c91c4-c537-4a0c-848b-2a80e9fdbfec","type":"kpi","col":16,"row":5,"colspan":8,"rowspan":1,"bounds":{"y":41.66666666666667,"x":66.66666666666666,"width":33.33333333333333,"height":8.333333333333332}}
+{"name":"qBrJgCx","type":"kpi","col":0,"row":3,"colspan":8,"rowspan":3,"bounds":{"y":25,"x":0,"width":33.33333333333333,"height":25}}
+{"name":"gEm","type":"linechart","col":0,"row":6,"colspan":11,"rowspan":6,"bounds":{"y":50,"x":0,"width":45.83333333333333,"height":50}}
+{"name":"wYjFW","type":"kpi","col":8,"row":3,"colspan":8,"rowspan":2,"bounds":{"y":25,"x":33.33333333333333,"width":33.33333333333333,"height":16.666666666666664}}
+{"name":"TakTuYq","type":"kpi","col":16,"row":3,"colspan":8,"rowspan":2,"bounds":{"y":25,"x":66.66666666666666,"width":33.33333333333333,"height":16.666666666666664}}
 {"name":"BsFMPR","type":"swr-sense-navigation","col":0,"row":0,"colspan":5,"rowspan":1,"bounds":{"y":0,"x":0,"width":20.833333333333336,"height":8.333333333333332}}
 {"name":"DAjCKDa","type":"swr-sense-navigation","col":5,"row":0,"colspan":5,"rowspan":1,"bounds":{"y":0,"x":20.833333333333336,"width":20.833333333333336,"height":8.333333333333332}}
 {"name":"TVZA","type":"swr-sense-navigation","col":10,"row":0,"colspan":5,"rowspan":1,"bounds":{"y":0,"x":41.66666666666667,"width":20.833333333333336,"height":8.333333333333332}}
 {"name":"JEEj","type":"swr-sense-navigation","col":15,"row":0,"colspan":5,"rowspan":1,"bounds":{"y":0,"x":62.5,"width":20.833333333333336,"height":8.333333333333332}}
 {"name":"gZXkPa","type":"swr-sense-navigation","col":20,"row":0,"colspan":4,"rowspan":1,"bounds":{"y":0,"x":83.33333333333334,"width":16.666666666666664,"height":8.333333333333332}}
+{"name":"Vnavmp","type":"swr-sense-navigation","col":0,"row":2,"colspan":12,"rowspan":1,"bounds":{"y":16.666666666666664,"x":0,"width":50,"height":8.333333333333332}}
+{"name":"fBtqWer","type":"swr-sense-navigation","col":12,"row":2,"colspan":12,"rowspan":1,"bounds":{"y":16.666666666666664,"x":50,"width":50,"height":8.333333333333332}}
+{"name":"9e323a0a-b26f-4083-aab2-e8a4456df721","type":"filterpane","col":0,"row":1,"colspan":24,"rowspan":1,"bounds":{"y":8.333333333333332,"x":0,"width":100,"height":8.333333333333332}}
+{"name":"3f31a991-c23c-48ab-b2bb-d63d988582cf","type":"swr-sense-navigation","col":0,"row":0,"colspan":5,"rowspan":1,"bounds":{"y":0,"x":0,"width":20.833333333333336,"height":8.333333333333332}}
+{"name":"ec9c4910-708e-4d2a-aa6a-c9a22363f586","type":"swr-sense-navigation","col":5,"row":0,"colspan":5,"rowspan":1,"bounds":{"y":0,"x":20.833333333333336,"width":20.833333333333336,"height":8.333333333333332}}
+{"name":"0c4f4044-e8a8-4c24-86c1-5dbbd07b4066","type":"swr-sense-navigation","col":10,"row":0,"colspan":5,"rowspan":1,"bounds":{"y":0,"x":41.66666666666667,"width":20.833333333333336,"height":8.333333333333332}}
+{"name":"fff5d664-a38b-4b0d-8b1b-9d64fbef06bf","type":"swr-sense-navigation","col":15,"row":0,"colspan":5,"rowspan":1,"bounds":{"y":0,"x":62.5,"width":20.833333333333336,"height":8.333333333333332}}
+{"name":"6cff0ed1-a754-4558-9a32-969d9a46eb5c","type":"swr-sense-navigation","col":20,"row":0,"colspan":4,"rowspan":1,"bounds":{"y":0,"x":83.33333333333334,"width":16.666666666666664,"height":8.333333333333332}}
+{"name":"73166f07-6135-4f4c-9d25-ff6b69c45092","type":"swr-sense-navigation","col":0,"row":2,"colspan":12,"rowspan":1,"bounds":{"y":16.666666666666664,"x":0,"width":50,"height":8.333333333333332}}
+{"name":"31ae6cb3-a087-4566-b89d-6656db32f503","type":"swr-sense-navigation","col":12,"row":2,"colspan":12,"rowspan":1,"bounds":{"y":16.666666666666664,"x":50,"width":50,"height":8.333333333333332}}
+{"name":"pPPvxb","type":"barchart","col":0,"row":5,"colspan":9,"rowspan":7,"bounds":{"y":41.66666666666667,"x":0,"width":37.5,"height":58.333333333333336}}
+{"name":"yJPVm","type":"linechart","col":9,"row":5,"colspan":15,"rowspan":7,"bounds":{"y":41.66666666666667,"x":37.5,"width":62.5,"height":58.333333333333336}}
+{"name":"NKZrjG","type":"kpi","col":0,"row":3,"colspan":7,"rowspan":2,"bounds":{"y":25,"x":0,"width":29.166666666666668,"height":16.666666666666664}}
+{"name":"TRauw","type":"kpi","col":8,"row":3,"colspan":7,"rowspan":2,"bounds":{"y":25,"x":33.33333333333333,"width":29.166666666666668,"height":16.666666666666664}}
+{"name":"uEkfuYm","type":"kpi","col":16,"row":3,"colspan":7,"rowspan":2,"bounds":{"y":25,"x":66.66666666666666,"width":29.166666666666668,"height":16.666666666666664}}
 {"name":"88353c10-9b02-4a8f-8c11-95408551f2b0","type":"swr-sense-navigation","col":0,"row":2,"colspan":5,"rowspan":1,"bounds":{"y":16.666666666666664,"x":0,"width":20.833333333333336,"height":8.333333333333332}}
 {"name":"654d7d04-88ba-446d-b7da-30a44cf31e3b","type":"swr-sense-navigation","col":5,"row":2,"colspan":5,"rowspan":1,"bounds":{"y":16.666666666666664,"x":20.833333333333336,"width":20.833333333333336,"height":8.333333333333332}}
 {"name":"b2ca338b-c802-4c79-8300-bd1d433bf05d","type":"swr-sense-navigation","col":10,"row":2,"colspan":5,"rowspan":1,"bounds":{"y":16.666666666666664,"x":41.66666666666667,"width":20.833333333333336,"height":8.333333333333332}}
@@ -207,16 +237,15 @@ OBJECTS ON SHEETS
 {"name":"MKGQm","type":"swr-sense-navigation","col":15,"row":0,"colspan":5,"rowspan":1,"bounds":{"y":0,"x":62.5,"width":20.833333333333336,"height":8.333333333333332}}
 {"name":"WMLesG","type":"swr-sense-navigation","col":20,"row":0,"colspan":4,"rowspan":1,"bounds":{"y":0,"x":83.33333333333334,"width":16.666666666666664,"height":8.333333333333332}}
 {"name":"8f0f6739-2a5f-4a53-90ff-90f1c371087b","type":"filterpane","col":0,"row":1,"colspan":24,"rowspan":1,"bounds":{"y":8.333333333333332,"x":0,"width":100,"height":8.333333333333332}}
-{"name":"9931f039-f095-434b-a378-191b0fa1b784","type":"swr-sense-navigation","col":0,"row":2,"colspan":5,"rowspan":1,"bounds":{"y":16.666666666666664,"x":0,"width":20.833333333333336,"height":8.333333333333332}}
+{"name":"9931f039-f095-434b-a378-191b0fa1b784","type":"swr-sense-navigation","col":0,"row":2,"colspan":6,"rowspan":1,"bounds":{"y":16.666666666666664,"x":0,"width":25,"height":8.333333333333332}}
 {"name":"dNUGQjq","type":"swr-sense-navigation","col":0,"row":0,"colspan":5,"rowspan":1,"bounds":{"y":0,"x":0,"width":20.833333333333336,"height":8.333333333333332}}
 {"name":"NLEMMJ","type":"swr-sense-navigation","col":5,"row":0,"colspan":5,"rowspan":1,"bounds":{"y":0,"x":20.833333333333336,"width":20.833333333333336,"height":8.333333333333332}}
 {"name":"hUaruw","type":"swr-sense-navigation","col":10,"row":0,"colspan":5,"rowspan":1,"bounds":{"y":0,"x":41.66666666666667,"width":20.833333333333336,"height":8.333333333333332}}
 {"name":"FruWfm","type":"swr-sense-navigation","col":15,"row":0,"colspan":5,"rowspan":1,"bounds":{"y":0,"x":62.5,"width":20.833333333333336,"height":8.333333333333332}}
 {"name":"RPKYaGp","type":"swr-sense-navigation","col":20,"row":0,"colspan":4,"rowspan":1,"bounds":{"y":0,"x":83.33333333333334,"width":16.666666666666664,"height":8.333333333333332}}
-{"name":"mLpJJV","type":"swr-sense-navigation","col":5,"row":2,"colspan":5,"rowspan":1,"bounds":{"y":16.666666666666664,"x":20.833333333333336,"width":20.833333333333336,"height":8.333333333333332}}
-{"name":"vMqwJC","type":"swr-sense-navigation","col":10,"row":2,"colspan":5,"rowspan":1,"bounds":{"y":16.666666666666664,"x":41.66666666666667,"width":20.833333333333336,"height":8.333333333333332}}
-{"name":"vZvEF","type":"swr-sense-navigation","col":15,"row":2,"colspan":5,"rowspan":1,"bounds":{"y":16.666666666666664,"x":62.5,"width":20.833333333333336,"height":8.333333333333332}}
-{"name":"XPkBG","type":"swr-sense-navigation","col":20,"row":2,"colspan":4,"rowspan":1,"bounds":{"y":16.666666666666664,"x":83.33333333333334,"width":16.666666666666664,"height":8.333333333333332}}
+{"name":"mLpJJV","type":"swr-sense-navigation","col":6,"row":2,"colspan":6,"rowspan":1,"bounds":{"y":16.666666666666664,"x":25,"width":25,"height":8.333333333333332}}
+{"name":"vMqwJC","type":"swr-sense-navigation","col":12,"row":2,"colspan":6,"rowspan":1,"bounds":{"y":16.666666666666664,"x":50,"width":25,"height":8.333333333333332}}
+{"name":"vZvEF","type":"swr-sense-navigation","col":18,"row":2,"colspan":6,"rowspan":1,"bounds":{"y":16.666666666666664,"x":75,"width":25,"height":8.333333333333332}}
 {"name":"kPaxT","type":"kpi","col":12,"row":3,"colspan":12,"rowspan":1,"bounds":{"y":25,"x":50,"width":50,"height":8.333333333333332}}
 {"name":"EpVmZQ","type":"kpi","col":12,"row":4,"colspan":12,"rowspan":1,"bounds":{"y":33.33333333333333,"x":50,"width":50,"height":8.333333333333332}}
 {"name":"gjEaZY","type":"kpi","col":12,"row":5,"colspan":12,"rowspan":1,"bounds":{"y":41.66666666666667,"x":50,"width":50,"height":8.333333333333332}}
@@ -224,17 +253,6 @@ OBJECTS ON SHEETS
 {"name":"KQkXZM","type":"kpi","col":0,"row":4,"colspan":12,"rowspan":1,"bounds":{"y":33.33333333333333,"x":0,"width":50,"height":8.333333333333332}}
 {"name":"JcjdYMm","type":"kpi","col":0,"row":5,"colspan":12,"rowspan":1,"bounds":{"y":41.66666666666667,"x":0,"width":50,"height":8.333333333333332}}
 {"name":"fwBrctF","type":"linechart","col":0,"row":6,"colspan":24,"rowspan":6,"bounds":{"y":50,"x":0,"width":100,"height":50}}
-{"name":"515e38a7-7981-4bb3-a744-2af73715e13e","type":"filterpane","col":0,"row":1,"colspan":24,"rowspan":1,"bounds":{"y":8.333333333333332,"x":0,"width":100,"height":8.333333333333332}}
-{"name":"baf6b80b-44c1-4a14-8375-c9deb801d71b","type":"swr-sense-navigation","col":0,"row":2,"colspan":5,"rowspan":1,"bounds":{"y":16.666666666666664,"x":0,"width":20.833333333333336,"height":8.333333333333332}}
-{"name":"76e834cd-7ae0-453a-9cd2-d07cb5367c44","type":"swr-sense-navigation","col":0,"row":0,"colspan":5,"rowspan":1,"bounds":{"y":0,"x":0,"width":20.833333333333336,"height":8.333333333333332}}
-{"name":"b58ee9cf-4eed-4ed0-bdbe-15e6da4efad9","type":"swr-sense-navigation","col":5,"row":0,"colspan":5,"rowspan":1,"bounds":{"y":0,"x":20.833333333333336,"width":20.833333333333336,"height":8.333333333333332}}
-{"name":"61481258-bbb1-4fef-a246-f88bbce19cb5","type":"swr-sense-navigation","col":10,"row":0,"colspan":5,"rowspan":1,"bounds":{"y":0,"x":41.66666666666667,"width":20.833333333333336,"height":8.333333333333332}}
-{"name":"5b8d79b2-5ddc-4548-9806-66f5cc5e6553","type":"swr-sense-navigation","col":15,"row":0,"colspan":5,"rowspan":1,"bounds":{"y":0,"x":62.5,"width":20.833333333333336,"height":8.333333333333332}}
-{"name":"9f4063c7-c698-4186-8ed2-90169dd1fc98","type":"swr-sense-navigation","col":20,"row":0,"colspan":4,"rowspan":1,"bounds":{"y":0,"x":83.33333333333334,"width":16.666666666666664,"height":8.333333333333332}}
-{"name":"3ecc9143-223e-4540-a5ac-350b88e94f4c","type":"swr-sense-navigation","col":5,"row":2,"colspan":5,"rowspan":1,"bounds":{"y":16.666666666666664,"x":20.833333333333336,"width":20.833333333333336,"height":8.333333333333332}}
-{"name":"0df68598-3911-468f-a67a-e6a065246598","type":"swr-sense-navigation","col":10,"row":2,"colspan":5,"rowspan":1,"bounds":{"y":16.666666666666664,"x":41.66666666666667,"width":20.833333333333336,"height":8.333333333333332}}
-{"name":"9ac1c3d1-1165-4077-812e-cd8510672a63","type":"swr-sense-navigation","col":15,"row":2,"colspan":5,"rowspan":1,"bounds":{"y":16.666666666666664,"x":62.5,"width":20.833333333333336,"height":8.333333333333332}}
-{"name":"ce3e8c97-b4bb-421f-988b-2b060784d488","type":"swr-sense-navigation","col":20,"row":2,"colspan":4,"rowspan":1,"bounds":{"y":16.666666666666664,"x":83.33333333333334,"width":16.666666666666664,"height":8.333333333333332}}
 {"name":"c74d01a7-2089-486f-a65c-a4c4972e7b62","type":"filterpane","col":0,"row":1,"colspan":24,"rowspan":1,"bounds":{"y":8.333333333333332,"x":0,"width":100,"height":8.333333333333332}}
 {"name":"c001edd1-874d-41ef-8dce-7fe9ae2c0e1d","type":"swr-sense-navigation","col":0,"row":2,"colspan":6,"rowspan":1,"bounds":{"y":16.666666666666664,"x":0,"width":25,"height":8.333333333333332}}
 {"name":"032c02c0-f1d5-4cff-946a-6fd375fbe3c3","type":"kpi","col":0,"row":3,"colspan":6,"rowspan":3,"bounds":{"y":25,"x":0,"width":25,"height":25}}
@@ -258,27 +276,25 @@ OBJECTS ON SHEETS
 {"name":"jJPjNA","type":"swr-sense-navigation","col":15,"row":0,"colspan":5,"rowspan":1,"bounds":{"y":0,"x":62.5,"width":20.833333333333336,"height":8.333333333333332}}
 {"name":"esJWgy","type":"swr-sense-navigation","col":20,"row":0,"colspan":4,"rowspan":1,"bounds":{"y":0,"x":83.33333333333334,"width":16.666666666666664,"height":8.333333333333332}}
 {"name":"0562f302-1e88-4614-bb3f-41bad229e2e4","type":"filterpane","col":0,"row":1,"colspan":24,"rowspan":1,"bounds":{"y":8.333333333333332,"x":0,"width":100,"height":8.333333333333332}}
-{"name":"cbabcb0f-5fab-4e8f-91f0-4610d49027ef","type":"swr-sense-navigation","col":0,"row":2,"colspan":5,"rowspan":1,"bounds":{"y":16.666666666666664,"x":0,"width":20.833333333333336,"height":8.333333333333332}}
+{"name":"cbabcb0f-5fab-4e8f-91f0-4610d49027ef","type":"swr-sense-navigation","col":0,"row":2,"colspan":6,"rowspan":1,"bounds":{"y":16.666666666666664,"x":0,"width":25,"height":8.333333333333332}}
 {"name":"c7208e44-6399-4a91-b6b2-9118d3903ee4","type":"swr-sense-navigation","col":0,"row":0,"colspan":5,"rowspan":1,"bounds":{"y":0,"x":0,"width":20.833333333333336,"height":8.333333333333332}}
 {"name":"a1e23a84-5fa7-4946-b7f4-c8c01b32b161","type":"swr-sense-navigation","col":5,"row":0,"colspan":5,"rowspan":1,"bounds":{"y":0,"x":20.833333333333336,"width":20.833333333333336,"height":8.333333333333332}}
 {"name":"fc610d11-cba5-4000-bd8f-5b8bc23f7839","type":"swr-sense-navigation","col":10,"row":0,"colspan":5,"rowspan":1,"bounds":{"y":0,"x":41.66666666666667,"width":20.833333333333336,"height":8.333333333333332}}
 {"name":"3a1f667e-856f-4c8b-a65b-7dc6b4fa86fc","type":"swr-sense-navigation","col":15,"row":0,"colspan":5,"rowspan":1,"bounds":{"y":0,"x":62.5,"width":20.833333333333336,"height":8.333333333333332}}
 {"name":"6635a8c1-8ee0-462a-a384-fdd9af82b644","type":"swr-sense-navigation","col":20,"row":0,"colspan":4,"rowspan":1,"bounds":{"y":0,"x":83.33333333333334,"width":16.666666666666664,"height":8.333333333333332}}
-{"name":"a943563b-78df-410d-ae39-c97c545337ee","type":"swr-sense-navigation","col":5,"row":2,"colspan":5,"rowspan":1,"bounds":{"y":16.666666666666664,"x":20.833333333333336,"width":20.833333333333336,"height":8.333333333333332}}
-{"name":"322b079b-fe1b-4c95-92fd-fc775fe21865","type":"swr-sense-navigation","col":10,"row":2,"colspan":5,"rowspan":1,"bounds":{"y":16.666666666666664,"x":41.66666666666667,"width":20.833333333333336,"height":8.333333333333332}}
-{"name":"10fbc2bf-3648-42ff-8229-af7585923dc9","type":"swr-sense-navigation","col":15,"row":2,"colspan":5,"rowspan":1,"bounds":{"y":16.666666666666664,"x":62.5,"width":20.833333333333336,"height":8.333333333333332}}
-{"name":"c3b07134-8503-4a56-aa5d-95b7cae21be0","type":"swr-sense-navigation","col":20,"row":2,"colspan":4,"rowspan":1,"bounds":{"y":16.666666666666664,"x":83.33333333333334,"width":16.666666666666664,"height":8.333333333333332}}
+{"name":"a943563b-78df-410d-ae39-c97c545337ee","type":"swr-sense-navigation","col":6,"row":2,"colspan":6,"rowspan":1,"bounds":{"y":16.666666666666664,"x":25,"width":25,"height":8.333333333333332}}
+{"name":"322b079b-fe1b-4c95-92fd-fc775fe21865","type":"swr-sense-navigation","col":12,"row":2,"colspan":6,"rowspan":1,"bounds":{"y":16.666666666666664,"x":50,"width":25,"height":8.333333333333332}}
+{"name":"10fbc2bf-3648-42ff-8229-af7585923dc9","type":"swr-sense-navigation","col":18,"row":2,"colspan":6,"rowspan":1,"bounds":{"y":16.666666666666664,"x":75,"width":25,"height":8.333333333333332}}
 {"name":"e9074146-8933-49bb-bdf2-deb8d3fc5647","type":"filterpane","col":0,"row":1,"colspan":24,"rowspan":1,"bounds":{"y":8.333333333333332,"x":0,"width":100,"height":8.333333333333332}}
-{"name":"9ba3db5e-cd74-4ae7-8ada-d7a15b9ba9b2","type":"swr-sense-navigation","col":0,"row":2,"colspan":5,"rowspan":1,"bounds":{"y":16.666666666666664,"x":0,"width":20.833333333333336,"height":8.333333333333332}}
+{"name":"9ba3db5e-cd74-4ae7-8ada-d7a15b9ba9b2","type":"swr-sense-navigation","col":0,"row":2,"colspan":6,"rowspan":1,"bounds":{"y":16.666666666666664,"x":0,"width":25,"height":8.333333333333332}}
 {"name":"ad266b8d-a341-4ea3-ade4-4df46bcab19e","type":"swr-sense-navigation","col":0,"row":0,"colspan":5,"rowspan":1,"bounds":{"y":0,"x":0,"width":20.833333333333336,"height":8.333333333333332}}
 {"name":"a3aff470-d942-45b3-a130-b51e1698668b","type":"swr-sense-navigation","col":5,"row":0,"colspan":5,"rowspan":1,"bounds":{"y":0,"x":20.833333333333336,"width":20.833333333333336,"height":8.333333333333332}}
 {"name":"6fc60ecc-627f-4209-a0ca-c8a6e78abadf","type":"swr-sense-navigation","col":10,"row":0,"colspan":5,"rowspan":1,"bounds":{"y":0,"x":41.66666666666667,"width":20.833333333333336,"height":8.333333333333332}}
 {"name":"ab3ccd0b-a285-47fe-9fc8-4c8410d39a3f","type":"swr-sense-navigation","col":15,"row":0,"colspan":5,"rowspan":1,"bounds":{"y":0,"x":62.5,"width":20.833333333333336,"height":8.333333333333332}}
 {"name":"91e4d48b-00a7-4d1b-a30e-0c425044aeea","type":"swr-sense-navigation","col":20,"row":0,"colspan":4,"rowspan":1,"bounds":{"y":0,"x":83.33333333333334,"width":16.666666666666664,"height":8.333333333333332}}
-{"name":"376844c3-4150-4376-b2a2-f5a6659925c0","type":"swr-sense-navigation","col":5,"row":2,"colspan":5,"rowspan":1,"bounds":{"y":16.666666666666664,"x":20.833333333333336,"width":20.833333333333336,"height":8.333333333333332}}
-{"name":"737a926b-2a75-4915-b056-90c004a1c526","type":"swr-sense-navigation","col":10,"row":2,"colspan":5,"rowspan":1,"bounds":{"y":16.666666666666664,"x":41.66666666666667,"width":20.833333333333336,"height":8.333333333333332}}
-{"name":"3fd26e28-b774-4550-bc04-c736d9dd87a8","type":"swr-sense-navigation","col":15,"row":2,"colspan":5,"rowspan":1,"bounds":{"y":16.666666666666664,"x":62.5,"width":20.833333333333336,"height":8.333333333333332}}
-{"name":"BJteaBm","type":"swr-sense-navigation","col":20,"row":2,"colspan":4,"rowspan":1,"bounds":{"y":16.666666666666664,"x":83.33333333333334,"width":16.666666666666664,"height":8.333333333333332}}
+{"name":"376844c3-4150-4376-b2a2-f5a6659925c0","type":"swr-sense-navigation","col":6,"row":2,"colspan":6,"rowspan":1,"bounds":{"y":16.666666666666664,"x":25,"width":25,"height":8.333333333333332}}
+{"name":"737a926b-2a75-4915-b056-90c004a1c526","type":"swr-sense-navigation","col":12,"row":2,"colspan":6,"rowspan":1,"bounds":{"y":16.666666666666664,"x":50,"width":25,"height":8.333333333333332}}
+{"name":"3fd26e28-b774-4550-bc04-c736d9dd87a8","type":"swr-sense-navigation","col":18,"row":2,"colspan":6,"rowspan":1,"bounds":{"y":16.666666666666664,"x":75,"width":25,"height":8.333333333333332}}
 
 DIMENSIONS
 {"qInfo":{"qId":"hkcxGk","qType":"dimension"},"qMeta":{"_resourcetype":"app.object","_objecttype":"dimension","id":"hkcxGk","approved":false,"published":false,"owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-07-24T05:22:31.928Z","modifiedDate":"2025-12-04T02:05:19.408Z","encrypted":true,"privileges":["read","update","delete","publish"],"title":"Departamento - Municipio postulaci\u00f3n","description":"","tags":[]},"qData":[]}
@@ -309,47 +325,50 @@ MEASURES
 {"qInfo":{"qId":"wscTRgm","qType":"measure"},"qMeta":{"_resourcetype":"app.object","_objecttype":"measure","id":"wscTRgm","approved":false,"published":false,"owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2025-12-04T02:10:54.522Z","modifiedDate":"2025-12-04T02:10:54.522Z","encrypted":true,"privileges":["read","update","delete","publish"],"title":"Postulaciones aprobadas","description":"","tags":[]},"qData":[]}
 
 VARIABLES
-{"qName":"vmes","qDefinition":"05","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"bc11c8a8-6de4-42cc-a593-83f1b75b3647","qType":"variable"},"qData":[],"qIsScriptCreated":true}
-{"qName":"vfechaDiariaFormato","qDefinition":"26\/05\/2026","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"c1119cd2-d9df-438c-8b9f-2eec06ede2ca","qType":"variable"},"qData":[],"qIsScriptCreated":true}
-{"qName":"vdia","qDefinition":"26","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"23f86aae-be93-4ca5-9250-5539b393be05","qType":"variable"},"qData":[],"qIsScriptCreated":true}
-{"qName":"fecha_envio","qDefinition":"26\/05\/2026 08:56:57 AM","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"6f233b91-1694-45df-b4c9-0a93aa225b09","qType":"variable"},"qData":[],"qIsScriptCreated":true}
-{"qName":"vmes_nombre","qDefinition":"MAYO","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"10ceefa9-718d-45be-bb36-8e90e76fbe33","qType":"variable"},"qData":[],"qIsScriptCreated":true}
-{"qName":"vfecha_inicial","qDefinition":"2026-05-01","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"1d274ccb-de91-45c5-8904-3ba26734a325","qType":"variable"},"qData":[],"qIsScriptCreated":true}
-{"qName":"vmensaje","qDefinition":"Hoy no se manda notificaci\u00f3n","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"e23d53e4-fc99-4123-9bc6-2e2d360636af","qType":"variable"},"qData":[],"qIsScriptCreated":true}
-{"qName":"vfecha_final","qDefinition":"2026-05-31","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"28cfdc03-0687-4722-8746-92c96090bb22","qType":"variable"},"qData":[],"qIsScriptCreated":true}
+{"qName":"vfechaDiariaFormato","qDefinition":"10\/06\/2026","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"c1119cd2-d9df-438c-8b9f-2eec06ede2ca","qType":"variable"},"qData":[],"qIsScriptCreated":true}
 {"qName":"va\u00f1o","qDefinition":"2026","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"e08d6016-f611-4215-bd85-4d12aa66b0f4","qType":"variable"},"qData":[],"qIsScriptCreated":true}
-{"qName":"vperiodo","qDefinition":"202605","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"df23a82f-bd6b-495f-9d9b-4f2588364794","qType":"variable"},"qData":[],"qIsScriptCreated":true}
-{"qName":"vmesAnterior","qDefinition":"04","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"f24d8792-8a3d-4d94-ad24-553e714fa673","qType":"variable"},"qData":[],"qIsScriptCreated":true}
+{"qName":"vmes","qDefinition":"06","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"bc11c8a8-6de4-42cc-a593-83f1b75b3647","qType":"variable"},"qData":[],"qIsScriptCreated":true}
+{"qName":"vmesAnterior","qDefinition":"05","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"f24d8792-8a3d-4d94-ad24-553e714fa673","qType":"variable"},"qData":[],"qIsScriptCreated":true}
+{"qName":"vdia","qDefinition":"10","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"23f86aae-be93-4ca5-9250-5539b393be05","qType":"variable"},"qData":[],"qIsScriptCreated":true}
+{"qName":"vmes_nombre","qDefinition":"JUNIO","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"10ceefa9-718d-45be-bb36-8e90e76fbe33","qType":"variable"},"qData":[],"qIsScriptCreated":true}
+{"qName":"vfecha_inicial","qDefinition":"2026-06-01","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"1d274ccb-de91-45c5-8904-3ba26734a325","qType":"variable"},"qData":[],"qIsScriptCreated":true}
+{"qName":"vfecha_final","qDefinition":"2026-06-30","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"28cfdc03-0687-4722-8746-92c96090bb22","qType":"variable"},"qData":[],"qIsScriptCreated":true}
+{"qName":"vperiodo","qDefinition":"202606","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"df23a82f-bd6b-495f-9d9b-4f2588364794","qType":"variable"},"qData":[],"qIsScriptCreated":true}
 {"qName":"contrato","qDefinition":"24000457","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"c637a448-107b-48f0-b325-19432ae68f76","qType":"variable"},"qData":[],"qIsScriptCreated":true}
+{"qName":"vmensaje","qDefinition":"Hoy no se manda notificaci\u00f3n","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"e23d53e4-fc99-4123-9bc6-2e2d360636af","qType":"variable"},"qData":[],"qIsScriptCreated":true}
+{"qName":"fecha_envio","qDefinition":"10\/06\/2026 06:18:40 AM","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"6f233b91-1694-45df-b4c9-0a93aa225b09","qType":"variable"},"qData":[],"qIsScriptCreated":true}
 
 FIELDS
-{"qIsHidden":true,"qIsSystem":true,"qName":"$Field","qCardinal":112,"qTags":["$text","$key","$hidden","$system"],"qSrcTables":[]}
+{"qIsHidden":true,"qIsSystem":true,"qName":"$Field","qCardinal":124,"qTags":["$text","$key","$hidden","$system"],"qSrcTables":[]}
 {"qIsHidden":true,"qIsSystem":true,"qName":"$Table","qCardinal":4,"qTags":["$text","$key","$hidden","$system"],"qSrcTables":[]}
 {"qIsHidden":true,"qIsSystem":true,"qName":"$Rows","qCardinal":4,"qTags":["$numeric","$integer","$hidden","$system"],"qSrcTables":[]}
 {"qIsHidden":true,"qIsSystem":true,"qName":"$Fields","qCardinal":4,"qTags":["$numeric","$integer","$hidden","$system"],"qSrcTables":[]}
-{"qIsHidden":true,"qIsSystem":true,"qName":"$FieldNo","qCardinal":61,"qTags":["$numeric","$integer","$hidden","$system"],"qSrcTables":[]}
+{"qIsHidden":true,"qIsSystem":true,"qName":"$FieldNo","qCardinal":73,"qTags":["$numeric","$integer","$hidden","$system"],"qSrcTables":[]}
 {"qIsHidden":true,"qIsSystem":true,"qName":"$Info","qCardinal":1,"qTags":["$text","$ascii","$hidden","$system"],"qSrcTables":[]}
-{"qName":"%key_principal","qCardinal":192544,"qTags":["$text","$ascii","$key"],"qSrcTables":["Tabla_principal","caracter\u00edsticas"]}
-{"qName":"%key_postulacion_his","qCardinal":24069,"qTags":["$numeric","$integer","$key"],"qSrcTables":["Tabla_principal","historico_postulacion"]}
-{"qName":"%key_radicacion_his","qCardinal":15333,"qTags":["$numeric","$integer","$key"],"qSrcTables":["Tabla_principal","historico_radicacion"]}
-{"qName":"%ID_radicacion","qCardinal":11579,"qTags":["$text","$ascii"],"qSrcTables":["Tabla_principal"]}
+{"qName":"%key_principal","qCardinal":232791,"qTags":["$text","$ascii","$key"],"qSrcTables":["Tabla_principal","caracter\u00edsticas"]}
+{"qName":"%key_postulacion_his","qCardinal":24422,"qTags":["$numeric","$integer","$key"],"qSrcTables":["Tabla_principal","historico_postulacion"]}
+{"qName":"%key_radicacion_his","qCardinal":15338,"qTags":["$numeric","$integer","$key"],"qSrcTables":["Tabla_principal","historico_radicacion"]}
+{"qName":"%ID_radicacion","qCardinal":11584,"qTags":["$text","$ascii"],"qSrcTables":["Tabla_principal"]}
 {"qName":"A\u00d1O","qCardinal":5,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla_principal"]}
 {"qName":"MES","qCardinal":12,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla_principal"]}
 {"qName":"MES_NUMERO","qCardinal":12,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla_principal"]}
-{"qName":"PERIODO_POSTULACION","qCardinal":45,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla_principal"]}
-{"qName":"numero_identificacion","qCardinal":70609,"qTags":[],"qSrcTables":["Tabla_principal"]}
-{"qName":"tipo_beneficio","qCardinal":9,"qTags":["$text","$ascii"],"qSrcTables":["Tabla_principal"]}
-{"qName":"fecha_postulacion","qCardinal":540,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["Tabla_principal"]}
+{"qName":"PERIODO_POSTULACION","qCardinal":46,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla_principal"]}
+{"qName":"numero_identificacion","qCardinal":74313,"qTags":[],"qSrcTables":["Tabla_principal"]}
+{"qName":"tipo_beneficio","qCardinal":10,"qTags":["$text","$ascii"],"qSrcTables":["Tabla_principal"]}
+{"qName":"fecha_postulacion","qCardinal":541,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["Tabla_principal"]}
 {"qName":"cod_estado_solicitud_postulacion","qCardinal":4,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla_principal"]}
 {"qName":"estado_solicitud_postulacion","qCardinal":4,"qTags":["$text","$ascii"],"qSrcTables":["Tabla_principal"]}
-{"qName":"cod_observacion_postulacion","qCardinal":14,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla_principal"]}
+{"qName":"cod_observacion_postulacion","qCardinal":9,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla_principal"]}
 {"qName":"observacion_postulacion","qCardinal":11,"qTags":["$text"],"qSrcTables":["Tabla_principal"]}
 {"qName":"reactivado_postulacion","qCardinal":2,"qTags":["$text","$ascii"],"qSrcTables":["Tabla_principal"]}
-{"qName":"cod_estado_solicitud_radicado","qCardinal":8,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla_principal"]}
-{"qName":"estado_solicitud_radicado","qCardinal":8,"qTags":["$text","$ascii"],"qSrcTables":["Tabla_principal"]}
+{"qName":"usuario_postulacion","qCardinal":17,"qTags":["$text","$ascii"],"qSrcTables":["Tabla_principal"]}
+{"qName":"fecha_gestion_postulacion","qCardinal":433,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["Tabla_principal"]}
+{"qName":"hora_gestion_postulacion","qCardinal":16328,"qTags":["$text","$ascii"],"qSrcTables":["Tabla_principal"]}
+{"qName":"cod_estado_solicitud_radicado","qCardinal":5,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla_principal"]}
+{"qName":"estado_solicitud_radicado","qCardinal":5,"qTags":["$text","$ascii"],"qSrcTables":["Tabla_principal"]}
 {"qName":"vigencia","qCardinal":4,"qTags":["$text","$ascii"],"qSrcTables":["Tabla_principal"]}
 {"qName":"RADICADO","qCardinal":2,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla_principal"]}
-{"qName":"fecha_aprobacion","qCardinal":270,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["Tabla_principal"]}
+{"qName":"fecha_aprobacion","qCardinal":272,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["Tabla_principal"]}
 {"qName":"cod_estado_beneficio","qCardinal":6,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla_principal"]}
 {"qName":"estado_beneficio","qCardinal":6,"qTags":["$text","$ascii"],"qSrcTables":["Tabla_principal"]}
 {"qName":"APROBADO","qCardinal":2,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla_principal"]}
@@ -381,63 +400,72 @@ FIELDS
 {"qName":"estado_nuevas_asignaciones","qCardinal":1,"qTags":["$text","$ascii"],"qSrcTables":["Tabla_principal"]}
 {"qName":"observaciones_cruce","qCardinal":2,"qTags":["$text"],"qSrcTables":["Tabla_principal"]}
 {"qName":"resultado_afiliacion","qCardinal":3,"qTags":["$text","$ascii"],"qSrcTables":["Tabla_principal"]}
-{"qName":"observacion_resultado","qCardinal":35,"qTags":["$text","$ascii"],"qSrcTables":["Tabla_principal"]}
+{"qName":"observacion_resultado","qCardinal":38,"qTags":["$text","$ascii"],"qSrcTables":["Tabla_principal"]}
 {"qName":"estado_asignacion","qCardinal":3,"qTags":["$text","$ascii"],"qSrcTables":["Tabla_principal"]}
-{"qName":"estado_aprobacion","qCardinal":3,"qTags":["$text"],"qSrcTables":["Tabla_principal"]}
+{"qName":"estado_aprobacion","qCardinal":2,"qTags":["$text","$ascii"],"qSrcTables":["Tabla_principal"]}
 {"qName":"cuenta_jde","qCardinal":18,"qTags":["$text","$ascii"],"qSrcTables":["Tabla_principal"]}
-{"qName":"documento_entidad","qCardinal":3020,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla_principal"]}
+{"qName":"documento_entidad","qCardinal":3382,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla_principal"]}
 {"qName":"nombre_entidad","qCardinal":3003,"qTags":["$text"],"qSrcTables":["Tabla_principal"]}
-{"qName":"fecha_jde","qCardinal":12,"qTags":["$text","$ascii"],"qSrcTables":["Tabla_principal"]}
+{"qName":"fecha_jde","qCardinal":14,"qTags":["$text","$ascii"],"qSrcTables":["Tabla_principal"]}
 {"qName":"concepto_conciliaci\u00f3n","qCardinal":18,"qTags":["$text"],"qSrcTables":["Tabla_principal"]}
-{"qName":"valor_jde","qCardinal":70,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla_principal"]}
+{"qName":"valor_jde","qCardinal":71,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla_principal"]}
+{"qName":"nombre_completo1","qCardinal":261,"qTags":["$text"],"qSrcTables":["Tabla_principal"]}
+{"qName":"revision_profesional","qCardinal":2,"qTags":["$text","$ascii"],"qSrcTables":["Tabla_principal"]}
+{"qName":"periodo_deuda","qCardinal":22,"qTags":["$text","$ascii"],"qSrcTables":["Tabla_principal"]}
+{"qName":"valor_deuda","qCardinal":20,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla_principal"]}
+{"qName":"id_eps_afp","qCardinal":5,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla_principal"]}
+{"qName":"nombre_eps_afp","qCardinal":5,"qTags":["$text"],"qSrcTables":["Tabla_principal"]}
+{"qName":"tipo_administradora","qCardinal":2,"qTags":["$text","$ascii"],"qSrcTables":["Tabla_principal"]}
+{"qName":"observacion_deudas_presuntas","qCardinal":23,"qTags":["$text","$ascii"],"qSrcTables":["Tabla_principal"]}
+{"qName":"Excluir_5311","qCardinal":2,"qTags":["$text","$ascii"],"qSrcTables":["Tabla_principal"]}
 {"qName":"tipo_identificacion","qCardinal":4,"qTags":["$text"],"qSrcTables":["caracter\u00edsticas"]}
-{"qName":"primer_nombre","qCardinal":1812,"qTags":["$text"],"qSrcTables":["caracter\u00edsticas"]}
-{"qName":"segundo_nombre","qCardinal":1175,"qTags":["$text"],"qSrcTables":["caracter\u00edsticas"]}
-{"qName":"primer_apellido","qCardinal":1198,"qTags":["$text"],"qSrcTables":["caracter\u00edsticas"]}
-{"qName":"segundo_apellido","qCardinal":1105,"qTags":["$text"],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"primer_nombre","qCardinal":1831,"qTags":["$text"],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"segundo_nombre","qCardinal":1189,"qTags":["$text"],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"primer_apellido","qCardinal":1210,"qTags":["$text"],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"segundo_apellido","qCardinal":1115,"qTags":["$text"],"qSrcTables":["caracter\u00edsticas"]}
 {"qName":"genero","qCardinal":3,"qTags":["$text","$ascii"],"qSrcTables":["caracter\u00edsticas"]}
 {"qName":"categoria","qCardinal":5,"qTags":["$text","$ascii"],"qSrcTables":["caracter\u00edsticas"]}
-{"qName":"municipio","qCardinal":185,"qTags":["$text"],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"municipio","qCardinal":187,"qTags":["$text"],"qSrcTables":["caracter\u00edsticas"]}
 {"qName":"departamento","qCardinal":38,"qTags":["$text","$ascii"],"qSrcTables":["caracter\u00edsticas"]}
 {"qName":"ultima_ccf","qCardinal":3,"qTags":["$text","$ascii"],"qSrcTables":["caracter\u00edsticas"]}
-{"qName":"nit_empleador","qCardinal":12656,"qTags":["$text","$ascii"],"qSrcTables":["caracter\u00edsticas"]}
-{"qName":"nombre_empresa","qCardinal":13270,"qTags":["$text"],"qSrcTables":["caracter\u00edsticas"]}
-{"qName":"nombre_empresa2","qCardinal":12880,"qTags":[],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"nit_empleador","qCardinal":13050,"qTags":["$text","$ascii"],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"nombre_empresa","qCardinal":13483,"qTags":["$text"],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"nombre_empresa2","qCardinal":13282,"qTags":[],"qSrcTables":["caracter\u00edsticas"]}
 {"qName":"nombre_eps","qCardinal":40,"qTags":["$text"],"qSrcTables":["caracter\u00edsticas"]}
 {"qName":"nombre_afp","qCardinal":7,"qTags":["$text","$ascii"],"qSrcTables":["caracter\u00edsticas"]}
 {"qName":"tipo_trabajador_aportes","qCardinal":3,"qTags":["$text","$ascii"],"qSrcTables":["caracter\u00edsticas"]}
-{"qName":"fecha_nacimiento","qCardinal":8981,"qTags":["$numeric","$integer"],"qSrcTables":["caracter\u00edsticas"]}
-{"qName":"direccion_solicitante","qCardinal":22418,"qTags":["$text"],"qSrcTables":["caracter\u00edsticas"]}
-{"qName":"telefono_solicitante","qCardinal":15873,"qTags":["$text","$ascii"],"qSrcTables":["caracter\u00edsticas"]}
-{"qName":"celular_solicitante","qCardinal":22030,"qTags":["$text","$ascii"],"qSrcTables":["caracter\u00edsticas"]}
-{"qName":"correo_solicitante","qCardinal":22182,"qTags":["$text","$ascii"],"qSrcTables":["caracter\u00edsticas"]}
-{"qName":"tiempo_aporte","qCardinal":948,"qTags":["$numeric","$integer"],"qSrcTables":["caracter\u00edsticas"]}
-{"qName":"fecha_retiro_genesys","qCardinal":1233,"qTags":[],"qSrcTables":["caracter\u00edsticas"]}
-{"qName":"nombre_completo","qCardinal":14798,"qTags":["$text"],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"fecha_nacimiento","qCardinal":9095,"qTags":["$numeric","$integer"],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"direccion_solicitante","qCardinal":22752,"qTags":["$text"],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"telefono_solicitante","qCardinal":16064,"qTags":["$text","$ascii"],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"celular_solicitante","qCardinal":22337,"qTags":["$text","$ascii"],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"correo_solicitante","qCardinal":22491,"qTags":["$text","$ascii"],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"tiempo_aporte","qCardinal":952,"qTags":["$numeric","$integer"],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"fecha_retiro_genesys","qCardinal":1247,"qTags":[],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"nombre_completo","qCardinal":15110,"qTags":["$text"],"qSrcTables":["caracter\u00edsticas"]}
 {"qName":"actividad_economica_empresa","qCardinal":346,"qTags":["$text"],"qSrcTables":["caracter\u00edsticas"]}
 {"qName":"sector_economico_empresa","qCardinal":33,"qTags":["$text"],"qSrcTables":["caracter\u00edsticas"]}
 {"qName":"registro_agencia_empleo","qCardinal":2,"qTags":["$text","$ascii"],"qSrcTables":["caracter\u00edsticas"]}
-{"qName":"nombre_empresa_estandar","qCardinal":4218,"qTags":["$text"],"qSrcTables":["caracter\u00edsticas"]}
-{"qName":"fecha_nacimiento_estandar","qCardinal":11078,"qTags":[],"qSrcTables":["caracter\u00edsticas"]}
-{"qName":"edad","qCardinal":74,"qTags":["$numeric","$integer"],"qSrcTables":["caracter\u00edsticas"]}
-{"qName":"fecha_preradicacion","qCardinal":18924,"qTags":["$numeric","$timestamp"],"qSrcTables":["caracter\u00edsticas"]}
-{"qName":"numero_radicado","qCardinal":10774,"qTags":["$text","$ascii"],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"nombre_empresa_estandar","qCardinal":4242,"qTags":["$text"],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"fecha_nacimiento_estandar","qCardinal":11147,"qTags":[],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"edad","qCardinal":75,"qTags":["$numeric","$integer"],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"fecha_preradicacion","qCardinal":18956,"qTags":["$numeric","$timestamp"],"qSrcTables":["caracter\u00edsticas"]}
+{"qName":"numero_radicado","qCardinal":10779,"qTags":["$text","$ascii"],"qSrcTables":["caracter\u00edsticas"]}
 {"qName":"fecha_cancelado","qCardinal":92,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["caracter\u00edsticas"]}
 {"qName":"discapacidad","qCardinal":3,"qTags":["$text","$ascii"],"qSrcTables":["caracter\u00edsticas"]}
 {"qName":"condicion_discapacidad","qCardinal":3,"qTags":["$text","$ascii"],"qSrcTables":["caracter\u00edsticas"]}
 {"qName":"fecha_ingreso_trabajador","qCardinal":2141,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["caracter\u00edsticas"]}
 {"qName":"estado_trabajador","qCardinal":4,"qTags":["$text","$ascii"],"qSrcTables":["caracter\u00edsticas"]}
-{"qName":"fecha_inicial","qCardinal":202,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["historico_postulacion"]}
-{"qName":"hora_inicial","qCardinal":2087,"qTags":["$numeric"],"qSrcTables":["historico_postulacion"]}
-{"qName":"fecha_final","qCardinal":432,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["historico_postulacion"]}
-{"qName":"hora_final","qCardinal":16433,"qTags":["$numeric"],"qSrcTables":["historico_postulacion"]}
+{"qName":"fecha_inicial","qCardinal":205,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["historico_postulacion"]}
+{"qName":"hora_inicial","qCardinal":2113,"qTags":["$numeric"],"qSrcTables":["historico_postulacion"]}
+{"qName":"fecha_final","qCardinal":435,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["historico_postulacion"]}
+{"qName":"hora_final","qCardinal":16449,"qTags":["$numeric"],"qSrcTables":["historico_postulacion"]}
 {"qName":"cod_estado_postulacion_his","qCardinal":6,"qTags":["$numeric","$integer"],"qSrcTables":["historico_postulacion"]}
 {"qName":"estado_postulacion_his","qCardinal":6,"qTags":["$text","$ascii"],"qSrcTables":["historico_postulacion"]}
 {"qName":"cod_obs_postulacion_his","qCardinal":22,"qTags":["$numeric","$integer"],"qSrcTables":["historico_postulacion"]}
 {"qName":"obs_postulacion_his","qCardinal":22,"qTags":["$text"],"qSrcTables":["historico_postulacion"]}
 {"qName":"sinc_usuario","qCardinal":18,"qTags":["$text","$ascii"],"qSrcTables":["historico_postulacion"]}
-{"qName":"HORAS","qCardinal":468,"qTags":["$numeric"],"qSrcTables":["historico_postulacion"]}
-{"qName":"MINUTOS","qCardinal":468,"qTags":["$numeric"],"qSrcTables":["historico_postulacion"]}
+{"qName":"HORAS","qCardinal":469,"qTags":["$numeric"],"qSrcTables":["historico_postulacion"]}
+{"qName":"MINUTOS","qCardinal":469,"qTags":["$numeric"],"qSrcTables":["historico_postulacion"]}
 {"qName":"cod_estado_detalle_postulacion_radicacion_his","qCardinal":11,"qTags":["$numeric","$integer"],"qSrcTables":["historico_radicacion"]}
 {"qName":"estado_detalle_postulacion_radicacion_his","qCardinal":10,"qTags":["$text","$ascii"],"qSrcTables":["historico_radicacion"]}
-{"qName":"fecha_radicacion_his","qCardinal":384,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["historico_radicacion"]}
+{"qName":"fecha_radicacion_his","qCardinal":385,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["historico_radicacion"]}
