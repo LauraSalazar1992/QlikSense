@@ -1,6 +1,6 @@
 
 SHEETS
-{"qInfo":{"qId":"25ca0eb0-659f-4941-97cf-cc285e8b87bf","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"25ca0eb0-659f-4941-97cf-cc285e8b87bf","approved":false,"published":true,"publishTime":"2026-08-31T15:45:42.093Z","owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2026-08-28T15:49:59.491Z","modifiedDate":"2026-08-31T15:45:41.937Z","encrypted":true,"privileges":["read","publish"],"title":"Cruce Validaci\u00f3n de derechos","description":""},"qData":[]}
+{"qInfo":{"qId":"25ca0eb0-659f-4941-97cf-cc285e8b87bf","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"25ca0eb0-659f-4941-97cf-cc285e8b87bf","approved":false,"published":true,"publishTime":"2026-09-01T21:44:41.889Z","owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2026-08-28T15:49:59.491Z","modifiedDate":"2026-09-01T21:44:41.716Z","encrypted":true,"privileges":["read","publish"],"title":"Cruce Validaci\u00f3n de derechos","description":""},"qData":[]}
 
 OBJECTS ON SHEETS
 {"name":"e520cdee-bc8f-4925-bb2d-b9b5398a2281","type":"filterpane","col":0,"row":1,"colspan":24,"rowspan":1,"bounds":{"y":8.333333333333332,"x":0,"width":100,"height":8.333333333333332}}
