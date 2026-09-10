@@ -64,6 +64,7 @@ LOAD
     AÑO,
 	MES,
 	MES_NUMERO,
+    DIA,
 	TIPO_IDENTIFICACION, 
 	NUMERO_IDENTIFICACION, 
 	PRIMER_NOMBRE, 
@@ -106,13 +107,14 @@ LOAD
 	MAE_SERIAL, 
 	TIENE_NOVEDAD,
     TIPO_CRUCE 
-FROM [lib://TABLEROS MPC:DataFiles/Cruces MPC/Validacion_derechos_antes_2*.QVD](qvd);
+FROM [lib://TABLEROS MPC:DataFiles/Cruces MPC/Cruce_Validacion_derechos_antes_2*.QVD](qvd);
 
 Concatenate
 LOAD
     AÑO,
 	MES,
 	MES_NUMERO,
+    DIA,
 	NUMERO_RADICADO, 
 	NUMERO_IDENTIFICACION, 
 	FECHA_LIQUIDACION, 
@@ -134,14 +136,16 @@ LOAD
 	MAE_FECHA_DEFUNCION, 
 	MAE_NOMBRE, 
 	TIENE_NOVEDAD,
+    ORIGEN_LIQUIDACION,
     TIPO_CRUCE    
-FROM [lib://TABLEROS MPC:DataFiles/Cruces MPC/Validacion_derechos_durante_2*.QVD](qvd); 
+FROM [lib://TABLEROS MPC:DataFiles/Cruces MPC/Cruce_Validacion_derechos_durante_2*.QVD](qvd); 
 
 Concatenate
 LOAD
 	AÑO,
 	MES,
 	MES_NUMERO,
+    DIA,
 	PAG_ID_TRANSACCION, 
 	PAG_TIPO_DOCUMENTO_TRANSACCION, 
 	NUMERO_IDENTIFICACION,
@@ -183,6 +187,6 @@ LOAD
 	MAESTRO_FUENTE, 
 	MAESTRO_CONTROL,
     TIPO_CRUCE  
-FROM [lib://TABLEROS MPC:DataFiles/Cruces MPC/Validacion_derechos_despues_2*.QVD](qvd);
+FROM [lib://TABLEROS MPC:DataFiles/Cruces MPC/Cruce_Validacion_derechos_despues_2*.QVD](qvd);
 ///$tab Exit
 Exit Script;
