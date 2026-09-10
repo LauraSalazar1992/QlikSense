@@ -1,18 +1,7 @@
 
 SHEETS
-{"qInfo":{"qId":"25ca0eb0-659f-4941-97cf-cc285e8b87bf","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"25ca0eb0-659f-4941-97cf-cc285e8b87bf","approved":false,"published":true,"publishTime":"2026-09-10T16:31:16.443Z","owner":"auth0|f44f4423f808768e3fe3ae61767f1a80924f3154a751dbe4ef0a4e22cdc2efb4","ownerId":"636034f3cd2625706fba75c5","createdDate":"2026-08-28T15:49:59.491Z","modifiedDate":"2026-09-10T16:31:16.332Z","encrypted":true,"privileges":["read","publish"],"title":"Cruce Validaci\u00f3n de derechos","description":""},"qData":[]}
 
 OBJECTS ON SHEETS
-{"name":"e520cdee-bc8f-4925-bb2d-b9b5398a2281","type":"filterpane","col":0,"row":1,"colspan":24,"rowspan":1,"bounds":{"y":8.333333333333332,"x":0,"width":100,"height":8.333333333333332}}
-{"name":"a6512c15-98ab-4082-9157-fa6c09c61e03","type":"sn-tabbed-container","col":0,"row":3,"colspan":24,"rowspan":9,"bounds":{"y":25,"x":0,"width":100,"height":75}}
-{"name":"feca009e-d95b-431c-903e-b602657f9552","type":"swr-sense-navigation","col":0,"row":0,"colspan":12,"rowspan":1,"bounds":{"y":0,"x":0,"width":50,"height":8.333333333333332}}
-{"name":"a610415b-84d7-4a5b-b7b3-097fc09ee87d","type":"swr-sense-navigation","col":12,"row":0,"colspan":12,"rowspan":1,"bounds":{"y":0,"x":50,"width":50,"height":8.333333333333332}}
-{"name":"jVHDxnm","type":"kpi","col":20,"row":2,"colspan":4,"rowspan":1,"bounds":{"y":16.666666666666664,"x":83.33333333333334,"width":16.666666666666664,"height":8.333333333333332}}
-{"name":"zZfdyXE","type":"kpi","col":16,"row":2,"colspan":4,"rowspan":1,"bounds":{"y":16.666666666666664,"x":66.66666666666666,"width":16.666666666666664,"height":8.333333333333332}}
-{"name":"SbfZPJ","type":"kpi","col":8,"row":2,"colspan":4,"rowspan":1,"bounds":{"y":16.666666666666664,"x":33.33333333333333,"width":16.666666666666664,"height":8.333333333333332}}
-{"name":"CuckLLd","type":"kpi","col":0,"row":2,"colspan":4,"rowspan":1,"bounds":{"y":16.666666666666664,"x":0,"width":16.666666666666664,"height":8.333333333333332}}
-{"name":"hbcThYj","type":"kpi","col":12,"row":2,"colspan":4,"rowspan":1,"bounds":{"y":16.666666666666664,"x":50,"width":16.666666666666664,"height":8.333333333333332}}
-{"name":"mtppa","type":"kpi","col":4,"row":2,"colspan":4,"rowspan":1,"bounds":{"y":16.666666666666664,"x":16.666666666666664,"width":16.666666666666664,"height":8.333333333333332}}
 
 DIMENSIONS
 
@@ -31,10 +20,10 @@ VARIABLES
 {"qName":"va\u00f1o_mes_anterior","qDefinition":"2026","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"200d30a4-6530-4d32-a3e4-c440790a3ae7","qType":"variable"},"qData":[],"qIsScriptCreated":true}
 {"qName":"vmes_anterior","qDefinition":"08","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"9fa4a0ea-ab5b-45a1-b53a-7cd7a2516045","qType":"variable"},"qData":[],"qIsScriptCreated":true}
 {"qName":"vmesNombre_anterior","qDefinition":"AGOSTO","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"e4cee70c-11fd-4292-88a2-82ce2b94731d","qType":"variable"},"qData":[],"qIsScriptCreated":true}
-{"qName":"fecha_envio","qDefinition":"10\/09\/2026 11:29:49 AM","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"80f1c2b9-1a7f-43cc-867d-aec81b59a48f","qType":"variable"},"qData":[],"qIsScriptCreated":true}
+{"qName":"fecha_envio","qDefinition":"10\/09\/2026 12:02:27 PM","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"80f1c2b9-1a7f-43cc-867d-aec81b59a48f","qType":"variable"},"qData":[],"qIsScriptCreated":true}
 {"qName":"vfechaInicial","qDefinition":"2026-09-01","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"34d90497-ea27-4eb8-bd54-f9552a3c3ae7","qType":"variable"},"qData":[],"qIsScriptCreated":true}
 {"qName":"va\u00f1oFiscal","qDefinition":"26","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"9a997074-da98-4742-8b7d-1a07757fc13f","qType":"variable"},"qData":[],"qIsScriptCreated":true}
-{"qName":"vInicioRecarga","qDefinition":"10\/09\/2026 04:29:49 PM","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"2a00a795-e196-474c-bb7f-9ea72f465094","qType":"variable"},"qData":[],"qIsScriptCreated":true}
+{"qName":"vInicioRecarga","qDefinition":"10\/09\/2026 05:02:28 PM","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"2a00a795-e196-474c-bb7f-9ea72f465094","qType":"variable"},"qData":[],"qIsScriptCreated":true}
 {"qName":"vperiodo_mes_anterior","qDefinition":"202608","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"00cf7bd3-ca60-472a-bbf2-5b6233833ce9","qType":"variable"},"qData":[],"qIsScriptCreated":true}
 
 FIELDS
@@ -49,24 +38,24 @@ FIELDS
 {"qName":"MES_NUMERO","qCardinal":1,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla"]}
 {"qName":"DIA","qCardinal":2,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla"]}
 {"qName":"TIPO_IDENTIFICACION","qCardinal":2,"qTags":["$text"],"qSrcTables":["Tabla"]}
-{"qName":"NUMERO_IDENTIFICACION","qCardinal":1816,"qTags":["$ascii","$text"],"qSrcTables":["Tabla"]}
-{"qName":"PRIMER_NOMBRE","qCardinal":126,"qTags":["$ascii","$text"],"qSrcTables":["Tabla"]}
-{"qName":"SEGUNDO_NOMBRE","qCardinal":92,"qTags":["$ascii","$text"],"qSrcTables":["Tabla"]}
-{"qName":"PRIMER_APELLIDO","qCardinal":134,"qTags":["$text"],"qSrcTables":["Tabla"]}
-{"qName":"SEGUNDO_APELLIDO","qCardinal":142,"qTags":["$text"],"qSrcTables":["Tabla"]}
+{"qName":"NUMERO_IDENTIFICACION","qCardinal":1823,"qTags":["$ascii","$text"],"qSrcTables":["Tabla"]}
+{"qName":"PRIMER_NOMBRE","qCardinal":129,"qTags":["$ascii","$text"],"qSrcTables":["Tabla"]}
+{"qName":"SEGUNDO_NOMBRE","qCardinal":94,"qTags":["$ascii","$text"],"qSrcTables":["Tabla"]}
+{"qName":"PRIMER_APELLIDO","qCardinal":137,"qTags":["$text"],"qSrcTables":["Tabla"]}
+{"qName":"SEGUNDO_APELLIDO","qCardinal":145,"qTags":["$text"],"qSrcTables":["Tabla"]}
 {"qName":"CAJA_COMPENSACION","qCardinal":1,"qTags":["$ascii","$text"],"qSrcTables":["Tabla"]}
 {"qName":"MUNICIPIO","qCardinal":20,"qTags":["$ascii","$text"],"qSrcTables":["Tabla"]}
 {"qName":"DEPARTAMENTO","qCardinal":4,"qTags":["$ascii","$text"],"qSrcTables":["Tabla"]}
 {"qName":"NOMBRE_EPS","qCardinal":6,"qTags":["$ascii","$text"],"qSrcTables":["Tabla"]}
 {"qName":"NOMBRE_AFP","qCardinal":5,"qTags":["$ascii","$text"],"qSrcTables":["Tabla"]}
-{"qName":"FECHA_PRERADICACION","qCardinal":118,"qTags":["$numeric","$timestamp"],"qSrcTables":["Tabla"]}
-{"qName":"NUMERO_RADICADO","qCardinal":1427,"qTags":["$ascii","$text"],"qSrcTables":["Tabla"]}
-{"qName":"FECHA_RADICACION","qCardinal":118,"qTags":["$numeric","$timestamp"],"qSrcTables":["Tabla"]}
+{"qName":"FECHA_PRERADICACION","qCardinal":120,"qTags":["$numeric","$timestamp"],"qSrcTables":["Tabla"]}
+{"qName":"NUMERO_RADICADO","qCardinal":1434,"qTags":["$ascii","$text"],"qSrcTables":["Tabla"]}
+{"qName":"FECHA_RADICACION","qCardinal":120,"qTags":["$numeric","$timestamp"],"qSrcTables":["Tabla"]}
 {"qName":"FECHA_BLOQUEO","qCardinal":0,"qTags":[],"qSrcTables":["Tabla"]}
-{"qName":"FECHA_SUSPENSION_CANCELACION","qCardinal":0,"qTags":[],"qSrcTables":["Tabla"]}
-{"qName":"ESTADO_BENEFICIO","qCardinal":1,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla"]}
-{"qName":"ESTADO_SOLICITUD","qCardinal":1,"qTags":["$ascii","$text"],"qSrcTables":["Tabla"]}
-{"qName":"FECHA_APROBACION","qCardinal":6,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["Tabla"]}
+{"qName":"FECHA_SUSPENSION_CANCELACION","qCardinal":3,"qTags":["$numeric","$timestamp"],"qSrcTables":["Tabla"]}
+{"qName":"ESTADO_BENEFICIO","qCardinal":2,"qTags":["$numeric","$integer"],"qSrcTables":["Tabla"]}
+{"qName":"ESTADO_SOLICITUD","qCardinal":2,"qTags":["$ascii","$text"],"qSrcTables":["Tabla"]}
+{"qName":"FECHA_APROBACION","qCardinal":7,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["Tabla"]}
 {"qName":"ESTADO_VALIDACION","qCardinal":1,"qTags":["$ascii","$text"],"qSrcTables":["Tabla"]}
 {"qName":"RESULTADO_VALIDACION","qCardinal":1,"qTags":["$ascii","$text"],"qSrcTables":["Tabla"]}
 {"qName":"TIPO_DOC_NORMALIZADO","qCardinal":2,"qTags":["$ascii","$text"],"qSrcTables":["Tabla"]}
@@ -80,12 +69,12 @@ FIELDS
 {"qName":"PEN_FECHAS_INGRESO","qCardinal":0,"qTags":[],"qSrcTables":["Tabla"]}
 {"qName":"PEN_FECHAS_RECEPCION","qCardinal":0,"qTags":[],"qSrcTables":["Tabla"]}
 {"qName":"PEN_FECHA_PRIMER_REPORTE","qCardinal":0,"qTags":[],"qSrcTables":["Tabla"]}
-{"qName":"MAE_ESTADO","qCardinal":2,"qTags":["$text"],"qSrcTables":["Tabla"]}
+{"qName":"MAE_ESTADO","qCardinal":1,"qTags":["$ascii","$text"],"qSrcTables":["Tabla"]}
 {"qName":"MAE_OBSERVACION","qCardinal":0,"qTags":[],"qSrcTables":["Tabla"]}
 {"qName":"MAE_FUENTE","qCardinal":1,"qTags":["$ascii","$text"],"qSrcTables":["Tabla"]}
 {"qName":"MAE_FECHA_INICIO","qCardinal":1,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["Tabla"]}
-{"qName":"MAE_FECHA_FIN","qCardinal":2,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["Tabla"]}
-{"qName":"MAE_NOMBRES_COMPLETOS","qCardinal":1,"qTags":["$ascii","$text"],"qSrcTables":["Tabla"]}
+{"qName":"MAE_FECHA_FIN","qCardinal":1,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["Tabla"]}
+{"qName":"MAE_NOMBRES_COMPLETOS","qCardinal":0,"qTags":[],"qSrcTables":["Tabla"]}
 {"qName":"MAE_FECHA_DEFUNCION","qCardinal":0,"qTags":[],"qSrcTables":["Tabla"]}
 {"qName":"MAE_SERIAL","qCardinal":0,"qTags":[],"qSrcTables":["Tabla"]}
 {"qName":"TIENE_NOVEDAD","qCardinal":2,"qTags":["$ascii","$text"],"qSrcTables":["Tabla"]}
