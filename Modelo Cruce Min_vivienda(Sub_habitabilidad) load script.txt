@@ -1,0 +1,85 @@
+///$tab Main
+SET ThousandSep='.';
+SET DecimalSep=',';
+SET MoneyThousandSep='.';
+SET MoneyDecimalSep=',';
+SET MoneyFormat='$ #.##0;-$ #.##0';
+SET TimeFormat='h:mm:ss TT';
+SET DateFormat='D/MM/YYYY';
+SET TimestampFormat='D/MM/YYYY h:mm:ss[.fff] TT';
+SET FirstWeekDay=6;
+SET BrokenWeeks=1;
+SET ReferenceDay=0;
+SET FirstMonthOfYear=1;
+SET CollationLocale='es-CO';
+SET CreateSearchIndexOnReload=1;
+SET MonthNames='ene.;feb.;mar.;abr.;may.;jun.;jul.;ago.;sep.;oct.;nov.;dic.';
+SET LongMonthNames='enero;febrero;marzo;abril;mayo;junio;julio;agosto;septiembre;octubre;noviembre;diciembre';
+SET DayNames='lun.;mar.;mié.;jue.;vie.;sáb.;dom.';
+SET LongDayNames='lunes;martes;miércoles;jueves;viernes;sábado;domingo';
+SET NumericalAbbreviation='3:k;6:M;9:G;12:T;15:P;18:E;21:Z;24:Y;-3:m;-6:μ;-9:n;-12:p;-15:f;-18:a;-21:z;-24:y';
+
+///$tab Variables
+
+
+//APLICAMOS EL MAPPING A LA FECHA INICIAL Y A LA FINAL
+
+LET vfechaDriveInicial= ApplyMap('Mapping_Fecha_Inicial', 'FECHA_INICIAL', Null());
+LET vfechaDriveFinal=   ApplyMap('Mapping_Fecha_Final',   'FECHA_FINAL',   Null());
+
+//OBTENEMOS LA FECHA DEL SISTEMA PARA LA GENERACIÓN DEL REPORTE
+LET vfechaSistemaInicial =  date($(Include=[lib://FECHAS MODELOS UTC:DataFiles/Mes inicio.txt]),'YYYY-MM-DD');
+LET vfechaSistemaFinal = date(monthend(vfechaSistemaInicial),'YYYY-MM-DD');
+
+//VALIDO SI LA FECHA DE DRIVE VIENE NULA SI ES ASÍ OBTENEMOS LA FECHA DEL SISTEMA, SINO DEJAMOS LA QUE VIENE DE DRIVE
+LET vfechaInicial = IF(ISNULL(vfechaDriveInicial), vfechaSistemaInicial, vfechaDriveInicial);
+LET vfechaFinal = IF(ISNULL(vfechaDriveFinal), vfechaSistemaFinal, vfechaDriveFinal);
+
+//cambiar solo para la fecha del sistema de información de nasfa
+LET vfechaInicialNasfa = date(monthstart(vfechaInicial,-1),'YYYY-MM-DD');
+
+// vfechaInicial = '2022-05-01';
+// vfechaFinal = '2022-05-31'
+TRACE $(vfechaInicial);
+TRACE $(vfechaFinal);
+// TRACE $(vfechaInicialNasfa);
+// TRACE $(vfechaSistemaFinal);
+
+LET vmes=NUM(MONTH(vfechaInicial),'00');
+LET vaño=Year(vfechaInicial);
+LET vperiodo=vaño&vmes;
+
+
+LET vmesNasfa=NUM(MONTH(vfechaInicialNasfa),'00');
+LET vañoNasfa=Year(vfechaInicialNasfa);
+LET vperiodoNasfa=vañoNasfa&vmesNasfa;
+
+LET vfechaDiariaFormato = date($(Include=[lib://FECHAS MODELOS UTC:DataFiles/fecha actual.txt]),'YYYY-MM-DD');
+
+
+// TRACE $(vmes);
+// TRACE $(vaño);
+TRACE $(vperiodo);
+
+//VARIABLE QUE LLAMA EL ARCHIVO DONDE ESTA CONFIGURADA LA SUBRUTINA PARA HACER LA RECARGA DE LA SIGUIENTE APLICACIÓN
+$(Include=[lib://TAREAS AUTOMATICAS:DataFiles/Tarea recarga.txt]);
+
+// Exit Script;
+   
+   
+
+///$tab Datos del modelo
+LET vRutaQVDs = 'lib://VALIDACIÓN DE DERECHOS:DataFiles/MIN_VIVIENDA/SUB_HABITABILIDAD/';
+
+CATASTRO:
+LOAD * FROM [$(vRutaQVDs)Subhabitabilidad_Catastro.qvd] (qvd);
+
+BENEFICIARIOS:
+LOAD * FROM [$(vRutaQVDs)Subhabitabilidad_Beneficiarios.qvd] (qvd);
+
+CALENDARIO_MAESTRO:
+LOAD * FROM [$(vRutaQVDs)Subhabitabilidad_Calendario.qvd] (qvd);
+
+LET vRutaQVDs = ;
+///$tab Exit
+Exit Script;
